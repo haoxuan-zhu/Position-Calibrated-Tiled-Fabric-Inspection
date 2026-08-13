@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "seed": 20260805,
+  "base_config": "configs/raw_fabrid_anomalib_patchcore_k0.json",
+  "reference_result_pattern": "runs/raw_fabrid_context_bias_field_k3/final_reproduction/{fold}.json",
+  "checkpoint_pattern": "runs/raw_fabrid_patchcore_k0/instance_audit/lightning_{fold}/Patchcore/v0/weights/lightning/model.ckpt",
+  "crop_observations": {
+    "physical_crop_edge": 256,
+    "phase_shift_pixels": 64,
+    "output_stride_pixels": 8,
+    "views": [
+      "base_grid",
+      "x_shifted_grid",
+      "y_shifted_grid"
+    ],
+    "processed_pixel_ratio_to_single_grid": 2.607142857142857,
+    "crops_per_parent": 73
+  },
+  "fusion_variants": {
+    "single_base": "Frozen non-overlapping base-grid reconstruction.",
+    "mean": "Equal mean over every available registered crop response.",
+    "gaussian": "nnU-Net-style separable Gaussian importance weighting with sigma_scale=1/8 and maximum weight normalized to one.",
+    "hann": "Outer product of two exact length-32 symmetric Hann windows; cells whose available weights all equal zero fall back to their equal mean.",
+    "hard_center": "Average the tied observations having maximum crop-local Chebyshev distance from the crop boundary.",
+    "context_bias_weighted_mean": "Frozen PCAF: crop-coordinate median subtraction followed by inverse robust-variance weighting."
+  },
+  "primary_score_mode": "robust_z",
+  "preregistration": {
+    "created_before_candidate_metrics": "2026-08-05",
+    "parameter_selection": "No target normal, defect score, mask, or metric selects a window, scale, fallback, or reported fold.",
+    "primary_comparison": "Seven-roll macro Pixel AP of PCAF minus each deterministic geometry-only fusion under the identical 73-crop observation budget.",
+    "support_condition": "PCAF must exceed the strongest deterministic baseline in seven-roll macro Pixel AP. Fold wins, exact sign tests, instance AUC, source-calibrated target-normal false positives, and all losing folds remain diagnostic and are reported without tuning.",
+    "failure_condition": "If a deterministic baseline equals or exceeds PCAF in macro Pixel AP, do not claim that learned coordinate calibration is superior to fixed center weighting."
+  },
+  "upstream_reference": {
+    "name": "nnU-Net compute_gaussian",
+    "url": "https://github.com/MIC-DKFZ/nnUNet/blob/master/nnunetv2/inference/sliding_window_prediction.py",
+    "retrieved": "2026-08-05"
+  }
+}

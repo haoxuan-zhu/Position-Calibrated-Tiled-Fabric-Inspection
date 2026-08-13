@@ -1,0 +1,193 @@
+{
+  "schema_version": 1,
+  "config": {
+    "schema_version": 1,
+    "seed": 20260804,
+    "fold": "Rollo4A",
+    "base_config": "configs/raw_fabrid_anomalib_patchcore_k0.json",
+    "checkpoint": "runs/raw_fabrid_patchcore_k0/instance_audit/lightning_Rollo4A/Patchcore/v0/weights/lightning/model.ckpt",
+    "frozen_full_reference": "runs/raw_fabrid_context_bias_field_k3/final_reproduction/Rollo4A.json",
+    "crop_observations": {
+      "physical_crop_edge": 256,
+      "phase_shift_pixels": 64,
+      "output_stride_pixels": 8,
+      "views": [
+        "base_grid",
+        "x_shifted_grid",
+        "y_shifted_grid"
+      ],
+      "stage_one_views": [
+        "base_grid",
+        "y_shifted_grid"
+      ],
+      "optional_view": "x_shifted_grid",
+      "full_crops_per_parent": 73,
+      "stage_one_crops_per_parent": 49
+    },
+    "selector": {
+      "fit_split": "source_calibration_normals_only",
+      "field": "stage_one_position_calibrated_inverse_variance_mean",
+      "score_mode": "robust_z_local_mean_max",
+      "candidate_region_top_fraction": 0.01,
+      "source_normal_quantile": 0.9,
+      "quantile_method": "higher",
+      "threshold_scope": "per_optional_crop_slot",
+      "tie_rule": "strictly_greater",
+      "uses_defect_labels": false,
+      "uses_target_roll_normals": false
+    },
+    "matched_control": {
+      "name": "matched_uniform_sparse_pcaf",
+      "policy": "same_optional_crop_count_per_parent_as_candidate_with_seeded_label_independent_uniform_slot_selection"
+    },
+    "primary_score_mode": "robust_z",
+    "evidence_gate": {
+      "candidate": "sequential_pcaf",
+      "stage_one_reference": "base_y_pcaf",
+      "matched_budget_reference": "matched_uniform_sparse_pcaf",
+      "full_reference": "full_pcaf",
+      "minimum_evaluation_budget_reduction_vs_full": 0.2,
+      "maximum_pixel_ap_loss_vs_full": 0.003,
+      "minimum_pixel_ap_gain_over_stage_one": 0.003,
+      "minimum_pixel_ap_gain_over_matched_budget": 0.002,
+      "maximum_parent_ap_loss_vs_full": 0.01,
+      "maximum_small_instance_auc_loss_vs_full": 0.02,
+      "maximum_elongated_instance_auc_loss_vs_full": 0.02,
+      "maximum_target_normal_false_positive_increment_vs_full": 0,
+      "formal_expansion": "Only a complete pass on Rollo4A authorizes a frozen six-roll confirmation. No selector quantile, score mode, stage-one view, or tie rule may be changed after reading Rollo4A metrics."
+    },
+    "novelty_boundary": {
+      "adjacent_work": [
+        "Dynamic Tiling (arXiv:2309.11069) starts from non-overlapping object-detection tiles and adapts overlap",
+        "HiAD (arXiv:2508.12931) assigns detectors from a pool under high-resolution compute constraints",
+        "TTA-AD (arXiv:2206.02345) uses augmentation consistency for image-level OOD detection"
+      ],
+      "candidate_difference": "The decision unit is an optional crop observation of an already registered physical parent coordinate. Source-normal calibrated first-stage evidence assigns value to a third crop-context observation, and a same-count uniform control isolates placement value from compute budget."
+    }
+  },
+  "run": {
+    "fold": "Rollo4A",
+    "smoke": false,
+    "repeats": 2,
+    "timing_order": [
+      "full",
+      "sequential",
+      "sequential",
+      "full"
+    ],
+    "data_root": "/root/autodl-tmp/Fabric_Defect_Detection/data/RAW_FABRID",
+    "device": "NVIDIA GeForce RTX 4090",
+    "torch": "2.5.1+cu124",
+    "batch_size": 8,
+    "workers": 2,
+    "checkpoint_sha256": "99B78F14CD6B6EAC49C476E8BC75214C060FE6EF5D7046C37385562C093F81F1",
+    "memory_vectors": 2621,
+    "memory_dimensions": 1536,
+    "script_sha256": "0EE890496B41943D137A99FE3C3E7BA883753F5789BC8E9ACF4DC76191A054D0",
+    "config_sha256": "033E40297519DF493B123796DBCD56E9CC6EF1AECB0D12CA9DFE01F1C56A04D7",
+    "formal_reference_sha256": "A61607D5F1845E7944E491CCAC74EEFC310E90C3B5818C04520D61D8216ACBFF"
+  },
+  "offline_source_normal_fitting": {
+    "parents": 106,
+    "crops": 7738,
+    "total_seconds": 41.32660576328635,
+    "detector_seconds": 36.3607187140733,
+    "coordinate_bins": 1024,
+    "samples_per_bin_minimum": 7738
+  },
+  "untimed_warmup": {
+    "parents": 170,
+    "crops": 4760,
+    "seconds": 22.232694432139397
+  },
+  "online_crop_budget": {
+    "parents": 170,
+    "full_crops_per_parent": 73,
+    "stage_one_crops_per_parent": 49,
+    "selected_optional_crops_total": 522,
+    "selected_optional_crops_per_parent_mean": 3.070588235294118,
+    "sequential_crops_per_parent_mean": 52.07058823529412,
+    "crop_reduction_vs_full": 0.28670427074939564
+  },
+  "online_timing_seconds": {
+    "full_repeats": [
+      {
+        "total_seconds": 58.06380494683981,
+        "detector_seconds": 57.08583361841738,
+        "selection_seconds": 0.0,
+        "fusion_and_scoring_seconds": 0.9775235578417778
+      },
+      {
+        "total_seconds": 59.19062730111182,
+        "detector_seconds": 57.47013618610799,
+        "selection_seconds": 0.0,
+        "fusion_and_scoring_seconds": 1.719803836196661
+      }
+    ],
+    "sequential_repeats": [
+      {
+        "total_seconds": 48.55187446810305,
+        "detector_seconds": 46.64542665705085,
+        "stage_one_detector_seconds": 38.71817263588309,
+        "optional_detector_seconds": 7.927254021167755,
+        "selection_seconds": 0.964371096342802,
+        "fusion_and_scoring_seconds": 0.9408570881932974
+      },
+      {
+        "total_seconds": 49.16856050863862,
+        "detector_seconds": 46.67783638648689,
+        "stage_one_detector_seconds": 38.92530220374465,
+        "optional_detector_seconds": 7.752534182742238,
+        "selection_seconds": 1.393870597705245,
+        "fusion_and_scoring_seconds": 1.0951693318784237
+      }
+    ],
+    "full_median": {
+      "total_seconds": 58.62721612397581,
+      "detector_seconds": 57.27798490226269,
+      "selection_seconds": 0.0,
+      "fusion_and_scoring_seconds": 1.3486636970192194
+    },
+    "sequential_median": {
+      "total_seconds": 48.860217488370836,
+      "detector_seconds": 46.66163152176887,
+      "stage_one_detector_seconds": 38.82173741981387,
+      "optional_detector_seconds": 7.839894101954997,
+      "selection_seconds": 1.1791208470240235,
+      "fusion_and_scoring_seconds": 1.0180132100358605
+    },
+    "end_to_end_speedup": 1.1998967490869152,
+    "end_to_end_latency_reduction": 0.16659495847374417
+  },
+  "compact_primary_metrics": {
+    "full_pcaf": {
+      "parent_average_precision": 0.9401812716158617,
+      "pixel_average_precision": 0.37556326566495807,
+      "source_parent_recall": 0.3974358974358974,
+      "target_normal_false_positives": 0,
+      "instance_auc_all": 0.7678120617110801,
+      "instance_auc_small": 0.6237212276214834,
+      "instance_auc_elongated": 0.6319875776397514,
+      "instance_recall_all": 0.27741935483870966,
+      "instance_recall_small": 0.16176470588235295,
+      "instance_recall_elongated": 0.07142857142857142
+    },
+    "sequential_pcaf": {
+      "parent_average_precision": 0.9396805727305853,
+      "pixel_average_precision": 0.37383772070268645,
+      "source_parent_recall": 0.3974358974358974,
+      "target_normal_false_positives": 0,
+      "instance_auc_all": 0.7710378681626928,
+      "instance_auc_small": 0.6246803069053709,
+      "instance_auc_elongated": 0.6475155279503105,
+      "instance_recall_all": 0.2903225806451613,
+      "instance_recall_small": 0.19117647058823528,
+      "instance_recall_elongated": 0.07142857142857142
+    }
+  },
+  "formal_result_max_absolute_compact_difference": 1.9108770374365314e-06,
+  "validation": {
+    "exact_formal_metric_replay": false,
+    "same_selected_count_as_formal": true
+  }
+}

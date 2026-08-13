@@ -1,0 +1,636 @@
+{
+  "schema_version": 1,
+  "purpose": "physical-location fixed-effect audit of crop-coordinate calibration",
+  "run": {
+    "fold": "Rollo5A",
+    "smoke": false,
+    "data_root": "/root/autodl-tmp/Fabric_Defect_Detection/data/RAW_FABRID",
+    "device": "NVIDIA GeForce RTX 4090",
+    "torch": "2.5.1+cu124",
+    "predict_seconds": 68.76788454316556,
+    "calibration_seconds": 23.377632580697536,
+    "evaluation_seconds": 5.320862615481019,
+    "total_seconds": 107.77049430832267,
+    "script_sha256": "8021128BD10CD07EDEDBF5D271C197B99FECA2845AC87B9635FEB1B9CA741CDB",
+    "config_sha256": "AFC6401B34F398121B35770F06F457FA82223941B6DE84D9052132B8857C201B",
+    "checkpoint_sha256": "5B24CFD899BF73AD5CD602496C08BE6A63B3CA634442EE3FA73CD2A3DD660314",
+    "memory_vectors": 2621,
+    "memory_dimensions": 1536
+  },
+  "counts": {
+    "training_normals": 365,
+    "calibration_normals": 124,
+    "evaluation_normals": 18,
+    "anomalies": 15,
+    "scored_parents": 157,
+    "crops_per_parent": 73,
+    "source_roll_calibration_parents": {
+      "Rollo1A": 17,
+      "Rollo2A": 14,
+      "Rollo3A": 4,
+      "Rollo4A": 23,
+      "Rollo6A": 24,
+      "Rollo7A": 42
+    }
+  },
+  "identifiability": {
+    "fit_normal_parents": 124,
+    "multi_observation_physical_locations": 3428352,
+    "centered_observations": 9142272,
+    "coordinate_bins": 1024,
+    "coordinate_graph_components": 64,
+    "component_size": 16,
+    "unidentifiable_component_constants": 64,
+    "rank_per_component": [
+      15,
+      15,
+      15,
+      15,
+      15,
+      15,
+      15,
+      15,
+      15,
+      15,
+      15,
+      15,
+      15,
+      15,
+      15,
+      15,
+      15,
+      15,
+      15,
+      15,
+      15,
+      15,
+      15,
+      15,
+      15,
+      15,
+      15,
+      15,
+      15,
+      15,
+      15,
+      15,
+      15,
+      15,
+      15,
+      15,
+      15,
+      15,
+      15,
+      15,
+      15,
+      15,
+      15,
+      15,
+      15,
+      15,
+      15,
+      15,
+      15,
+      15,
+      15,
+      15,
+      15,
+      15,
+      15,
+      15,
+      15,
+      15,
+      15,
+      15,
+      15,
+      15,
+      15,
+      15
+    ],
+    "expected_rank_per_component": 15,
+    "all_components_have_expected_rank": true,
+    "condition_number_identifiable_subspace_minimum": 2.444444444444444,
+    "condition_number_identifiable_subspace_median": 2.444444444444444,
+    "condition_number_identifiable_subspace_maximum": 2.444444444444444,
+    "gauge": "minimum-norm zero mean within each disconnected coordinate component",
+    "residual_scale_floor": 0.04147751707334991
+  },
+  "calibration": {
+    "pooled_replay_max_absolute_difference": 3.814697265625e-06,
+    "samples_per_coordinate_minimum": 9052,
+    "samples_per_coordinate_median": 9052.0,
+    "pooled_center_spatial_summary": {
+      "boundary_band_tokens": 4,
+      "boundary_mean": 21.4650996029377,
+      "boundary_median": 21.625638961791992,
+      "interior_mean": 21.484122431940502,
+      "interior_median": 21.375577926635742,
+      "boundary_minus_interior_mean": -0.01902282900280383,
+      "boundary_minus_interior_median": 0.25006103515625
+    },
+    "pooled_scale_spatial_summary": {
+      "boundary_band_tokens": 4,
+      "boundary_mean": 1.2174146712005138,
+      "boundary_median": 1.1899303802490233,
+      "interior_mean": 1.2198830696483454,
+      "interior_median": 1.2019204010009763,
+      "boundary_minus_interior_mean": -0.0024683984478315324,
+      "boundary_minus_interior_median": -0.01199002075195299
+    },
+    "fixed_effect_zero_gauge_spatial_summary": {
+      "boundary_band_tokens": 4,
+      "boundary_mean": 0.027091325083160762,
+      "boundary_median": 0.10513418248701889,
+      "interior_mean": -0.021071030620236172,
+      "interior_median": -0.055584525118616654,
+      "boundary_minus_interior_mean": 0.048162355703396935,
+      "boundary_minus_interior_median": 0.16071870760563556
+    },
+    "anchored_fixed_effect_spatial_summary": {
+      "boundary_band_tokens": 4,
+      "boundary_mean": 21.49597856897305,
+      "boundary_median": 21.66963176223301,
+      "interior_mean": 21.447816213269657,
+      "interior_median": 21.351203922945555,
+      "boundary_minus_interior_mean": 0.048162355703393445,
+      "boundary_minus_interior_median": 0.3184278392874553
+    },
+    "pooled_vs_anchored_pearson": 0.9914763893471772,
+    "pooled_vs_anchored_spearman": 0.9800093877405048,
+    "within_component_pooled_vs_fixed_pearson_minimum": 0.7854644182122716,
+    "within_component_pooled_vs_fixed_pearson_median": 0.9924113293844166,
+    "within_component_pooled_vs_fixed_pearson_maximum": 0.9995830830112713,
+    "overlap_pair_differences": {
+      "raw": {
+        "paired_differences": 7999488,
+        "signed_mean": 0.0025103059166940323,
+        "rmse": 1.4227587793303647,
+        "absolute_mean": 1.0159740473909844,
+        "absolute_median": 0.7242889404296875,
+        "absolute_q90": 2.32773265838623
+      },
+      "pooled_corrected": {
+        "paired_differences": 7999488,
+        "signed_mean": 0.0025103059166940323,
+        "rmse": 1.2764806960035755,
+        "absolute_mean": 0.9119458898971801,
+        "absolute_median": 0.65179443359375,
+        "absolute_q90": 2.082345962524414
+      },
+      "fixed_effect_corrected": {
+        "paired_differences": 7999488,
+        "signed_mean": 0.00251030591669401,
+        "rmse": 1.2719825351607075,
+        "absolute_mean": 0.9096088483832975,
+        "absolute_median": 0.6511254214038704,
+        "absolute_q90": 2.0755770911103775
+      }
+    },
+    "source_roll_stability": {
+      "pooled_centers": {
+        "rolls": [
+          "Rollo1A",
+          "Rollo2A",
+          "Rollo3A",
+          "Rollo4A",
+          "Rollo6A",
+          "Rollo7A"
+        ],
+        "pairs": {
+          "Rollo1A__Rollo2A": {
+            "pearson": 0.9718278554432728,
+            "spearman": 0.9656890543733967
+          },
+          "Rollo1A__Rollo3A": {
+            "pearson": 0.8867085743327934,
+            "spearman": 0.8801893610083253
+          },
+          "Rollo1A__Rollo4A": {
+            "pearson": 0.962824899844611,
+            "spearman": 0.9427996612266174
+          },
+          "Rollo1A__Rollo6A": {
+            "pearson": 0.5962981910909945,
+            "spearman": 0.5904080163212798
+          },
+          "Rollo1A__Rollo7A": {
+            "pearson": 0.6918605836068226,
+            "spearman": 0.6623177679258843
+          },
+          "Rollo2A__Rollo3A": {
+            "pearson": 0.9145675140944013,
+            "spearman": 0.906475107138916
+          },
+          "Rollo2A__Rollo4A": {
+            "pearson": 0.9483694733394608,
+            "spearman": 0.9341738922536661
+          },
+          "Rollo2A__Rollo6A": {
+            "pearson": 0.5628791320396359,
+            "spearman": 0.5590753091223002
+          },
+          "Rollo2A__Rollo7A": {
+            "pearson": 0.6657400299165882,
+            "spearman": 0.6242130296926773
+          },
+          "Rollo3A__Rollo4A": {
+            "pearson": 0.9007282515083386,
+            "spearman": 0.8967869725921953
+          },
+          "Rollo3A__Rollo6A": {
+            "pearson": 0.6592099435550869,
+            "spearman": 0.6701434536156211
+          },
+          "Rollo3A__Rollo7A": {
+            "pearson": 0.7264745362329516,
+            "spearman": 0.7237277488198268
+          },
+          "Rollo4A__Rollo6A": {
+            "pearson": 0.6889967113833343,
+            "spearman": 0.6525135655784724
+          },
+          "Rollo4A__Rollo7A": {
+            "pearson": 0.7888942438238538,
+            "spearman": 0.7479111872134011
+          },
+          "Rollo6A__Rollo7A": {
+            "pearson": 0.857120347147342,
+            "spearman": 0.8187094874293683
+          }
+        },
+        "pair_count": 15,
+        "pearson_minimum": 0.5628791320396359,
+        "pearson_median": 0.7888942438238538,
+        "pearson_maximum": 0.9718278554432728,
+        "spearman_minimum": 0.5590753091223002,
+        "spearman_median": 0.7479111872134011,
+        "spearman_maximum": 0.9656890543733967
+      },
+      "fixed_effect_zero_gauge": {
+        "rolls": [
+          "Rollo1A",
+          "Rollo2A",
+          "Rollo3A",
+          "Rollo4A",
+          "Rollo6A",
+          "Rollo7A"
+        ],
+        "pairs": {
+          "Rollo1A__Rollo2A": {
+            "pearson": 0.9707130016251065,
+            "spearman": 0.9688126743437521
+          },
+          "Rollo1A__Rollo3A": {
+            "pearson": 0.8683580500541515,
+            "spearman": 0.8725926704098418
+          },
+          "Rollo1A__Rollo4A": {
+            "pearson": 0.956789938585986,
+            "spearman": 0.9562738828588797
+          },
+          "Rollo1A__Rollo6A": {
+            "pearson": 0.5352935775670848,
+            "spearman": 0.5549079442636434
+          },
+          "Rollo1A__Rollo7A": {
+            "pearson": 0.6185420750113215,
+            "spearman": 0.6137256142264501
+          },
+          "Rollo2A__Rollo3A": {
+            "pearson": 0.8994388560719352,
+            "spearman": 0.9093581914741433
+          },
+          "Rollo2A__Rollo4A": {
+            "pearson": 0.9485546328246756,
+            "spearman": 0.9485624575316499
+          },
+          "Rollo2A__Rollo6A": {
+            "pearson": 0.520299194902786,
+            "spearman": 0.5447484197303483
+          },
+          "Rollo2A__Rollo7A": {
+            "pearson": 0.6055083238411854,
+            "spearman": 0.5998362286317144
+          },
+          "Rollo3A__Rollo4A": {
+            "pearson": 0.8713888013397684,
+            "spearman": 0.8785752762677919
+          },
+          "Rollo3A__Rollo6A": {
+            "pearson": 0.6241896377933489,
+            "spearman": 0.648201320095129
+          },
+          "Rollo3A__Rollo7A": {
+            "pearson": 0.6673059870639816,
+            "spearman": 0.6647301359881266
+          },
+          "Rollo4A__Rollo6A": {
+            "pearson": 0.6571275124149124,
+            "spearman": 0.6610259123989699
+          },
+          "Rollo4A__Rollo7A": {
+            "pearson": 0.74620645692865,
+            "spearman": 0.7343043684285815
+          },
+          "Rollo6A__Rollo7A": {
+            "pearson": 0.8508990980775611,
+            "spearman": 0.8709791525105499
+          }
+        },
+        "pair_count": 15,
+        "pearson_minimum": 0.520299194902786,
+        "pearson_median": 0.74620645692865,
+        "pearson_maximum": 0.9707130016251065,
+        "spearman_minimum": 0.5447484197303483,
+        "spearman_median": 0.7343043684285815,
+        "spearman_maximum": 0.9688126743437521
+      },
+      "fixed_effect_anchored": {
+        "rolls": [
+          "Rollo1A",
+          "Rollo2A",
+          "Rollo3A",
+          "Rollo4A",
+          "Rollo6A",
+          "Rollo7A"
+        ],
+        "pairs": {
+          "Rollo1A__Rollo2A": {
+            "pearson": 0.9749945734123094,
+            "spearman": 0.9733891307846362
+          },
+          "Rollo1A__Rollo3A": {
+            "pearson": 0.8856161905718525,
+            "spearman": 0.8896527988877762
+          },
+          "Rollo1A__Rollo4A": {
+            "pearson": 0.9634414276431178,
+            "spearman": 0.9536831235247835
+          },
+          "Rollo1A__Rollo6A": {
+            "pearson": 0.6070218162567993,
+            "spearman": 0.6169050184178527
+          },
+          "Rollo1A__Rollo7A": {
+            "pearson": 0.6778204116254447,
+            "spearman": 0.6396436681925469
+          },
+          "Rollo2A__Rollo3A": {
+            "pearson": 0.9144429431910516,
+            "spearman": 0.9177145657499463
+          },
+          "Rollo2A__Rollo4A": {
+            "pearson": 0.9584053170487824,
+            "spearman": 0.9494977447071024
+          },
+          "Rollo2A__Rollo6A": {
+            "pearson": 0.5984983415278969,
+            "spearman": 0.6066212069058007
+          },
+          "Rollo2A__Rollo7A": {
+            "pearson": 0.6712773163542721,
+            "spearman": 0.6197548235104784
+          },
+          "Rollo3A__Rollo4A": {
+            "pearson": 0.8923526660820478,
+            "spearman": 0.8958769155460982
+          },
+          "Rollo3A__Rollo6A": {
+            "pearson": 0.6859186409106545,
+            "spearman": 0.7233453101530648
+          },
+          "Rollo3A__Rollo7A": {
+            "pearson": 0.7242269414288272,
+            "spearman": 0.7050747889993562
+          },
+          "Rollo4A__Rollo6A": {
+            "pearson": 0.7060666479022475,
+            "spearman": 0.6826910963986839
+          },
+          "Rollo4A__Rollo7A": {
+            "pearson": 0.7852538610706444,
+            "spearman": 0.7277777877118946
+          },
+          "Rollo6A__Rollo7A": {
+            "pearson": 0.8701705379662455,
+            "spearman": 0.8610609599635218
+          }
+        },
+        "pair_count": 15,
+        "pearson_minimum": 0.5984983415278969,
+        "pearson_median": 0.7852538610706444,
+        "pearson_maximum": 0.9749945734123094,
+        "spearman_minimum": 0.6066212069058007,
+        "spearman_median": 0.7277777877118946,
+        "spearman_maximum": 0.9733891307846362
+      }
+    },
+    "frozen_pooled_calibration": {
+      "fit_normal_parents": 124,
+      "coordinate_calibration_seconds": 0.7004761062562466,
+      "field_recovery_seconds": 0.848261097446084,
+      "field_recovery_milliseconds_per_parent": 5.402936926408178,
+      "relative_coordinate_bins": 1024,
+      "samples_per_relative_bin_minimum": 9052,
+      "samples_per_relative_bin_median": 9052.0,
+      "robust_scale_minimum": 0.9940575361251831,
+      "robust_scale_median": 1.1982667446136475,
+      "coverage_pattern_cell_counts": {},
+      "score": "pattern-conditional empirical upper-tail of one-sided robust residual energy",
+      "physical_field_estimator": "inverse-robust-variance weighted mean after crop-relative median bias removal",
+      "ablation_estimators": {
+        "context_bias_equal_mean": "equal mean after crop-relative median bias removal",
+        "context_scale_weighted_mean": "inverse-robust-variance weighted raw response without bias removal"
+      },
+      "uses_defect_labels": false
+    }
+  },
+  "compact_primary_metrics": {
+    "mean": {
+      "parent_average_precision": 0.9268402893402894,
+      "pixel_average_precision": 0.44138220169825226,
+      "source_parent_recall": 0.13333333333333333,
+      "target_normal_false_positives": 0,
+      "instance_auc_all": 0.8289473684210523,
+      "instance_auc_small": 0.7373737373737373,
+      "instance_auc_elongated": 0.8055555555555556,
+      "instance_recall_all": 0.02631578947368421,
+      "instance_recall_small": 0.0,
+      "instance_recall_elongated": 0.0
+    },
+    "context_bias_equal_mean": {
+      "parent_average_precision": 0.913506956006956,
+      "pixel_average_precision": 0.44363651568599227,
+      "source_parent_recall": 0.2,
+      "target_normal_false_positives": 0,
+      "instance_auc_all": 0.8274853801169587,
+      "instance_auc_small": 0.7323232323232323,
+      "instance_auc_elongated": 0.8055555555555556,
+      "instance_recall_all": 0.02631578947368421,
+      "instance_recall_small": 0.0,
+      "instance_recall_elongated": 0.0
+    },
+    "context_bias_weighted_mean": {
+      "parent_average_precision": 0.913506956006956,
+      "pixel_average_precision": 0.44484754542154503,
+      "source_parent_recall": 0.2,
+      "target_normal_false_positives": 0,
+      "instance_auc_all": 0.8274853801169588,
+      "instance_auc_small": 0.7323232323232323,
+      "instance_auc_elongated": 0.8055555555555556,
+      "instance_recall_all": 0.05263157894736842,
+      "instance_recall_small": 0.0,
+      "instance_recall_elongated": 0.0
+    },
+    "fixed_effect_equal_mean": {
+      "parent_average_precision": 0.913506956006956,
+      "pixel_average_precision": 0.44401441401174924,
+      "source_parent_recall": 0.2,
+      "target_normal_false_positives": 0,
+      "instance_auc_all": 0.8260233918128652,
+      "instance_auc_small": 0.7323232323232323,
+      "instance_auc_elongated": 0.8055555555555556,
+      "instance_recall_all": 0.02631578947368421,
+      "instance_recall_small": 0.0,
+      "instance_recall_elongated": 0.0
+    },
+    "fixed_effect_weighted_mean": {
+      "parent_average_precision": 0.913506956006956,
+      "pixel_average_precision": 0.4454081656462589,
+      "source_parent_recall": 0.2,
+      "target_normal_false_positives": 0,
+      "instance_auc_all": 0.8274853801169588,
+      "instance_auc_small": 0.7323232323232323,
+      "instance_auc_elongated": 0.8055555555555556,
+      "instance_recall_all": 0.07894736842105263,
+      "instance_recall_small": 0.0,
+      "instance_recall_elongated": 0.5
+    },
+    "fixed_effect_zero_gauge_equal_mean": {
+      "parent_average_precision": 0.913506956006956,
+      "pixel_average_precision": 0.4450264310878448,
+      "source_parent_recall": 0.2,
+      "target_normal_false_positives": 0,
+      "instance_auc_all": 0.8304093567251459,
+      "instance_auc_small": 0.7424242424242423,
+      "instance_auc_elongated": 0.8055555555555556,
+      "instance_recall_all": 0.02631578947368421,
+      "instance_recall_small": 0.0,
+      "instance_recall_elongated": 0.0
+    },
+    "fixed_effect_residual_weighted_mean": {
+      "parent_average_precision": 0.913506956006956,
+      "pixel_average_precision": 0.4479834120772085,
+      "source_parent_recall": 0.2,
+      "target_normal_false_positives": 0,
+      "instance_auc_all": 0.8289473684210523,
+      "instance_auc_small": 0.7323232323232323,
+      "instance_auc_elongated": 0.8055555555555556,
+      "instance_recall_all": 0.02631578947368421,
+      "instance_recall_small": 0.0,
+      "instance_recall_elongated": 0.0
+    }
+  },
+  "source_calibrated_operating_points": {
+    "mean": {
+      "image_threshold": 29.423198699951172,
+      "pixel_threshold": 35.03765869140625,
+      "target_normal_fpr": 0.0,
+      "target_normal_false_positives": 0,
+      "defect_parent_recall": 0.13333333333333333
+    },
+    "context_bias_equal_mean": {
+      "image_threshold": 31.498258590698242,
+      "pixel_threshold": 37.652748107910156,
+      "target_normal_fpr": 0.0,
+      "target_normal_false_positives": 0,
+      "defect_parent_recall": 0.2
+    },
+    "context_bias_weighted_mean": {
+      "image_threshold": 31.367664337158203,
+      "pixel_threshold": 37.49449920654297,
+      "target_normal_fpr": 0.0,
+      "target_normal_false_positives": 0,
+      "defect_parent_recall": 0.2
+    },
+    "fixed_effect_equal_mean": {
+      "image_threshold": 31.41656494140625,
+      "pixel_threshold": 37.592533111572266,
+      "target_normal_fpr": 0.0,
+      "target_normal_false_positives": 0,
+      "defect_parent_recall": 0.2
+    },
+    "fixed_effect_weighted_mean": {
+      "image_threshold": 31.16653823852539,
+      "pixel_threshold": 37.29002380371094,
+      "target_normal_fpr": 0.0,
+      "target_normal_false_positives": 0,
+      "defect_parent_recall": 0.2
+    },
+    "fixed_effect_zero_gauge_equal_mean": {
+      "image_threshold": 30.410871505737305,
+      "pixel_threshold": 36.50843048095703,
+      "target_normal_fpr": 0.0,
+      "target_normal_false_positives": 0,
+      "defect_parent_recall": 0.2
+    },
+    "fixed_effect_residual_weighted_mean": {
+      "image_threshold": 31.379104614257812,
+      "pixel_threshold": 37.54758834838867,
+      "target_normal_fpr": 0.0,
+      "target_normal_false_positives": 0,
+      "defect_parent_recall": 0.2
+    }
+  },
+  "paired_fixed_effect_minus_mean": {
+    "fixed_effect_equal_mean": {
+      "parent_average_precision": -0.01333333333333342,
+      "pixel_average_precision": 0.0026322123134969733,
+      "source_parent_recall": 0.06666666666666668,
+      "target_normal_false_positives": 0.0,
+      "instance_auc_all": -0.0029239766081871066,
+      "instance_auc_small": -0.005050505050505083,
+      "instance_auc_elongated": 0.0,
+      "instance_recall_all": 0.0,
+      "instance_recall_small": 0.0,
+      "instance_recall_elongated": 0.0
+    },
+    "fixed_effect_weighted_mean": {
+      "parent_average_precision": -0.01333333333333342,
+      "pixel_average_precision": 0.004025963948006639,
+      "source_parent_recall": 0.06666666666666668,
+      "target_normal_false_positives": 0.0,
+      "instance_auc_all": -0.0014619883040934978,
+      "instance_auc_small": -0.005050505050505083,
+      "instance_auc_elongated": 0.0,
+      "instance_recall_all": 0.05263157894736842,
+      "instance_recall_small": 0.0,
+      "instance_recall_elongated": 0.5
+    },
+    "fixed_effect_zero_gauge_equal_mean": {
+      "parent_average_precision": -0.01333333333333342,
+      "pixel_average_precision": 0.0036442293895925237,
+      "source_parent_recall": 0.06666666666666668,
+      "target_normal_false_positives": 0.0,
+      "instance_auc_all": 0.0014619883040936088,
+      "instance_auc_small": 0.005050505050504972,
+      "instance_auc_elongated": 0.0,
+      "instance_recall_all": 0.0,
+      "instance_recall_small": 0.0,
+      "instance_recall_elongated": 0.0
+    },
+    "fixed_effect_residual_weighted_mean": {
+      "parent_average_precision": -0.01333333333333342,
+      "pixel_average_precision": 0.006601210378956224,
+      "source_parent_recall": 0.06666666666666668,
+      "target_normal_false_positives": 0.0,
+      "instance_auc_all": 0.0,
+      "instance_auc_small": -0.005050505050505083,
+      "instance_auc_elongated": 0.0,
+      "instance_recall_all": 0.0,
+      "instance_recall_small": 0.0,
+      "instance_recall_elongated": 0.0
+    }
+  },
+  "interpretation_guard": "The paired fixed effect removes physical-location content only within the identifiable crop-coordinate graph. One constant per disconnected component is not identifiable from the frozen scan and is anchored by pooled source-normal centers."
+}

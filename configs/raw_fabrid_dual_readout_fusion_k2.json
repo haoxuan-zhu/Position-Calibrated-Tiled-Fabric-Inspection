@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "seed": 20260813,
+  "base_config": "configs/raw_fabrid_anomalib_patchcore_k0.json",
+  "parent_geometric_audit_config": "configs/raw_fabrid_geometric_fusion_baselines_k0.json",
+  "parent_geometry_calibration_config": "configs/raw_fabrid_geometry_calibrated_fusion_k1.json",
+  "reference_result_pattern": "runs/raw_fabrid_context_bias_field_k3/final_reproduction/{fold}.json",
+  "checkpoint_pattern": "runs/raw_fabrid_patchcore_k0/instance_audit/lightning_{fold}/Patchcore/v0/weights/lightning/model.ckpt",
+  "crop_observations": {
+    "physical_crop_edge": 256,
+    "phase_shift_pixels": 64,
+    "output_stride_pixels": 8,
+    "views": [
+      "base_grid",
+      "x_shifted_grid",
+      "y_shifted_grid"
+    ],
+    "crops_per_parent": 73
+  },
+  "candidate": {
+    "name": "dual_gaussian_bias_localization_pcaf_alarm",
+    "localization_readout": "gaussian_bias_equal_mean",
+    "alarm_readout": "context_bias_weighted_mean",
+    "localization_equation": "L(p)=sum_v g(r_v(p))*(s_v(p)-b(r_v(p)))/sum_v g(r_v(p)); g is the fixed nnU-Net Gaussian with sigma_scale=1/8 and b is the source-normal crop-coordinate median",
+    "alarm_equation": "A(I)=top_fraction_mean(score_modes(PCAF(I))); the parent threshold is fitted from source-normal parents exactly as in frozen PCAF",
+    "logic": "Localization and parent alarming are distinct estimands. The localization map is never reused to redefine the parent alarm, and the PCAF alarm is never used to alter pixel ranks.",
+    "runtime": "Both readouts reuse the same 73 frozen detector crop maps; the candidate adds no crop scoring, training, or GPU model."
+  },
+  "development_record": {
+    "fold": "Rollo4A",
+    "status": "development evidence known before this K2 preregistration",
+    "known_localization_variant": "gaussian_bias_equal_mean",
+    "minimum_reproduction_pixel_ap_gain_over_best_of_gaussian_hann_pcaf": 0.001,
+    "maximum_reproduction_instance_auc_loss_from_best_of_gaussian_hann_pcaf": 0.005,
+    "require_exact_pcaf_parent_readout": true,
+    "interpretation": "Rollo4A may verify implementation identity but is not independent confirmation and must not select another window, score mode, blend, or alarm readout."
+  },
+  "confirmation": {
+    "folds": [
+      "Rollo1A",
+      "Rollo2A",
+      "Rollo3A",
+      "Rollo5A",
+      "Rollo6A",
+      "Rollo7A"
+    ],
+    "primary_score_mode": "robust_z",
+    "minimum_macro_pixel_ap_gain_over_strongest_reference": 0.001,
+    "maximum_macro_instance_auc_loss_from_strongest_reference": 0.002,
+    "minimum_fold_wins_against_each_fold_best_reference": 4,
+    "require_exact_pcaf_parent_readout": true,
+    "references": [
+      "gaussian",
+      "hann",
+      "context_bias_weighted_mean"
+    ],
+    "support_condition": "On the six untouched confirmation rolls, the fixed dual readout must exceed the strongest reference macro Pixel AP by at least 0.001, remain within 0.002 all-instance AUC of the strongest reference, beat the best reference on at least four rolls, and reproduce every PCAF parent score and operating-point metric exactly. All six rolls are reported.",
+    "strong_pareto_condition": "In addition to exact PCAF parent alarming, confirmation macro Pixel AP and all-instance AUC must both exceed the corresponding strongest reference values."
+  },
+  "prohibited_after_results": [
+    "changing Gaussian to Hann or another window",
+    "blending localization maps",
+    "selecting a score mode other than robust_z",
+    "using a localization-derived parent alarm",
+    "tuning thresholds on target-normal or defective parents",
+    "dropping a confirmation roll"
+  ],
+  "provenance": {
+    "created_before_confirmation_metrics": "2026-08-13",
+    "development_disclosure": "Gaussian plus coordinate-bias localization was observed on Rollo4A in K1 before K2 was defined; the other six rolls have not been evaluated for this localization readout.",
+    "prior_covariance_boundary": "Exact-signature correlated PCAF and its nonnegative GLS variant were already tested on Rollo4A. Their normalized weights are invariant to an additive common covariance c*11^T, but both reduced Pixel AP and failed frozen stability/performance gates. K2 does not tune or rescue those closed covariance estimators; it tests the distinct hypothesis that localization and parent alarming require separate readouts."
+  }
+}

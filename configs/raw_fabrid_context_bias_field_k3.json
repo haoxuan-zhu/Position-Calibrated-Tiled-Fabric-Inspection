@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "seed": 20260730,
+  "fold": "Rollo4A",
+  "base_configs": {
+    "patchcore": "configs/raw_fabrid_anomalib_patchcore_k0.json",
+    "anomalydino": "configs/raw_fabrid_anomalydino_k0.json"
+  },
+  "crop_observations": {
+    "physical_crop_edge": 256,
+    "phase_shift_pixels": 64,
+    "output_stride_pixels": 8,
+    "views": [
+      "base_grid",
+      "x_shifted_grid",
+      "y_shifted_grid"
+    ],
+    "selection": "label_independent_full_parent_geometry",
+    "processed_pixel_ratio_to_single_grid": 2.607142857142857
+  },
+  "models": {
+    "patchcore": {
+      "checkpoint": "runs/raw_fabrid_patchcore_k0/instance_audit/lightning_Rollo4A/Patchcore/v0/weights/lightning/model.ckpt"
+    },
+    "anomalydino": {
+      "model_edge_size": 252,
+      "reference_tile_budget": 16
+    }
+  },
+  "fusion_controls": [
+    "single_base",
+    "mean",
+    "maximum",
+    "context_bias_weighted_mean"
+  ],
+  "primary_score_mode": "robust_z",
+  "evidence_gate": {
+    "fixed_candidate_fusion": "context_bias_weighted_mean",
+    "required_simple_fusion": "mean",
+    "minimum_pixel_ap_gain_over_simple": 0.005,
+    "minimum_instance_auc_gain_over_simple": 0.01,
+    "maximum_parent_recall_loss": 0.03,
+    "maximum_small_instance_auc_loss": 0.03,
+    "maximum_elongated_instance_auc_loss": 0.03,
+    "material_pixel_ap_gain": 0.02,
+    "material_instance_auc_gain": 0.03,
+    "required_model_families": 2,
+    "interpretation": "K3 replaces K2's tail-only statistic with the identifiable common component of s(v,p)=a(p)+b(r)+epsilon. Source normal crops estimate b(r) and robust noise scale; inverse-variance aggregation estimates the shared physical field a(p). The fixed estimator must beat ordinary mean before independent-roll confirmation."
+  },
+  "novelty_boundary": {
+    "adjacent_peers": [
+      "CAPS shift equivalence",
+      "TTA-AD image-level OOD consistency",
+      "SPACE spatial consistency regularization",
+      "overlap/tiled anomaly-map fusion"
+    ],
+    "method_requirement": "The estimator must improve over unweighted overlap mean under identical observations by explicitly removing learned crop-coordinate bias and weighting observation noise without defect supervision."
+  }
+}

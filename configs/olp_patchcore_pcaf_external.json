@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "seed": 20260730,
+  "data": {
+    "root": "/root/autodl-tmp/Fabric_Defect_Detection/data/OLP/subset",
+    "metadata_root": "/root/autodl-tmp/Fabric_Defect_Detection/data/OLP/metadata",
+    "audit": "/root/autodl-tmp/Fabric_Defect_Detection/data/OLP/scene_grouped_audit.json",
+    "illumination": "front_light_rgb_only",
+    "original_height": 2050,
+    "original_width": 2448,
+    "padded_height": 2304,
+    "padded_width": 2560,
+    "padding": "bottom_and_right_reflect_then_score_original_geometry_only",
+    "license": "CC-BY-NC-SA-4.0_as_packaged_in_downloaded_archive"
+  },
+  "eligibility": {
+    "minimum_acquisition_scenes": 3,
+    "minimum_normals_per_source_scene": 8,
+    "minimum_evaluation_anomalies": 1,
+    "selection": "metadata_only_before_detector_outputs"
+  },
+  "split": {
+    "scene_assignment": "sha256(seed:textile_id:scene)_ascending; first=train, second=calibration, all_remaining=evaluation",
+    "normal_train_per_scene": 8,
+    "normal_calibration_per_scene": 8,
+    "normal_evaluation_per_scene": 8,
+    "normal_assignment": "sha256(seed:textile_id:role:relative_path)_ascending",
+    "anomalies": "all_anomalous_parents_in_evaluation_scenes_only"
+  },
+  "tiling": {
+    "crop_edge": 256,
+    "phase_shift_pixels": 64,
+    "output_stride_pixels": 8,
+    "views": ["base_grid", "x_shifted_grid", "y_shifted_grid"],
+    "selection": "label_independent_full_padded_parent_geometry",
+    "train_crops": "all_base_grid_crops_from_selected_training_normal_parents"
+  },
+  "model": {
+    "implementation": "anomalib_2.5.1_Patchcore",
+    "backbone": "wide_resnet50_2",
+    "layers": ["layer2", "layer3"],
+    "pre_trained": true,
+    "coreset_sampling_ratio": 0.005,
+    "num_neighbors": 9,
+    "precision": "float32",
+    "train_batch_size": 8,
+    "predict_batch_size": 16,
+    "num_workers": 2
+  },
+  "fusion": [
+    "single_base",
+    "mean",
+    "context_bias_equal_mean",
+    "context_bias_weighted_mean"
+  ],
+  "score": {
+    "mode": "parent_wise_robust_z",
+    "local_mean_kernel_tokens": 3,
+    "parent_top_fraction": 0.001,
+    "calibration_normal_fpr": 0.01,
+    "mask_reduction": "any_positive_within_8x8_cell"
+  },
+  "primary_endpoint": "textile_macro_pixel_average_precision_pcaf_minus_matched_mean",
+  "decision_rule_frozen_before_outputs": {
+    "external_success": "macro_delta_gt_0 AND textile_bootstrap_95pct_lower_gt_0 AND wins_ge_10_of_15 AND worst_delta_ge_minus_0.05",
+    "supporting_only": "macro_delta_gt_0 AND wins_ge_8_of_15 but full external_success rule not met",
+    "failure": "macro_delta_le_0 OR wins_lt_8_of_15",
+    "dataset_selection_reason": "two_dimensionally_identifiable_crop_geometry_plus_patterned_fabrics_pixel_masks_and_scene_groups"
+  },
+  "claim_boundary": "External scene-grouped patterned-fabric validation on OLP front-light images; no roll or temporal claim. Eligibility and split are fixed from metadata before detector outputs."
+}

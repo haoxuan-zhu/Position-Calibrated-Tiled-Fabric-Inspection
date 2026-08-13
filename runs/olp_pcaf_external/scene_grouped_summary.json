@@ -1,0 +1,2010 @@
+{
+  "schema_version": 1,
+  "purpose": "OLP scene-grouped patterned-fabric external validation",
+  "claim_boundary": "External scene-grouped patterned-fabric validation on OLP front-light images; no roll or temporal claim. Eligibility and split are fixed from metadata before detector outputs.",
+  "textiles": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    14,
+    16,
+    18,
+    21,
+    23,
+    24,
+    31,
+    38
+  ],
+  "independent_summary_unit": "textile",
+  "protocol_totals": {
+    "training_normals": 120,
+    "calibration_normals": 120,
+    "evaluation_normals": 280,
+    "evaluation_anomalies": 172,
+    "evaluation_annotations": 362
+  },
+  "bootstrap": {
+    "seed": 20260730,
+    "samples": 10000,
+    "unit": "textile"
+  },
+  "frozen_decision_rule": {
+    "external_success": "macro_delta_gt_0 AND textile_bootstrap_95pct_lower_gt_0 AND wins_ge_10_of_15 AND worst_delta_ge_minus_0.05",
+    "supporting_only": "macro_delta_gt_0 AND wins_ge_8_of_15 but full external_success rule not met",
+    "failure": "macro_delta_le_0 OR wins_lt_8_of_15",
+    "dataset_selection_reason": "two_dimensionally_identifiable_crop_geometry_plus_patterned_fabrics_pixel_masks_and_scene_groups"
+  },
+  "decision": "supporting_only",
+  "per_textile": {
+    "1": {
+      "counts": {
+        "training_normals": 8,
+        "calibration_normals": 8,
+        "evaluation_normals": 32,
+        "anomalies": 8
+      },
+      "split_scenes": {
+        "training_normals": [
+          "1"
+        ],
+        "calibration_normals": [
+          "3"
+        ],
+        "evaluation_normals": [
+          "2",
+          "4",
+          "5",
+          "6"
+        ],
+        "anomalies": [
+          "2",
+          "4",
+          "5",
+          "6"
+        ]
+      },
+      "crop_budget": {
+        "training_base_crops": 720,
+        "scored_parents": 48,
+        "scored_crops": 12048,
+        "base_crops_per_parent": 90,
+        "matched_views_crops_per_parent": 251.0,
+        "processed_pixel_ratio_to_single_grid": 2.7888888888888888
+      },
+      "run": {
+        "textile_id": 1,
+        "smoke": false,
+        "device": "NVIDIA GeForce RTX 4090",
+        "torch": "2.5.1+cu124",
+        "train_seconds": 15.996440943330526,
+        "predict_seconds": 60.21007253602147,
+        "fusion_and_evaluation_seconds": 11.874885313212872,
+        "checkpoint": "/root/autodl-tmp/Fabric_Defect_Detection/runs/olp_pcaf_external/full/checkpoints/textile_01.ckpt",
+        "checkpoint_sha256": "FA238143B3AF362E3BBD70AEE0F6B890FAA5E64177B2CAF7EBC616E75F58E038",
+        "script_sha256": "99BF9C7B14CB6429A23AB1C29E558492DFD044323CF9972A1C0982DA8BE85AA1",
+        "config_sha256": "7F740A2C2A3F68725EBFC131CA6E31DAAD01BD958D109467E3D6C3252F93B12F",
+        "audit_sha256": "57756510F1BE53E3D45540E1E3847CFD72458A9F690D24D244017008AB7E9F22"
+      },
+      "metrics": {
+        "single_base": {
+          "pixel_average_precision": 0.3748222024685618,
+          "pixel_roc_auc": 0.8918395646664825,
+          "parent_average_precision": 0.779738031576267,
+          "parent_roc_auc": 0.92578125,
+          "source_calibrated_threshold": 9.263716697692871,
+          "evaluation_normal_false_positives": 0,
+          "evaluation_normal_fpr": 0.0,
+          "defect_parent_recall": 0.375,
+          "pixel_positive_cells": 9781,
+          "pixel_evaluated_cells": 3145680
+        },
+        "mean": {
+          "pixel_average_precision": 0.4227700176632822,
+          "pixel_roc_auc": 0.9220211040678066,
+          "parent_average_precision": 0.8184523809523809,
+          "parent_roc_auc": 0.94921875,
+          "source_calibrated_threshold": 10.5169095993042,
+          "evaluation_normal_false_positives": 0,
+          "evaluation_normal_fpr": 0.0,
+          "defect_parent_recall": 0.375,
+          "pixel_positive_cells": 9781,
+          "pixel_evaluated_cells": 3145680
+        },
+        "context_bias_equal_mean": {
+          "pixel_average_precision": 0.43785719435486953,
+          "pixel_roc_auc": 0.9345741547788989,
+          "parent_average_precision": 0.8123397435897436,
+          "parent_roc_auc": 0.94140625,
+          "source_calibrated_threshold": 12.29645824432373,
+          "evaluation_normal_false_positives": 0,
+          "evaluation_normal_fpr": 0.0,
+          "defect_parent_recall": 0.375,
+          "pixel_positive_cells": 9781,
+          "pixel_evaluated_cells": 3145680
+        },
+        "context_bias_weighted_mean": {
+          "pixel_average_precision": 0.44223914093404487,
+          "pixel_roc_auc": 0.9362394785467655,
+          "parent_average_precision": 0.8253787878787877,
+          "parent_roc_auc": 0.94921875,
+          "source_calibrated_threshold": 12.498208045959473,
+          "evaluation_normal_false_positives": 0,
+          "evaluation_normal_fpr": 0.0,
+          "defect_parent_recall": 0.375,
+          "pixel_positive_cells": 9781,
+          "pixel_evaluated_cells": 3145680
+        }
+      },
+      "pcaf_minus_mean": {
+        "pixel_average_precision": 0.019469123270762667,
+        "pixel_roc_auc": 0.014218374478958906,
+        "parent_average_precision": 0.006926406926406781,
+        "parent_roc_auc": 0.0,
+        "evaluation_normal_false_positives": 0.0,
+        "evaluation_normal_fpr": 0.0,
+        "defect_parent_recall": 0.0
+      }
+    },
+    "2": {
+      "counts": {
+        "training_normals": 8,
+        "calibration_normals": 8,
+        "evaluation_normals": 8,
+        "anomalies": 1
+      },
+      "split_scenes": {
+        "training_normals": [
+          "1"
+        ],
+        "calibration_normals": [
+          "2"
+        ],
+        "evaluation_normals": [
+          "3"
+        ],
+        "anomalies": [
+          "3"
+        ]
+      },
+      "crop_budget": {
+        "training_base_crops": 720,
+        "scored_parents": 17,
+        "scored_crops": 4267,
+        "base_crops_per_parent": 90,
+        "matched_views_crops_per_parent": 251.0,
+        "processed_pixel_ratio_to_single_grid": 2.7888888888888888
+      },
+      "run": {
+        "textile_id": 2,
+        "smoke": false,
+        "device": "NVIDIA GeForce RTX 4090",
+        "torch": "2.5.1+cu124",
+        "train_seconds": 16.051876155659556,
+        "predict_seconds": 21.742489045485854,
+        "fusion_and_evaluation_seconds": 3.3999074399471283,
+        "checkpoint": "/root/autodl-tmp/Fabric_Defect_Detection/runs/olp_pcaf_external/full/checkpoints/textile_02.ckpt",
+        "checkpoint_sha256": "F3F034C9FFEF7FC081B65C76DA3FBDAD32A7DD0358AC7AEAF983C27A30EB79C4",
+        "script_sha256": "99BF9C7B14CB6429A23AB1C29E558492DFD044323CF9972A1C0982DA8BE85AA1",
+        "config_sha256": "7F740A2C2A3F68725EBFC131CA6E31DAAD01BD958D109467E3D6C3252F93B12F",
+        "audit_sha256": "57756510F1BE53E3D45540E1E3847CFD72458A9F690D24D244017008AB7E9F22"
+      },
+      "metrics": {
+        "single_base": {
+          "pixel_average_precision": 0.043501416502367385,
+          "pixel_roc_auc": 0.8300925020562907,
+          "parent_average_precision": 0.3333333333333333,
+          "parent_roc_auc": 0.75,
+          "source_calibrated_threshold": 10.071755409240723,
+          "evaluation_normal_false_positives": 0,
+          "evaluation_normal_fpr": 0.0,
+          "defect_parent_recall": 0.0,
+          "pixel_positive_cells": 984,
+          "pixel_evaluated_cells": 707778
+        },
+        "mean": {
+          "pixel_average_precision": 0.05310615896883187,
+          "pixel_roc_auc": 0.9011229900969753,
+          "parent_average_precision": 0.25,
+          "parent_roc_auc": 0.625,
+          "source_calibrated_threshold": 11.58370590209961,
+          "evaluation_normal_false_positives": 0,
+          "evaluation_normal_fpr": 0.0,
+          "defect_parent_recall": 0.0,
+          "pixel_positive_cells": 984,
+          "pixel_evaluated_cells": 707778
+        },
+        "context_bias_equal_mean": {
+          "pixel_average_precision": 0.0534879646847902,
+          "pixel_roc_auc": 0.926468460520839,
+          "parent_average_precision": 0.25,
+          "parent_roc_auc": 0.625,
+          "source_calibrated_threshold": 13.07530689239502,
+          "evaluation_normal_false_positives": 0,
+          "evaluation_normal_fpr": 0.0,
+          "defect_parent_recall": 0.0,
+          "pixel_positive_cells": 984,
+          "pixel_evaluated_cells": 707778
+        },
+        "context_bias_weighted_mean": {
+          "pixel_average_precision": 0.05212248421853417,
+          "pixel_roc_auc": 0.9323093985296851,
+          "parent_average_precision": 0.25,
+          "parent_roc_auc": 0.625,
+          "source_calibrated_threshold": 13.162046432495117,
+          "evaluation_normal_false_positives": 0,
+          "evaluation_normal_fpr": 0.0,
+          "defect_parent_recall": 0.0,
+          "pixel_positive_cells": 984,
+          "pixel_evaluated_cells": 707778
+        }
+      },
+      "pcaf_minus_mean": {
+        "pixel_average_precision": -0.0009836747502977028,
+        "pixel_roc_auc": 0.03118640843270981,
+        "parent_average_precision": 0.0,
+        "parent_roc_auc": 0.0,
+        "evaluation_normal_false_positives": 0.0,
+        "evaluation_normal_fpr": 0.0,
+        "defect_parent_recall": 0.0
+      }
+    },
+    "3": {
+      "counts": {
+        "training_normals": 8,
+        "calibration_normals": 8,
+        "evaluation_normals": 8,
+        "anomalies": 6
+      },
+      "split_scenes": {
+        "training_normals": [
+          "1"
+        ],
+        "calibration_normals": [
+          "schusskraeusel0"
+        ],
+        "evaluation_normals": [
+          "2"
+        ],
+        "anomalies": [
+          "2"
+        ]
+      },
+      "crop_budget": {
+        "training_base_crops": 720,
+        "scored_parents": 22,
+        "scored_crops": 5522,
+        "base_crops_per_parent": 90,
+        "matched_views_crops_per_parent": 251.0,
+        "processed_pixel_ratio_to_single_grid": 2.7888888888888888
+      },
+      "run": {
+        "textile_id": 3,
+        "smoke": false,
+        "device": "NVIDIA GeForce RTX 4090",
+        "torch": "2.5.1+cu124",
+        "train_seconds": 16.245353741571307,
+        "predict_seconds": 28.161011001095176,
+        "fusion_and_evaluation_seconds": 5.176682444289327,
+        "checkpoint": "/root/autodl-tmp/Fabric_Defect_Detection/runs/olp_pcaf_external/full/checkpoints/textile_03.ckpt",
+        "checkpoint_sha256": "CD1B93A4E208671C061EBF40D611492F3649783C5E2324E0B8B77224A97FF239",
+        "script_sha256": "99BF9C7B14CB6429A23AB1C29E558492DFD044323CF9972A1C0982DA8BE85AA1",
+        "config_sha256": "7F740A2C2A3F68725EBFC131CA6E31DAAD01BD958D109467E3D6C3252F93B12F",
+        "audit_sha256": "57756510F1BE53E3D45540E1E3847CFD72458A9F690D24D244017008AB7E9F22"
+      },
+      "metrics": {
+        "single_base": {
+          "pixel_average_precision": 0.47502872279817754,
+          "pixel_roc_auc": 0.9763095281108546,
+          "parent_average_precision": 0.9166666666666665,
+          "parent_roc_auc": 0.9166666666666667,
+          "source_calibrated_threshold": 5.279872417449951,
+          "evaluation_normal_false_positives": 7,
+          "evaluation_normal_fpr": 0.875,
+          "defect_parent_recall": 1.0,
+          "pixel_positive_cells": 1037,
+          "pixel_evaluated_cells": 1100988
+        },
+        "mean": {
+          "pixel_average_precision": 0.47104811534372537,
+          "pixel_roc_auc": 0.9900294620558039,
+          "parent_average_precision": 0.8968253968253967,
+          "parent_roc_auc": 0.8958333333333333,
+          "source_calibrated_threshold": 5.748093605041504,
+          "evaluation_normal_false_positives": 7,
+          "evaluation_normal_fpr": 0.875,
+          "defect_parent_recall": 1.0,
+          "pixel_positive_cells": 1037,
+          "pixel_evaluated_cells": 1100988
+        },
+        "context_bias_equal_mean": {
+          "pixel_average_precision": 0.42921892960270813,
+          "pixel_roc_auc": 0.9873316005791358,
+          "parent_average_precision": 0.8634920634920634,
+          "parent_roc_auc": 0.875,
+          "source_calibrated_threshold": 6.724103927612305,
+          "evaluation_normal_false_positives": 2,
+          "evaluation_normal_fpr": 0.25,
+          "defect_parent_recall": 0.8333333333333334,
+          "pixel_positive_cells": 1037,
+          "pixel_evaluated_cells": 1100988
+        },
+        "context_bias_weighted_mean": {
+          "pixel_average_precision": 0.4341688870357726,
+          "pixel_roc_auc": 0.9878822243003974,
+          "parent_average_precision": 0.8968253968253967,
+          "parent_roc_auc": 0.8958333333333333,
+          "source_calibrated_threshold": 6.74307918548584,
+          "evaluation_normal_false_positives": 2,
+          "evaluation_normal_fpr": 0.25,
+          "defect_parent_recall": 0.8333333333333334,
+          "pixel_positive_cells": 1037,
+          "pixel_evaluated_cells": 1100988
+        }
+      },
+      "pcaf_minus_mean": {
+        "pixel_average_precision": -0.03687922830795276,
+        "pixel_roc_auc": -0.0021472377554064837,
+        "parent_average_precision": 0.0,
+        "parent_roc_auc": 0.0,
+        "evaluation_normal_false_positives": -5.0,
+        "evaluation_normal_fpr": -0.625,
+        "defect_parent_recall": -0.16666666666666663
+      }
+    },
+    "4": {
+      "counts": {
+        "training_normals": 8,
+        "calibration_normals": 8,
+        "evaluation_normals": 8,
+        "anomalies": 4
+      },
+      "split_scenes": {
+        "training_normals": [
+          "1"
+        ],
+        "calibration_normals": [
+          "3"
+        ],
+        "evaluation_normals": [
+          "2"
+        ],
+        "anomalies": [
+          "2"
+        ]
+      },
+      "crop_budget": {
+        "training_base_crops": 720,
+        "scored_parents": 20,
+        "scored_crops": 5020,
+        "base_crops_per_parent": 90,
+        "matched_views_crops_per_parent": 251.0,
+        "processed_pixel_ratio_to_single_grid": 2.7888888888888888
+      },
+      "run": {
+        "textile_id": 4,
+        "smoke": false,
+        "device": "NVIDIA GeForce RTX 4090",
+        "torch": "2.5.1+cu124",
+        "train_seconds": 16.253432150930166,
+        "predict_seconds": 25.451715756207705,
+        "fusion_and_evaluation_seconds": 4.263553008437157,
+        "checkpoint": "/root/autodl-tmp/Fabric_Defect_Detection/runs/olp_pcaf_external/full/checkpoints/textile_04.ckpt",
+        "checkpoint_sha256": "A0421EBA477F3446C15055158E5705257886C06050F11C6E5E7668135F70F844",
+        "script_sha256": "99BF9C7B14CB6429A23AB1C29E558492DFD044323CF9972A1C0982DA8BE85AA1",
+        "config_sha256": "7F740A2C2A3F68725EBFC131CA6E31DAAD01BD958D109467E3D6C3252F93B12F",
+        "audit_sha256": "57756510F1BE53E3D45540E1E3847CFD72458A9F690D24D244017008AB7E9F22"
+      },
+      "metrics": {
+        "single_base": {
+          "pixel_average_precision": 0.021230523705399938,
+          "pixel_roc_auc": 0.6127846776602947,
+          "parent_average_precision": 0.39017857142857143,
+          "parent_roc_auc": 0.46875,
+          "source_calibrated_threshold": 7.510580062866211,
+          "evaluation_normal_false_positives": 0,
+          "evaluation_normal_fpr": 0.0,
+          "defect_parent_recall": 0.0,
+          "pixel_positive_cells": 12682,
+          "pixel_evaluated_cells": 943704
+        },
+        "mean": {
+          "pixel_average_precision": 0.021710950744673677,
+          "pixel_roc_auc": 0.6204419509906889,
+          "parent_average_precision": 0.2973484848484848,
+          "parent_roc_auc": 0.25,
+          "source_calibrated_threshold": 8.974347114562988,
+          "evaluation_normal_false_positives": 0,
+          "evaluation_normal_fpr": 0.0,
+          "defect_parent_recall": 0.0,
+          "pixel_positive_cells": 12682,
+          "pixel_evaluated_cells": 943704
+        },
+        "context_bias_equal_mean": {
+          "pixel_average_precision": 0.021938230518712656,
+          "pixel_roc_auc": 0.6291581450438988,
+          "parent_average_precision": 0.25707070707070706,
+          "parent_roc_auc": 0.15625,
+          "source_calibrated_threshold": 10.033976554870605,
+          "evaluation_normal_false_positives": 0,
+          "evaluation_normal_fpr": 0.0,
+          "defect_parent_recall": 0.0,
+          "pixel_positive_cells": 12682,
+          "pixel_evaluated_cells": 943704
+        },
+        "context_bias_weighted_mean": {
+          "pixel_average_precision": 0.021831735848150794,
+          "pixel_roc_auc": 0.6287174850868912,
+          "parent_average_precision": 0.26957070707070707,
+          "parent_roc_auc": 0.1875,
+          "source_calibrated_threshold": 10.017867088317871,
+          "evaluation_normal_false_positives": 0,
+          "evaluation_normal_fpr": 0.0,
+          "defect_parent_recall": 0.0,
+          "pixel_positive_cells": 12682,
+          "pixel_evaluated_cells": 943704
+        }
+      },
+      "pcaf_minus_mean": {
+        "pixel_average_precision": 0.00012078510347711749,
+        "pixel_roc_auc": 0.008275534096202297,
+        "parent_average_precision": -0.027777777777777735,
+        "parent_roc_auc": -0.0625,
+        "evaluation_normal_false_positives": 0.0,
+        "evaluation_normal_fpr": 0.0,
+        "defect_parent_recall": 0.0
+      }
+    },
+    "5": {
+      "counts": {
+        "training_normals": 8,
+        "calibration_normals": 8,
+        "evaluation_normals": 8,
+        "anomalies": 5
+      },
+      "split_scenes": {
+        "training_normals": [
+          "1"
+        ],
+        "calibration_normals": [
+          "3"
+        ],
+        "evaluation_normals": [
+          "2"
+        ],
+        "anomalies": [
+          "2"
+        ]
+      },
+      "crop_budget": {
+        "training_base_crops": 720,
+        "scored_parents": 21,
+        "scored_crops": 5271,
+        "base_crops_per_parent": 90,
+        "matched_views_crops_per_parent": 251.0,
+        "processed_pixel_ratio_to_single_grid": 2.7888888888888888
+      },
+      "run": {
+        "textile_id": 5,
+        "smoke": false,
+        "device": "NVIDIA GeForce RTX 4090",
+        "torch": "2.5.1+cu124",
+        "train_seconds": 16.140566628426313,
+        "predict_seconds": 26.865706000477076,
+        "fusion_and_evaluation_seconds": 4.630350187420845,
+        "checkpoint": "/root/autodl-tmp/Fabric_Defect_Detection/runs/olp_pcaf_external/full/checkpoints/textile_05.ckpt",
+        "checkpoint_sha256": "CBF9DB23D5EE6A7AB2CC739CD445F895EE90E6B7CF7B951F4BA1AC200F0D997C",
+        "script_sha256": "99BF9C7B14CB6429A23AB1C29E558492DFD044323CF9972A1C0982DA8BE85AA1",
+        "config_sha256": "7F740A2C2A3F68725EBFC131CA6E31DAAD01BD958D109467E3D6C3252F93B12F",
+        "audit_sha256": "57756510F1BE53E3D45540E1E3847CFD72458A9F690D24D244017008AB7E9F22"
+      },
+      "metrics": {
+        "single_base": {
+          "pixel_average_precision": 0.014267723579925371,
+          "pixel_roc_auc": 0.6881591840647401,
+          "parent_average_precision": 0.3972222222222222,
+          "parent_roc_auc": 0.475,
+          "source_calibrated_threshold": 9.47125244140625,
+          "evaluation_normal_false_positives": 0,
+          "evaluation_normal_fpr": 0.0,
+          "defect_parent_recall": 0.0,
+          "pixel_positive_cells": 2978,
+          "pixel_evaluated_cells": 1022346
+        },
+        "mean": {
+          "pixel_average_precision": 0.014018543798201024,
+          "pixel_roc_auc": 0.7041866291819872,
+          "parent_average_precision": 0.3812698412698412,
+          "parent_roc_auc": 0.45,
+          "source_calibrated_threshold": 10.743773460388184,
+          "evaluation_normal_false_positives": 0,
+          "evaluation_normal_fpr": 0.0,
+          "defect_parent_recall": 0.0,
+          "pixel_positive_cells": 2978,
+          "pixel_evaluated_cells": 1022346
+        },
+        "context_bias_equal_mean": {
+          "pixel_average_precision": 0.014276116152437948,
+          "pixel_roc_auc": 0.7238685168490787,
+          "parent_average_precision": 0.3847979797979798,
+          "parent_roc_auc": 0.44999999999999996,
+          "source_calibrated_threshold": 11.7699556350708,
+          "evaluation_normal_false_positives": 0,
+          "evaluation_normal_fpr": 0.0,
+          "defect_parent_recall": 0.0,
+          "pixel_positive_cells": 2978,
+          "pixel_evaluated_cells": 1022346
+        },
+        "context_bias_weighted_mean": {
+          "pixel_average_precision": 0.014157558816029247,
+          "pixel_roc_auc": 0.7214766677367495,
+          "parent_average_precision": 0.3847979797979798,
+          "parent_roc_auc": 0.44999999999999996,
+          "source_calibrated_threshold": 11.807402610778809,
+          "evaluation_normal_false_positives": 0,
+          "evaluation_normal_fpr": 0.0,
+          "defect_parent_recall": 0.0,
+          "pixel_positive_cells": 2978,
+          "pixel_evaluated_cells": 1022346
+        }
+      },
+      "pcaf_minus_mean": {
+        "pixel_average_precision": 0.00013901501782822255,
+        "pixel_roc_auc": 0.0172900385547623,
+        "parent_average_precision": 0.0035281385281386024,
+        "parent_roc_auc": -5.551115123125783e-17,
+        "evaluation_normal_false_positives": 0.0,
+        "evaluation_normal_fpr": 0.0,
+        "defect_parent_recall": 0.0
+      }
+    },
+    "6": {
+      "counts": {
+        "training_normals": 8,
+        "calibration_normals": 8,
+        "evaluation_normals": 56,
+        "anomalies": 21
+      },
+      "split_scenes": {
+        "training_normals": [
+          "1"
+        ],
+        "calibration_normals": [
+          "3"
+        ],
+        "evaluation_normals": [
+          "2",
+          "4",
+          "5",
+          "6",
+          "7",
+          "8",
+          "angeschmutzte_kettfaeden0"
+        ],
+        "anomalies": [
+          "2",
+          "5",
+          "7",
+          "8",
+          "angeschmutzte_kettfaeden0"
+        ]
+      },
+      "crop_budget": {
+        "training_base_crops": 720,
+        "scored_parents": 85,
+        "scored_crops": 21335,
+        "base_crops_per_parent": 90,
+        "matched_views_crops_per_parent": 251.0,
+        "processed_pixel_ratio_to_single_grid": 2.7888888888888888
+      },
+      "run": {
+        "textile_id": 6,
+        "smoke": false,
+        "device": "NVIDIA GeForce RTX 4090",
+        "torch": "2.5.1+cu124",
+        "train_seconds": 16.134896809235215,
+        "predict_seconds": 106.84330233372748,
+        "fusion_and_evaluation_seconds": 25.42618814110756,
+        "checkpoint": "/root/autodl-tmp/Fabric_Defect_Detection/runs/olp_pcaf_external/full/checkpoints/textile_06.ckpt",
+        "checkpoint_sha256": "7DC216FF7DB192469934901214333D756569D33894DE4E9A6257FD5A961674D9",
+        "script_sha256": "99BF9C7B14CB6429A23AB1C29E558492DFD044323CF9972A1C0982DA8BE85AA1",
+        "config_sha256": "7F740A2C2A3F68725EBFC131CA6E31DAAD01BD958D109467E3D6C3252F93B12F",
+        "audit_sha256": "57756510F1BE53E3D45540E1E3847CFD72458A9F690D24D244017008AB7E9F22"
+      },
+      "metrics": {
+        "single_base": {
+          "pixel_average_precision": 0.14041939272387483,
+          "pixel_roc_auc": 0.8636642203215983,
+          "parent_average_precision": 0.403736596136271,
+          "parent_roc_auc": 0.6581632653061225,
+          "source_calibrated_threshold": 6.515005588531494,
+          "evaluation_normal_false_positives": 12,
+          "evaluation_normal_fpr": 0.21428571428571427,
+          "defect_parent_recall": 0.38095238095238093,
+          "pixel_positive_cells": 33122,
+          "pixel_evaluated_cells": 6055434
+        },
+        "mean": {
+          "pixel_average_precision": 0.16634561219498434,
+          "pixel_roc_auc": 0.8838232190349343,
+          "parent_average_precision": 0.41600864213603483,
+          "parent_roc_auc": 0.6811224489795918,
+          "source_calibrated_threshold": 7.597677707672119,
+          "evaluation_normal_false_positives": 9,
+          "evaluation_normal_fpr": 0.16071428571428573,
+          "defect_parent_recall": 0.38095238095238093,
+          "pixel_positive_cells": 33122,
+          "pixel_evaluated_cells": 6055434
+        },
+        "context_bias_equal_mean": {
+          "pixel_average_precision": 0.17155582487191903,
+          "pixel_roc_auc": 0.8923676341612116,
+          "parent_average_precision": 0.4268732193697379,
+          "parent_roc_auc": 0.7040816326530612,
+          "source_calibrated_threshold": 8.079227447509766,
+          "evaluation_normal_false_positives": 9,
+          "evaluation_normal_fpr": 0.16071428571428573,
+          "defect_parent_recall": 0.42857142857142855,
+          "pixel_positive_cells": 33122,
+          "pixel_evaluated_cells": 6055434
+        },
+        "context_bias_weighted_mean": {
+          "pixel_average_precision": 0.17114362946459588,
+          "pixel_roc_auc": 0.8919454658240904,
+          "parent_average_precision": 0.4240106470718511,
+          "parent_roc_auc": 0.7023809523809523,
+          "source_calibrated_threshold": 8.077298164367676,
+          "evaluation_normal_false_positives": 9,
+          "evaluation_normal_fpr": 0.16071428571428573,
+          "defect_parent_recall": 0.42857142857142855,
+          "pixel_positive_cells": 33122,
+          "pixel_evaluated_cells": 6055434
+        }
+      },
+      "pcaf_minus_mean": {
+        "pixel_average_precision": 0.004798017269611543,
+        "pixel_roc_auc": 0.008122246789156073,
+        "parent_average_precision": 0.008002004935816265,
+        "parent_roc_auc": 0.021258503401360485,
+        "evaluation_normal_false_positives": 0.0,
+        "evaluation_normal_fpr": 0.0,
+        "defect_parent_recall": 0.047619047619047616
+      }
+    },
+    "7": {
+      "counts": {
+        "training_normals": 8,
+        "calibration_normals": 8,
+        "evaluation_normals": 40,
+        "anomalies": 14
+      },
+      "split_scenes": {
+        "training_normals": [
+          "5"
+        ],
+        "calibration_normals": [
+          "6"
+        ],
+        "evaluation_normals": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "schlinge_kette0"
+        ],
+        "anomalies": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "schlinge_kette0"
+        ]
+      },
+      "crop_budget": {
+        "training_base_crops": 720,
+        "scored_parents": 62,
+        "scored_crops": 15562,
+        "base_crops_per_parent": 90,
+        "matched_views_crops_per_parent": 251.0,
+        "processed_pixel_ratio_to_single_grid": 2.7888888888888888
+      },
+      "run": {
+        "textile_id": 7,
+        "smoke": false,
+        "device": "NVIDIA GeForce RTX 4090",
+        "torch": "2.5.1+cu124",
+        "train_seconds": 15.860592748969793,
+        "predict_seconds": 78.23444350063801,
+        "fusion_and_evaluation_seconds": 16.690140878781676,
+        "checkpoint": "/root/autodl-tmp/Fabric_Defect_Detection/runs/olp_pcaf_external/full/checkpoints/textile_07.ckpt",
+        "checkpoint_sha256": "07AE1A1690D3FF3AA3AD79DEBB7F01E0D61A806B643511EFACDAA093071D941D",
+        "script_sha256": "99BF9C7B14CB6429A23AB1C29E558492DFD044323CF9972A1C0982DA8BE85AA1",
+        "config_sha256": "7F740A2C2A3F68725EBFC131CA6E31DAAD01BD958D109467E3D6C3252F93B12F",
+        "audit_sha256": "57756510F1BE53E3D45540E1E3847CFD72458A9F690D24D244017008AB7E9F22"
+      },
+      "metrics": {
+        "single_base": {
+          "pixel_average_precision": 0.08435625474354204,
+          "pixel_roc_auc": 0.7393036609088185,
+          "parent_average_precision": 0.46596521457926243,
+          "parent_roc_auc": 0.6482142857142857,
+          "source_calibrated_threshold": 5.974915027618408,
+          "evaluation_normal_false_positives": 4,
+          "evaluation_normal_fpr": 0.1,
+          "defect_parent_recall": 0.35714285714285715,
+          "pixel_positive_cells": 65324,
+          "pixel_evaluated_cells": 4246668
+        },
+        "mean": {
+          "pixel_average_precision": 0.08258367580881111,
+          "pixel_roc_auc": 0.7615931251876465,
+          "parent_average_precision": 0.38863378684807254,
+          "parent_roc_auc": 0.6160714285714286,
+          "source_calibrated_threshold": 6.785193920135498,
+          "evaluation_normal_false_positives": 3,
+          "evaluation_normal_fpr": 0.075,
+          "defect_parent_recall": 0.2857142857142857,
+          "pixel_positive_cells": 65324,
+          "pixel_evaluated_cells": 4246668
+        },
+        "context_bias_equal_mean": {
+          "pixel_average_precision": 0.08177267311961452,
+          "pixel_roc_auc": 0.769492920844928,
+          "parent_average_precision": 0.40317628061416877,
+          "parent_roc_auc": 0.6375,
+          "source_calibrated_threshold": 7.33109712600708,
+          "evaluation_normal_false_positives": 3,
+          "evaluation_normal_fpr": 0.075,
+          "defect_parent_recall": 0.14285714285714285,
+          "pixel_positive_cells": 65324,
+          "pixel_evaluated_cells": 4246668
+        },
+        "context_bias_weighted_mean": {
+          "pixel_average_precision": 0.08243479229544685,
+          "pixel_roc_auc": 0.7622138975526732,
+          "parent_average_precision": 0.4442443534880509,
+          "parent_roc_auc": 0.6875,
+          "source_calibrated_threshold": 7.373416900634766,
+          "evaluation_normal_false_positives": 2,
+          "evaluation_normal_fpr": 0.05,
+          "defect_parent_recall": 0.14285714285714285,
+          "pixel_positive_cells": 65324,
+          "pixel_evaluated_cells": 4246668
+        }
+      },
+      "pcaf_minus_mean": {
+        "pixel_average_precision": -0.00014888351336425631,
+        "pixel_roc_auc": 0.0006207723650266672,
+        "parent_average_precision": 0.055610566639978376,
+        "parent_roc_auc": 0.0714285714285714,
+        "evaluation_normal_false_positives": -1.0,
+        "evaluation_normal_fpr": -0.024999999999999994,
+        "defect_parent_recall": -0.14285714285714285
+      }
+    },
+    "14": {
+      "counts": {
+        "training_normals": 8,
+        "calibration_normals": 8,
+        "evaluation_normals": 8,
+        "anomalies": 5
+      },
+      "split_scenes": {
+        "training_normals": [
+          "3"
+        ],
+        "calibration_normals": [
+          "1"
+        ],
+        "evaluation_normals": [
+          "2"
+        ],
+        "anomalies": [
+          "2"
+        ]
+      },
+      "crop_budget": {
+        "training_base_crops": 720,
+        "scored_parents": 21,
+        "scored_crops": 5271,
+        "base_crops_per_parent": 90,
+        "matched_views_crops_per_parent": 251.0,
+        "processed_pixel_ratio_to_single_grid": 2.7888888888888888
+      },
+      "run": {
+        "textile_id": 14,
+        "smoke": false,
+        "device": "NVIDIA GeForce RTX 4090",
+        "torch": "2.5.1+cu124",
+        "train_seconds": 16.28277506865561,
+        "predict_seconds": 26.71658380329609,
+        "fusion_and_evaluation_seconds": 4.312738172709942,
+        "checkpoint": "/root/autodl-tmp/Fabric_Defect_Detection/runs/olp_pcaf_external/full/checkpoints/textile_14.ckpt",
+        "checkpoint_sha256": "61262BA2107070AEFDB2CD2004D30D9B02AB3A237ADB3841AC72F5866CD956BD",
+        "script_sha256": "99BF9C7B14CB6429A23AB1C29E558492DFD044323CF9972A1C0982DA8BE85AA1",
+        "config_sha256": "7F740A2C2A3F68725EBFC131CA6E31DAAD01BD958D109467E3D6C3252F93B12F",
+        "audit_sha256": "57756510F1BE53E3D45540E1E3847CFD72458A9F690D24D244017008AB7E9F22"
+      },
+      "metrics": {
+        "single_base": {
+          "pixel_average_precision": 0.03412590799153247,
+          "pixel_roc_auc": 0.8506114031931729,
+          "parent_average_precision": 0.911111111111111,
+          "parent_roc_auc": 0.9,
+          "source_calibrated_threshold": 6.75574254989624,
+          "evaluation_normal_false_positives": 0,
+          "evaluation_normal_fpr": 0.0,
+          "defect_parent_recall": 0.8,
+          "pixel_positive_cells": 3130,
+          "pixel_evaluated_cells": 1022346
+        },
+        "mean": {
+          "pixel_average_precision": 0.03848643838756653,
+          "pixel_roc_auc": 0.8734760881232123,
+          "parent_average_precision": 0.8999999999999999,
+          "parent_roc_auc": 0.875,
+          "source_calibrated_threshold": 7.303191184997559,
+          "evaluation_normal_false_positives": 2,
+          "evaluation_normal_fpr": 0.25,
+          "defect_parent_recall": 0.8,
+          "pixel_positive_cells": 3130,
+          "pixel_evaluated_cells": 1022346
+        },
+        "context_bias_equal_mean": {
+          "pixel_average_precision": 0.03192151249535636,
+          "pixel_roc_auc": 0.8755523933562315,
+          "parent_average_precision": 0.925,
+          "parent_roc_auc": 0.925,
+          "source_calibrated_threshold": 7.779063701629639,
+          "evaluation_normal_false_positives": 0,
+          "evaluation_normal_fpr": 0.0,
+          "defect_parent_recall": 0.8,
+          "pixel_positive_cells": 3130,
+          "pixel_evaluated_cells": 1022346
+        },
+        "context_bias_weighted_mean": {
+          "pixel_average_precision": 0.03100566766999129,
+          "pixel_roc_auc": 0.8716064071272874,
+          "parent_average_precision": 0.925,
+          "parent_roc_auc": 0.925,
+          "source_calibrated_threshold": 7.758245944976807,
+          "evaluation_normal_false_positives": 0,
+          "evaluation_normal_fpr": 0.0,
+          "defect_parent_recall": 0.8,
+          "pixel_positive_cells": 3130,
+          "pixel_evaluated_cells": 1022346
+        }
+      },
+      "pcaf_minus_mean": {
+        "pixel_average_precision": -0.0074807707175752435,
+        "pixel_roc_auc": -0.0018696809959248828,
+        "parent_average_precision": 0.025000000000000133,
+        "parent_roc_auc": 0.050000000000000044,
+        "evaluation_normal_false_positives": -2.0,
+        "evaluation_normal_fpr": -0.25,
+        "defect_parent_recall": 0.0
+      }
+    },
+    "16": {
+      "counts": {
+        "training_normals": 8,
+        "calibration_normals": 8,
+        "evaluation_normals": 16,
+        "anomalies": 9
+      },
+      "split_scenes": {
+        "training_normals": [
+          "1"
+        ],
+        "calibration_normals": [
+          "2"
+        ],
+        "evaluation_normals": [
+          "3",
+          "4"
+        ],
+        "anomalies": [
+          "3",
+          "4"
+        ]
+      },
+      "crop_budget": {
+        "training_base_crops": 720,
+        "scored_parents": 33,
+        "scored_crops": 8283,
+        "base_crops_per_parent": 90,
+        "matched_views_crops_per_parent": 251.0,
+        "processed_pixel_ratio_to_single_grid": 2.7888888888888888
+      },
+      "run": {
+        "textile_id": 16,
+        "smoke": false,
+        "device": "NVIDIA GeForce RTX 4090",
+        "torch": "2.5.1+cu124",
+        "train_seconds": 15.843294154852629,
+        "predict_seconds": 41.775756103917956,
+        "fusion_and_evaluation_seconds": 7.56093586795032,
+        "checkpoint": "/root/autodl-tmp/Fabric_Defect_Detection/runs/olp_pcaf_external/full/checkpoints/textile_16.ckpt",
+        "checkpoint_sha256": "B33DBF6494CD177D7F335B90304E7F7FBB4DA2E03FCA5767111C68A5C6BAEF1C",
+        "script_sha256": "99BF9C7B14CB6429A23AB1C29E558492DFD044323CF9972A1C0982DA8BE85AA1",
+        "config_sha256": "7F740A2C2A3F68725EBFC131CA6E31DAAD01BD958D109467E3D6C3252F93B12F",
+        "audit_sha256": "57756510F1BE53E3D45540E1E3847CFD72458A9F690D24D244017008AB7E9F22"
+      },
+      "metrics": {
+        "single_base": {
+          "pixel_average_precision": 0.544514186580273,
+          "pixel_roc_auc": 0.9603599827348158,
+          "parent_average_precision": 0.79424202340869,
+          "parent_roc_auc": 0.7708333333333333,
+          "source_calibrated_threshold": 10.936456680297852,
+          "evaluation_normal_false_positives": 0,
+          "evaluation_normal_fpr": 0.0,
+          "defect_parent_recall": 0.4444444444444444,
+          "pixel_positive_cells": 5003,
+          "pixel_evaluated_cells": 1966050
+        },
+        "mean": {
+          "pixel_average_precision": 0.6120081446671912,
+          "pixel_roc_auc": 0.9803067509509873,
+          "parent_average_precision": 0.8075646632922175,
+          "parent_roc_auc": 0.8055555555555555,
+          "source_calibrated_threshold": 12.137524604797363,
+          "evaluation_normal_false_positives": 0,
+          "evaluation_normal_fpr": 0.0,
+          "defect_parent_recall": 0.4444444444444444,
+          "pixel_positive_cells": 5003,
+          "pixel_evaluated_cells": 1966050
+        },
+        "context_bias_equal_mean": {
+          "pixel_average_precision": 0.6199165257342368,
+          "pixel_roc_auc": 0.9836458305573267,
+          "parent_average_precision": 0.8072478991596639,
+          "parent_roc_auc": 0.8055555555555556,
+          "source_calibrated_threshold": 13.901307106018066,
+          "evaluation_normal_false_positives": 0,
+          "evaluation_normal_fpr": 0.0,
+          "defect_parent_recall": 0.3333333333333333,
+          "pixel_positive_cells": 5003,
+          "pixel_evaluated_cells": 1966050
+        },
+        "context_bias_weighted_mean": {
+          "pixel_average_precision": 0.6249539130826186,
+          "pixel_roc_auc": 0.9840382675807797,
+          "parent_average_precision": 0.8082010582010581,
+          "parent_roc_auc": 0.8055555555555555,
+          "source_calibrated_threshold": 13.9776611328125,
+          "evaluation_normal_false_positives": 0,
+          "evaluation_normal_fpr": 0.0,
+          "defect_parent_recall": 0.3333333333333333,
+          "pixel_positive_cells": 5003,
+          "pixel_evaluated_cells": 1966050
+        }
+      },
+      "pcaf_minus_mean": {
+        "pixel_average_precision": 0.012945768415427383,
+        "pixel_roc_auc": 0.0037315166297924307,
+        "parent_average_precision": 0.0006363949088405985,
+        "parent_roc_auc": 0.0,
+        "evaluation_normal_false_positives": 0.0,
+        "evaluation_normal_fpr": 0.0,
+        "defect_parent_recall": -0.1111111111111111
+      }
+    },
+    "18": {
+      "counts": {
+        "training_normals": 8,
+        "calibration_normals": 8,
+        "evaluation_normals": 32,
+        "anomalies": 35
+      },
+      "split_scenes": {
+        "training_normals": [
+          "6"
+        ],
+        "calibration_normals": [
+          "1"
+        ],
+        "evaluation_normals": [
+          "2",
+          "3",
+          "4",
+          "5"
+        ],
+        "anomalies": [
+          "2",
+          "3",
+          "4",
+          "5"
+        ]
+      },
+      "crop_budget": {
+        "training_base_crops": 720,
+        "scored_parents": 75,
+        "scored_crops": 18825,
+        "base_crops_per_parent": 90,
+        "matched_views_crops_per_parent": 251.0,
+        "processed_pixel_ratio_to_single_grid": 2.7888888888888888
+      },
+      "run": {
+        "textile_id": 18,
+        "smoke": false,
+        "device": "NVIDIA GeForce RTX 4090",
+        "torch": "2.5.1+cu124",
+        "train_seconds": 16.346779180690646,
+        "predict_seconds": 94.40792638063431,
+        "fusion_and_evaluation_seconds": 21.654110612347722,
+        "checkpoint": "/root/autodl-tmp/Fabric_Defect_Detection/runs/olp_pcaf_external/full/checkpoints/textile_18.ckpt",
+        "checkpoint_sha256": "1C9F487CF895B8BED01CBC1B0197DFE95147F51336C6220FB65DFC143242B486",
+        "script_sha256": "99BF9C7B14CB6429A23AB1C29E558492DFD044323CF9972A1C0982DA8BE85AA1",
+        "config_sha256": "7F740A2C2A3F68725EBFC131CA6E31DAAD01BD958D109467E3D6C3252F93B12F",
+        "audit_sha256": "57756510F1BE53E3D45540E1E3847CFD72458A9F690D24D244017008AB7E9F22"
+      },
+      "metrics": {
+        "single_base": {
+          "pixel_average_precision": 0.14832497295331692,
+          "pixel_roc_auc": 0.868004864157223,
+          "parent_average_precision": 0.7702600958227238,
+          "parent_roc_auc": 0.7482142857142857,
+          "source_calibrated_threshold": 9.515774726867676,
+          "evaluation_normal_false_positives": 1,
+          "evaluation_normal_fpr": 0.03125,
+          "defect_parent_recall": 0.2,
+          "pixel_positive_cells": 8791,
+          "pixel_evaluated_cells": 5269014
+        },
+        "mean": {
+          "pixel_average_precision": 0.14839807944252942,
+          "pixel_roc_auc": 0.8892475431112187,
+          "parent_average_precision": 0.7632554280906234,
+          "parent_roc_auc": 0.7428571428571429,
+          "source_calibrated_threshold": 10.97751522064209,
+          "evaluation_normal_false_positives": 1,
+          "evaluation_normal_fpr": 0.03125,
+          "defect_parent_recall": 0.14285714285714285,
+          "pixel_positive_cells": 8791,
+          "pixel_evaluated_cells": 5269014
+        },
+        "context_bias_equal_mean": {
+          "pixel_average_precision": 0.13993214628005993,
+          "pixel_roc_auc": 0.8950363729336854,
+          "parent_average_precision": 0.7476700196534082,
+          "parent_roc_auc": 0.7107142857142857,
+          "source_calibrated_threshold": 13.772944450378418,
+          "evaluation_normal_false_positives": 1,
+          "evaluation_normal_fpr": 0.03125,
+          "defect_parent_recall": 0.11428571428571428,
+          "pixel_positive_cells": 8791,
+          "pixel_evaluated_cells": 5269014
+        },
+        "context_bias_weighted_mean": {
+          "pixel_average_precision": 0.13977528828226216,
+          "pixel_roc_auc": 0.8959635997135611,
+          "parent_average_precision": 0.7463165714576213,
+          "parent_roc_auc": 0.7107142857142857,
+          "source_calibrated_threshold": 13.808528900146484,
+          "evaluation_normal_false_positives": 1,
+          "evaluation_normal_fpr": 0.03125,
+          "defect_parent_recall": 0.11428571428571428,
+          "pixel_positive_cells": 8791,
+          "pixel_evaluated_cells": 5269014
+        }
+      },
+      "pcaf_minus_mean": {
+        "pixel_average_precision": -0.008622791160267262,
+        "pixel_roc_auc": 0.006716056602342424,
+        "parent_average_precision": -0.016938856633002097,
+        "parent_roc_auc": -0.03214285714285714,
+        "evaluation_normal_false_positives": 0.0,
+        "evaluation_normal_fpr": 0.0,
+        "defect_parent_recall": -0.028571428571428567
+      }
+    },
+    "21": {
+      "counts": {
+        "training_normals": 8,
+        "calibration_normals": 8,
+        "evaluation_normals": 16,
+        "anomalies": 20
+      },
+      "split_scenes": {
+        "training_normals": [
+          "1"
+        ],
+        "calibration_normals": [
+          "2"
+        ],
+        "evaluation_normals": [
+          "garnaufschieber_kette0",
+          "knotenschuss0"
+        ],
+        "anomalies": [
+          "garnaufschieber_kette0",
+          "knotenschuss0"
+        ]
+      },
+      "crop_budget": {
+        "training_base_crops": 720,
+        "scored_parents": 44,
+        "scored_crops": 11044,
+        "base_crops_per_parent": 90,
+        "matched_views_crops_per_parent": 251.0,
+        "processed_pixel_ratio_to_single_grid": 2.7888888888888888
+      },
+      "run": {
+        "textile_id": 21,
+        "smoke": false,
+        "device": "NVIDIA GeForce RTX 4090",
+        "torch": "2.5.1+cu124",
+        "train_seconds": 16.353516079485416,
+        "predict_seconds": 56.037462232634425,
+        "fusion_and_evaluation_seconds": 10.737624542787671,
+        "checkpoint": "/root/autodl-tmp/Fabric_Defect_Detection/runs/olp_pcaf_external/full/checkpoints/textile_21.ckpt",
+        "checkpoint_sha256": "04D5EDAF34D71D166683C541D65565FDCE05A51E182FA4C49E0207E649B67955",
+        "script_sha256": "99BF9C7B14CB6429A23AB1C29E558492DFD044323CF9972A1C0982DA8BE85AA1",
+        "config_sha256": "7F740A2C2A3F68725EBFC131CA6E31DAAD01BD958D109467E3D6C3252F93B12F",
+        "audit_sha256": "57756510F1BE53E3D45540E1E3847CFD72458A9F690D24D244017008AB7E9F22"
+      },
+      "metrics": {
+        "single_base": {
+          "pixel_average_precision": 0.05691699178564984,
+          "pixel_roc_auc": 0.6050312247998982,
+          "parent_average_precision": 0.6987652323474194,
+          "parent_roc_auc": 0.515625,
+          "source_calibrated_threshold": 7.178928852081299,
+          "evaluation_normal_false_positives": 0,
+          "evaluation_normal_fpr": 0.0,
+          "defect_parent_recall": 0.0,
+          "pixel_positive_cells": 80460,
+          "pixel_evaluated_cells": 2831112
+        },
+        "mean": {
+          "pixel_average_precision": 0.05992697876977263,
+          "pixel_roc_auc": 0.6141698008355669,
+          "parent_average_precision": 0.6882116866191943,
+          "parent_roc_auc": 0.5125,
+          "source_calibrated_threshold": 7.156171798706055,
+          "evaluation_normal_false_positives": 0,
+          "evaluation_normal_fpr": 0.0,
+          "defect_parent_recall": 0.0,
+          "pixel_positive_cells": 80460,
+          "pixel_evaluated_cells": 2831112
+        },
+        "context_bias_equal_mean": {
+          "pixel_average_precision": 0.06684963094566057,
+          "pixel_roc_auc": 0.6298127035498465,
+          "parent_average_precision": 0.6719924512483915,
+          "parent_roc_auc": 0.496875,
+          "source_calibrated_threshold": 7.175538063049316,
+          "evaluation_normal_false_positives": 0,
+          "evaluation_normal_fpr": 0.0,
+          "defect_parent_recall": 0.0,
+          "pixel_positive_cells": 80460,
+          "pixel_evaluated_cells": 2831112
+        },
+        "context_bias_weighted_mean": {
+          "pixel_average_precision": 0.06657571058930559,
+          "pixel_roc_auc": 0.6271234237875757,
+          "parent_average_precision": 0.6804806082835451,
+          "parent_roc_auc": 0.496875,
+          "source_calibrated_threshold": 7.118468284606934,
+          "evaluation_normal_false_positives": 0,
+          "evaluation_normal_fpr": 0.0,
+          "defect_parent_recall": 0.0,
+          "pixel_positive_cells": 80460,
+          "pixel_evaluated_cells": 2831112
+        }
+      },
+      "pcaf_minus_mean": {
+        "pixel_average_precision": 0.006648731819532953,
+        "pixel_roc_auc": 0.012953622952008748,
+        "parent_average_precision": -0.007731078335649233,
+        "parent_roc_auc": -0.015624999999999944,
+        "evaluation_normal_false_positives": 0.0,
+        "evaluation_normal_fpr": 0.0,
+        "defect_parent_recall": 0.0
+      }
+    },
+    "23": {
+      "counts": {
+        "training_normals": 8,
+        "calibration_normals": 8,
+        "evaluation_normals": 16,
+        "anomalies": 7
+      },
+      "split_scenes": {
+        "training_normals": [
+          "kettbruch1"
+        ],
+        "calibration_normals": [
+          "flecken_schmutz0"
+        ],
+        "evaluation_normals": [
+          "kettbruch2",
+          "spannfaden_kette1"
+        ],
+        "anomalies": [
+          "kettbruch2",
+          "spannfaden_kette1"
+        ]
+      },
+      "crop_budget": {
+        "training_base_crops": 720,
+        "scored_parents": 31,
+        "scored_crops": 7781,
+        "base_crops_per_parent": 90,
+        "matched_views_crops_per_parent": 251.0,
+        "processed_pixel_ratio_to_single_grid": 2.7888888888888888
+      },
+      "run": {
+        "textile_id": 23,
+        "smoke": false,
+        "device": "NVIDIA GeForce RTX 4090",
+        "torch": "2.5.1+cu124",
+        "train_seconds": 16.393539858981967,
+        "predict_seconds": 39.28223440423608,
+        "fusion_and_evaluation_seconds": 6.927272852510214,
+        "checkpoint": "/root/autodl-tmp/Fabric_Defect_Detection/runs/olp_pcaf_external/full/checkpoints/textile_23.ckpt",
+        "checkpoint_sha256": "501C2EF42160BE581F41DD6AB73AE489D628AE4BBCD0335F27B770B0BC995659",
+        "script_sha256": "99BF9C7B14CB6429A23AB1C29E558492DFD044323CF9972A1C0982DA8BE85AA1",
+        "config_sha256": "7F740A2C2A3F68725EBFC131CA6E31DAAD01BD958D109467E3D6C3252F93B12F",
+        "audit_sha256": "57756510F1BE53E3D45540E1E3847CFD72458A9F690D24D244017008AB7E9F22"
+      },
+      "metrics": {
+        "single_base": {
+          "pixel_average_precision": 0.333366759175345,
+          "pixel_roc_auc": 0.7567192134502446,
+          "parent_average_precision": 0.7763347763347763,
+          "parent_roc_auc": 0.794642857142857,
+          "source_calibrated_threshold": 5.917283058166504,
+          "evaluation_normal_false_positives": 4,
+          "evaluation_normal_fpr": 0.25,
+          "defect_parent_recall": 0.5714285714285714,
+          "pixel_positive_cells": 16240,
+          "pixel_evaluated_cells": 1808766
+        },
+        "mean": {
+          "pixel_average_precision": 0.3543063793139568,
+          "pixel_roc_auc": 0.7789315271606505,
+          "parent_average_precision": 0.7643467643467643,
+          "parent_roc_auc": 0.7946428571428571,
+          "source_calibrated_threshold": 6.907652854919434,
+          "evaluation_normal_false_positives": 1,
+          "evaluation_normal_fpr": 0.0625,
+          "defect_parent_recall": 0.5714285714285714,
+          "pixel_positive_cells": 16240,
+          "pixel_evaluated_cells": 1808766
+        },
+        "context_bias_equal_mean": {
+          "pixel_average_precision": 0.3662716225587695,
+          "pixel_roc_auc": 0.787774578895432,
+          "parent_average_precision": 0.7708416700013339,
+          "parent_roc_auc": 0.8035714285714286,
+          "source_calibrated_threshold": 8.10482120513916,
+          "evaluation_normal_false_positives": 0,
+          "evaluation_normal_fpr": 0.0,
+          "defect_parent_recall": 0.5714285714285714,
+          "pixel_positive_cells": 16240,
+          "pixel_evaluated_cells": 1808766
+        },
+        "context_bias_weighted_mean": {
+          "pixel_average_precision": 0.3634870580408266,
+          "pixel_roc_auc": 0.7875184859841045,
+          "parent_average_precision": 0.7708416700013339,
+          "parent_roc_auc": 0.8035714285714286,
+          "source_calibrated_threshold": 8.202654838562012,
+          "evaluation_normal_false_positives": 0,
+          "evaluation_normal_fpr": 0.0,
+          "defect_parent_recall": 0.5714285714285714,
+          "pixel_positive_cells": 16240,
+          "pixel_evaluated_cells": 1808766
+        }
+      },
+      "pcaf_minus_mean": {
+        "pixel_average_precision": 0.009180678726869784,
+        "pixel_roc_auc": 0.00858695882345395,
+        "parent_average_precision": 0.0064949056545695605,
+        "parent_roc_auc": 0.008928571428571508,
+        "evaluation_normal_false_positives": -1.0,
+        "evaluation_normal_fpr": -0.0625,
+        "defect_parent_recall": 0.0
+      }
+    },
+    "24": {
+      "counts": {
+        "training_normals": 8,
+        "calibration_normals": 8,
+        "evaluation_normals": 8,
+        "anomalies": 3
+      },
+      "split_scenes": {
+        "training_normals": [
+          "angeschmutzter_kettfaden0"
+        ],
+        "calibration_normals": [
+          "garnaufschieber0"
+        ],
+        "evaluation_normals": [
+          "angeschmutzter_kettfaden1"
+        ],
+        "anomalies": [
+          "angeschmutzter_kettfaden1"
+        ]
+      },
+      "crop_budget": {
+        "training_base_crops": 720,
+        "scored_parents": 19,
+        "scored_crops": 4769,
+        "base_crops_per_parent": 90,
+        "matched_views_crops_per_parent": 251.0,
+        "processed_pixel_ratio_to_single_grid": 2.7888888888888888
+      },
+      "run": {
+        "textile_id": 24,
+        "smoke": false,
+        "device": "NVIDIA GeForce RTX 4090",
+        "torch": "2.5.1+cu124",
+        "train_seconds": 16.860178381204605,
+        "predict_seconds": 24.443575048819184,
+        "fusion_and_evaluation_seconds": 3.7253919076174498,
+        "checkpoint": "/root/autodl-tmp/Fabric_Defect_Detection/runs/olp_pcaf_external/full/checkpoints/textile_24.ckpt",
+        "checkpoint_sha256": "3DB4E366965CF91F330F627D8FE5AB0728F6E2C83594AB090CACD5AA0DCB9B64",
+        "script_sha256": "99BF9C7B14CB6429A23AB1C29E558492DFD044323CF9972A1C0982DA8BE85AA1",
+        "config_sha256": "7F740A2C2A3F68725EBFC131CA6E31DAAD01BD958D109467E3D6C3252F93B12F",
+        "audit_sha256": "57756510F1BE53E3D45540E1E3847CFD72458A9F690D24D244017008AB7E9F22"
+      },
+      "metrics": {
+        "single_base": {
+          "pixel_average_precision": 0.05770492163136186,
+          "pixel_roc_auc": 0.7163883405498164,
+          "parent_average_precision": 0.6666666666666667,
+          "parent_roc_auc": 0.7916666666666666,
+          "source_calibrated_threshold": 19.451454162597656,
+          "evaluation_normal_false_positives": 0,
+          "evaluation_normal_fpr": 0.0,
+          "defect_parent_recall": 0.3333333333333333,
+          "pixel_positive_cells": 6973,
+          "pixel_evaluated_cells": 865062
+        },
+        "mean": {
+          "pixel_average_precision": 0.05899849505527066,
+          "pixel_roc_auc": 0.7276939218663214,
+          "parent_average_precision": 0.6666666666666667,
+          "parent_roc_auc": 0.7916666666666666,
+          "source_calibrated_threshold": 21.381505966186523,
+          "evaluation_normal_false_positives": 0,
+          "evaluation_normal_fpr": 0.0,
+          "defect_parent_recall": 0.3333333333333333,
+          "pixel_positive_cells": 6973,
+          "pixel_evaluated_cells": 865062
+        },
+        "context_bias_equal_mean": {
+          "pixel_average_precision": 0.06028589393306705,
+          "pixel_roc_auc": 0.7459818707804594,
+          "parent_average_precision": 0.6666666666666667,
+          "parent_roc_auc": 0.7916666666666666,
+          "source_calibrated_threshold": 25.04206657409668,
+          "evaluation_normal_false_positives": 0,
+          "evaluation_normal_fpr": 0.0,
+          "defect_parent_recall": 0.3333333333333333,
+          "pixel_positive_cells": 6973,
+          "pixel_evaluated_cells": 865062
+        },
+        "context_bias_weighted_mean": {
+          "pixel_average_precision": 0.0596342777429205,
+          "pixel_roc_auc": 0.7455321482236359,
+          "parent_average_precision": 0.6666666666666667,
+          "parent_roc_auc": 0.7916666666666666,
+          "source_calibrated_threshold": 25.164323806762695,
+          "evaluation_normal_false_positives": 0,
+          "evaluation_normal_fpr": 0.0,
+          "defect_parent_recall": 0.3333333333333333,
+          "pixel_positive_cells": 6973,
+          "pixel_evaluated_cells": 865062
+        }
+      },
+      "pcaf_minus_mean": {
+        "pixel_average_precision": 0.0006357826876498412,
+        "pixel_roc_auc": 0.01783822635731447,
+        "parent_average_precision": 0.0,
+        "parent_roc_auc": 0.0,
+        "evaluation_normal_false_positives": 0.0,
+        "evaluation_normal_fpr": 0.0,
+        "defect_parent_recall": 0.0
+      }
+    },
+    "31": {
+      "counts": {
+        "training_normals": 8,
+        "calibration_normals": 8,
+        "evaluation_normals": 8,
+        "anomalies": 31
+      },
+      "split_scenes": {
+        "training_normals": [
+          "einschlag_schuss0"
+        ],
+        "calibration_normals": [
+          "knotenschuss1"
+        ],
+        "evaluation_normals": [
+          "schussfehler0"
+        ],
+        "anomalies": [
+          "schussfehler0"
+        ]
+      },
+      "crop_budget": {
+        "training_base_crops": 720,
+        "scored_parents": 47,
+        "scored_crops": 11797,
+        "base_crops_per_parent": 90,
+        "matched_views_crops_per_parent": 251.0,
+        "processed_pixel_ratio_to_single_grid": 2.7888888888888888
+      },
+      "run": {
+        "textile_id": 31,
+        "smoke": false,
+        "device": "NVIDIA GeForce RTX 4090",
+        "torch": "2.5.1+cu124",
+        "train_seconds": 16.664682883769274,
+        "predict_seconds": 59.92123893275857,
+        "fusion_and_evaluation_seconds": 13.552350334823132,
+        "checkpoint": "/root/autodl-tmp/Fabric_Defect_Detection/runs/olp_pcaf_external/full/checkpoints/textile_31.ckpt",
+        "checkpoint_sha256": "61C9F17FC05C76F53D0C2B63F5E8C899229AE00DB2B22AE31BE6E2DF800C9178",
+        "script_sha256": "99BF9C7B14CB6429A23AB1C29E558492DFD044323CF9972A1C0982DA8BE85AA1",
+        "config_sha256": "7F740A2C2A3F68725EBFC131CA6E31DAAD01BD958D109467E3D6C3252F93B12F",
+        "audit_sha256": "57756510F1BE53E3D45540E1E3847CFD72458A9F690D24D244017008AB7E9F22"
+      },
+      "metrics": {
+        "single_base": {
+          "pixel_average_precision": 0.1611450224007974,
+          "pixel_roc_auc": 0.5769170628466144,
+          "parent_average_precision": 0.7218184486929725,
+          "parent_roc_auc": 0.3225806451612903,
+          "source_calibrated_threshold": 6.577083587646484,
+          "evaluation_normal_false_positives": 4,
+          "evaluation_normal_fpr": 0.5,
+          "defect_parent_recall": 0.16129032258064516,
+          "pixel_positive_cells": 344397,
+          "pixel_evaluated_cells": 3067038
+        },
+        "mean": {
+          "pixel_average_precision": 0.16559538492662249,
+          "pixel_roc_auc": 0.5904557082757508,
+          "parent_average_precision": 0.7131169456644395,
+          "parent_roc_auc": 0.3024193548387097,
+          "source_calibrated_threshold": 7.598957538604736,
+          "evaluation_normal_false_positives": 4,
+          "evaluation_normal_fpr": 0.5,
+          "defect_parent_recall": 0.16129032258064516,
+          "pixel_positive_cells": 344397,
+          "pixel_evaluated_cells": 3067038
+        },
+        "context_bias_equal_mean": {
+          "pixel_average_precision": 0.16528766032765507,
+          "pixel_roc_auc": 0.591750387969084,
+          "parent_average_precision": 0.7133836311540852,
+          "parent_roc_auc": 0.29435483870967744,
+          "source_calibrated_threshold": 8.5827054977417,
+          "evaluation_normal_false_positives": 2,
+          "evaluation_normal_fpr": 0.25,
+          "defect_parent_recall": 0.06451612903225806,
+          "pixel_positive_cells": 344397,
+          "pixel_evaluated_cells": 3067038
+        },
+        "context_bias_weighted_mean": {
+          "pixel_average_precision": 0.16731099143113284,
+          "pixel_roc_auc": 0.5962219949119358,
+          "parent_average_precision": 0.708247154727286,
+          "parent_roc_auc": 0.282258064516129,
+          "source_calibrated_threshold": 8.825718879699707,
+          "evaluation_normal_false_positives": 3,
+          "evaluation_normal_fpr": 0.375,
+          "defect_parent_recall": 0.0967741935483871,
+          "pixel_positive_cells": 344397,
+          "pixel_evaluated_cells": 3067038
+        }
+      },
+      "pcaf_minus_mean": {
+        "pixel_average_precision": 0.0017156065045103586,
+        "pixel_roc_auc": 0.0057662866361850584,
+        "parent_average_precision": -0.004869790937153451,
+        "parent_roc_auc": -0.020161290322580683,
+        "evaluation_normal_false_positives": -1.0,
+        "evaluation_normal_fpr": -0.125,
+        "defect_parent_recall": -0.06451612903225806
+      }
+    },
+    "38": {
+      "counts": {
+        "training_normals": 8,
+        "calibration_normals": 8,
+        "evaluation_normals": 16,
+        "anomalies": 3
+      },
+      "split_scenes": {
+        "training_normals": [
+          "dekoware_verlierer_schuss0"
+        ],
+        "calibration_normals": [
+          "dickstelle_schuss2"
+        ],
+        "evaluation_normals": [
+          "dickstelle_schuss4",
+          "dickstelle_zurueckspringer0"
+        ],
+        "anomalies": [
+          "dickstelle_schuss4",
+          "dickstelle_zurueckspringer0"
+        ]
+      },
+      "crop_budget": {
+        "training_base_crops": 720,
+        "scored_parents": 27,
+        "scored_crops": 6777,
+        "base_crops_per_parent": 90,
+        "matched_views_crops_per_parent": 251.0,
+        "processed_pixel_ratio_to_single_grid": 2.7888888888888888
+      },
+      "run": {
+        "textile_id": 38,
+        "smoke": false,
+        "device": "NVIDIA GeForce RTX 4090",
+        "torch": "2.5.1+cu124",
+        "train_seconds": 16.46345985494554,
+        "predict_seconds": 34.34770775958896,
+        "fusion_and_evaluation_seconds": 6.00677764415741,
+        "checkpoint": "/root/autodl-tmp/Fabric_Defect_Detection/runs/olp_pcaf_external/full/checkpoints/textile_38.ckpt",
+        "checkpoint_sha256": "0144CE24C46CBA0A0BA55CB55B1AE95A80724F965E3D189F2A7B13A89D3DDAB3",
+        "script_sha256": "99BF9C7B14CB6429A23AB1C29E558492DFD044323CF9972A1C0982DA8BE85AA1",
+        "config_sha256": "7F740A2C2A3F68725EBFC131CA6E31DAAD01BD958D109467E3D6C3252F93B12F",
+        "audit_sha256": "57756510F1BE53E3D45540E1E3847CFD72458A9F690D24D244017008AB7E9F22"
+      },
+      "metrics": {
+        "single_base": {
+          "pixel_average_precision": 0.01327777497703425,
+          "pixel_roc_auc": 0.5790800237034726,
+          "parent_average_precision": 0.7777777777777777,
+          "parent_roc_auc": 0.875,
+          "source_calibrated_threshold": 3.7596895694732666,
+          "evaluation_normal_false_positives": 0,
+          "evaluation_normal_fpr": 0.0,
+          "defect_parent_recall": 0.0,
+          "pixel_positive_cells": 10953,
+          "pixel_evaluated_cells": 1494198
+        },
+        "mean": {
+          "pixel_average_precision": 0.013405400165164248,
+          "pixel_roc_auc": 0.6056122382924015,
+          "parent_average_precision": 0.3619047619047619,
+          "parent_roc_auc": 0.7291666666666666,
+          "source_calibrated_threshold": 3.9820854663848877,
+          "evaluation_normal_false_positives": 0,
+          "evaluation_normal_fpr": 0.0,
+          "defect_parent_recall": 0.0,
+          "pixel_positive_cells": 10953,
+          "pixel_evaluated_cells": 1494198
+        },
+        "context_bias_equal_mean": {
+          "pixel_average_precision": 0.015073107946658256,
+          "pixel_roc_auc": 0.6481464952779679,
+          "parent_average_precision": 0.5873015873015872,
+          "parent_roc_auc": 0.8333333333333334,
+          "source_calibrated_threshold": 4.536671161651611,
+          "evaluation_normal_false_positives": 0,
+          "evaluation_normal_fpr": 0.0,
+          "defect_parent_recall": 0.0,
+          "pixel_positive_cells": 10953,
+          "pixel_evaluated_cells": 1494198
+        },
+        "context_bias_weighted_mean": {
+          "pixel_average_precision": 0.015036218793630669,
+          "pixel_roc_auc": 0.6461442447197122,
+          "parent_average_precision": 0.5916666666666666,
+          "parent_roc_auc": 0.8333333333333333,
+          "source_calibrated_threshold": 4.6233601570129395,
+          "evaluation_normal_false_positives": 0,
+          "evaluation_normal_fpr": 0.0,
+          "defect_parent_recall": 0.0,
+          "pixel_positive_cells": 10953,
+          "pixel_evaluated_cells": 1494198
+        }
+      },
+      "pcaf_minus_mean": {
+        "pixel_average_precision": 0.0016308186284664204,
+        "pixel_roc_auc": 0.040532006427310696,
+        "parent_average_precision": 0.22976190476190467,
+        "parent_roc_auc": 0.10416666666666663,
+        "evaluation_normal_false_positives": 0.0,
+        "evaluation_normal_fpr": 0.0,
+        "defect_parent_recall": 0.0
+      }
+    }
+  },
+  "macro": {
+    "single_base": {
+      "pixel_average_precision": {
+        "mean": 0.16686685160114395,
+        "median": 0.08435625474354204,
+        "minimum": 0.01327777497703425,
+        "maximum": 0.544514186580273
+      },
+      "pixel_roc_auc": {
+        "mean": 0.7676843635482891,
+        "median": 0.7567192134502446,
+        "minimum": 0.5769170628466144,
+        "maximum": 0.9763095281108546
+      },
+      "parent_average_precision": {
+        "mean": 0.6535877845403154,
+        "median": 0.7218184486929725,
+        "minimum": 0.3333333333333333,
+        "maximum": 0.9166666666666665
+      },
+      "parent_roc_auc": {
+        "mean": 0.7040758837137006,
+        "median": 0.75,
+        "minimum": 0.3225806451612903,
+        "maximum": 0.92578125
+      },
+      "evaluation_normal_false_positives": {
+        "mean": 2.1333333333333333,
+        "median": 0.0,
+        "minimum": 0.0,
+        "maximum": 12.0
+      },
+      "evaluation_normal_fpr": {
+        "mean": 0.1313690476190476,
+        "median": 0.0,
+        "minimum": 0.0,
+        "maximum": 0.875
+      },
+      "defect_parent_recall": {
+        "mean": 0.30823946065881547,
+        "median": 0.3333333333333333,
+        "minimum": 0.0,
+        "maximum": 1.0
+      }
+    },
+    "mean": {
+      "pixel_average_precision": {
+        "mean": 0.17884722501670555,
+        "median": 0.08258367580881111,
+        "minimum": 0.013405400165164248,
+        "maximum": 0.6120081446671912
+      },
+      "pixel_roc_auc": {
+        "mean": 0.7895408039487968,
+        "median": 0.7789315271606505,
+        "minimum": 0.5904557082757508,
+        "maximum": 0.9900294620558039
+      },
+      "parent_average_precision": {
+        "mean": 0.6075736966309919,
+        "median": 0.6882116866191943,
+        "minimum": 0.25,
+        "maximum": 0.8999999999999999
+      },
+      "parent_roc_auc": {
+        "mean": 0.6680702803074634,
+        "median": 0.7291666666666666,
+        "minimum": 0.25,
+        "maximum": 0.94921875
+      },
+      "evaluation_normal_false_positives": {
+        "mean": 1.8,
+        "median": 0.0,
+        "minimum": 0.0,
+        "maximum": 9.0
+      },
+      "evaluation_normal_fpr": {
+        "mean": 0.13029761904761905,
+        "median": 0.0,
+        "minimum": 0.0,
+        "maximum": 0.875
+      },
+      "defect_parent_recall": {
+        "mean": 0.2996680320873869,
+        "median": 0.2857142857142857,
+        "minimum": 0.0,
+        "maximum": 1.0
+      }
+    },
+    "context_bias_equal_mean": {
+      "pixel_average_precision": {
+        "mean": 0.1783763355684344,
+        "median": 0.08177267311961452,
+        "minimum": 0.014276116152437948,
+        "maximum": 0.6199165257342368
+      },
+      "pixel_roc_auc": {
+        "mean": 0.8013974710732017,
+        "median": 0.787774578895432,
+        "minimum": 0.591750387969084,
+        "maximum": 0.9873316005791358
+      },
+      "parent_average_precision": {
+        "mean": 0.6191902612746358,
+        "median": 0.6719924512483915,
+        "minimum": 0.25,
+        "maximum": 0.925
+      },
+      "parent_roc_auc": {
+        "mean": 0.6700205994136006,
+        "median": 0.7107142857142857,
+        "minimum": 0.15625,
+        "maximum": 0.94140625
+      },
+      "evaluation_normal_false_positives": {
+        "mean": 1.1333333333333333,
+        "median": 0.0,
+        "minimum": 0.0,
+        "maximum": 9.0
+      },
+      "evaluation_normal_fpr": {
+        "mean": 0.05113095238095238,
+        "median": 0.0,
+        "minimum": 0.0,
+        "maximum": 0.25
+      },
+      "defect_parent_recall": {
+        "mean": 0.26644393241167436,
+        "median": 0.14285714285714285,
+        "minimum": 0.0,
+        "maximum": 0.8333333333333334
+      }
+    },
+    "context_bias_weighted_mean": {
+      "pixel_average_precision": {
+        "mean": 0.1790584902830175,
+        "median": 0.08243479229544685,
+        "minimum": 0.014157558816029247,
+        "maximum": 0.6249539130826186
+      },
+      "pixel_roc_auc": {
+        "mean": 0.8009955459750563,
+        "median": 0.7875184859841045,
+        "minimum": 0.5962219949119358,
+        "maximum": 0.9878822243003974
+      },
+      "parent_average_precision": {
+        "mean": 0.6261498845424633,
+        "median": 0.6804806082835451,
+        "minimum": 0.25,
+        "maximum": 0.925
+      },
+      "parent_roc_auc": {
+        "mean": 0.6764271580047789,
+        "median": 0.7107142857142857,
+        "minimum": 0.1875,
+        "maximum": 0.94921875
+      },
+      "evaluation_normal_false_positives": {
+        "mean": 1.1333333333333333,
+        "median": 0.0,
+        "minimum": 0.0,
+        "maximum": 9.0
+      },
+      "evaluation_normal_fpr": {
+        "mean": 0.05779761904761905,
+        "median": 0.0,
+        "minimum": 0.0,
+        "maximum": 0.375
+      },
+      "defect_parent_recall": {
+        "mean": 0.268594470046083,
+        "median": 0.14285714285714285,
+        "minimum": 0.0,
+        "maximum": 0.8333333333333334
+      }
+    }
+  },
+  "paired_pcaf_minus_mean": {
+    "pixel_average_precision": {
+      "textile_deltas": {
+        "1": 0.019469123270762667,
+        "2": -0.0009836747502977028,
+        "3": -0.03687922830795276,
+        "4": 0.00012078510347711749,
+        "5": 0.00013901501782822255,
+        "6": 0.004798017269611543,
+        "7": -0.00014888351336425631,
+        "14": -0.0074807707175752435,
+        "16": 0.012945768415427383,
+        "18": -0.008622791160267262,
+        "21": 0.006648731819532953,
+        "23": 0.009180678726869784,
+        "24": 0.0006357826876498412,
+        "31": 0.0017156065045103586,
+        "38": 0.0016308186284664204
+      },
+      "textile_macro_mean_delta": 0.00021126526631193738,
+      "textile_macro_median_delta": 0.0006357826876498412,
+      "textile_bootstrap_95pct_ci": [
+        -0.0064348072327120994,
+        0.005643146843571557
+      ],
+      "wins": 10,
+      "ties": 0,
+      "losses": 5,
+      "exact_two_sided_sign_test_p": 0.3017578125
+    },
+    "pixel_roc_auc": {
+      "textile_deltas": {
+        "1": 0.014218374478958906,
+        "2": 0.03118640843270981,
+        "3": -0.0021472377554064837,
+        "4": 0.008275534096202297,
+        "5": 0.0172900385547623,
+        "6": 0.008122246789156073,
+        "7": 0.0006207723650266672,
+        "14": -0.0018696809959248828,
+        "16": 0.0037315166297924307,
+        "18": 0.006716056602342424,
+        "21": 0.012953622952008748,
+        "23": 0.00858695882345395,
+        "24": 0.01783822635731447,
+        "31": 0.0057662866361850584,
+        "38": 0.040532006427310696
+      },
+      "textile_macro_mean_delta": 0.011454742026259497,
+      "textile_macro_median_delta": 0.008275534096202297,
+      "textile_bootstrap_95pct_ci": [
+        0.006193631395017809,
+        0.01755261438096137
+      ],
+      "wins": 13,
+      "ties": 0,
+      "losses": 2,
+      "exact_two_sided_sign_test_p": 0.00738525390625
+    },
+    "parent_average_precision": {
+      "textile_deltas": {
+        "1": 0.006926406926406781,
+        "2": 0.0,
+        "3": 0.0,
+        "4": -0.027777777777777735,
+        "5": 0.0035281385281386024,
+        "6": 0.008002004935816265,
+        "7": 0.055610566639978376,
+        "14": 0.025000000000000133,
+        "16": 0.0006363949088405985,
+        "18": -0.016938856633002097,
+        "21": -0.007731078335649233,
+        "23": 0.0064949056545695605,
+        "24": 0.0,
+        "31": -0.004869790937153451,
+        "38": 0.22976190476190467
+      },
+      "textile_macro_mean_delta": 0.018576187911471496,
+      "textile_macro_median_delta": 0.0006363949088405985,
+      "textile_bootstrap_95pct_ci": [
+        -0.003316224704617471,
+        0.05371449488991493
+      ],
+      "wins": 8,
+      "ties": 3,
+      "losses": 4,
+      "exact_two_sided_sign_test_p": 0.3876953125
+    },
+    "parent_roc_auc": {
+      "textile_deltas": {
+        "1": 0.0,
+        "2": 0.0,
+        "3": 0.0,
+        "4": -0.0625,
+        "5": -5.551115123125783e-17,
+        "6": 0.021258503401360485,
+        "7": 0.0714285714285714,
+        "14": 0.050000000000000044,
+        "16": 0.0,
+        "18": -0.03214285714285714,
+        "21": -0.015624999999999944,
+        "23": 0.008928571428571508,
+        "24": 0.0,
+        "31": -0.020161290322580683,
+        "38": 0.10416666666666663
+      },
+      "textile_macro_mean_delta": 0.008356877697315484,
+      "textile_macro_median_delta": 0.0,
+      "textile_bootstrap_95pct_ci": [
+        -0.010872695852534557,
+        0.02916186635944699
+      ],
+      "wins": 5,
+      "ties": 5,
+      "losses": 5,
+      "exact_two_sided_sign_test_p": 1.0
+    },
+    "evaluation_normal_false_positives": {
+      "textile_deltas": {
+        "1": 0.0,
+        "2": 0.0,
+        "3": -5.0,
+        "4": 0.0,
+        "5": 0.0,
+        "6": 0.0,
+        "7": -1.0,
+        "14": -2.0,
+        "16": 0.0,
+        "18": 0.0,
+        "21": 0.0,
+        "23": -1.0,
+        "24": 0.0,
+        "31": -1.0,
+        "38": 0.0
+      },
+      "textile_macro_mean_delta": -0.6666666666666666,
+      "textile_macro_median_delta": 0.0,
+      "textile_bootstrap_95pct_ci": [
+        -1.4,
+        -0.13333333333333333
+      ],
+      "wins": 0,
+      "ties": 10,
+      "losses": 5,
+      "exact_two_sided_sign_test_p": 0.0625
+    },
+    "evaluation_normal_fpr": {
+      "textile_deltas": {
+        "1": 0.0,
+        "2": 0.0,
+        "3": -0.625,
+        "4": 0.0,
+        "5": 0.0,
+        "6": 0.0,
+        "7": -0.024999999999999994,
+        "14": -0.25,
+        "16": 0.0,
+        "18": 0.0,
+        "21": 0.0,
+        "23": -0.0625,
+        "24": 0.0,
+        "31": -0.125,
+        "38": 0.0
+      },
+      "textile_macro_mean_delta": -0.0725,
+      "textile_macro_median_delta": 0.0,
+      "textile_bootstrap_95pct_ci": [
+        -0.16666666666666666,
+        -0.008333333333333333
+      ],
+      "wins": 0,
+      "ties": 10,
+      "losses": 5,
+      "exact_two_sided_sign_test_p": 0.0625
+    },
+    "defect_parent_recall": {
+      "textile_deltas": {
+        "1": 0.0,
+        "2": 0.0,
+        "3": -0.16666666666666663,
+        "4": 0.0,
+        "5": 0.0,
+        "6": 0.047619047619047616,
+        "7": -0.14285714285714285,
+        "14": 0.0,
+        "16": -0.1111111111111111,
+        "18": -0.028571428571428567,
+        "21": 0.0,
+        "23": 0.0,
+        "24": 0.0,
+        "31": -0.06451612903225806,
+        "38": 0.0
+      },
+      "textile_macro_mean_delta": -0.031073562041303973,
+      "textile_macro_median_delta": 0.0,
+      "textile_bootstrap_95pct_ci": [
+        -0.06348540706605223,
+        -0.0031710189452125457
+      ],
+      "wins": 1,
+      "ties": 9,
+      "losses": 5,
+      "exact_two_sided_sign_test_p": 0.21875
+    }
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "seed": 20260804,
+  "fold": "Rollo4A",
+  "base_config": "configs/raw_fabrid_anomalib_patchcore_k0.json",
+  "checkpoint": "runs/raw_fabrid_patchcore_k0/instance_audit/lightning_Rollo4A/Patchcore/v0/weights/lightning/model.ckpt",
+  "frozen_full_reference": "runs/raw_fabrid_context_bias_field_k3/final_reproduction/Rollo4A.json",
+  "crop_observations": {
+    "physical_crop_edge": 256,
+    "phase_shift_pixels": 64,
+    "output_stride_pixels": 8,
+    "views": [
+      "base_grid",
+      "x_shifted_grid",
+      "y_shifted_grid"
+    ],
+    "stage_one_views": [
+      "base_grid",
+      "y_shifted_grid"
+    ],
+    "optional_view": "x_shifted_grid",
+    "full_crops_per_parent": 73,
+    "stage_one_crops_per_parent": 49
+  },
+  "selector": {
+    "fit_split": "source_calibration_normals_only",
+    "field": "stage_one_position_calibrated_inverse_variance_mean",
+    "score_mode": "robust_z_local_mean_max",
+    "candidate_region_top_fraction": 0.01,
+    "source_normal_quantile": 0.9,
+    "quantile_method": "higher",
+    "threshold_scope": "per_optional_crop_slot",
+    "tie_rule": "strictly_greater",
+    "uses_defect_labels": false,
+    "uses_target_roll_normals": false
+  },
+  "matched_control": {
+    "name": "matched_uniform_sparse_pcaf",
+    "policy": "same_optional_crop_count_per_parent_as_candidate_with_seeded_label_independent_uniform_slot_selection"
+  },
+  "primary_score_mode": "robust_z",
+  "evidence_gate": {
+    "candidate": "sequential_pcaf",
+    "stage_one_reference": "base_y_pcaf",
+    "matched_budget_reference": "matched_uniform_sparse_pcaf",
+    "full_reference": "full_pcaf",
+    "minimum_evaluation_budget_reduction_vs_full": 0.2,
+    "maximum_pixel_ap_loss_vs_full": 0.003,
+    "minimum_pixel_ap_gain_over_stage_one": 0.003,
+    "minimum_pixel_ap_gain_over_matched_budget": 0.002,
+    "maximum_parent_ap_loss_vs_full": 0.01,
+    "maximum_small_instance_auc_loss_vs_full": 0.02,
+    "maximum_elongated_instance_auc_loss_vs_full": 0.02,
+    "maximum_target_normal_false_positive_increment_vs_full": 0,
+    "formal_expansion": "Only a complete pass on Rollo4A authorizes a frozen six-roll confirmation. No selector quantile, score mode, stage-one view, or tie rule may be changed after reading Rollo4A metrics."
+  },
+  "novelty_boundary": {
+    "adjacent_work": [
+      "Dynamic Tiling (arXiv:2309.11069) starts from non-overlapping object-detection tiles and adapts overlap",
+      "HiAD (arXiv:2508.12931) assigns detectors from a pool under high-resolution compute constraints",
+      "TTA-AD (arXiv:2206.02345) uses augmentation consistency for image-level OOD detection"
+    ],
+    "candidate_difference": "The decision unit is an optional crop observation of an already registered physical parent coordinate. Source-normal calibrated first-stage evidence assigns value to a third crop-context observation, and a same-count uniform control isolates placement value from compute budget."
+  }
+}

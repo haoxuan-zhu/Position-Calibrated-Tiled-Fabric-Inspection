@@ -1,0 +1,1134 @@
+{
+  "schema_version": 1,
+  "purpose": "Seven-fold content-controlled crop-coordinate mechanism audit",
+  "folds": [
+    "Rollo1A",
+    "Rollo2A",
+    "Rollo3A",
+    "Rollo4A",
+    "Rollo5A",
+    "Rollo6A",
+    "Rollo7A"
+  ],
+  "independent_accuracy_unit": "held-out fabric roll",
+  "identifiability": {
+    "relative_coordinate_bins": 1024,
+    "connected_components": 64,
+    "identifiable_contrasts": 960,
+    "component_constants_requiring_pooled_anchor": 64
+  },
+  "bootstrap": {
+    "seed": 20260730,
+    "samples": 10000,
+    "unit": "roll"
+  },
+  "per_fold": {
+    "Rollo1A": {
+      "paired_differences": 7225344,
+      "pair_rmse": {
+        "raw": 1.395493909410488,
+        "pooled_corrected": 1.25871706135343,
+        "fixed_effect_corrected": 1.2551552935347086
+      },
+      "pair_absolute_median": {
+        "raw": 0.6985855102539062,
+        "pooled_corrected": 0.6277370452880859,
+        "fixed_effect_corrected": 0.6278340741772599
+      },
+      "pooled_vs_anchored": {
+        "pearson": 0.9910502846132262,
+        "spearman": 0.9805282392175093
+      },
+      "within_component_pearson": {
+        "minimum": 0.8627021125651106,
+        "median": 0.9923986429041394
+      },
+      "source_roll_fixed_effect_stability": {
+        "rolls": [
+          "Rollo2A",
+          "Rollo3A",
+          "Rollo4A",
+          "Rollo5A",
+          "Rollo6A",
+          "Rollo7A"
+        ],
+        "pairs": {
+          "Rollo2A__Rollo3A": {
+            "pearson": 0.827325696341907,
+            "spearman": 0.6705250987947928
+          },
+          "Rollo2A__Rollo4A": {
+            "pearson": 0.9326019915671824,
+            "spearman": 0.8394832384128459
+          },
+          "Rollo2A__Rollo5A": {
+            "pearson": 0.8970026684722795,
+            "spearman": 0.7754325401437664
+          },
+          "Rollo2A__Rollo6A": {
+            "pearson": 0.512816674901589,
+            "spearman": 0.49914133466847854
+          },
+          "Rollo2A__Rollo7A": {
+            "pearson": 0.7873608321445257,
+            "spearman": 0.6839482713146412
+          },
+          "Rollo3A__Rollo4A": {
+            "pearson": 0.8971938824677735,
+            "spearman": 0.8181519338745439
+          },
+          "Rollo3A__Rollo5A": {
+            "pearson": 0.8993099921911102,
+            "spearman": 0.8504662466025319
+          },
+          "Rollo3A__Rollo6A": {
+            "pearson": 0.7524117838980284,
+            "spearman": 0.7839871857342106
+          },
+          "Rollo3A__Rollo7A": {
+            "pearson": 0.8721200681582973,
+            "spearman": 0.8376072214076244
+          },
+          "Rollo4A__Rollo5A": {
+            "pearson": 0.9440121096839761,
+            "spearman": 0.9082015771404047
+          },
+          "Rollo4A__Rollo6A": {
+            "pearson": 0.7028475846658755,
+            "spearman": 0.761828262463343
+          },
+          "Rollo4A__Rollo7A": {
+            "pearson": 0.83173198174357,
+            "spearman": 0.7637979892353908
+          },
+          "Rollo5A__Rollo6A": {
+            "pearson": 0.7082478754595076,
+            "spearman": 0.7496479038516557
+          },
+          "Rollo5A__Rollo7A": {
+            "pearson": 0.8329454774730254,
+            "spearman": 0.8027165103533366
+          },
+          "Rollo6A__Rollo7A": {
+            "pearson": 0.696230362064776,
+            "spearman": 0.6689397329411343
+          }
+        },
+        "pair_count": 15,
+        "pearson_minimum": 0.512816674901589,
+        "pearson_median": 0.83173198174357,
+        "pearson_maximum": 0.9440121096839761,
+        "spearman_minimum": 0.49914133466847854,
+        "spearman_median": 0.7754325401437664,
+        "spearman_maximum": 0.9082015771404047
+      },
+      "metrics": {
+        "mean": {
+          "pixel_average_precision": 0.2441150095369628,
+          "instance_auc_all": 0.8491436100131753
+        },
+        "context_bias_equal_mean": {
+          "pixel_average_precision": 0.2530570840588133,
+          "instance_auc_all": 0.8484848484848485
+        },
+        "context_bias_weighted_mean": {
+          "pixel_average_precision": 0.25372369395073807,
+          "instance_auc_all": 0.8484848484848485
+        },
+        "fixed_effect_equal_mean": {
+          "pixel_average_precision": 0.2532724840127645,
+          "instance_auc_all": 0.8484848484848485
+        },
+        "fixed_effect_weighted_mean": {
+          "pixel_average_precision": 0.2539709358338838,
+          "instance_auc_all": 0.8478260869565217
+        }
+      }
+    },
+    "Rollo2A": {
+      "paired_differences": 7418880,
+      "pair_rmse": {
+        "raw": 1.4084693147569436,
+        "pooled_corrected": 1.2779429754341383,
+        "fixed_effect_corrected": 1.2717862383157759
+      },
+      "pair_absolute_median": {
+        "raw": 0.7256889343261719,
+        "pooled_corrected": 0.6455974578857422,
+        "fixed_effect_corrected": 0.6474274550716608
+      },
+      "pooled_vs_anchored": {
+        "pearson": 0.9883144949652986,
+        "spearman": 0.9821344899499055
+      },
+      "within_component_pearson": {
+        "minimum": 0.8150109539760151,
+        "median": 0.9897030975400738
+      },
+      "source_roll_fixed_effect_stability": {
+        "rolls": [
+          "Rollo1A",
+          "Rollo3A",
+          "Rollo4A",
+          "Rollo5A",
+          "Rollo6A",
+          "Rollo7A"
+        ],
+        "pairs": {
+          "Rollo1A__Rollo3A": {
+            "pearson": 0.8851877661469207,
+            "spearman": 0.8910713535333665
+          },
+          "Rollo1A__Rollo4A": {
+            "pearson": 0.9605297111399376,
+            "spearman": 0.9592914491095056
+          },
+          "Rollo1A__Rollo5A": {
+            "pearson": 0.97921430238685,
+            "spearman": 0.977492310993491
+          },
+          "Rollo1A__Rollo6A": {
+            "pearson": 0.5621560829892686,
+            "spearman": 0.5799822527000928
+          },
+          "Rollo1A__Rollo7A": {
+            "pearson": 0.5735734367873112,
+            "spearman": 0.5796339563514769
+          },
+          "Rollo3A__Rollo4A": {
+            "pearson": 0.941270083817006,
+            "spearman": 0.943722060296116
+          },
+          "Rollo3A__Rollo5A": {
+            "pearson": 0.8887329452861167,
+            "spearman": 0.8925993759387739
+          },
+          "Rollo3A__Rollo6A": {
+            "pearson": 0.7542499071094926,
+            "spearman": 0.7419752923610613
+          },
+          "Rollo3A__Rollo7A": {
+            "pearson": 0.7751855343792677,
+            "spearman": 0.7705769772369643
+          },
+          "Rollo4A__Rollo5A": {
+            "pearson": 0.947842921198449,
+            "spearman": 0.9433615151813174
+          },
+          "Rollo4A__Rollo6A": {
+            "pearson": 0.6480155850132582,
+            "spearman": 0.6461858504398826
+          },
+          "Rollo4A__Rollo7A": {
+            "pearson": 0.6799668015083417,
+            "spearman": 0.6791133949645947
+          },
+          "Rollo5A__Rollo6A": {
+            "pearson": 0.5631078076843771,
+            "spearman": 0.5687100797510907
+          },
+          "Rollo5A__Rollo7A": {
+            "pearson": 0.5695961540591108,
+            "spearman": 0.5788513317180458
+          },
+          "Rollo6A__Rollo7A": {
+            "pearson": 0.8408694183477875,
+            "spearman": 0.8702624991059293
+          }
+        },
+        "pair_count": 15,
+        "pearson_minimum": 0.5621560829892686,
+        "pearson_median": 0.7751855343792677,
+        "pearson_maximum": 0.97921430238685,
+        "spearman_minimum": 0.5687100797510907,
+        "spearman_median": 0.7705769772369643,
+        "spearman_maximum": 0.977492310993491
+      },
+      "metrics": {
+        "mean": {
+          "pixel_average_precision": 0.2615731180647777,
+          "instance_auc_all": 0.7284090909090909
+        },
+        "context_bias_equal_mean": {
+          "pixel_average_precision": 0.26527079852890495,
+          "instance_auc_all": 0.7268939393939394
+        },
+        "context_bias_weighted_mean": {
+          "pixel_average_precision": 0.26552597239799813,
+          "instance_auc_all": 0.7261363636363636
+        },
+        "fixed_effect_equal_mean": {
+          "pixel_average_precision": 0.2645480422740293,
+          "instance_auc_all": 0.7276515151515152
+        },
+        "fixed_effect_weighted_mean": {
+          "pixel_average_precision": 0.26414881081584646,
+          "instance_auc_all": 0.7261363636363636
+        }
+      }
+    },
+    "Rollo3A": {
+      "paired_differences": 8064000,
+      "pair_rmse": {
+        "raw": 1.4344011773581102,
+        "pooled_corrected": 1.251560798205806,
+        "fixed_effect_corrected": 1.2463738974955596
+      },
+      "pair_absolute_median": {
+        "raw": 0.7222633361816406,
+        "pooled_corrected": 0.6181087493896484,
+        "fixed_effect_corrected": 0.6171206690877309
+      },
+      "pooled_vs_anchored": {
+        "pearson": 0.9915929707610383,
+        "spearman": 0.9854372228381373
+      },
+      "within_component_pearson": {
+        "minimum": 0.9054600721112598,
+        "median": 0.9931979072888912
+      },
+      "source_roll_fixed_effect_stability": {
+        "rolls": [
+          "Rollo1A",
+          "Rollo2A",
+          "Rollo4A",
+          "Rollo5A",
+          "Rollo6A",
+          "Rollo7A"
+        ],
+        "pairs": {
+          "Rollo1A__Rollo2A": {
+            "pearson": 0.975454178851133,
+            "spearman": 0.969370440240326
+          },
+          "Rollo1A__Rollo4A": {
+            "pearson": 0.971719661902081,
+            "spearman": 0.9721336546026749
+          },
+          "Rollo1A__Rollo5A": {
+            "pearson": 0.9671387262160765,
+            "spearman": 0.964874260156641
+          },
+          "Rollo1A__Rollo6A": {
+            "pearson": 0.7902247487126104,
+            "spearman": 0.784909631821758
+          },
+          "Rollo1A__Rollo7A": {
+            "pearson": 0.7640426820770028,
+            "spearman": 0.7956853274086259
+          },
+          "Rollo2A__Rollo4A": {
+            "pearson": 0.9831596871226151,
+            "spearman": 0.9835676543165723
+          },
+          "Rollo2A__Rollo5A": {
+            "pearson": 0.9443178899510122,
+            "spearman": 0.9401310260353335
+          },
+          "Rollo2A__Rollo6A": {
+            "pearson": 0.7801380548832687,
+            "spearman": 0.76467563121379
+          },
+          "Rollo2A__Rollo7A": {
+            "pearson": 0.7459992405278665,
+            "spearman": 0.7756905577211929
+          },
+          "Rollo4A__Rollo5A": {
+            "pearson": 0.9172668826589485,
+            "spearman": 0.9246304359487875
+          },
+          "Rollo4A__Rollo6A": {
+            "pearson": 0.7421822563132199,
+            "spearman": 0.7392561892032042
+          },
+          "Rollo4A__Rollo7A": {
+            "pearson": 0.7128057489094971,
+            "spearman": 0.7609175063479006
+          },
+          "Rollo5A__Rollo6A": {
+            "pearson": 0.8644672978222471,
+            "spearman": 0.8503106895071881
+          },
+          "Rollo5A__Rollo7A": {
+            "pearson": 0.8336718371606799,
+            "spearman": 0.837859829858379
+          },
+          "Rollo6A__Rollo7A": {
+            "pearson": 0.8514018665820605,
+            "spearman": 0.8344119139367712
+          }
+        },
+        "pair_count": 15,
+        "pearson_minimum": 0.7128057489094971,
+        "pearson_median": 0.8514018665820605,
+        "pearson_maximum": 0.9831596871226151,
+        "spearman_minimum": 0.7392561892032042,
+        "spearman_median": 0.837859829858379,
+        "spearman_maximum": 0.9835676543165723
+      },
+      "metrics": {
+        "mean": {
+          "pixel_average_precision": 0.18646717250162687,
+          "instance_auc_all": 0.588235294117647
+        },
+        "context_bias_equal_mean": {
+          "pixel_average_precision": 0.19050677766412277,
+          "instance_auc_all": 0.5972850678733032
+        },
+        "context_bias_weighted_mean": {
+          "pixel_average_precision": 0.19123090694958533,
+          "instance_auc_all": 0.6018099547511313
+        },
+        "fixed_effect_equal_mean": {
+          "pixel_average_precision": 0.19195852960883714,
+          "instance_auc_all": 0.6063348416289593
+        },
+        "fixed_effect_weighted_mean": {
+          "pixel_average_precision": 0.19247840113278444,
+          "instance_auc_all": 0.5972850678733032
+        }
+      }
+    },
+    "Rollo4A": {
+      "paired_differences": 6838272,
+      "pair_rmse": {
+        "raw": 1.3998881029846926,
+        "pooled_corrected": 1.2419140671086069,
+        "fixed_effect_corrected": 1.2398364606470338
+      },
+      "pair_absolute_median": {
+        "raw": 0.7337512969970703,
+        "pooled_corrected": 0.6344642639160156,
+        "fixed_effect_corrected": 0.634442289569785
+      },
+      "pooled_vs_anchored": {
+        "pearson": 0.9961757600605174,
+        "spearman": 0.9949607419079933
+      },
+      "within_component_pearson": {
+        "minimum": 0.9733147840625337,
+        "median": 0.9967324171571081
+      },
+      "source_roll_fixed_effect_stability": {
+        "rolls": [
+          "Rollo1A",
+          "Rollo2A",
+          "Rollo3A",
+          "Rollo5A",
+          "Rollo6A",
+          "Rollo7A"
+        ],
+        "pairs": {
+          "Rollo1A__Rollo2A": {
+            "pearson": 0.9298192451889099,
+            "spearman": 0.9288072540411986
+          },
+          "Rollo1A__Rollo3A": {
+            "pearson": 0.9036191380312812,
+            "spearman": 0.8952361799048707
+          },
+          "Rollo1A__Rollo5A": {
+            "pearson": 0.9690261885123405,
+            "spearman": 0.9644618030720261
+          },
+          "Rollo1A__Rollo6A": {
+            "pearson": 0.710162524089444,
+            "spearman": 0.7585779361276016
+          },
+          "Rollo1A__Rollo7A": {
+            "pearson": 0.7399746019919066,
+            "spearman": 0.7943299723732207
+          },
+          "Rollo2A__Rollo3A": {
+            "pearson": 0.9201540328445429,
+            "spearman": 0.8984277658071668
+          },
+          "Rollo2A__Rollo5A": {
+            "pearson": 0.9401756360171423,
+            "spearman": 0.9357449507367139
+          },
+          "Rollo2A__Rollo6A": {
+            "pearson": 0.7562208945027696,
+            "spearman": 0.7907988296616836
+          },
+          "Rollo2A__Rollo7A": {
+            "pearson": 0.7681762533426446,
+            "spearman": 0.8468080452936126
+          },
+          "Rollo3A__Rollo5A": {
+            "pearson": 0.9462783815644696,
+            "spearman": 0.941548127816322
+          },
+          "Rollo3A__Rollo6A": {
+            "pearson": 0.7951581832972718,
+            "spearman": 0.8286565137508045
+          },
+          "Rollo3A__Rollo7A": {
+            "pearson": 0.848515327435694,
+            "spearman": 0.8958252829733208
+          },
+          "Rollo5A__Rollo6A": {
+            "pearson": 0.7578356197673162,
+            "spearman": 0.7951023710750302
+          },
+          "Rollo5A__Rollo7A": {
+            "pearson": 0.793778634399834,
+            "spearman": 0.8542531270116586
+          },
+          "Rollo6A__Rollo7A": {
+            "pearson": 0.8269999643766244,
+            "spearman": 0.8456379193190757
+          }
+        },
+        "pair_count": 15,
+        "pearson_minimum": 0.710162524089444,
+        "pearson_median": 0.8269999643766244,
+        "pearson_maximum": 0.9690261885123405,
+        "spearman_minimum": 0.7585779361276016,
+        "spearman_median": 0.8542531270116586,
+        "spearman_maximum": 0.9644618030720261
+      },
+      "metrics": {
+        "mean": {
+          "pixel_average_precision": 0.3710845142199495,
+          "instance_auc_all": 0.7586956521739131
+        },
+        "context_bias_equal_mean": {
+          "pixel_average_precision": 0.3745505990026681,
+          "instance_auc_all": 0.76781206171108
+        },
+        "context_bias_weighted_mean": {
+          "pixel_average_precision": 0.37556293271968477,
+          "instance_auc_all": 0.7678120617110801
+        },
+        "fixed_effect_equal_mean": {
+          "pixel_average_precision": 0.3745872125616027,
+          "instance_auc_all": 0.7680925666199158
+        },
+        "fixed_effect_weighted_mean": {
+          "pixel_average_precision": 0.3756753514439213,
+          "instance_auc_all": 0.7678821879382889
+        }
+      }
+    },
+    "Rollo5A": {
+      "paired_differences": 7999488,
+      "pair_rmse": {
+        "raw": 1.4227587793303647,
+        "pooled_corrected": 1.2764806960035755,
+        "fixed_effect_corrected": 1.2719825351607075
+      },
+      "pair_absolute_median": {
+        "raw": 0.7242889404296875,
+        "pooled_corrected": 0.65179443359375,
+        "fixed_effect_corrected": 0.6511254214038704
+      },
+      "pooled_vs_anchored": {
+        "pearson": 0.9914763893471772,
+        "spearman": 0.9800093877405048
+      },
+      "within_component_pearson": {
+        "minimum": 0.7854644182122716,
+        "median": 0.9924113293844166
+      },
+      "source_roll_fixed_effect_stability": {
+        "rolls": [
+          "Rollo1A",
+          "Rollo2A",
+          "Rollo3A",
+          "Rollo4A",
+          "Rollo6A",
+          "Rollo7A"
+        ],
+        "pairs": {
+          "Rollo1A__Rollo2A": {
+            "pearson": 0.9749945734123094,
+            "spearman": 0.9733891307846362
+          },
+          "Rollo1A__Rollo3A": {
+            "pearson": 0.8856161905718525,
+            "spearman": 0.8896527988877762
+          },
+          "Rollo1A__Rollo4A": {
+            "pearson": 0.9634414276431178,
+            "spearman": 0.9536831235247835
+          },
+          "Rollo1A__Rollo6A": {
+            "pearson": 0.6070218162567993,
+            "spearman": 0.6169050184178527
+          },
+          "Rollo1A__Rollo7A": {
+            "pearson": 0.6778204116254447,
+            "spearman": 0.6396436681925469
+          },
+          "Rollo2A__Rollo3A": {
+            "pearson": 0.9144429431910516,
+            "spearman": 0.9177145657499463
+          },
+          "Rollo2A__Rollo4A": {
+            "pearson": 0.9584053170487824,
+            "spearman": 0.9494977447071024
+          },
+          "Rollo2A__Rollo6A": {
+            "pearson": 0.5984983415278969,
+            "spearman": 0.6066212069058007
+          },
+          "Rollo2A__Rollo7A": {
+            "pearson": 0.6712773163542721,
+            "spearman": 0.6197548235104784
+          },
+          "Rollo3A__Rollo4A": {
+            "pearson": 0.8923526660820478,
+            "spearman": 0.8958769155460982
+          },
+          "Rollo3A__Rollo6A": {
+            "pearson": 0.6859186409106545,
+            "spearman": 0.7233453101530648
+          },
+          "Rollo3A__Rollo7A": {
+            "pearson": 0.7242269414288272,
+            "spearman": 0.7050747889993562
+          },
+          "Rollo4A__Rollo6A": {
+            "pearson": 0.7060666479022475,
+            "spearman": 0.6826910963986839
+          },
+          "Rollo4A__Rollo7A": {
+            "pearson": 0.7852538610706444,
+            "spearman": 0.7277777877118946
+          },
+          "Rollo6A__Rollo7A": {
+            "pearson": 0.8701705379662455,
+            "spearman": 0.8610609599635218
+          }
+        },
+        "pair_count": 15,
+        "pearson_minimum": 0.5984983415278969,
+        "pearson_median": 0.7852538610706444,
+        "pearson_maximum": 0.9749945734123094,
+        "spearman_minimum": 0.6066212069058007,
+        "spearman_median": 0.7277777877118946,
+        "spearman_maximum": 0.9733891307846362
+      },
+      "metrics": {
+        "mean": {
+          "pixel_average_precision": 0.44138220169825226,
+          "instance_auc_all": 0.8289473684210523
+        },
+        "context_bias_equal_mean": {
+          "pixel_average_precision": 0.44363651568599227,
+          "instance_auc_all": 0.8274853801169587
+        },
+        "context_bias_weighted_mean": {
+          "pixel_average_precision": 0.44484754542154503,
+          "instance_auc_all": 0.8274853801169588
+        },
+        "fixed_effect_equal_mean": {
+          "pixel_average_precision": 0.44401441401174924,
+          "instance_auc_all": 0.8260233918128652
+        },
+        "fixed_effect_weighted_mean": {
+          "pixel_average_precision": 0.4454081656462589,
+          "instance_auc_all": 0.8274853801169588
+        }
+      }
+    },
+    "Rollo6A": {
+      "paired_differences": 6773760,
+      "pair_rmse": {
+        "raw": 1.4480227829779933,
+        "pooled_corrected": 1.290668808854694,
+        "fixed_effect_corrected": 1.278724829482449
+      },
+      "pair_absolute_median": {
+        "raw": 0.7328414916992188,
+        "pooled_corrected": 0.6391716003417969,
+        "fixed_effect_corrected": 0.6364319822210529
+      },
+      "pooled_vs_anchored": {
+        "pearson": 0.9789745911859198,
+        "spearman": 0.9726524502002717
+      },
+      "within_component_pearson": {
+        "minimum": 0.8510096015028388,
+        "median": 0.9839325111123884
+      },
+      "source_roll_fixed_effect_stability": {
+        "rolls": [
+          "Rollo1A",
+          "Rollo2A",
+          "Rollo3A",
+          "Rollo4A",
+          "Rollo5A",
+          "Rollo7A"
+        ],
+        "pairs": {
+          "Rollo1A__Rollo2A": {
+            "pearson": 0.9631125002465998,
+            "spearman": 0.9705056974644158
+          },
+          "Rollo1A__Rollo3A": {
+            "pearson": 0.938500427929345,
+            "spearman": 0.945875965596166
+          },
+          "Rollo1A__Rollo4A": {
+            "pearson": 0.9818668285549667,
+            "spearman": 0.9866057730133752
+          },
+          "Rollo1A__Rollo5A": {
+            "pearson": 0.981208877612585,
+            "spearman": 0.9787844552428294
+          },
+          "Rollo1A__Rollo7A": {
+            "pearson": 0.6251562972330429,
+            "spearman": 0.7068333363135683
+          },
+          "Rollo2A__Rollo3A": {
+            "pearson": 0.8938794865730364,
+            "spearman": 0.9099831579464986
+          },
+          "Rollo2A__Rollo4A": {
+            "pearson": 0.9790207195087189,
+            "spearman": 0.9791143337386451
+          },
+          "Rollo2A__Rollo5A": {
+            "pearson": 0.9429337726433454,
+            "spearman": 0.9522746271725913
+          },
+          "Rollo2A__Rollo7A": {
+            "pearson": 0.5190407103606887,
+            "spearman": 0.6230571065195621
+          },
+          "Rollo3A__Rollo4A": {
+            "pearson": 0.934588354789061,
+            "spearman": 0.9428044757170444
+          },
+          "Rollo3A__Rollo5A": {
+            "pearson": 0.9457848063484098,
+            "spearman": 0.9452273509584435
+          },
+          "Rollo3A__Rollo7A": {
+            "pearson": 0.7360985980346477,
+            "spearman": 0.7817848329876259
+          },
+          "Rollo4A__Rollo5A": {
+            "pearson": 0.9563868169602896,
+            "spearman": 0.9615800796616836
+          },
+          "Rollo4A__Rollo7A": {
+            "pearson": 0.5865438077064041,
+            "spearman": 0.6808902595486731
+          },
+          "Rollo5A__Rollo7A": {
+            "pearson": 0.6594516786723201,
+            "spearman": 0.7022670387490164
+          }
+        },
+        "pair_count": 15,
+        "pearson_minimum": 0.5190407103606887,
+        "pearson_median": 0.938500427929345,
+        "pearson_maximum": 0.9818668285549667,
+        "spearman_minimum": 0.6230571065195621,
+        "spearman_median": 0.9452273509584435,
+        "spearman_maximum": 0.9866057730133752
+      },
+      "metrics": {
+        "mean": {
+          "pixel_average_precision": 0.4840749022999018,
+          "instance_auc_all": 0.9333333333333332
+        },
+        "context_bias_equal_mean": {
+          "pixel_average_precision": 0.49636764555803975,
+          "instance_auc_all": 0.9422619047619047
+        },
+        "context_bias_weighted_mean": {
+          "pixel_average_precision": 0.49534362421982664,
+          "instance_auc_all": 0.9407738095238094
+        },
+        "fixed_effect_equal_mean": {
+          "pixel_average_precision": 0.4961194241116098,
+          "instance_auc_all": 0.9428571428571426
+        },
+        "fixed_effect_weighted_mean": {
+          "pixel_average_precision": 0.49523287556677903,
+          "instance_auc_all": 0.9407738095238094
+        }
+      }
+    },
+    "Rollo7A": {
+      "paired_differences": 5612544,
+      "pair_rmse": {
+        "raw": 1.2961565549998553,
+        "pooled_corrected": 1.1477517811705302,
+        "fixed_effect_corrected": 1.142760076678366
+      },
+      "pair_absolute_median": {
+        "raw": 0.6763105392456055,
+        "pooled_corrected": 0.594935417175293,
+        "fixed_effect_corrected": 0.5946966280681814
+      },
+      "pooled_vs_anchored": {
+        "pearson": 0.9890475645538943,
+        "spearman": 0.9880940539839781
+      },
+      "within_component_pearson": {
+        "minimum": 0.9557930156214485,
+        "median": 0.992981047191031
+      },
+      "source_roll_fixed_effect_stability": {
+        "rolls": [
+          "Rollo1A",
+          "Rollo2A",
+          "Rollo3A",
+          "Rollo4A",
+          "Rollo5A",
+          "Rollo6A"
+        ],
+        "pairs": {
+          "Rollo1A__Rollo2A": {
+            "pearson": 0.9649769344832387,
+            "spearman": 0.9501413301981259
+          },
+          "Rollo1A__Rollo3A": {
+            "pearson": 0.9105094374255648,
+            "spearman": 0.8969421670481366
+          },
+          "Rollo1A__Rollo4A": {
+            "pearson": 0.9659511453834316,
+            "spearman": 0.9530742614977468
+          },
+          "Rollo1A__Rollo5A": {
+            "pearson": 0.9706933367193443,
+            "spearman": 0.9696622983870966
+          },
+          "Rollo1A__Rollo6A": {
+            "pearson": 0.7500238705154753,
+            "spearman": 0.8119494537229095
+          },
+          "Rollo2A__Rollo3A": {
+            "pearson": 0.9332699141128764,
+            "spearman": 0.9386076192690078
+          },
+          "Rollo2A__Rollo4A": {
+            "pearson": 0.9791419182074457,
+            "spearman": 0.9760691071811742
+          },
+          "Rollo2A__Rollo5A": {
+            "pearson": 0.9649504532107044,
+            "spearman": 0.9583647561869678
+          },
+          "Rollo2A__Rollo6A": {
+            "pearson": 0.7771767775595183,
+            "spearman": 0.8423184925076889
+          },
+          "Rollo3A__Rollo4A": {
+            "pearson": 0.9363380226768162,
+            "spearman": 0.9307354512373934
+          },
+          "Rollo3A__Rollo5A": {
+            "pearson": 0.9452059500078612,
+            "spearman": 0.9375590645340103
+          },
+          "Rollo3A__Rollo6A": {
+            "pearson": 0.8305668172352748,
+            "spearman": 0.8528830645161289
+          },
+          "Rollo4A__Rollo5A": {
+            "pearson": 0.9634001221574392,
+            "spearman": 0.9583712493741505
+          },
+          "Rollo4A__Rollo6A": {
+            "pearson": 0.8101342164426177,
+            "spearman": 0.8495933543737929
+          },
+          "Rollo5A__Rollo6A": {
+            "pearson": 0.8128509319434779,
+            "spearman": 0.8541096510442743
+          }
+        },
+        "pair_count": 15,
+        "pearson_minimum": 0.7500238705154753,
+        "pearson_median": 0.9363380226768162,
+        "pearson_maximum": 0.9791419182074457,
+        "spearman_minimum": 0.8119494537229095,
+        "spearman_median": 0.9375590645340103,
+        "spearman_maximum": 0.9760691071811742
+      },
+      "metrics": {
+        "mean": {
+          "pixel_average_precision": 0.09045210459546299,
+          "instance_auc_all": 0.6581503659347971
+        },
+        "context_bias_equal_mean": {
+          "pixel_average_precision": 0.10115033778467594,
+          "instance_auc_all": 0.6678642714570859
+        },
+        "context_bias_weighted_mean": {
+          "pixel_average_precision": 0.10526374167131136,
+          "instance_auc_all": 0.6743845642049237
+        },
+        "fixed_effect_equal_mean": {
+          "pixel_average_precision": 0.10241517416083769,
+          "instance_auc_all": 0.6657351962741185
+        },
+        "fixed_effect_weighted_mean": {
+          "pixel_average_precision": 0.10622283502490644,
+          "instance_auc_all": 0.6718562874251498
+        }
+      }
+    }
+  },
+  "aggregate": {
+    "paired_differences_total": 49932288,
+    "pair_rmse": {
+      "raw": {
+        "mean": 1.4007415174026356,
+        "median": 1.4084693147569436,
+        "minimum": 1.2961565549998553,
+        "maximum": 1.4480227829779933
+      },
+      "pooled_corrected": {
+        "mean": 1.249290884018683,
+        "median": 1.25871706135343,
+        "minimum": 1.1477517811705302,
+        "maximum": 1.290668808854694
+      },
+      "fixed_effect_corrected": {
+        "mean": 1.2438027616163716,
+        "median": 1.2551552935347086,
+        "minimum": 1.142760076678366,
+        "maximum": 1.278724829482449
+      }
+    },
+    "pair_absolute_median": {
+      "raw": {
+        "mean": 0.7162471498761859,
+        "median": 0.7242889404296875,
+        "minimum": 0.6763105392456055,
+        "maximum": 0.7337512969970703
+      },
+      "pooled_corrected": {
+        "mean": 0.630258423941476,
+        "median": 0.6344642639160156,
+        "minimum": 0.594935417175293,
+        "maximum": 0.65179443359375
+      },
+      "fixed_effect_corrected": {
+        "mean": 0.6298683599427916,
+        "median": 0.634442289569785,
+        "minimum": 0.5946966280681814,
+        "maximum": 0.6511254214038704
+      }
+    },
+    "pooled_corrected_rmse_fraction_reduced": {
+      "mean": 0.10813979680593636,
+      "median": 0.10866816183629802,
+      "minimum": 0.09267247639351658,
+      "maximum": 0.12746809054427924
+    },
+    "fixed_effect_corrected_rmse_fraction_reduced": {
+      "mean": 0.11203764932561001,
+      "median": 0.11433173979864082,
+      "minimum": 0.09704370198846314,
+      "maximum": 0.13108416447960572
+    },
+    "pooled_vs_anchored_pearson": {
+      "mean": 0.9895188650695818,
+      "median": 0.9910502846132262,
+      "minimum": 0.9789745911859198,
+      "maximum": 0.9961757600605174
+    },
+    "pooled_vs_anchored_spearman": {
+      "mean": 0.9834023694054714,
+      "median": 0.9821344899499055,
+      "minimum": 0.9726524502002717,
+      "maximum": 0.9949607419079933
+    },
+    "within_component_pearson_median": {
+      "mean": 0.991622421796864,
+      "median": 0.9924113293844166,
+      "minimum": 0.9839325111123884,
+      "maximum": 0.9967324171571081
+    },
+    "within_component_pearson_minimum": {
+      "mean": 0.8783935654359255,
+      "median": 0.8627021125651106,
+      "minimum": 0.7854644182122716,
+      "maximum": 0.9733147840625337
+    },
+    "source_roll_stability_pearson_median": {
+      "mean": 0.8493445226797611,
+      "median": 0.83173198174357,
+      "minimum": 0.7751855343792677,
+      "maximum": 0.938500427929345
+    },
+    "source_roll_stability_pearson_minimum": {
+      "mean": 0.6236434218991228,
+      "median": 0.5984983415278969,
+      "minimum": 0.512816674901589,
+      "maximum": 0.7500238705154753
+    }
+  },
+  "macro": {
+    "mean": {
+      "pixel_average_precision": {
+        "mean": 0.2970212889881334,
+        "median": 0.2615731180647777,
+        "minimum": 0.09045210459546299,
+        "maximum": 0.4840749022999018
+      },
+      "instance_auc_all": {
+        "mean": 0.7635592449861441,
+        "median": 0.7586956521739131,
+        "minimum": 0.588235294117647,
+        "maximum": 0.9333333333333332
+      }
+    },
+    "context_bias_equal_mean": {
+      "pixel_average_precision": {
+        "mean": 0.3035056797547453,
+        "median": 0.26527079852890495,
+        "minimum": 0.10115033778467594,
+        "maximum": 0.49636764555803975
+      },
+      "instance_auc_all": {
+        "mean": 0.7682982105427314,
+        "median": 0.76781206171108,
+        "minimum": 0.5972850678733032,
+        "maximum": 0.9422619047619047
+      }
+    },
+    "context_bias_weighted_mean": {
+      "pixel_average_precision": {
+        "mean": 0.30449977390438415,
+        "median": 0.26552597239799813,
+        "minimum": 0.10526374167131136,
+        "maximum": 0.49534362421982664
+      },
+      "instance_auc_all": {
+        "mean": 0.7695552832041593,
+        "median": 0.7678120617110801,
+        "minimum": 0.6018099547511313,
+        "maximum": 0.9407738095238094
+      }
+    },
+    "fixed_effect_equal_mean": {
+      "pixel_average_precision": {
+        "mean": 0.3038450401059187,
+        "median": 0.2645480422740293,
+        "minimum": 0.10241517416083769,
+        "maximum": 0.4961194241116098
+      },
+      "instance_auc_all": {
+        "mean": 0.7693113575470522,
+        "median": 0.7680925666199158,
+        "minimum": 0.6063348416289593,
+        "maximum": 0.9428571428571426
+      }
+    },
+    "fixed_effect_weighted_mean": {
+      "pixel_average_precision": {
+        "mean": 0.3047339107806258,
+        "median": 0.26414881081584646,
+        "minimum": 0.10622283502490644,
+        "maximum": 0.49523287556677903
+      },
+      "instance_auc_all": {
+        "mean": 0.7684635976386278,
+        "median": 0.7678821879382889,
+        "minimum": 0.5972850678733032,
+        "maximum": 0.9407738095238094
+      }
+    }
+  },
+  "paired_comparisons": {
+    "fixed_effect_weighted_minus_mean": {
+      "pixel_average_precision": {
+        "fold_deltas": {
+          "Rollo1A": 0.009855926296921003,
+          "Rollo2A": 0.002575692751068781,
+          "Rollo3A": 0.006011228631157578,
+          "Rollo4A": 0.0045908372239718,
+          "Rollo5A": 0.004025963948006639,
+          "Rollo6A": 0.01115797326687723,
+          "Rollo7A": 0.01577073042944345
+        },
+        "macro_mean_delta": 0.007712621792492354,
+        "macro_median_delta": 0.006011228631157578,
+        "bootstrap_95pct_ci_of_macro_mean": [
+          0.004728061753462294,
+          0.011177848427723321
+        ],
+        "wins": 7,
+        "ties": 0,
+        "losses": 0,
+        "exact_two_sided_sign_test_p": 0.015625
+      },
+      "instance_auc_all": {
+        "fold_deltas": {
+          "Rollo1A": -0.0013175230566535578,
+          "Rollo2A": -0.002272727272727315,
+          "Rollo3A": 0.009049773755656187,
+          "Rollo4A": 0.00918653576437578,
+          "Rollo5A": -0.0014619883040934978,
+          "Rollo6A": 0.007440476190476164,
+          "Rollo7A": 0.013705921490352657
+        },
+        "macro_mean_delta": 0.004904352652483774,
+        "macro_median_delta": 0.007440476190476164,
+        "bootstrap_95pct_ci_of_macro_mean": [
+          0.0005144920319148451,
+          0.009334323588027564
+        ],
+        "wins": 4,
+        "ties": 0,
+        "losses": 3,
+        "exact_two_sided_sign_test_p": 1.0
+      }
+    },
+    "fixed_effect_weighted_minus_pooled_weighted": {
+      "pixel_average_precision": {
+        "fold_deltas": {
+          "Rollo1A": 0.00024724188314573237,
+          "Rollo2A": -0.0013771615821516758,
+          "Rollo3A": 0.0012474941831991104,
+          "Rollo4A": 0.00011241872423650712,
+          "Rollo5A": 0.0005606202247138703,
+          "Rollo6A": -0.00011074865304760984,
+          "Rollo7A": 0.000959093353595078
+        },
+        "macro_mean_delta": 0.00023413687624157322,
+        "macro_median_delta": 0.00024724188314573237,
+        "bootstrap_95pct_ci_of_macro_mean": [
+          -0.0003728715852795974,
+          0.0007712751669693438
+        ],
+        "wins": 5,
+        "ties": 0,
+        "losses": 2,
+        "exact_two_sided_sign_test_p": 0.453125
+      },
+      "instance_auc_all": {
+        "fold_deltas": {
+          "Rollo1A": -0.0006587615283267789,
+          "Rollo2A": 0.0,
+          "Rollo3A": -0.004524886877828149,
+          "Rollo4A": 7.012622720881101e-05,
+          "Rollo5A": 0.0,
+          "Rollo6A": 0.0,
+          "Rollo7A": -0.0025282767797738526
+        },
+        "macro_mean_delta": -0.0010916855655314242,
+        "macro_median_delta": 0.0,
+        "bootstrap_95pct_ci_of_macro_mean": [
+          -0.00239452842022644,
+          -7.407272484416527e-05
+        ],
+        "wins": 1,
+        "ties": 3,
+        "losses": 3,
+        "exact_two_sided_sign_test_p": 0.625
+      }
+    }
+  }
+}

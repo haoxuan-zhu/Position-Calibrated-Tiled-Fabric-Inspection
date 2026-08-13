@@ -1,0 +1,238 @@
+{
+  "schema_version": 1,
+  "purpose": "OLP scene-grouped patterned-fabric external validation",
+  "claim_boundary": "External scene-grouped patterned-fabric validation on OLP front-light images; no roll or temporal claim. Eligibility and split are fixed from metadata before detector outputs.",
+  "config": {
+    "schema_version": 1,
+    "seed": 20260730,
+    "data": {
+      "root": "/root/autodl-tmp/Fabric_Defect_Detection/data/OLP/subset",
+      "metadata_root": "/root/autodl-tmp/Fabric_Defect_Detection/data/OLP/metadata",
+      "audit": "/root/autodl-tmp/Fabric_Defect_Detection/data/OLP/scene_grouped_audit.json",
+      "illumination": "front_light_rgb_only",
+      "original_height": 2050,
+      "original_width": 2448,
+      "padded_height": 2304,
+      "padded_width": 2560,
+      "padding": "bottom_and_right_reflect_then_score_original_geometry_only",
+      "license": "CC-BY-NC-SA-4.0_as_packaged_in_downloaded_archive"
+    },
+    "eligibility": {
+      "minimum_acquisition_scenes": 3,
+      "minimum_normals_per_source_scene": 8,
+      "minimum_evaluation_anomalies": 1,
+      "selection": "metadata_only_before_detector_outputs"
+    },
+    "split": {
+      "scene_assignment": "sha256(seed:textile_id:scene)_ascending; first=train, second=calibration, all_remaining=evaluation",
+      "normal_train_per_scene": 8,
+      "normal_calibration_per_scene": 8,
+      "normal_evaluation_per_scene": 8,
+      "normal_assignment": "sha256(seed:textile_id:role:relative_path)_ascending",
+      "anomalies": "all_anomalous_parents_in_evaluation_scenes_only"
+    },
+    "tiling": {
+      "crop_edge": 256,
+      "phase_shift_pixels": 64,
+      "output_stride_pixels": 8,
+      "views": [
+        "base_grid",
+        "x_shifted_grid",
+        "y_shifted_grid"
+      ],
+      "selection": "label_independent_full_padded_parent_geometry",
+      "train_crops": "all_base_grid_crops_from_selected_training_normal_parents"
+    },
+    "model": {
+      "implementation": "anomalib_2.5.1_Patchcore",
+      "backbone": "wide_resnet50_2",
+      "layers": [
+        "layer2",
+        "layer3"
+      ],
+      "pre_trained": true,
+      "coreset_sampling_ratio": 0.005,
+      "num_neighbors": 9,
+      "precision": "float32",
+      "train_batch_size": 8,
+      "predict_batch_size": 16,
+      "num_workers": 2
+    },
+    "fusion": [
+      "single_base",
+      "mean",
+      "context_bias_equal_mean",
+      "context_bias_weighted_mean"
+    ],
+    "score": {
+      "mode": "parent_wise_robust_z",
+      "local_mean_kernel_tokens": 3,
+      "parent_top_fraction": 0.001,
+      "calibration_normal_fpr": 0.01,
+      "mask_reduction": "any_positive_within_8x8_cell"
+    },
+    "primary_endpoint": "textile_macro_pixel_average_precision_pcaf_minus_matched_mean",
+    "decision_rule_frozen_before_outputs": {
+      "external_success": "macro_delta_gt_0 AND textile_bootstrap_95pct_lower_gt_0 AND wins_ge_10_of_15 AND worst_delta_ge_minus_0.05",
+      "supporting_only": "macro_delta_gt_0 AND wins_ge_8_of_15 but full external_success rule not met",
+      "failure": "macro_delta_le_0 OR wins_lt_8_of_15",
+      "dataset_selection_reason": "two_dimensionally_identifiable_crop_geometry_plus_patterned_fabrics_pixel_masks_and_scene_groups"
+    },
+    "claim_boundary": "External scene-grouped patterned-fabric validation on OLP front-light images; no roll or temporal claim. Eligibility and split are fixed from metadata before detector outputs."
+  },
+  "run": {
+    "textile_id": 14,
+    "smoke": false,
+    "device": "NVIDIA GeForce RTX 4090",
+    "torch": "2.5.1+cu124",
+    "train_seconds": 16.28277506865561,
+    "predict_seconds": 26.71658380329609,
+    "fusion_and_evaluation_seconds": 4.312738172709942,
+    "checkpoint": "/root/autodl-tmp/Fabric_Defect_Detection/runs/olp_pcaf_external/full/checkpoints/textile_14.ckpt",
+    "checkpoint_sha256": "61262BA2107070AEFDB2CD2004D30D9B02AB3A237ADB3841AC72F5866CD956BD",
+    "script_sha256": "99BF9C7B14CB6429A23AB1C29E558492DFD044323CF9972A1C0982DA8BE85AA1",
+    "config_sha256": "7F740A2C2A3F68725EBFC131CA6E31DAAD01BD958D109467E3D6C3252F93B12F",
+    "audit_sha256": "57756510F1BE53E3D45540E1E3847CFD72458A9F690D24D244017008AB7E9F22"
+  },
+  "counts": {
+    "training_normals": 8,
+    "calibration_normals": 8,
+    "evaluation_normals": 8,
+    "anomalies": 5
+  },
+  "split_paths": {
+    "training_normals": [
+      "Textile_14/3/c_fl0027.png",
+      "Textile_14/3/c_fl0068.png",
+      "Textile_14/3/c_fl0021.png",
+      "Textile_14/3/c_fl0026.png",
+      "Textile_14/3/c_fl0037.png",
+      "Textile_14/3/c_fl0013.png",
+      "Textile_14/3/c_fl0022.png",
+      "Textile_14/3/c_fl0018.png"
+    ],
+    "calibration_normals": [
+      "Textile_14/1/c_fl0076.png",
+      "Textile_14/1/c_fl0015.png",
+      "Textile_14/1/c_fl0035.png",
+      "Textile_14/1/c_fl0039.png",
+      "Textile_14/1/c_fl0082.png",
+      "Textile_14/1/c_fl0043.png",
+      "Textile_14/1/c_fl0052.png",
+      "Textile_14/1/c_fl0024.png"
+    ],
+    "evaluation_normals": [
+      "Textile_14/2/c_fl0012.png",
+      "Textile_14/2/c_fl0009.png",
+      "Textile_14/2/c_fl0004.png",
+      "Textile_14/2/c_fl0054.png",
+      "Textile_14/2/c_fl0076.png",
+      "Textile_14/2/c_fl0074.png",
+      "Textile_14/2/c_fl0072.png",
+      "Textile_14/2/c_fl0001.png"
+    ],
+    "anomalies": [
+      "Textile_14/2/f_fl0005.png",
+      "Textile_14/2/f_fl0025.png",
+      "Textile_14/2/f_fl0035.png",
+      "Textile_14/2/f_fl0036.png",
+      "Textile_14/2/f_fl0046.png"
+    ]
+  },
+  "split_scenes": {
+    "training_normals": [
+      "3"
+    ],
+    "calibration_normals": [
+      "1"
+    ],
+    "evaluation_normals": [
+      "2"
+    ],
+    "anomalies": [
+      "2"
+    ]
+  },
+  "crop_budget": {
+    "training_base_crops": 720,
+    "scored_parents": 21,
+    "scored_crops": 5271,
+    "base_crops_per_parent": 90,
+    "matched_views_crops_per_parent": 251.0,
+    "processed_pixel_ratio_to_single_grid": 2.7888888888888888
+  },
+  "calibration": {
+    "fit_normal_parents": 8,
+    "coordinate_calibration_seconds": 0.9119475577026606,
+    "field_recovery_seconds": 0.36847597174346447,
+    "field_recovery_milliseconds_per_parent": 17.54647484492688,
+    "relative_coordinate_bins": 1024,
+    "samples_per_relative_bin_minimum": 2008,
+    "samples_per_relative_bin_median": 2008.0,
+    "robust_scale_minimum": 0.9924725294113159,
+    "robust_scale_median": 1.86465322971344,
+    "coverage_pattern_cell_counts": {},
+    "score": "pattern-conditional empirical upper-tail of one-sided robust residual energy",
+    "physical_field_estimator": "inverse-robust-variance weighted mean after crop-relative median bias removal",
+    "ablation_estimators": {
+      "context_bias_equal_mean": "equal mean after crop-relative median bias removal",
+      "context_scale_weighted_mean": "inverse-robust-variance weighted raw response without bias removal"
+    },
+    "uses_defect_labels": false
+  },
+  "metrics": {
+    "single_base": {
+      "pixel_average_precision": 0.03412590799153247,
+      "pixel_roc_auc": 0.8506114031931729,
+      "parent_average_precision": 0.911111111111111,
+      "parent_roc_auc": 0.9,
+      "source_calibrated_threshold": 6.75574254989624,
+      "evaluation_normal_false_positives": 0,
+      "evaluation_normal_fpr": 0.0,
+      "defect_parent_recall": 0.8,
+      "pixel_positive_cells": 3130,
+      "pixel_evaluated_cells": 1022346
+    },
+    "mean": {
+      "pixel_average_precision": 0.03848643838756653,
+      "pixel_roc_auc": 0.8734760881232123,
+      "parent_average_precision": 0.8999999999999999,
+      "parent_roc_auc": 0.875,
+      "source_calibrated_threshold": 7.303191184997559,
+      "evaluation_normal_false_positives": 2,
+      "evaluation_normal_fpr": 0.25,
+      "defect_parent_recall": 0.8,
+      "pixel_positive_cells": 3130,
+      "pixel_evaluated_cells": 1022346
+    },
+    "context_bias_equal_mean": {
+      "pixel_average_precision": 0.03192151249535636,
+      "pixel_roc_auc": 0.8755523933562315,
+      "parent_average_precision": 0.925,
+      "parent_roc_auc": 0.925,
+      "source_calibrated_threshold": 7.779063701629639,
+      "evaluation_normal_false_positives": 0,
+      "evaluation_normal_fpr": 0.0,
+      "defect_parent_recall": 0.8,
+      "pixel_positive_cells": 3130,
+      "pixel_evaluated_cells": 1022346
+    },
+    "context_bias_weighted_mean": {
+      "pixel_average_precision": 0.03100566766999129,
+      "pixel_roc_auc": 0.8716064071272874,
+      "parent_average_precision": 0.925,
+      "parent_roc_auc": 0.925,
+      "source_calibrated_threshold": 7.758245944976807,
+      "evaluation_normal_false_positives": 0,
+      "evaluation_normal_fpr": 0.0,
+      "defect_parent_recall": 0.8,
+      "pixel_positive_cells": 3130,
+      "pixel_evaluated_cells": 1022346
+    }
+  },
+  "diagnostic_observation_count_histogram": {
+    "1": 21504,
+    "2": 365568,
+    "3": 1548288
+  }
+}

@@ -1,0 +1,7 @@
+# Install a CUDA-compatible PyTorch and torchvision build separately.
+anomalib==2.5.1
+numpy>=1.26,<2.0
+scipy>=1.11
+scikit-learn>=1.3
+Pillow>=10.0
+matplotlib>=3.8

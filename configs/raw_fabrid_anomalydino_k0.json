@@ -1,0 +1,88 @@
+{
+  "schema_version": 1,
+  "seed": 20260729,
+  "data": {
+    "root": "/root/autodl-tmp/Fabric_Defect_Detection/data/RAW_FABRID",
+    "metadata": "RAW_FABRID_HighRes_Metadata.csv",
+    "coco": "RAW_FABRID_HighRes_COCO.json",
+    "image_height": 1024,
+    "image_width": 1792
+  },
+  "tiling": {
+    "source_tile_height": 256,
+    "source_tile_width": 256,
+    "model_edge_size": 252,
+    "rows": 4,
+    "columns": 7,
+    "overlap": 0,
+    "selection": "fixed_grid_label_independent",
+    "reference_tile_budget": 16,
+    "reference_selection": "one_seeded_tile_from_each_of_16_distinct_source_normal_parents",
+    "pixel_budget_ratio_to_256_square_scan": 0.968994140625
+  },
+  "protocol": {
+    "name": "P2_leave_one_roll_out_full_frame",
+    "source_normal_calibration_rule": "every_fourth_filename_sorted_normal_parent_per_source_roll",
+    "target_normal_evaluation": "all_normal_parents_in_heldout_roll",
+    "target_anomaly_evaluation": "all_defective_parents_in_heldout_roll",
+    "reference_setting": "official_AnomalyDINO_16_shot_mechanism_on_label_blind_fixed_tiles",
+    "failure_scope": "A failure rejects only the default 16-shot DINOv2-S/14 memory mechanism at the matched scan budget; it does not reject DINO features, larger memory banks, learned adaptation, or multiscale ViTs."
+  },
+  "model": {
+    "method": "AnomalyDINO_WACV_2025_mechanism",
+    "audit_repository": "https://github.com/dammsi/AnomalyDINO",
+    "audit_repository_commit": "b9d1c2648e3a5247437d4d953d907a8f3d994457",
+    "backbone_repository": "facebookresearch/dinov2",
+    "backbone_repository_commit": "7764ea0f912e53c92e82eb78a2a1631e92725fc8",
+    "backbone": "dinov2_vits14",
+    "patch_size": 14,
+    "feature_layer": "last_intermediate_layer",
+    "imagenet_normalization": true,
+    "background_masking": false,
+    "rotation_augmentation": false,
+    "knn_metric": "L2_normalized_equivalent_cosine_distance",
+    "knn_neighbors": 1,
+    "feature_precision": "float32",
+    "matrix_multiply_precision": "highest_no_tf32",
+    "reference_batch_size": 8,
+    "predict_batch_size": 8,
+    "num_workers": 2
+  },
+  "scores": {
+    "modes": [
+      "raw",
+      "robust_z",
+      "robust_z_local_mean_max"
+    ],
+    "official_image_top_fraction": 0.01,
+    "matched_image_top_fraction": 0.001,
+    "local_mean_kernel_tokens": 3
+  },
+  "evaluation": {
+    "normal_parent_fpr": 0.01,
+    "small_instance_area_px": 1024,
+    "elongated_instance_aspect_ratio": 10.0,
+    "pixel_mask_reduction": "any_positive_after_nearest_projection_to_72x126_token_grid",
+    "instance_detection": "maximum_score_inside_instance_mask_above_source_normal_parent_maximum_quantile"
+  },
+  "frozen_Rollo4A_comparison": {
+    "reference_result": "runs/raw_fabrid_patchcore_k0/instance_audit/P2_Rollo4A.json",
+    "reference_sha256": "30471402E3570A93458E44F51FBE6697DB89A8FE6E76C2EA535178443D692F62",
+    "reference_mode": "robust_z",
+    "reference_values": {
+      "parent_average_precision": 0.9363071653202163,
+      "pixel_average_precision": 0.3476899809368267,
+      "source_normal_false_positives": 0,
+      "source_parent_recall": 0.4358974358974359,
+      "instance_auc_all": 0.755820476858345,
+      "instance_auc_small": 0.5983056265984655,
+      "instance_auc_elongated": 0.6552795031055901
+    },
+    "noninferiority_tolerance": 0.03,
+    "material_localization_improvement": 0.05,
+    "maximum_additional_normal_false_positives": 1,
+    "competitive_gate": "The matched-top-fraction strongest frozen mode must be within 0.03 of PatchCore on parent AP, pixel AP, source parent recall, and all/small/elongated instance AUC, with at most one extra target normal false positive.",
+    "residual_explained_gate": "The competitive gate must pass and at least one of pixel AP or all/small/elongated instance AUC must improve by 0.05."
+  },
+  "interpretation": "Frozen one-fold modern-representation strong-baseline probe. It tests whether the observed RAW-FABRID residual survives the maintained AnomalyDINO mechanism under the same full-frame physical scan and approximately the same processed-pixel budget. It is neither a method candidate nor a seven-roll conclusion."
+}

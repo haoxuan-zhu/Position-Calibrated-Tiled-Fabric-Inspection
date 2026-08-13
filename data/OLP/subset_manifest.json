@@ -1,0 +1,4926 @@
+{
+  "schema_version": 1,
+  "purpose": "Frozen OLP scene-grouped front-light subset byte manifest",
+  "file_count": 709,
+  "total_bytes": 3577436473,
+  "png_geometries": {
+    "2448x2050": 692
+  },
+  "png_modes": {
+    "RGB": 692
+  },
+  "files": {
+    "LICENSE": {
+      "bytes": 20845,
+      "sha256": "A355A57937552790EBD751F8A8026B23882160AB73F1C38F8030456DFCF1A330"
+    },
+    "README.md": {
+      "bytes": 819,
+      "sha256": "863D140AF400F578E663AB043C0EF96D518308CA2EE93E4D3012E86FA89D8155"
+    },
+    "Textile_1/1/c_fl0001.png": {
+      "bytes": 4411762,
+      "sha256": "0EDB7B9FA7B2D343A898FD2EBF55520BAD1CA6DFF6A8299A3B44481231A262D1",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_1/1/c_fl0031.png": {
+      "bytes": 4413058,
+      "sha256": "3F671C7572ECB8FF8978A70BEBE92C22A58568EA0C40EFA311AF921DE21F83EC",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_1/1/c_fl0037.png": {
+      "bytes": 4421843,
+      "sha256": "E1B8A0EE8353504DAFC160C582D2009F2A2381BEBB6F0982CA290F5C49DB7523",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_1/1/c_fl0039.png": {
+      "bytes": 4412513,
+      "sha256": "146095F0110905F1004282B1BA2A97C606BEF60EB72B5BF5D6B2DC15187DA3C7",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_1/1/c_fl0049.png": {
+      "bytes": 4434232,
+      "sha256": "1EFB406ED441BD7C69B6B8C0255B6022A67C1F2F5E66F897AF0EFE0DFB66C5EF",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_1/1/c_fl0067.png": {
+      "bytes": 4375179,
+      "sha256": "BC5143E12F6DB4CD456CA304ABECAE3C67C715DA0D000D599C7A487E8A5CF6EB",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_1/1/c_fl0068.png": {
+      "bytes": 4400371,
+      "sha256": "37917321A3CC71736EC0B788BFC0FACCBA9F4B33297715C71FD30FD93E1F98D2",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_1/1/c_fl0074.png": {
+      "bytes": 4385785,
+      "sha256": "80925408B2DF7F381F04ACC0EC5FE5664B894AB5A39CDEC7EECBB8C05C9E2233",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_1/2/c_fl0013.png": {
+      "bytes": 4402908,
+      "sha256": "34735350B782BD45CCE679B7BB5C9BE692D7411BA9AE37FBE5E5A2356F02D8B9",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_1/2/c_fl0029.png": {
+      "bytes": 4366752,
+      "sha256": "FC4110D2B92E30D9D9889A6B6A0111394BCEBE57904C1263024B8B841642C143",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_1/2/c_fl0042.png": {
+      "bytes": 4369658,
+      "sha256": "35BBDF9EFEDDC46FCD3D78651E5F0609E1E0042DEF759F65C4ACC19F65F97CE4",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_1/2/c_fl0044.png": {
+      "bytes": 4345146,
+      "sha256": "5214A11483FD2CB10767A388C1888DDDCF14B4E34485282EFE3F71EFD6E3833B",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_1/2/c_fl0056.png": {
+      "bytes": 4360886,
+      "sha256": "ACC945E6B2DF39AD58E59324A9CF05F7C983CD401CE97A6FE0DE2CAE79DAACB3",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_1/2/c_fl0060.png": {
+      "bytes": 4332628,
+      "sha256": "4041D417F1C2577CA1D8029B22774753090F5084125532DB8627B19F21602822",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_1/2/c_fl0063.png": {
+      "bytes": 4348620,
+      "sha256": "0AE2EF93556847A5FE700BFCC6F41A05F5867C99062D7098C53FACD7964C9682",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_1/2/c_fl0073.png": {
+      "bytes": 4319102,
+      "sha256": "00D9D8F255B2189AB6616CF8D4DA2D02E5F677821B7707893754DAE026087032",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_1/2/f_fl0038.png": {
+      "bytes": 4348725,
+      "sha256": "E593D26356FC144F78F33BBAB6621F8489685203639767A527F3BF963831669D",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_1/2/f_fl0039.png": {
+      "bytes": 4350904,
+      "sha256": "83DCEA0B1AE431543528A811C2D36EB3470B7B7C6635C1396F26FFF226CFD4F7",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_1/3/c_fl0000.png": {
+      "bytes": 4488247,
+      "sha256": "5AD8FB49B320EFD3481E6EF4921685D8675FB67B80CF798B80D7499C90625AA6",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_1/3/c_fl0029.png": {
+      "bytes": 4532825,
+      "sha256": "FE5EB1467051E7936C30623AB43D646C63FB7F4B4AB26440906FB3339A996B29",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_1/3/c_fl0031.png": {
+      "bytes": 4542189,
+      "sha256": "59EE8BD991D8EC60FDD0F17F1F193FF288AD42443D50AD4E8E45AC46C921EEAE",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_1/3/c_fl0048.png": {
+      "bytes": 4548876,
+      "sha256": "677B9BAC8BA45E2F43AA85C623D29195C11E589F46DD8390EC9C50CA1A80B1E1",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_1/3/c_fl0053.png": {
+      "bytes": 4544424,
+      "sha256": "29868D6D4ADE07305179B94D846D76FE94A1D1D46B92AB4D5C0BD429C38C2E1B",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_1/3/c_fl0072.png": {
+      "bytes": 4545921,
+      "sha256": "0B323C8A59EFB80B6D5BE7F48310B2FB31509A3621B95A30CC0D2E0E1878F9EF",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_1/3/c_fl0074.png": {
+      "bytes": 4556092,
+      "sha256": "AA12B956734FC563B5705DEDCC4F9E21E85E2B8ACB04EFE1B77F9EB26F1B8824",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_1/3/c_fl0083.png": {
+      "bytes": 4534230,
+      "sha256": "3BF523BED23FDC63B5340D4C50BD3A262E3DD05D41B5B4EBF3464899E4559556",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_1/4/c_fl0002.png": {
+      "bytes": 4554575,
+      "sha256": "CDC1A6736C9C9FCB1FD124EF3E4D6013F8724340C0A67D990FDF7510DBDE32F8",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_1/4/c_fl0003.png": {
+      "bytes": 4558028,
+      "sha256": "BEF885EB399961FB34E32CA65C9160A1773ECD6784D33D50270D89BDD2631911",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_1/4/c_fl0005.png": {
+      "bytes": 4550346,
+      "sha256": "0CA15A14F509113DB3A195F2CC9368C6222022D192557E3485AF78D7ED992363",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_1/4/c_fl0006.png": {
+      "bytes": 4531953,
+      "sha256": "623CE17F8793B3C1B294512FEED9BBA8CB7A81B014E957584D31A63298232DD5",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_1/4/c_fl0016.png": {
+      "bytes": 4545224,
+      "sha256": "EF05BAFE6DA935B38C8E4EB6E9E9F6CDB31868EC40F90CEB58B2A4E5C7E262B2",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_1/4/c_fl0041.png": {
+      "bytes": 4537154,
+      "sha256": "786BD2ADD19F7E7F806668B6411B40593A92D60E17B2F4576F9254973D21243F",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_1/4/c_fl0045.png": {
+      "bytes": 4548584,
+      "sha256": "1CE62FC5A94DA3DDA0BCDBBECD86C8D650D3D8C7672ACAF0C13EAB3A7DA23B8A",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_1/4/c_fl0082.png": {
+      "bytes": 4533846,
+      "sha256": "8990984A6C09520B6A30896B06F34A4F35BC8DC027CF1E9A2CFFE1924C2525E9",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_1/4/f_fl0027.png": {
+      "bytes": 4534073,
+      "sha256": "F96C74B02EAB030500F58B4F5F2D4589C3555B3AC6CE54F32798F097D08BB21A",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_1/4/f_fl0042.png": {
+      "bytes": 4536739,
+      "sha256": "586CB463F0D1252BD0B27C2993C75EC6AAD317419C638E153AF8FDD89421055C",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_1/4/f_fl0055.png": {
+      "bytes": 4532446,
+      "sha256": "13BAF61E040DDE7C188E75E470C872B8ADB617C5CB545C21AFDA54DD3EC09B60",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_1/5/c_fl0021.png": {
+      "bytes": 4515260,
+      "sha256": "50C09D1468198FB37734E32E6B73A10E6C61C8C88A3CE1C099EB426C1D2BF10E",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_1/5/c_fl0033.png": {
+      "bytes": 4522960,
+      "sha256": "15158715CF02EAA874553F9D8551EC26098D365247F071D8BAACEEDB2717F523",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_1/5/c_fl0044.png": {
+      "bytes": 4547406,
+      "sha256": "70215F681DCA2CA8512567D1BD9FB705629D942CBD40BFC17C13FA4703828E5B",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_1/5/c_fl0048.png": {
+      "bytes": 4539193,
+      "sha256": "549754AF8BB3617CE2E2B233BFDC15FBC1AB3A5A7A8371137AE2C1F881FEB085",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_1/5/c_fl0050.png": {
+      "bytes": 4552603,
+      "sha256": "4A149C4FC827C9E8023EBC0A8425F1FC1F77D9A104268E6BA12E6D4130D3251D",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_1/5/c_fl0051.png": {
+      "bytes": 4556279,
+      "sha256": "BE1F250B9EC7E58D225BAC1606C6F5E06ABA2E95D924C30FE0219C1AD295BAA1",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_1/5/c_fl0052.png": {
+      "bytes": 4554982,
+      "sha256": "BE066D4E718489292A8744689843873FA87B289504A3719BFCA778095E2DAF1D",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_1/5/c_fl0073.png": {
+      "bytes": 4545976,
+      "sha256": "57913862E36D52D694EDA30656CC971093A90904EF6C32CF65D8DBD745F06DAA",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_1/5/f_fl0036.png": {
+      "bytes": 4525231,
+      "sha256": "71314C2D734BA848A433CF3F683838A99A72EC11C167BAFCBC871C536AAF4A0C",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_1/6/c_fl0015.png": {
+      "bytes": 4535262,
+      "sha256": "57C847E89BE09BAF580565834E9B8AA29A793CFB1D44BB3037E4F2920F7B2435",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_1/6/c_fl0016.png": {
+      "bytes": 4529513,
+      "sha256": "22B73D5210FC4171CCF4373ABBCBFBFD3CE7679F599158785A4A9AB0BEA75495",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_1/6/c_fl0033.png": {
+      "bytes": 4536187,
+      "sha256": "08009894B13E454D5F966170DDCC8F1E7CBD2FF14117FFEDDC330AFC91D5DACB",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_1/6/c_fl0050.png": {
+      "bytes": 4538813,
+      "sha256": "CE6F21AA1B0DB567BEF74044880B93FB804B743A80E5D6521E1459DE9E5C8AFA",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_1/6/c_fl0069.png": {
+      "bytes": 4539875,
+      "sha256": "BA1434F6AEAFA32C467611BDD3E63207A0FE0FEDFBA01A72AFF4A7A12DF77D15",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_1/6/c_fl0070.png": {
+      "bytes": 4536625,
+      "sha256": "00A3239871905F48A63E765BF7A361033E9422581F39DAFB4B6BF1403C98BA06",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_1/6/c_fl0077.png": {
+      "bytes": 4357686,
+      "sha256": "10F1712ABD0843C078AEF6374D4F15B9702E36B8D69048ECC2EA712D1ABE70AC",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_1/6/c_fl0079.png": {
+      "bytes": 4515057,
+      "sha256": "228E7A0F0C36A69FC59DC69055E1C996EED0423AA1F00448726FC97A02A17DB1",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_1/6/f_fl0045.png": {
+      "bytes": 4533763,
+      "sha256": "B38FF845DB3325FC00F0BAD93A09CF1C7B2EC8E4996254DE72094C49E0D714BA",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_1/6/f_fl0052.png": {
+      "bytes": 4529381,
+      "sha256": "A378D73F7B4ED10543E9A1854D5733637EDC4C7135EB06F10EDF683A4E581031",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_1/dataset.json": {
+      "bytes": 82989,
+      "sha256": "46AA146E741F035D4826E121236EDD71AFFE3DB134E6BE66A2B3170129640E1D"
+    },
+    "Textile_14/1/c_fl0015.png": {
+      "bytes": 4847605,
+      "sha256": "A6E68EE03919BDCD9BB4930CB17EC68E300058714DACC283C2A9159D82E68C04",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_14/1/c_fl0024.png": {
+      "bytes": 4698510,
+      "sha256": "F820E40EDDD05588BD599B28AC8849EC5066B1194E466B4FFF25B46DF6331E60",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_14/1/c_fl0035.png": {
+      "bytes": 4608097,
+      "sha256": "9658D4C8E88E207521F077A66221A796D684AD087EB6762CFFD469B8362962EC",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_14/1/c_fl0039.png": {
+      "bytes": 4793087,
+      "sha256": "FF81CAC1716C529FF39D9A98E60B95DCCBD97538D98095DC4CA7AD4ACB2693C3",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_14/1/c_fl0043.png": {
+      "bytes": 4849710,
+      "sha256": "1F3899201E2ACF1C656B4B87C14F7483790F1BB7EC8EE83D9D9B69D26667948E",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_14/1/c_fl0052.png": {
+      "bytes": 4705728,
+      "sha256": "73BD8DF1B407A4CBEDEAFB2C6309A37F46F74DAF043D6D6E79B5AE790255932C",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_14/1/c_fl0076.png": {
+      "bytes": 4603357,
+      "sha256": "21422359EA6FA04545303C5DE127F683C18D591FF7454E2F88FE7AB97BB3D537",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_14/1/c_fl0082.png": {
+      "bytes": 4854697,
+      "sha256": "B1B6322FA5123AFA22510B567D7AD2C3F65BA10D7C98567CF7BF410360ACF6B7",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_14/2/c_fl0001.png": {
+      "bytes": 4197793,
+      "sha256": "C9A4AC946AD1241B0A83782270FF9E9799EB8446452742D122D9313134F4FE58",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_14/2/c_fl0004.png": {
+      "bytes": 4464311,
+      "sha256": "5D04F8CF265F1C7737CCCD14E5BF573365C22E0E700E4B9D7F070CE43BB8D4E7",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_14/2/c_fl0009.png": {
+      "bytes": 4444758,
+      "sha256": "C717B60D93DFBB0F96B37DA931BCF5D179F507BF4F1DCDC5875AA76B8EE36BF0",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_14/2/c_fl0012.png": {
+      "bytes": 4176306,
+      "sha256": "BFF0F429AA2FC5834A6A90EB245787CAC38440E1A81DAA755FE6B6654C26A73B",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_14/2/c_fl0054.png": {
+      "bytes": 4145479,
+      "sha256": "82B46023E079FD17EDF5741A46BD3F352A7A7BB498003B6BE179B48F14CAFEDD",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_14/2/c_fl0072.png": {
+      "bytes": 4202748,
+      "sha256": "F430C066D92AC3F6BB2E20A3116FB47E3EBDCAE65928D08188A26494C9DEB16C",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_14/2/c_fl0074.png": {
+      "bytes": 4394840,
+      "sha256": "952600FC3B4BD0E757874B67B0E8360D95584CE77AF4CB596FAA1C0FBC9E6CAC",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_14/2/c_fl0076.png": {
+      "bytes": 4544401,
+      "sha256": "A0B9EAE2A9A3D4BCE1725DA9278ED2A9C9ED37CEE91936C297E5D71A720B63FD",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_14/2/f_fl0005.png": {
+      "bytes": 4537770,
+      "sha256": "F766ED16A26B170E4F0B3FB1F58ED02548ECD7EFECA6B9B53DCC251CC85712A3",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_14/2/f_fl0025.png": {
+      "bytes": 4231355,
+      "sha256": "E4776D107D3B1C8D8B3ED719FB0843D3302932D5927925D53CEACB840E2A7243",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_14/2/f_fl0035.png": {
+      "bytes": 4561114,
+      "sha256": "1FA5B211D0ED69B47FF6F8A25AB9A929E976A8BFEF045BE60EC558762250C0BA",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_14/2/f_fl0036.png": {
+      "bytes": 4524515,
+      "sha256": "2B0DCE00E7F3F6FD6BED8D8E3730490F507D9CE0B91E048F1169CBDE55671273",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_14/2/f_fl0046.png": {
+      "bytes": 4435777,
+      "sha256": "478F7C59BDD21D40D1251D42044AAD78A805E005CE6709E0A4FBD9BE515E179B",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_14/3/c_fl0013.png": {
+      "bytes": 4566753,
+      "sha256": "69C080209C18967D6053DE660A737C02DA1227BD1EEDCB0C79EAC8EA67C8868E",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_14/3/c_fl0018.png": {
+      "bytes": 4205914,
+      "sha256": "4EC0713688BFF191F4F50E58134411A542EE5C049A39D7957FB9A056CE6C755E",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_14/3/c_fl0021.png": {
+      "bytes": 4272081,
+      "sha256": "F3B31FCAAB3D8A942407667A1D279AB2A25E4CF0BAB23264C8C92C925B12A8C2",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_14/3/c_fl0022.png": {
+      "bytes": 4159221,
+      "sha256": "38CD35DD1151E89826BD66691F4ED6FFC6FF133623763C76973053FA0EA63005",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_14/3/c_fl0026.png": {
+      "bytes": 4527925,
+      "sha256": "AF3775D4EDF9309EDB96E0763248B4E14754310287533F50E715F0CC0F84CA11",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_14/3/c_fl0027.png": {
+      "bytes": 4544662,
+      "sha256": "DCE12AFCD9004222C7225AB8DBF2FF51827431E03265EA8567E4E3013B4D0465",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_14/3/c_fl0037.png": {
+      "bytes": 4218515,
+      "sha256": "0565999C2599E998F30F4B66D139C13BC9A1604F8415C36F04B6CB7207F00FA1",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_14/3/c_fl0068.png": {
+      "bytes": 4474533,
+      "sha256": "3A9B1E99402757A7BD3E20156872242FAC2D62735049ECAD8C7EC4A0FA6BEE8E",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_14/dataset.json": {
+      "bytes": 43479,
+      "sha256": "0D69FEFC5EE02BCC426D07B4BD1821A6ACE4148F8ECE096197A904A3D38F2E63"
+    },
+    "Textile_16/1/c_fl0000.png": {
+      "bytes": 4673048,
+      "sha256": "5F4D96ADD2B406A6B4D273ED34B2598DA818AC9B8742B1E0D67E3DF3DFCEC08F",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_16/1/c_fl0008.png": {
+      "bytes": 4822402,
+      "sha256": "71C21FB9681C154CC13F3ECCC05525A63CFAC02F1A6BF44112D8C75B378A7ADA",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_16/1/c_fl0026.png": {
+      "bytes": 4544335,
+      "sha256": "2F8ADBB3FFF18207D4FF887D4D0C47E552D867A6663C997AF6721C128040286E",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_16/1/c_fl0027.png": {
+      "bytes": 4578996,
+      "sha256": "4223F711C8E87CFD594D36DB072FD08344955C458823E97690CBB515C82B3821",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_16/1/c_fl0044.png": {
+      "bytes": 4645065,
+      "sha256": "86D53701E5F6ACA83686AF9298C1B91203F586E8CBEA9D3728E049098C31EEE9",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_16/1/c_fl0057.png": {
+      "bytes": 4504648,
+      "sha256": "595337CB1917B2DF35846CAA8016D058D155FE423D0212CD30C5A5369EC29D0B",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_16/1/c_fl0062.png": {
+      "bytes": 4860496,
+      "sha256": "F4DB66748EA29481B1FD5A17D2D941B8C4C1401A26F8639E06FFAC7A2629866C",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_16/1/c_fl0067.png": {
+      "bytes": 4631130,
+      "sha256": "BE9D5F2D9767CC69F4C63C9EAD0BA272F1A85E51736E8DD0F73EA30689A50FFE",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_16/2/c_fl0009.png": {
+      "bytes": 4715375,
+      "sha256": "4897284135397BD20E639E20526896A41DAEB91D8FF6685272B32F6C3AEC751B",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_16/2/c_fl0015.png": {
+      "bytes": 4690567,
+      "sha256": "0679068CD2C19164D183CD9343FBDCD5B5A15EE893298A12DD3CE7558B27E3B2",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_16/2/c_fl0039.png": {
+      "bytes": 4668329,
+      "sha256": "1F589BB84FF4297D467160251E5DE8F627CE30FEB8D41ECC7F042E4B308035D7",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_16/2/c_fl0040.png": {
+      "bytes": 4664033,
+      "sha256": "7AF7507468D528E9FAD7E51D3108462F23F6CFB1D3D787EC597C2D8ADA388E90",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_16/2/c_fl0049.png": {
+      "bytes": 4456029,
+      "sha256": "8D4C86D6984C4DA4420DA69DBA81C924B5FA2C5F5A4A45EEB23FE75AAE2B73B4",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_16/2/c_fl0053.png": {
+      "bytes": 4677675,
+      "sha256": "9E0E764551BF4184019DE668BA1687EAC1496D30B5FDC717FF540E9456B1CCED",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_16/2/c_fl0064.png": {
+      "bytes": 4428935,
+      "sha256": "1173A9CD17B4FAF25B6E24AA36D472A9FAC1E2B05E942A9911D2DAADBD5F508B",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_16/2/c_fl0075.png": {
+      "bytes": 4416114,
+      "sha256": "E118C54D3D8E94DBE080D41BAD4CEC30EA2BBF6A96778B57326627999297AF11",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_16/3/c_fl0006.png": {
+      "bytes": 4844582,
+      "sha256": "D1E1F7E2B8FD40C642E65DB9DA95687C3A9E1F2E68D4A56A20278150FF52B392",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_16/3/c_fl0010.png": {
+      "bytes": 4787440,
+      "sha256": "D9D7B820E9FC8176715D3ACA963180700C4E87BEA46CB5D89FD125549C536DA1",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_16/3/c_fl0011.png": {
+      "bytes": 4648044,
+      "sha256": "9F2CB11A1FBCE49A2B05186A6F17B2E2E96395C5A07B367C08CD03C4A1E89CA8",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_16/3/c_fl0025.png": {
+      "bytes": 4586573,
+      "sha256": "57C2A71567F993FF1A6876C360F9055A8A028781A65FD0965B465CC918C1A4C7",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_16/3/c_fl0031.png": {
+      "bytes": 4658385,
+      "sha256": "DE97EB765EAE3D6B060D46789DF1BAD817182ABFCB1029DE6D81E1D314C2580D",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_16/3/c_fl0050.png": {
+      "bytes": 4734797,
+      "sha256": "AF84ACE7635D2B74AE094A5606AB84149E496B532D16C3FC5811A4CAC5886CA2",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_16/3/c_fl0053.png": {
+      "bytes": 4596720,
+      "sha256": "E9CB6B505FF523AC9ED5A862ED59D24289E797815EEAA179CADFA301AB2DE673",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_16/3/c_fl0071.png": {
+      "bytes": 4380479,
+      "sha256": "6FFEE170E222CBC82F2418691E7DCC6F289F2660E1B89E3EC9B2AC6F53ACAD00",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_16/3/f_fl0041.png": {
+      "bytes": 4486949,
+      "sha256": "EECD984EEF4992C1F3CE775306B50EC232BB295BF3C4458B12B62F2E85547A4A",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_16/3/f_fl0042.png": {
+      "bytes": 4547547,
+      "sha256": "E147146FC3915C3ABD1235674576D73C3A5069B3621780CE773E2018C1127F39",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_16/4/c_fl0002.png": {
+      "bytes": 4807202,
+      "sha256": "1C037A5B10AC71FFC7F23ED03123C845E66C14ABE20EF127BFEBB1CE600DFCC0",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_16/4/c_fl0025.png": {
+      "bytes": 4812265,
+      "sha256": "8080175DFBE0DCDCA24028E0EA4B6F6BE94757CA9BD81C93447DE12792F09D83",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_16/4/c_fl0032.png": {
+      "bytes": 4831284,
+      "sha256": "F34D86610FA3BBE6D918104E2D5531E118869FE59A32B02666DAE14CC36E9B4D",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_16/4/c_fl0049.png": {
+      "bytes": 4911409,
+      "sha256": "F91D962A34EB43AFA854626A7D51D68D29BF9A0092006C87D79056776D6698D5",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_16/4/c_fl0051.png": {
+      "bytes": 4767258,
+      "sha256": "6C225545D80FA39EECFAFE31D948B73AA702FD85E84060FFA38BE1A8C6C54904",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_16/4/c_fl0053.png": {
+      "bytes": 4676677,
+      "sha256": "B180F00F48A4F5E51515D1C9C184F5CC0317BBF031419FF74F9090DE799891D7",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_16/4/c_fl0054.png": {
+      "bytes": 4527324,
+      "sha256": "DA27ECBF41E8E102829C12FD0859AC6DC0EA1095C088A1C1C09E20A0CD0D4566",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_16/4/c_fl0079.png": {
+      "bytes": 4695619,
+      "sha256": "EFC8D991E0FFF3DEA37BC392091804BD6332E7F6BB83E53B4872A0769F3A4D72",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_16/4/f_fl0000.png": {
+      "bytes": 4785046,
+      "sha256": "9A6EAB4C9CB31E96C40284C3FE5E0F8762C624887AE310B3CDA7EB31E3AD768A",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_16/4/f_fl0021.png": {
+      "bytes": 4915711,
+      "sha256": "3F755F4848C575D614E8AC5D2B4CB1F0ED2A0CC39B48153709A6E8CEEBC136E1",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_16/4/f_fl0034.png": {
+      "bytes": 4897192,
+      "sha256": "B2C22840DABC58300EC28296CF5A9CA0DDDC629E31EE12D8E926B96D2774DF8F",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_16/4/f_fl0035.png": {
+      "bytes": 4881173,
+      "sha256": "87A8546F6564E532AE9EA1887E8E83D3F166429D5C1691BD2904F8F9A4A8081C",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_16/4/f_fl0036.png": {
+      "bytes": 4849543,
+      "sha256": "BD8B7D20842E03EF1BDA551EFA677C33BDE4D03D2C521F855D9972539884362B",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_16/4/f_fl0038.png": {
+      "bytes": 4807030,
+      "sha256": "25038300A5EAA8546240C9F2BE9BC40F0ACA59AA561D4CBF286AA73FEB14BBE7",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_16/4/f_fl0047.png": {
+      "bytes": 4809486,
+      "sha256": "899F15F2D2F6043F257B9242CBB244423F14223B8F5590CE02D676616636D2C8",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_16/dataset.json": {
+      "bytes": 68433,
+      "sha256": "966112420B4E3355222F42FD229B599C5BCC9466D2F4F37F3A0AF45AD3FBA049"
+    },
+    "Textile_18/1/c_fl0001.png": {
+      "bytes": 4457171,
+      "sha256": "CF10668DF6DCF49187B9F9D002C92D5ADD1B1949A7F5D7BAC55725C949DA772B",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_18/1/c_fl0019.png": {
+      "bytes": 4219221,
+      "sha256": "9F24EFF94850743359E2A7426B99B8AAE65F7142F60C42140B2C4E8AA756B65E",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_18/1/c_fl0030.png": {
+      "bytes": 4333503,
+      "sha256": "CB11E825C46BCFF755761D653DFDD7BBF7A56A3E5BF9BAB9654591C656D2A60A",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_18/1/c_fl0037.png": {
+      "bytes": 4197929,
+      "sha256": "39A48175291FCF1DC081DF455118306521127D249162590D60928A434C9B8B0B",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_18/1/c_fl0038.png": {
+      "bytes": 4331422,
+      "sha256": "DF88549F4A9E7B3AE0C5FEB3D989AAA0CD65C953E19B73DA75F752643B0E89E2",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_18/1/c_fl0055.png": {
+      "bytes": 4375124,
+      "sha256": "62A4B3540B487D44B83FEA8B60815B34B73C6AC37C13D1334EF6D5E5CEC8C512",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_18/1/c_fl0070.png": {
+      "bytes": 4358908,
+      "sha256": "BBE38FE48706BD5E5B151FAC21C91ADB283F971159288FB4F3692B45C33AFCC9",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_18/1/c_fl0083.png": {
+      "bytes": 4350500,
+      "sha256": "CACEA90FA50CEAD14337A94D204FDCE2E9CE4EE64DE101567272E80398360FE1",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_18/2/c_fl0007.png": {
+      "bytes": 4906082,
+      "sha256": "5E1F31826B359ECB255C5A03F66CFACF97BE023EC830DDEA622B1D18D1C21FAE",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_18/2/c_fl0011.png": {
+      "bytes": 4554765,
+      "sha256": "AFFB90D180AA833963447D14A697C882F632080AEF65B1612C972DB7D7018D56",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_18/2/c_fl0013.png": {
+      "bytes": 4589334,
+      "sha256": "0A4E63EFF0A2C605543049638AD4211881792CE238D9B5CFEB5D0CEBE6F6CD41",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_18/2/c_fl0025.png": {
+      "bytes": 4423339,
+      "sha256": "97FFC44F686F516FAB9A39D5CC3180AE892DB0986D9680F893A52A2442CA3539",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_18/2/c_fl0039.png": {
+      "bytes": 4408108,
+      "sha256": "C9F49ECDF8EB20D008BA440BB27D94A718E20D224921DF41F3C22AD3B441693C",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_18/2/c_fl0049.png": {
+      "bytes": 4860563,
+      "sha256": "89943E3C9B7433179CE0D6C0CB3FC667F15A388254BCA41FA189745222B3683D",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_18/2/c_fl0060.png": {
+      "bytes": 4800758,
+      "sha256": "0507A6163163B8E0AAA5F2BE0591776EAFC99AE73C0894987E0FD8EFA0D4F50C",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_18/2/c_fl0068.png": {
+      "bytes": 4480919,
+      "sha256": "AF642A24557325E52D498531F5C0F35F92F0D4E8F330CBEB4CA1B9A34A13D19C",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_18/2/f_fl0019.png": {
+      "bytes": 4829962,
+      "sha256": "F6CB11A007F79BE19C3502104F52763115EFA7EC90B26809DB1D38C83CB683EB",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_18/2/f_fl0034.png": {
+      "bytes": 4834848,
+      "sha256": "F6D0DD1238B0621F0D5F2661705F978A8CE438F79733A352561F97E9D7AA52EF",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_18/2/f_fl0038.png": {
+      "bytes": 4445793,
+      "sha256": "752FFBA1328B5027F26C8815CC5FA4BE4B39E848C17060B375E9A658F1776FAE",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_18/2/f_fl0041.png": {
+      "bytes": 4463382,
+      "sha256": "93393A1A5DB0DFC58FA342B0EBC3A30AE9EA8838834EAADD45EF6FA9EDB5AD9C",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_18/2/f_fl0054.png": {
+      "bytes": 4491091,
+      "sha256": "1B0AB5659B808542AB06CBD73F56AD1EC6826A41783C7740ED2EE2B18C1D2A0C",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_18/2/f_fl0066.png": {
+      "bytes": 4553178,
+      "sha256": "F2A554FF9C2780606111EA2885FAFA61915EAD9D29D4C0FFECBA9BD2AB10BDA3",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_18/2/f_fl0070.png": {
+      "bytes": 4410647,
+      "sha256": "D2907B102FF23AEB337483F605BA7AB9B8B3C479EEE170B5686802B1241E2719",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_18/3/c_fl0008.png": {
+      "bytes": 4930544,
+      "sha256": "DB5F73A0F672571D569D65969D563DDFF3B41F72FFB3F540CEE2FF9168A85C53",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_18/3/c_fl0013.png": {
+      "bytes": 4812813,
+      "sha256": "A7F67BD60F76401AFE12346C8D92D73DF2BCB66062759249D98B890BC3DF22F7",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_18/3/c_fl0016.png": {
+      "bytes": 4721613,
+      "sha256": "EF5524EB29CA8BAC8B09D3DAA79B68E2433AA8A697932A9C423B74D39CC5531A",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_18/3/c_fl0019.png": {
+      "bytes": 4917159,
+      "sha256": "5114491D18D248B7D4FDE7AD33377DA3BDBC8EC9993DEF42BD4D163FE33DF9B3",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_18/3/c_fl0030.png": {
+      "bytes": 4734678,
+      "sha256": "14CA393FAAF0D96436F355AFA1FD81CB0D61FD3F4F91DA7876C13E104436361D",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_18/3/c_fl0033.png": {
+      "bytes": 4929722,
+      "sha256": "CD58230AF4D2B9921E3936CF70C596CD0E73FF69E4AFC513C7F88F6CD4E62414",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_18/3/c_fl0068.png": {
+      "bytes": 4713925,
+      "sha256": "430AEB64AC801D5EEB0581FF9A683570491439C8C5F17478452A07CB157F4ADE",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_18/3/c_fl0081.png": {
+      "bytes": 4697191,
+      "sha256": "10A1396C1D65B3818CEF9553489D0DA05A587DA21325BB729E3A79B3C501F9B4",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_18/3/f_fl0003.png": {
+      "bytes": 4743722,
+      "sha256": "E705B9DC0113264ACF914B0B56E28C1AFA208B7585577F770B603E24E43958A8",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_18/3/f_fl0014.png": {
+      "bytes": 4808672,
+      "sha256": "C8EFF81314D44C7AD54465F9CB21A71D81A2C79B80215D9528CF43532E9735F0",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_18/3/f_fl0015.png": {
+      "bytes": 4733818,
+      "sha256": "EF7B90284E6B85EE4EA187AA73A5E3296FE5660A176BDA8BD56A8E53FB02C6D8",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_18/3/f_fl0027.png": {
+      "bytes": 4818733,
+      "sha256": "0CBD1D8F9631083D44B8C12FEDA520E2C74870A355143E0B47C7647CCF8B2E19",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_18/3/f_fl0028.png": {
+      "bytes": 4828650,
+      "sha256": "2BBEC3BE71DC1A80FCBA8220FEA1F34245C35B4F7D8DD9BA5504DD6E4C828316",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_18/3/f_fl0032.png": {
+      "bytes": 4738506,
+      "sha256": "3BD201FC8B23D5A078CFAE3A7E3ACB71BCB57E6607882BA819E87AF9A8F8564B",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_18/3/f_fl0037.png": {
+      "bytes": 4749224,
+      "sha256": "609FB56C52C06E60BBF1ED2AAD0F72DBE7C3634B3B90ED51CD1E01F7A5C6E30B",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_18/3/f_fl0038.png": {
+      "bytes": 4752549,
+      "sha256": "DC4155C2FBE0A212EC8A3DF487044B402740D4B197BE3BFF9E90C8DCD1019A8C",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_18/3/f_fl0039.png": {
+      "bytes": 4738191,
+      "sha256": "F23DDF64C035491F98693ECF8D3611FEF3A8A2C8E4900214D7E0067A54E44310",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_18/3/f_fl0066.png": {
+      "bytes": 4695507,
+      "sha256": "D29C2F37AB915D30B2FEF1296B68142694FD5C91597C2207EC3A88EFF4DAB36B",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_18/3/f_fl0079.png": {
+      "bytes": 4682955,
+      "sha256": "45D50A394494D1ED332343C664F327C38D48165634612FA42AA40F589340DCE2",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_18/4/c_fl0004.png": {
+      "bytes": 4947124,
+      "sha256": "9E81D77C88323E444557B0808F04C9BD3D221E9E37FB4643F3EC6F4AE7C4A581",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_18/4/c_fl0008.png": {
+      "bytes": 4815072,
+      "sha256": "F8CE215665342D6D73EC79B07E6323D7C72D73CC35ECB4C56515C85F4DB86BA5",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_18/4/c_fl0010.png": {
+      "bytes": 4954060,
+      "sha256": "82BFB69E21360AA6CCA0A661A9F6935A5A257AD9C19D5C1FD1627BB3D03B7A6E",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_18/4/c_fl0018.png": {
+      "bytes": 4955496,
+      "sha256": "918B60A1737566C0CA0AB5AF58263B8CC4706CBDCBD59502DEB4FE720EA08E29",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_18/4/c_fl0023.png": {
+      "bytes": 4961421,
+      "sha256": "2BDDA9467090557894758D31CB8407B08EF95E542CD58C754926D124788C161D",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_18/4/c_fl0032.png": {
+      "bytes": 4957696,
+      "sha256": "9D96E982CC34A8ACCE9966E15FFE857468D907E2F810A729C62329D1216707EE",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_18/4/c_fl0036.png": {
+      "bytes": 4803178,
+      "sha256": "33525A4C2000C62CEA428A4E815699252057220A3D80F52228AA0C218976C559",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_18/4/c_fl0051.png": {
+      "bytes": 4942786,
+      "sha256": "2FD49771896DF8E7FDEE87CE081D5DFF8F4A2E26DE2AEF30BF232FA6723D87B6",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_18/4/f_fl0039.png": {
+      "bytes": 7327918,
+      "sha256": "C409528C5DC4E6A5FC309B8B2A1D88612039A1467833525917ABD33D4C97C0DF",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_18/5/c_fl0005.png": {
+      "bytes": 4607776,
+      "sha256": "2BBA3A282313BDCACDA6F3A7B8AE54C2036F59FCA9CFB21FE33643A02D03AF6E",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_18/5/c_fl0026.png": {
+      "bytes": 4923007,
+      "sha256": "29D85E44B4AEAD1DBB5E999D14B79832F88F68146D97AFCE2574D61C69022C15",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_18/5/c_fl0036.png": {
+      "bytes": 4626416,
+      "sha256": "7D5225F07B6C63340876C63DB5321C20C62A90258724A4BB9538340B76CBF313",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_18/5/c_fl0060.png": {
+      "bytes": 4607597,
+      "sha256": "D28AD48EEC82E772CD33A0351DF41215083C8222CE5D4F0FFD1DDE10C151E691",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_18/5/c_fl0070.png": {
+      "bytes": 4899904,
+      "sha256": "33BF8D19742D549054B7E480F3BBDFCFAB8450FA6CC3D15B99EDF2F7483B9461",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_18/5/c_fl0075.png": {
+      "bytes": 4572023,
+      "sha256": "02E1AC1E1A0543BB258CAD4C965B85649C6BC504D47C1304F91114D2775609FA",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_18/5/c_fl0082.png": {
+      "bytes": 4864557,
+      "sha256": "4185703555128D07D3AFB9A4AB0FDFA946AB06EBEFD2F46F32AD0A9FC40A1A5A",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_18/5/c_fl0083.png": {
+      "bytes": 4900227,
+      "sha256": "F7ECD310BE26F153F2568A2175C370D96DC3076AA419B6A06819E6DB133F6D67",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_18/5/f_fl0000.png": {
+      "bytes": 4925236,
+      "sha256": "A2F43C59951C78A0F668B713A9E4F973F14B9355408E8E8FE5212616C7F5DE6B",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_18/5/f_fl0001.png": {
+      "bytes": 4906589,
+      "sha256": "05070DDD95C74FE181481C51530126E059C0A932826128486E97D45B2C265E66",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_18/5/f_fl0007.png": {
+      "bytes": 4654215,
+      "sha256": "E52FD41354EAD47456F0D85BB9A3E374F453E07C1261B2E60BCF1DAD8B3D1AC7",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_18/5/f_fl0012.png": {
+      "bytes": 4919841,
+      "sha256": "B02A77E1E03F96FFDE7EC9D98D81E375D5197582CBF4C5FF5B6A3FBDBBCC40F2",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_18/5/f_fl0013.png": {
+      "bytes": 4926522,
+      "sha256": "32945DF0C079C0C0F3931397C9194945C543F3FE534905F3CD879DEA091D0DCB",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_18/5/f_fl0022.png": {
+      "bytes": 4621026,
+      "sha256": "2C3EC44C49998DF9C9A2C3EE33AAD2A049C43E8159E9B8846FFD7DB3478C4893",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_18/5/f_fl0023.png": {
+      "bytes": 4652772,
+      "sha256": "C645C3F067692749680CE485B53FA43258352A093EDD0B4E06B77CCC4FDCDFCD",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_18/5/f_fl0028.png": {
+      "bytes": 4939194,
+      "sha256": "78AB6C153E2B41150037A24BB6D01794E3A7496EA58327C7272020042B8A1842",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_18/5/f_fl0037.png": {
+      "bytes": 4634980,
+      "sha256": "22E158E9B0C01DB1827CD49B4CA467978167B57218390B746C11F0B569297FAB",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_18/5/f_fl0038.png": {
+      "bytes": 4904301,
+      "sha256": "9A209621E7E2ECA5A829DC1D12B268BE080DA414415724F47676AA820C1184BF",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_18/5/f_fl0041.png": {
+      "bytes": 4931276,
+      "sha256": "AC899641A6CF8B80564E8E43D8CDB3C42741D2557F110AE70F071E4CF63CF118",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_18/5/f_fl0045.png": {
+      "bytes": 4902914,
+      "sha256": "DC50E601BC31556DF2B54E1F3EDAEE6555050C9F0734288E3F24B810FEF26FEF",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_18/5/f_fl0046.png": {
+      "bytes": 4636483,
+      "sha256": "F949DC7170FE2FFD4DE9FD2563844E03A6ECEB8FFABC62DA1E8056BA839CE3C8",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_18/5/f_fl0051.png": {
+      "bytes": 4640859,
+      "sha256": "2F5379B7A4CB4A899935D9FEE11CEA16AE23A4A72F07164AA7C04A263A15FD29",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_18/5/f_fl0076.png": {
+      "bytes": 4581471,
+      "sha256": "7F5FABF57E9FD263423ED7D44357826CAFEB4E7D11F4C4A6C2F140064FB4A145",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_18/5/f_fl0079.png": {
+      "bytes": 4535655,
+      "sha256": "C7498ADA9C7C2B0379CD9A0C991DD42117E8E9A2089C582AF9E3A1BC0DC4F78C",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_18/6/c_fl0001.png": {
+      "bytes": 4847367,
+      "sha256": "33CAB5533C0CA2363D935074E95C803A294EF84B85E2D5B7FDCDEDB671C0C48A",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_18/6/c_fl0019.png": {
+      "bytes": 4645241,
+      "sha256": "CFEFA6D57465945E44E261F9494E541ED001F574E2AD837F1C3D9E9C0A3BD083",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_18/6/c_fl0034.png": {
+      "bytes": 4642737,
+      "sha256": "CD330995298E65B9E4409B4731288A1479A113A83EF6736DDD4892BB02F5C14A",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_18/6/c_fl0039.png": {
+      "bytes": 4748286,
+      "sha256": "F02E1A5482BF8094F1810331CE39834A79BCB791EEB722B5DF5EC4472D287DC6",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_18/6/c_fl0042.png": {
+      "bytes": 4879923,
+      "sha256": "A2FD4AA65D063A69ECB7EC98E40B23F3BB15ADAFB1B75249847A414BE2F1F0FE",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_18/6/c_fl0051.png": {
+      "bytes": 4584238,
+      "sha256": "C930AA80FE39EE60D511FCA65C7F5306BEC0FEE2FB2965527909A7AEA5312B98",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_18/6/c_fl0063.png": {
+      "bytes": 4605829,
+      "sha256": "CE6388AC804653128080F0BD49AFE2B9A13E3F2E30DF91D8339F66CAD913DDA8",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_18/6/c_fl0069.png": {
+      "bytes": 4833033,
+      "sha256": "15B4272BBB82764A7154CAB4E7A26ABF3468363B5EA7A9E910BA67CBFFB5A034",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_18/dataset.json": {
+      "bytes": 91898,
+      "sha256": "A1C77B17F259CCE2A461A02CCD648043CA60C4B055DA6F07D0A1F62F065EFB48"
+    },
+    "Textile_2/1/c_fl0005.png": {
+      "bytes": 4835163,
+      "sha256": "CF0DB48F82C517603209BC7E6FB0A68753FBDEA090AC551ACCE711FE9733B841",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_2/1/c_fl0010.png": {
+      "bytes": 4837141,
+      "sha256": "3A030C011B5F48D7C1D7AF5123BD391DC84BA7417FE7A2112888ECD2BD2F8EC2",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_2/1/c_fl0020.png": {
+      "bytes": 4846677,
+      "sha256": "5D3B1EC7F66DEC6F35F718110BB61EB914FCFDE48B9C29690EE622389EF2C457",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_2/1/c_fl0034.png": {
+      "bytes": 4839913,
+      "sha256": "3D62D572C571D580DA5C9975318056DE62B111FEC5EF0EA2630F55D2FECDC571",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_2/1/c_fl0036.png": {
+      "bytes": 4833541,
+      "sha256": "70537BDA4FCB55266F365CAC9220CE5D81D6A167AC2B677B040ABD9B814F9C5C",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_2/1/c_fl0042.png": {
+      "bytes": 4845445,
+      "sha256": "86DF3EFF0CAF339D9BFA95AFF67C21DBE0DE37C612B29CF602D3FF14488BA46D",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_2/1/c_fl0076.png": {
+      "bytes": 4829674,
+      "sha256": "2A3773A40E7876072BF7C3390AE83B5E32BA1F06F6F8D54B745B18694E0BD904",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_2/1/c_fl0077.png": {
+      "bytes": 4828187,
+      "sha256": "E013EDB5C5455ED287CA8B4C4FCD5AF2D3465DAFC2AC9FCBE8B12A8E31E2F4FB",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_2/2/c_fl0000.png": {
+      "bytes": 4891756,
+      "sha256": "9D4352F471546FB679723FF803FB5F9353E6D1DBCA82DC55C5964A0E848DED9B",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_2/2/c_fl0017.png": {
+      "bytes": 4876856,
+      "sha256": "7A6E5F4470619CA668C243E471B16393C86E5ECD49412994835A4CDD5B2D811C",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_2/2/c_fl0047.png": {
+      "bytes": 4872056,
+      "sha256": "7F2E6FCA6E9EC26AC203111BDF88407C447141FDE24A63AC7F06806BB46298D7",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_2/2/c_fl0053.png": {
+      "bytes": 4861028,
+      "sha256": "2E4DAE2FA9850FFAB5DD8ACDBADD3A65DF656773DD69314195B8105DA121DD9B",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_2/2/c_fl0054.png": {
+      "bytes": 4859874,
+      "sha256": "1E2418609BABB3212F89BB20424A0DF159CF06D4B8B99BC4198677A6EE8C6CC6",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_2/2/c_fl0061.png": {
+      "bytes": 4862699,
+      "sha256": "529F0397B8066E0D9C4EAD0E34852714262A3916E3C01A8FA338779D5728C4FA",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_2/2/c_fl0072.png": {
+      "bytes": 4849127,
+      "sha256": "959189678E291758089F7D624F5418D80ED26351874FB5E7D1A12074C67903A8",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_2/2/c_fl0076.png": {
+      "bytes": 4861489,
+      "sha256": "0C4D6B2D3D0AA022B6486267B50C16A2F5CB6C9FA09C8E08DB8001D9C3A530BE",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_2/3/c_fl0008.png": {
+      "bytes": 4859658,
+      "sha256": "C82FED34412DAF9C08F14C03399E05352F1BDEE2AA25D409AECC5D713BD4D0FE",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_2/3/c_fl0035.png": {
+      "bytes": 4856924,
+      "sha256": "55BAA2576934C13429AF62F07614373F8A94FA408EDEF8F0E4D9861920349F9B",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_2/3/c_fl0049.png": {
+      "bytes": 4840528,
+      "sha256": "BF50B3EE3D9A68839B9965CDE1D2DE4207A654F321F94D955A79109331449B1C",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_2/3/c_fl0054.png": {
+      "bytes": 4854815,
+      "sha256": "9EF18B263E9867BB39469672A010E3F361EDB118FBDD60E0ABE7E2C18CE4B0B2",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_2/3/c_fl0060.png": {
+      "bytes": 4823972,
+      "sha256": "8B30A4466001B8EE09B68FFEDA23289E5681F6C005F2AE14D08BA031ACEAA32A",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_2/3/c_fl0070.png": {
+      "bytes": 4877659,
+      "sha256": "ADB434084744EAF4A741358002266DFD695388BC9EE524AF55F681CFA42EC139",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_2/3/c_fl0073.png": {
+      "bytes": 4823438,
+      "sha256": "E9BC70247712C492EBF9966FFB489749331EE7C39547B8CC7A8F76549FEF8C08",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_2/3/c_fl0075.png": {
+      "bytes": 4826915,
+      "sha256": "C664DE009725DC6CB70D4EA9E285817E6D415C8E0C5B70F404B7E3E5F8FF25E9",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_2/3/f_fl0046.png": {
+      "bytes": 4829003,
+      "sha256": "1A806BCF07D2E80668D2E6CD331574B28DFB9C449170784DE38526A07559B29F",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_2/dataset.json": {
+      "bytes": 40046,
+      "sha256": "EF28E2C1614E9AEB9D817130702A977B13D04CB268B33E89EA04EED40810A933"
+    },
+    "Textile_21/1/c_fl0017.png": {
+      "bytes": 4468740,
+      "sha256": "43109A9AB8E2E08D2466874D15FD1D6AC3C326296090EDA7BB4C6114A5B8A9FD",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_21/1/c_fl0024.png": {
+      "bytes": 4434798,
+      "sha256": "2CD29BAF14359887B07FD7D97D43ABA54E2D5742EC7AD275BDADD926141B47F5",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_21/1/c_fl0027.png": {
+      "bytes": 4438285,
+      "sha256": "7A27102F44C1CB4A1739D0D36BDEF5A634EDA1085199A430D7F5F94CF8C3467D",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_21/1/c_fl0029.png": {
+      "bytes": 4416760,
+      "sha256": "0E29C031FCA6BCEF045FCD683606CDAE3E94A5FE9A04F74A0277EDD5E300720D",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_21/1/c_fl0039.png": {
+      "bytes": 4499601,
+      "sha256": "52C3A400ED49332C79B496425D8304D7ADE9D64455F97616C20CF2C63F61C275",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_21/1/c_fl0045.png": {
+      "bytes": 4234205,
+      "sha256": "A634C63CE4807348CD97A930CF0BF55380E0F14D49920E02700093140CAF63BE",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_21/1/c_fl0056.png": {
+      "bytes": 4095188,
+      "sha256": "83DCC172107AEECEAAC2055CC4E6E709A3E2410BFD435437EC1A55A63D797D57",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_21/1/c_fl0068.png": {
+      "bytes": 4040248,
+      "sha256": "35746A3527018CE61F97D7FAA9EF86BA5F0FBD0EEDD423CE2997BD12243783BD",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_21/2/c_fl0010.png": {
+      "bytes": 4104390,
+      "sha256": "BCFC28B82FCE839B29A67204865B1ACEC663CE185329013677052A2EBAF8EC4E",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_21/2/c_fl0021.png": {
+      "bytes": 4318016,
+      "sha256": "3805D1306EA80BE59A62E94A2247BABFCFD663EC6FC657D7259828529B55A145",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_21/2/c_fl0026.png": {
+      "bytes": 4295877,
+      "sha256": "744B2A7C4A581C642D522CDC9A6F21569E2F8A62E389E5725288F6A4E65D892D",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_21/2/c_fl0031.png": {
+      "bytes": 4289651,
+      "sha256": "51F6F658EC9BD216C00A89A7463AAD57BE9874E0BBFD66776055E4B6E7C607A1",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_21/2/c_fl0039.png": {
+      "bytes": 4282830,
+      "sha256": "A99C7103DB8334A8A560A388E4ACDC618FE1184BE41C095475921259E3905F63",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_21/2/c_fl0041.png": {
+      "bytes": 4283173,
+      "sha256": "C805741D48AA66738379BC407516C35F0E77C5DB28ED8736D3ABD1389AEA8C07",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_21/2/c_fl0047.png": {
+      "bytes": 4007909,
+      "sha256": "21FA831B8B34918539B2558A935749D61CA74BD978581E12D4CB279D0CB8E5E8",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_21/2/c_fl0075.png": {
+      "bytes": 4192924,
+      "sha256": "FE98E99F5E4D53BB506EDEDE64FDCF3896E4B71564081CAF4FE9D45518768492",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_21/dataset.json": {
+      "bytes": 123624,
+      "sha256": "FA26DF23D37C66E6CD33829826D163E3CBCDD4D43B960A1E5142EDF9BC128644"
+    },
+    "Textile_21/garnaufschieber_kette0/c_fl_x124_y0.png": {
+      "bytes": 5891167,
+      "sha256": "B5E2296598C71F3967ECA01BDC9C00BFB26D7CD1034924421EE1900C5356C8DC",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_21/garnaufschieber_kette0/c_fl_x155_y75.png": {
+      "bytes": 6369378,
+      "sha256": "9E80F88946A624C9D635A775C4BE76105E2C0BBF27A30A568408B8DACE4D5CA8",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_21/garnaufschieber_kette0/c_fl_x31_y100.png": {
+      "bytes": 6348813,
+      "sha256": "A46726EAEBE009BA3E4700D758EB9557A2660617516C4A89EAD4D63C7C4637B4",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_21/garnaufschieber_kette0/c_fl_x31_y125.png": {
+      "bytes": 6335921,
+      "sha256": "B9DCA271EADACF780A208BA3A9CD14B5E80AAB4093999478826F0D4E6707C252",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_21/garnaufschieber_kette0/c_fl_x31_y150.png": {
+      "bytes": 6326385,
+      "sha256": "F00962C5366454DA79A26E2EA07C8E3C022A4D8E9055FE471919E61B4EEC713C",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_21/garnaufschieber_kette0/c_fl_x62_y125.png": {
+      "bytes": 5906110,
+      "sha256": "B0D0BE5220988F1DC284BCA46B7C55BA825CF8B7A9C168DD6144B40214671B2F",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_21/garnaufschieber_kette0/c_fl_x93_y0.png": {
+      "bytes": 5921009,
+      "sha256": "6C254B09AEFDF646240C6035CCC64D962E7240F118C494F606E3D86834AD39BD",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_21/garnaufschieber_kette0/c_fl_x93_y25.png": {
+      "bytes": 5896582,
+      "sha256": "1AC281B3C5E9601FFF70426032C39F965555A53C2AB9918730446A5E32D5F9D8",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_21/garnaufschieber_kette0/f_fl_x0_y100.png": {
+      "bytes": 6395047,
+      "sha256": "90E00416008341D8EA673DC07BAF1CD0E0BEFFB4661B1EEA7798C00C65DD096A",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_21/garnaufschieber_kette0/f_fl_x124_y125.png": {
+      "bytes": 5910828,
+      "sha256": "C5F8845DF59D67EF3E0998930E9FA4D6E951E485590F2AF1E385F76C5C872331",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_21/garnaufschieber_kette0/f_fl_x124_y175.png": {
+      "bytes": 5907287,
+      "sha256": "84FD7E08FB7E34AB5F7BEC85A5865E70B6BD0669C723CF328C050EEE4BC58AB9",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_21/garnaufschieber_kette0/f_fl_x124_y200.png": {
+      "bytes": 5917281,
+      "sha256": "C9044F6ABC24897EA503F030F03B307521830E0E099E1CA4B938E518F7E360F1",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_21/garnaufschieber_kette0/f_fl_x124_y225.png": {
+      "bytes": 5904518,
+      "sha256": "1D9C08F55CDB12FA39D95D506CBD0F778633EA2A34B103DD0037D9587467FA6F",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_21/garnaufschieber_kette0/f_fl_x155_y0.png": {
+      "bytes": 6360803,
+      "sha256": "FE44CE05863F6F5B2F2A4E9DD7686396BC4D296A6DC2FA783BD7D30117308682",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_21/garnaufschieber_kette0/f_fl_x31_y200.png": {
+      "bytes": 6333877,
+      "sha256": "8F41BFA99F8511C131F20823CD82AC30AAED15DC9104433EE541BD2A1ECC4AA6",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_21/garnaufschieber_kette0/f_fl_x31_y225.png": {
+      "bytes": 6346875,
+      "sha256": "85850A6719A00D5F12201B6C4F0E9D2B4A6F15EFFB1D51816CDCEAAA0A8D2934",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_21/garnaufschieber_kette0/f_fl_x62_y175.png": {
+      "bytes": 5935792,
+      "sha256": "E8856EC93747387AFB3F3FF74D64105B967A6A0527F9413E89DBF7CE08508830",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_21/garnaufschieber_kette0/f_fl_x62_y200.png": {
+      "bytes": 5934638,
+      "sha256": "E7E6F01412454154ADC724BB9244743AC2743EBDB63270A46D3C50A31B8FBC2B",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_21/garnaufschieber_kette0/f_fl_x62_y225.png": {
+      "bytes": 5927049,
+      "sha256": "AFC18C39A8BF6503DA4FD1FA506019F37747FB05CAD0B6C3C8D4D3D53DFF9075",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_21/garnaufschieber_kette0/f_fl_x93_y175.png": {
+      "bytes": 5942580,
+      "sha256": "7AF34A7E46EEFB33737A99465C71DA92DD1AE02B799E7EB5C11C92C865C4B535",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_21/garnaufschieber_kette0/f_fl_x93_y225.png": {
+      "bytes": 5932519,
+      "sha256": "322BC9723ACF366295B28EEE2B46B5389A278C413FE4463D1142B862E298A980",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_21/knotenschuss0/c_fl_x0_y125.png": {
+      "bytes": 6136156,
+      "sha256": "478E8052895396D70E9AAED248F8549F740605CCB641A38E2EE66354EC68811F",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_21/knotenschuss0/c_fl_x0_y200.png": {
+      "bytes": 6118213,
+      "sha256": "D0D4D56DC983BD8953E7877E0656A1A63E06CEB439284F675BE7D8929495266F",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_21/knotenschuss0/c_fl_x124_y50.png": {
+      "bytes": 6291847,
+      "sha256": "41B6EB40683BCB39968ED37737ADF45D25862C27F055E1A4DA6E60524B9B4AD1",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_21/knotenschuss0/c_fl_x155_y150.png": {
+      "bytes": 6165646,
+      "sha256": "7708BD1AC06E7F19BB835A7532B30194AA9CA145DACF8E681FD01BD854FE908A",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_21/knotenschuss0/c_fl_x31_y150.png": {
+      "bytes": 6419707,
+      "sha256": "69261E32D51758C0A516079785A123A8FB27C81EB47ADBC1552C88270711BDF2",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_21/knotenschuss0/c_fl_x62_y175.png": {
+      "bytes": 6468640,
+      "sha256": "FFD150AAD995D4815ABD898189F40B8931959B76B5D26F6853D683B61C1D54B0",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_21/knotenschuss0/c_fl_x93_y150.png": {
+      "bytes": 6493239,
+      "sha256": "E4FF75DF486672D7146BA9BE514279A2AD70C9FD6770EB71A3CC83316043C706",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_21/knotenschuss0/c_fl_x93_y225.png": {
+      "bytes": 6482842,
+      "sha256": "FBB42AB769C67440583BA1FE349674ABB66793D67E0B52F0C8671D171023F00A",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_21/knotenschuss0/f_fl_x31_y25.png": {
+      "bytes": 6501202,
+      "sha256": "DD3A2216EC8B2B9871281BDC4C77FB04E3E7A83A3D8876589BEE9F1C142A480F",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_21/knotenschuss0/f_fl_x31_y50.png": {
+      "bytes": 6487527,
+      "sha256": "9FCDA557CCA1C2EB8299FDE9451A6CCCCA6A91288D81F207AA0DD5BF5CA9A31B",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_21/knotenschuss0/f_fl_x62_y0.png": {
+      "bytes": 6594027,
+      "sha256": "16EBAC48879FA39C629EE78BF97881D89217D084C03DA9497DA9080501CF9A92",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_21/knotenschuss0/f_fl_x62_y25.png": {
+      "bytes": 6515118,
+      "sha256": "16F8232C663541958C44231EF706411E665279501CB102136BEBD855CF839C43",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_21/knotenschuss0/f_fl_x62_y50.png": {
+      "bytes": 6500877,
+      "sha256": "83E3F24FDE286291A228DF1ED6DAB4683E96871FBCCA23DE321A791539B6AFA0",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_21/knotenschuss0/f_fl_x93_y25.png": {
+      "bytes": 6533769,
+      "sha256": "E5893306CB066BF1742FBCEEE1845EBCE5B175101DCC9AD4EFAD4614C67230BC",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_21/knotenschuss0/f_fl_x93_y50.png": {
+      "bytes": 6503274,
+      "sha256": "094715A3712742D63DF8E0C0DB3A77C9E56AC3CDD2B84A3C584898BDAE8EE25A",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_23/dataset.json": {
+      "bytes": 63540,
+      "sha256": "4980951CFE0869F0DAE66C016B9144E16189E48B5B0F4B61F6EF1033E17B8C74"
+    },
+    "Textile_23/flecken_schmutz0/c_fl_x0_y25.png": {
+      "bytes": 4660296,
+      "sha256": "D13AB2DB959B878083262CDD4B1D8036467F0CEB7B6BC92EB4529ACA801CE53F",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_23/flecken_schmutz0/c_fl_x0_y75.png": {
+      "bytes": 4637755,
+      "sha256": "3888B60B8A31F51D116FF314247AD09E1814A5EA550D188E774A6AA653EFED90",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_23/flecken_schmutz0/c_fl_x31_y175.png": {
+      "bytes": 4603392,
+      "sha256": "B8219098257FD87E843A548AAC0FDEBEF50106A6721653AB6819E0B79E9E3460",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_23/flecken_schmutz0/c_fl_x31_y225.png": {
+      "bytes": 4605181,
+      "sha256": "D38BCC1879B0F747CDD7DCB8BD0F24BA9CBF9F5A26424B43256F5E81A0595870",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_23/flecken_schmutz0/c_fl_x62_y125.png": {
+      "bytes": 4616660,
+      "sha256": "CBA328C01D94021B838AB2278835377CC7139747FDB90633D98992B8F331D763",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_23/flecken_schmutz0/c_fl_x62_y175.png": {
+      "bytes": 4585500,
+      "sha256": "233990ECC45AD5C5C0FDD703368F3052F108982B91BC55A38109EA5C4DD9986E",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_23/flecken_schmutz0/c_fl_x93_y200.png": {
+      "bytes": 4557325,
+      "sha256": "6923196B14EE65280F55C6029AF109677EA4A0D0CB7F2C5B91294F31F6698AB5",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_23/flecken_schmutz0/c_fl_x93_y75.png": {
+      "bytes": 4593677,
+      "sha256": "C2E1DB81190F5AA7F5970BC721F48AB3FD331C86FA9551D7B059D9AAB64A563C",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_23/kettbruch1/c_fl_x0_y125.png": {
+      "bytes": 5966646,
+      "sha256": "4177B65D35AFAFF69C187D87FD7837BC0C6CC0E1CD0757D906C2E6A86997A59C",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_23/kettbruch1/c_fl_x0_y150.png": {
+      "bytes": 5965126,
+      "sha256": "FFAE415D41EB318DA96DA47977D34195D20334E3D972BAD449A8D89F43033741",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_23/kettbruch1/c_fl_x0_y175.png": {
+      "bytes": 5985422,
+      "sha256": "6329EB69B1BE4EA548D2BC9B96D8765898D1B5095731689779825DD79927977C",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_23/kettbruch1/c_fl_x0_y200.png": {
+      "bytes": 5997670,
+      "sha256": "CA2CA3CB367C38855DF2AC790F857B1F5E89CE0D34C0D9ECF216AA0A84DE98B8",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_23/kettbruch1/c_fl_x0_y225.png": {
+      "bytes": 6022641,
+      "sha256": "377B666EB2ABFE5CAE3377E5FC02DF61BC0BB7C9492F961DFDADB89000B86A50",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_23/kettbruch1/c_fl_x0_y50.png": {
+      "bytes": 6027024,
+      "sha256": "0FDF5DAA4A740CEF2ADC28F77EC2C0BB4620CCFCB75A5D0DDF1683FBE021953A",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_23/kettbruch1/c_fl_x93_y100.png": {
+      "bytes": 5987767,
+      "sha256": "6342216BC622CEDD33344A9BF5C6C08EB8F947EE8BC96AAAB7BF02E49D53B735",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_23/kettbruch1/c_fl_x93_y25.png": {
+      "bytes": 6041731,
+      "sha256": "5AE4D9E148D5839398F680A001AA6F7B4D3B7F83E6280B91CAF6BFF59250F90D",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_23/kettbruch2/c_fl_x0_y100.png": {
+      "bytes": 5599570,
+      "sha256": "041BFB7DAD58D15C5F6D03BE08092322EF58AD602F47099575F5AF98745571EB",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_23/kettbruch2/c_fl_x0_y150.png": {
+      "bytes": 5627405,
+      "sha256": "1CE411F9405E87ACB775D952F7E122DE208785B509AA5B7F9416A198811D6642",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_23/kettbruch2/c_fl_x124_y125.png": {
+      "bytes": 5648392,
+      "sha256": "E044FB8EB6A8F34EFF8F74A17A9F16A0C6C7F0615038B1CB5536940790C3EDBA",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_23/kettbruch2/c_fl_x155_y125.png": {
+      "bytes": 5672664,
+      "sha256": "90E7BA8C0C1EC9444D1D1250733D2F69F60DFD1E76FBB1728AF17037B4C9676A",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_23/kettbruch2/c_fl_x31_y0.png": {
+      "bytes": 5664366,
+      "sha256": "A700B463F587B26153CD15D777552536CFDD6ECF4627F85D3451A9EEAEEC0877",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_23/kettbruch2/c_fl_x31_y150.png": {
+      "bytes": 5631324,
+      "sha256": "7C6DCCBD7D20BF18D6F0CABED1691403889BD3536DE56280009B8FE9AC608093",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_23/kettbruch2/c_fl_x62_y175.png": {
+      "bytes": 5646481,
+      "sha256": "BBB54C6F3A09F16B74597C4E1244781125FF95D63CFB3BA8BC75EA994D22CC57",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_23/kettbruch2/c_fl_x93_y75.png": {
+      "bytes": 5662641,
+      "sha256": "90395B8DA4772E7601CBB9104BFCA2C30F699835BA319F23ABAEDCB6054BDDE9",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_23/kettbruch2/f_fl_x62_y0.png": {
+      "bytes": 5664241,
+      "sha256": "50FF11A8FDC549AF1D099F974D4685C5A68C99FDE5EB786B163017D8E8AAB8A3",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_23/kettbruch2/f_fl_x62_y100.png": {
+      "bytes": 5633126,
+      "sha256": "71C14313B85309454E156181CBC31246E0D921ECF36943E7B4B7CA3363B0ED5C",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_23/kettbruch2/f_fl_x62_y125.png": {
+      "bytes": 5657474,
+      "sha256": "177ED5518C9FEBEABAF578300A8EA293EAB8B4E708325A7C5D11FCA6A80A9356",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_23/kettbruch2/f_fl_x62_y150.png": {
+      "bytes": 5660038,
+      "sha256": "A196B78122BDA6C4D305906DDE62D8E7F9CA139ECAE22397FFC9466C828A0037",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_23/kettbruch2/f_fl_x62_y50.png": {
+      "bytes": 5662650,
+      "sha256": "E00FE775E852BDCB9B10F4E831D2F40121C2A021E240F762F9B5E33488F78C64",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_23/kettbruch2/f_fl_x62_y75.png": {
+      "bytes": 5643413,
+      "sha256": "FDD87559E7E15D08C28EFFBDA79304489D2D070228F3D7AD2E690AF43C098719",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_23/spannfaden_kette1/c_fl_x0_y0.png": {
+      "bytes": 6763684,
+      "sha256": "A3734FAB4A40CDC1BAB7F21C9237DAD1A6F02CC4984D09C800968A6760EB614F",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_23/spannfaden_kette1/c_fl_x0_y125.png": {
+      "bytes": 6646299,
+      "sha256": "9776A3C5A61892E09012F16C10A3E1101521D186501A18D857FECE7D80E4F6E1",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_23/spannfaden_kette1/c_fl_x0_y25.png": {
+      "bytes": 6724518,
+      "sha256": "E31406D10317FE97BA6AC791395577690DAD51C306346C8CDB67D8AFBEACD9D1",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_23/spannfaden_kette1/c_fl_x124_y125.png": {
+      "bytes": 6625374,
+      "sha256": "68009FDDB8571CF6239292C94B3CC2E3C9636604BAB9E9CE527D12C52EEDA601",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_23/spannfaden_kette1/c_fl_x124_y200.png": {
+      "bytes": 6675604,
+      "sha256": "91DE52EC5B9AC56CBD7B63CA8B2F70CFCB661585D8396E41CC50A1EF81BD6D0E",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_23/spannfaden_kette1/c_fl_x124_y50.png": {
+      "bytes": 6709489,
+      "sha256": "FB0DDEA42D6C401048814DA056D5464687F0BB7FF73B0A53CC9C8D5574938ADA",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_23/spannfaden_kette1/c_fl_x93_y100.png": {
+      "bytes": 6656186,
+      "sha256": "CDA872163E2561C2D3E8F2002A3388E0ECA4EC9857D805093BABBD8D4D727B02",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_23/spannfaden_kette1/c_fl_x93_y175.png": {
+      "bytes": 6607879,
+      "sha256": "D14D29A48F299B114E29ECDBECDD3364ADD81188AD465BDAB0692BAA4384A982",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_23/spannfaden_kette1/f_fl_x62_y125.png": {
+      "bytes": 6622719,
+      "sha256": "F3C0A01148223100788A9BB50E8795AEEACB83E3926BE5582DB0206D6954154E",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_24/angeschmutzter_kettfaden0/c_fl_x0_y100.png": {
+      "bytes": 5927867,
+      "sha256": "7F2C6E79B5E29910A632FB8353B4195FBFE0B242FE761090744FF80D0CF4DCD2",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_24/angeschmutzter_kettfaden0/c_fl_x0_y150.png": {
+      "bytes": 5924925,
+      "sha256": "1FD9504A88B8928B37500D32658494BAF94DAACBD776C5FBC6012F2204816C00",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_24/angeschmutzter_kettfaden0/c_fl_x0_y200.png": {
+      "bytes": 5928519,
+      "sha256": "AC76556D0FA51A2C45419DC4CDC211935C362A49FEAE6C694D3A4AF5E066B80B",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_24/angeschmutzter_kettfaden0/c_fl_x124_y150.png": {
+      "bytes": 5919291,
+      "sha256": "1588B160FF9F6CD6DF1C270B9BF7C2FD3503701F553ABBDC154A57C4515E83AC",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_24/angeschmutzter_kettfaden0/c_fl_x155_y200.png": {
+      "bytes": 5908653,
+      "sha256": "9D4F8F31B7AB3EFBE48CC4FB8E95D30AAC7C7E2C2F7826F534D617C8785E697B",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_24/angeschmutzter_kettfaden0/c_fl_x155_y50.png": {
+      "bytes": 5958536,
+      "sha256": "4DBF373BD2C442AAC03E5AFC83E1F53B6BE8D9AAE65D3541DEAB00FB58F55AED",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_24/angeschmutzter_kettfaden0/c_fl_x31_y50.png": {
+      "bytes": 5979219,
+      "sha256": "A11CF2FEAED792ED79E10516B267AE252698FE4EE8B04C7425BBE6D098D24C43",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_24/angeschmutzter_kettfaden0/c_fl_x93_y200.png": {
+      "bytes": 5918699,
+      "sha256": "293CDF717C29B26220A8F894379836C5C4ADFD4352C45E67381287826519F818",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_24/angeschmutzter_kettfaden1/c_fl_x0_y75.png": {
+      "bytes": 6020818,
+      "sha256": "8836A21650E342990DFB748E122F814E01FAE20FF00813E534F21615A51EFDD5",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_24/angeschmutzter_kettfaden1/c_fl_x124_y200.png": {
+      "bytes": 5931204,
+      "sha256": "A063DBBFA6DC1FFCBDF5B2A2E6A95D6566C888026E345C762C7F306DED3C9520",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_24/angeschmutzter_kettfaden1/c_fl_x155_y100.png": {
+      "bytes": 5970347,
+      "sha256": "A79F02EBD1D0449E853237A1965D7F2E59821E6F21F5E702EB4E5D50F881C0F6",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_24/angeschmutzter_kettfaden1/c_fl_x31_y175.png": {
+      "bytes": 5959614,
+      "sha256": "B4CDB3D189FA5F185FCCA56C0C96328DBF1469B85DC8B49F3BED26B7430CEDA4",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_24/angeschmutzter_kettfaden1/c_fl_x31_y50.png": {
+      "bytes": 5986713,
+      "sha256": "F1A2495D691FB881D591E7E5B6D02BEE5C3498792B9CA712A6F3F1056489E693",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_24/angeschmutzter_kettfaden1/c_fl_x62_y200.png": {
+      "bytes": 5952845,
+      "sha256": "BFD9AC5F0F5C6C98450881C182CB446EF2847BEC1D532EBE16C8930B0AA015D1",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_24/angeschmutzter_kettfaden1/c_fl_x62_y75.png": {
+      "bytes": 5974515,
+      "sha256": "5736C369CB46523DB953ED752FE64ACCBA631EC0EBA0262F9EBE03AB2D4321E2",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_24/angeschmutzter_kettfaden1/c_fl_x93_y225.png": {
+      "bytes": 5966615,
+      "sha256": "DEA1660A6C40B28A8C3D5FD19B49854C1F3BF4B3242F7CFE4135988726498C27",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_24/angeschmutzter_kettfaden1/f_fl_x62_y100.png": {
+      "bytes": 5981840,
+      "sha256": "9E16B3CAFDD1607C4676E9CE488E844034E12DB199D090265FED8242CFFD88DE",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_24/angeschmutzter_kettfaden1/f_fl_x62_y125.png": {
+      "bytes": 5959315,
+      "sha256": "308B7C32DAD94797FF6F9B1AD050C8F532B468037970AF115BB52639FC2E23A2",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_24/angeschmutzter_kettfaden1/f_fl_x62_y150.png": {
+      "bytes": 5949851,
+      "sha256": "B37A28434E1DE8E5579F780AF1C2EC2B025F5E24D54D75A7910DB78D68176B7C",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_24/dataset.json": {
+      "bytes": 41790,
+      "sha256": "63B474749F5CD2B777B074D620752DAFEFA350D73A6A82051C58767C7D7C5BBE"
+    },
+    "Textile_24/garnaufschieber0/c_fl_x0_y150.png": {
+      "bytes": 6033870,
+      "sha256": "2CA33AF8137A0F649A97CA52924A6BB2DC1D94D30B413094F14B28E5FE3C07DA",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_24/garnaufschieber0/c_fl_x0_y50.png": {
+      "bytes": 6054427,
+      "sha256": "212F4BCBC0888096ECE67391A3BC52EA4D60D2B97044B2BA7D6964ED3EB62F29",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_24/garnaufschieber0/c_fl_x124_y0.png": {
+      "bytes": 6106921,
+      "sha256": "4A269A2ECD99A4E4174E2C356A14599F03DBD919828CAA8ED9806FDF1C6F3E35",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_24/garnaufschieber0/c_fl_x124_y50.png": {
+      "bytes": 6032786,
+      "sha256": "B45D2EF55589A91677103D610FDE057C7E8DF67F0AB174FC8FB732BBC847DB7D",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_24/garnaufschieber0/c_fl_x155_y225.png": {
+      "bytes": 5992214,
+      "sha256": "4A64913D5D31E9FD5271E1C9FCE0933AADC340F0EE4636B2ECAFC7B340C6904B",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_24/garnaufschieber0/c_fl_x31_y50.png": {
+      "bytes": 6044349,
+      "sha256": "EC0EF862FB1AE90199AD6F25FC22551AC61F2D35D35011C4D0DCB48069F0075E",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_24/garnaufschieber0/c_fl_x62_y125.png": {
+      "bytes": 6018939,
+      "sha256": "2E028B6D1348C520744FB90B72C6E856BFF28BE745A3339EBE9C24374D18EE43",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_24/garnaufschieber0/c_fl_x93_y200.png": {
+      "bytes": 6001272,
+      "sha256": "EEB21BCD085E290EE5F82252FE7F5314796AE73864C5431B158BF1365B892648",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_3/1/c_fl0007.png": {
+      "bytes": 4715434,
+      "sha256": "302F69D8487605C7C79A5046AE438AA36DFEEB7C32B9B42617091D5364364831",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_3/1/c_fl0012.png": {
+      "bytes": 4705613,
+      "sha256": "29C9DC0A0892FE281E2C495312E33737BE49D3C3F65DDE7A4A195636C8C9F005",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_3/1/c_fl0019.png": {
+      "bytes": 4742388,
+      "sha256": "EABD78BAD745EDE235AFFC7BFA84904CCFC531B5DB501AB02C3DA07C25F5B52F",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_3/1/c_fl0031.png": {
+      "bytes": 4745833,
+      "sha256": "E0DE3D13B02114022CA95DB9E816B37E6A9E3967A4BEB436F868EB190A09EC14",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_3/1/c_fl0040.png": {
+      "bytes": 4706587,
+      "sha256": "30487AEE181348FFCA82B61952A6765E6B3AA48A7923FF54F68213FCCC31C63A",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_3/1/c_fl0070.png": {
+      "bytes": 4744855,
+      "sha256": "FED5051718A26106F8AC49671B6AAE100D44FBAC5340FB608333C9EA510F682C",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_3/1/c_fl0071.png": {
+      "bytes": 4704194,
+      "sha256": "463CB0B3AC839A3E3AA28A20F33BDC459875210304A1534ADCD8896B297AC54F",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_3/1/c_fl0072.png": {
+      "bytes": 4722524,
+      "sha256": "1654293095533FBC6EDC6A96D066D4543EEA1199DAE897B27609A1933B112329",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_3/2/c_fl0002.png": {
+      "bytes": 4776004,
+      "sha256": "479194D8AC7602AFB580F411D7DF7B7C2C4AFED7BFCDCB82428CC618535EDF5C",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_3/2/c_fl0017.png": {
+      "bytes": 4753705,
+      "sha256": "D47DA4BDC63F899C4D7487889FBBB2F9D6CF37D08C53CE25486F704DF1D221C1",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_3/2/c_fl0021.png": {
+      "bytes": 4724327,
+      "sha256": "9457E864451126F3C0E3D87ED7DE6FE7203C11D687E7746CCCE4C8C95B67E122",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_3/2/c_fl0030.png": {
+      "bytes": 4742867,
+      "sha256": "258016290D08B6B792EDBA611AE5A36B6B698BFCE27754C7B2E236CD9C357CBB",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_3/2/c_fl0034.png": {
+      "bytes": 4715755,
+      "sha256": "BC2481C2060EC1D51F5CCFAC38896A6BF03A04DC82405B89332709D8BE3C137B",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_3/2/c_fl0051.png": {
+      "bytes": 4727589,
+      "sha256": "CE6575CF7F091BE1A82A6B071F978AE6CA7F60BD15F64D29CAADFC88A8FCF8FE",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_3/2/c_fl0070.png": {
+      "bytes": 4733130,
+      "sha256": "97C0FB41103A2715115AFA6967E0A73C735F56601D22068AF582B105F6951F44",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_3/2/c_fl0076.png": {
+      "bytes": 4732034,
+      "sha256": "491771F3821C0A9AD658A70A3E98B486EEDE9970168280CC05085E938D4279B8",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_3/2/f_fl0019.png": {
+      "bytes": 4707497,
+      "sha256": "4269F30E18432FB59A7DBA8D88AAEFFB863508812B1ED292ECFDBB1156AFA797",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_3/2/f_fl0020.png": {
+      "bytes": 4721041,
+      "sha256": "3F37C6BB8B64928B6316A501BDF8D1C1F09C7644B91E05F282F0F6B20E206A0C",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_3/2/f_fl0022.png": {
+      "bytes": 4714854,
+      "sha256": "28D715D723B9DA0180D4968E4410229781EF4BA796EE731C52983409047B641F",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_3/2/f_fl0023.png": {
+      "bytes": 4742628,
+      "sha256": "23B3013E78B40F9989EE6FA1A91835523309E3D66CBE748C936FA2554FC885DE",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_3/2/f_fl0035.png": {
+      "bytes": 4727638,
+      "sha256": "D6BFDC43253DB07CCB101C4035B137D8F6A88E2093D4132A22B730A6E1A147C1",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_3/2/f_fl0065.png": {
+      "bytes": 4736903,
+      "sha256": "D6E387DC29445ECA449981727BAEEC67B914302B201C1A929BA40787596E75F8",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_3/dataset.json": {
+      "bytes": 109028,
+      "sha256": "6647D9BBE73CBF646965DBD98089D59CF53895E95308EE9ABBC86686D1412B6D"
+    },
+    "Textile_3/schusskraeusel0/c_fl_x0_y200.png": {
+      "bytes": 7190762,
+      "sha256": "F926778FA57C72AA8E9EAF96D6396B769769A7E2172C3CCDFEFF3CAB3C5D5F26",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_3/schusskraeusel0/c_fl_x124_y200.png": {
+      "bytes": 7158756,
+      "sha256": "5CCD498BB23C331E027D942E53949F609467057A56959B5910F59B5E3070CF0D",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_3/schusskraeusel0/c_fl_x31_y75.png": {
+      "bytes": 7068179,
+      "sha256": "E43DA8BB4C850E19421086F272247E568A305F59D39B090B03E6030EBD4AAF4A",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_3/schusskraeusel0/c_fl_x62_y125.png": {
+      "bytes": 7107982,
+      "sha256": "4D35A4875324281FBCA4FC7484D2979D13039BEAC6CE8DA949502A22B4573196",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_3/schusskraeusel0/c_fl_x93_y125.png": {
+      "bytes": 7119283,
+      "sha256": "4B18DF7D8B8C1789D33EE6C9EDF4E87F4CE0A7166EA38D3FDEFCA036610FB320",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_3/schusskraeusel0/c_fl_x93_y200.png": {
+      "bytes": 7108133,
+      "sha256": "CFFB248A042B7150EA1CAC719B9FDD318C6F9CC3BF0AB73E66C82F181C670440",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_3/schusskraeusel0/c_fl_x93_y225.png": {
+      "bytes": 7140076,
+      "sha256": "66B9A0472A92187646D8DF689AD1FA355F2740847DE85A682A1F44FD0AEFF86E",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_3/schusskraeusel0/c_fl_x93_y25.png": {
+      "bytes": 7148351,
+      "sha256": "8034668E34AC111B5CD7AB08283DCFCE48CD6F532AC0D473F5B38D98EFEB9EE4",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_31/dataset.json": {
+      "bytes": 531681,
+      "sha256": "E1614923C14741EB35479FB14D3A6354ABAF21E0DE8DF01F9531CD88B8FF489B"
+    },
+    "Textile_31/einschlag_schuss0/c_fl_x0_y0.png": {
+      "bytes": 6535862,
+      "sha256": "6BBD8177F48A9DEFED40133BFB3562A3E15C2EECF23071221F51841FCC86A19D",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_31/einschlag_schuss0/c_fl_x0_y125.png": {
+      "bytes": 6553604,
+      "sha256": "2A10AB5BC9437227022E7DAC44FD3D70C0812C30FF0D23B47A3D8C162303E2F5",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_31/einschlag_schuss0/c_fl_x124_y0.png": {
+      "bytes": 6528048,
+      "sha256": "2E9732466BF0144769F35B25119D5E3A9346577124A13174B8AE7A3BA020E842",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_31/einschlag_schuss0/c_fl_x124_y100.png": {
+      "bytes": 6549661,
+      "sha256": "69444D6DD37645E90B038D0000EE71170A0786FB91DA42CB92563874AC3AB205",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_31/einschlag_schuss0/c_fl_x31_y0.png": {
+      "bytes": 6537151,
+      "sha256": "B8A8B43DABA19B14E9CEC66F01563C140ED4E3F91397A34215482C4E9AA75CAF",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_31/einschlag_schuss0/c_fl_x31_y75.png": {
+      "bytes": 6563484,
+      "sha256": "96787A75EB78817DB8D85852DEDF5CCDED0BC6EB903F4080C84FC7A29A9168DC",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_31/einschlag_schuss0/c_fl_x62_y25.png": {
+      "bytes": 6570095,
+      "sha256": "2C96BC2C76560A43841E16B33DDE097704BC5733B8E95E47BD5338765284C216",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_31/einschlag_schuss0/c_fl_x62_y50.png": {
+      "bytes": 6568488,
+      "sha256": "B84C4D0DF2494C0CC37A7072B98A5BE09505DD27522881AF2A13F8EB67A356F7",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_31/knotenschuss1/c_fl_x124_y150.png": {
+      "bytes": 6471583,
+      "sha256": "C6C692E679D319B03308AA31B22BA5086F249A3ADB0CD53BCC9B721C8D753373",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_31/knotenschuss1/c_fl_x155_y150.png": {
+      "bytes": 6524409,
+      "sha256": "412393326B0965C599A80899FE7BE9B522E837E265053EE189A7F7ECC9B83826",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_31/knotenschuss1/c_fl_x155_y50.png": {
+      "bytes": 6556036,
+      "sha256": "46079FD164B289436A8F0E6CA72EDA950483C61CB63DFD0C0E74BF8E2AFA8137",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_31/knotenschuss1/c_fl_x155_y75.png": {
+      "bytes": 6543306,
+      "sha256": "E0C42A1D81F41A0A1FAEB170BF6B79FDC271E68C97A533F71AA36EF81F109818",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_31/knotenschuss1/c_fl_x31_y25.png": {
+      "bytes": 6430031,
+      "sha256": "844484EF9A811333D586BD8901F415399C8B7281BCD3036FC3C2B1E6E796DAC7",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_31/knotenschuss1/c_fl_x62_y125.png": {
+      "bytes": 6459366,
+      "sha256": "DD1709DE4AA9537E0A8D89ECB58DF873DB23650BD1089230889625BD58A52881",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_31/knotenschuss1/c_fl_x62_y150.png": {
+      "bytes": 6466657,
+      "sha256": "D1C69D8D57434C342309AEBED18A6F3B77C033EA2A519956C35D1A6E01C2102A",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_31/knotenschuss1/c_fl_x93_y75.png": {
+      "bytes": 6458104,
+      "sha256": "74616D65F27ED42AD10B490B0E3A793F94B918273E7E53A30EC06C194BB5EA9A",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_31/schussfehler0/c_fl_x0_y100.png": {
+      "bytes": 5795754,
+      "sha256": "9459A0ED37DCBE1DFDC2599E8F27640BC4BE01E809E08D2A6F27D3A114D81910",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_31/schussfehler0/c_fl_x0_y150.png": {
+      "bytes": 5776299,
+      "sha256": "E0EC5372B0A9E53F2E5C24DCCD0C4D4DF2FE3AB6F9058ABE33607F113A566B93",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_31/schussfehler0/c_fl_x0_y200.png": {
+      "bytes": 5774506,
+      "sha256": "899ED96A52C399988721631F46C077E7D908ADA95166FD5C94648C8CAA9DABA4",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_31/schussfehler0/c_fl_x31_y0.png": {
+      "bytes": 5813035,
+      "sha256": "EA366F0E2124CDB21C3A59FF3FA3AD2B95BE4DED461285D447DC803FEB7AE79A",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_31/schussfehler0/c_fl_x31_y50.png": {
+      "bytes": 5796645,
+      "sha256": "33E4C2EF14C7D0C03131E16AA068EB046603B8D6F2F4C124F73ADFE1650C813D",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_31/schussfehler0/c_fl_x31_y75.png": {
+      "bytes": 5797823,
+      "sha256": "391F4D1DAC33C517342EF7271DE422688D95450333B67EE78455A6BE0D230E79",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_31/schussfehler0/c_fl_x62_y150.png": {
+      "bytes": 5786417,
+      "sha256": "A2FF7C2FAC46DBCB34B932E3C14AB6D87A9C4697BEA08004E41EA1004664E908",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_31/schussfehler0/c_fl_x62_y25.png": {
+      "bytes": 5807309,
+      "sha256": "52AA9AAC1F5D65146A5A54D4F7D03683D37ABF31F3EBC1B23E6BF5C4D2CED308",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_31/schussfehler0/f_fl_x124_y0.png": {
+      "bytes": 5840438,
+      "sha256": "F3A7754DDA6479024B442ABFACEAF82007B110634249D481E4AAE550CAA96518",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_31/schussfehler0/f_fl_x124_y100.png": {
+      "bytes": 5798976,
+      "sha256": "B899E6A418DBF1A6A04907DA9F2B731EAA8FC7EB1DEB74801E77D699B89D6146",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_31/schussfehler0/f_fl_x124_y125.png": {
+      "bytes": 5808496,
+      "sha256": "F510E4CBBCDC732184DAC2BD86A9FD035C35AA751229839C50BFCF4098A14CDA",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_31/schussfehler0/f_fl_x124_y150.png": {
+      "bytes": 5800934,
+      "sha256": "E998C4FC024915355B71EA2B9E9F5F8F28FCE0EF35FEE56282DFB9865F11C7D3",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_31/schussfehler0/f_fl_x124_y175.png": {
+      "bytes": 5801412,
+      "sha256": "27373C0EB3B55B218492E853E4AD863E266312041B208508D3CAA302AC13ACAB",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_31/schussfehler0/f_fl_x124_y200.png": {
+      "bytes": 5789919,
+      "sha256": "D74B5468EA4945F034948F8910C0D21F85654391887D869B92C7906A63300F4D",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_31/schussfehler0/f_fl_x124_y225.png": {
+      "bytes": 5791161,
+      "sha256": "CD1934D04893FCE4EE8F4EF68F069D0183BCE6913FB5DB6A7EBFADD43401D8B3",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_31/schussfehler0/f_fl_x124_y25.png": {
+      "bytes": 5817180,
+      "sha256": "914433EA6C2CFE496107019BAB31D0F8BBB6CBC326D34A36BB49D50BC876FBCB",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_31/schussfehler0/f_fl_x124_y50.png": {
+      "bytes": 5825417,
+      "sha256": "1D481BF3999C1DB59A60E88F3190A0C7E8D11470D3E534780084ACA12BA9F973",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_31/schussfehler0/f_fl_x124_y75.png": {
+      "bytes": 5826620,
+      "sha256": "C4E69580056B30A25E06899C1E353491505DFF7E9C1D0361F564DEFCEAA48C3C",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_31/schussfehler0/f_fl_x155_y0.png": {
+      "bytes": 5872468,
+      "sha256": "BEF8E98CE635744F4AC7EE00058B48BD48334C5519B032CB0A8477FAB7661A8A",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_31/schussfehler0/f_fl_x155_y100.png": {
+      "bytes": 5839028,
+      "sha256": "E8CCD73B36D6291272584DA16F3217305D52D3C3CE4483F79B46FA4DA9793530",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_31/schussfehler0/f_fl_x155_y125.png": {
+      "bytes": 5846742,
+      "sha256": "DD05BAE2096B347478E388C90FE69D060B628782F5C7BCCA705FE15EE8690124",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_31/schussfehler0/f_fl_x155_y150.png": {
+      "bytes": 5835837,
+      "sha256": "10F1DA3EF59FCFEB80C1B8888F331CD6A5C838E022999F44D1A37B04F5D0B03B",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_31/schussfehler0/f_fl_x155_y175.png": {
+      "bytes": 5832915,
+      "sha256": "F1899BCDE4C1AA4897AA7CED8260AB6F32B8BA212532A6DFAF4545957721D407",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_31/schussfehler0/f_fl_x155_y200.png": {
+      "bytes": 5856607,
+      "sha256": "35F57B47D43817BF87733611DE9F8334FD95CBA6EAAE9A3FBC1317B9FB82D490",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_31/schussfehler0/f_fl_x155_y225.png": {
+      "bytes": 5844410,
+      "sha256": "A7D8186E6397F83E9CB17B16B7B01863959866E7F4636C74C29CA2059603E697",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_31/schussfehler0/f_fl_x155_y25.png": {
+      "bytes": 5849946,
+      "sha256": "3509C4262E2D9822BC873CA486D9BAB36B764AA894DE7E4B2CED74061A229A33",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_31/schussfehler0/f_fl_x155_y50.png": {
+      "bytes": 5850135,
+      "sha256": "7F6C0AE05810FC358CBDA28D9B8E8D1E30F3F0CB70F2ED4B193B294DDC45084F",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_31/schussfehler0/f_fl_x155_y75.png": {
+      "bytes": 5844496,
+      "sha256": "6AE76078BB5EA3184B97E9C61467DDE0722CA7E956059D665105190CE4D7F942",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_31/schussfehler0/f_fl_x31_y150.png": {
+      "bytes": 5783665,
+      "sha256": "F5A818B5B7413CAF4E0451200856374D147D8DE438A4A870C6905D1A841BADEE",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_31/schussfehler0/f_fl_x93_y0.png": {
+      "bytes": 5837202,
+      "sha256": "569A1C9C226DC13D346A95D9CB45A5BAE983A136C157B50F655C4756405371FB",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_31/schussfehler0/f_fl_x93_y100.png": {
+      "bytes": 5815201,
+      "sha256": "1EB3B1CF4AFB2C653C962B388F7871F4A5B88823602F431B71643E681691E4AC",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_31/schussfehler0/f_fl_x93_y125.png": {
+      "bytes": 5800447,
+      "sha256": "043E4FE60FA07F914C793D14B5FAF2ADB2D3D63276E1793F4E4B705A18496AA7",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_31/schussfehler0/f_fl_x93_y150.png": {
+      "bytes": 5807891,
+      "sha256": "8C74C2929208377A182165EA7A0FF873F3AD39D64AD0B55C9F74783E5F664066",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_31/schussfehler0/f_fl_x93_y175.png": {
+      "bytes": 5791020,
+      "sha256": "746C44C32AFC61EC8D1557F26AC08A9E0F8B01A2F28019504FDF82019B629536",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_31/schussfehler0/f_fl_x93_y200.png": {
+      "bytes": 5763637,
+      "sha256": "BFCBCB819B3DBEA6FD1EE81FB058757DAB26E18B6844EE122036CF51CE1A2A06",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_31/schussfehler0/f_fl_x93_y225.png": {
+      "bytes": 5785742,
+      "sha256": "929EBA9A7118C68D52192CD998A5B9B32E7BDBEDE3512F264BAE5ACA1B994D13",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_31/schussfehler0/f_fl_x93_y25.png": {
+      "bytes": 5824905,
+      "sha256": "1ACB9FEEB4AF5E71825B9FB9447A535CA41177D36CBE595FBDC4055FBB6AD5D9",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_31/schussfehler0/f_fl_x93_y50.png": {
+      "bytes": 5820251,
+      "sha256": "09FC37BB862FDF527759B1D91F593C6021E2350C6427B9E0B7781D8986E20424",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_31/schussfehler0/f_fl_x93_y75.png": {
+      "bytes": 5810572,
+      "sha256": "3DE2DEAC007D4199EACA199F51701BAAA0832EC2A9C8B59A756E3D1A0602024C",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_38/dataset.json": {
+      "bytes": 89050,
+      "sha256": "11BD3E3CC3B31F42860618B11B425DA4BEEC00AFB08016D981BBC2CE204B6E51"
+    },
+    "Textile_38/dekoware_verlierer_schuss0/c_fl_x124_y150.png": {
+      "bytes": 7704599,
+      "sha256": "7851CF3F7293DB5187E6F7A787370ADD7B2E2C5FD04D3CA57F930BF6FCDAD7EC",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_38/dekoware_verlierer_schuss0/c_fl_x124_y225.png": {
+      "bytes": 7712558,
+      "sha256": "CDB6DD7EEA5398A83A1F1D0923A58310BE3238B7BF9F9415607F14ED2E049D64",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_38/dekoware_verlierer_schuss0/c_fl_x31_y100.png": {
+      "bytes": 7801999,
+      "sha256": "9FDEACD358945F4F972F7AAB0DC76F44F4E548786003C4243A9412922B217FA3",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_38/dekoware_verlierer_schuss0/c_fl_x31_y200.png": {
+      "bytes": 7749220,
+      "sha256": "DC5D2471AC0B345118E31C69942814C7F25E78BA18DFA821FEF176B9B2A7EF2F",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_38/dekoware_verlierer_schuss0/c_fl_x62_y100.png": {
+      "bytes": 7793032,
+      "sha256": "FAD0D408E3229C8474F0B4B3339C0C3861AD1A35F9A6BE34E91ACB77A08D2439",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_38/dekoware_verlierer_schuss0/c_fl_x93_y150.png": {
+      "bytes": 7724381,
+      "sha256": "CC0F7860635C6387111C62D910CEC025C45428E76059F0611551E03E378C12A3",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_38/dekoware_verlierer_schuss0/c_fl_x93_y200.png": {
+      "bytes": 7715797,
+      "sha256": "ABF6E682B4242AC8F6434BD3DBC160542D644C70635E8919AF56C0699D250A02",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_38/dekoware_verlierer_schuss0/c_fl_x93_y225.png": {
+      "bytes": 7703936,
+      "sha256": "AED2D77CC3BD96AC07797E98787981DD61D803CD0979D54E50753B9ACBB77229",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_38/dickstelle_schuss2/c_fl_x0_y100.png": {
+      "bytes": 7267197,
+      "sha256": "16F522B04159130FA1508D0ADC58862C552E101B646D14A89052F69691E62B4E",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_38/dickstelle_schuss2/c_fl_x0_y75.png": {
+      "bytes": 7269535,
+      "sha256": "116E33416F637147DA29573031585A1CB86C484B46A8226D6B85233A4D65CDC9",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_38/dickstelle_schuss2/c_fl_x124_y100.png": {
+      "bytes": 7258428,
+      "sha256": "2B2286741F6F5EB69113124FC6016280A9EF91FC378D226E0CE500C97E1E12C2",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_38/dickstelle_schuss2/c_fl_x124_y150.png": {
+      "bytes": 7255935,
+      "sha256": "6D833456D3CBB4B6ADA84CD666659E9DE132F5F5AAA3BB9DBB4D51240B4014DF",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_38/dickstelle_schuss2/c_fl_x31_y150.png": {
+      "bytes": 7277812,
+      "sha256": "1ABCF629EC091FF9F385F58643514677BF48B74EE3F6C857AF0D21B096B5A856",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_38/dickstelle_schuss2/c_fl_x62_y25.png": {
+      "bytes": 7292515,
+      "sha256": "82FF626E2EC957B2D63766BC4BCBDF0A76F6CDC3FBAC1F3B215C0B451EB28D23",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_38/dickstelle_schuss2/c_fl_x93_y125.png": {
+      "bytes": 7264927,
+      "sha256": "978378040D945A73D615C18D093A1CDEF2937D31D50F2260307C69C22401B806",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_38/dickstelle_schuss2/c_fl_x93_y225.png": {
+      "bytes": 7245128,
+      "sha256": "792B0EFE75EB192E4BA91BF1E36AF4B0C8E12B760DEE95377EDAB3F04C9D9278",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_38/dickstelle_schuss4/c_fl_x124_y100.png": {
+      "bytes": 6477855,
+      "sha256": "3DFA7110353DE3FBEEB30B1206C4EFA70D31B8E4FE3B4E2F7BC1E31CEAC80E5E",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_38/dickstelle_schuss4/c_fl_x124_y125.png": {
+      "bytes": 6432189,
+      "sha256": "4BFAF1179503BD40A71F261F34D759EAB31FD5A763227DBCA4674CB60101F2AE",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_38/dickstelle_schuss4/c_fl_x155_y150.png": {
+      "bytes": 6442510,
+      "sha256": "1AEAFBB9A60D1F343665A7A7B002EFC9ECEB2638F39058C6A8C6194CEF3F3E07",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_38/dickstelle_schuss4/c_fl_x31_y100.png": {
+      "bytes": 6497991,
+      "sha256": "B7E5AFEF004F105964A7E8F1E211C293910B3F3AD0361B32CC86217A66132EBD",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_38/dickstelle_schuss4/c_fl_x31_y25.png": {
+      "bytes": 6543035,
+      "sha256": "D40B337EBD9AD7B3423275402876B73D345F77C9586F9147C31B1A9083CBCF04",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_38/dickstelle_schuss4/c_fl_x62_y0.png": {
+      "bytes": 6533584,
+      "sha256": "34B5A98E7A6354E72D32B7ED7DEB624B49FCA65FA79BB6A2F11577F106A60A5D",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_38/dickstelle_schuss4/c_fl_x62_y25.png": {
+      "bytes": 6504596,
+      "sha256": "9AB69652B12F8705C80F4209B97CA81C46A14A0FF8C45813F0E8F4BB474EE057",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_38/dickstelle_schuss4/c_fl_x93_y150.png": {
+      "bytes": 6419848,
+      "sha256": "6EF6224AEF206F92F9E7BA681F479AD01B7CA87DFB5A830655FB8F40DAAAEC0E",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_38/dickstelle_schuss4/f_fl_x93_y75.png": {
+      "bytes": 6476776,
+      "sha256": "20F27DAB8305023DA954EBB29CA7AB9A679A0FA472FE4E868BB167ECDF758B6F",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_38/dickstelle_zurueckspringer0/c_fl_x0_y150.png": {
+      "bytes": 7398546,
+      "sha256": "09F62B6D62C99CFC8FA498E7336AF03A9301467F76C139CEFBD5914B8111EA62",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_38/dickstelle_zurueckspringer0/c_fl_x0_y225.png": {
+      "bytes": 7439592,
+      "sha256": "699CECCCEA031D1710A6B9B5808D61F8987537BA64995EA23722023463A68F17",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_38/dickstelle_zurueckspringer0/c_fl_x124_y50.png": {
+      "bytes": 7391626,
+      "sha256": "ED6BEDC326EE2E4D62ACA1ECA30958BACDB15035F7577CA8376C38958BB293E0",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_38/dickstelle_zurueckspringer0/c_fl_x155_y0.png": {
+      "bytes": 7410530,
+      "sha256": "8C15B735A729B85644AA0B34DF9B9D65BB00A0F47404965A79C62B56A986B664",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_38/dickstelle_zurueckspringer0/c_fl_x31_y25.png": {
+      "bytes": 7351975,
+      "sha256": "57D2603FACFECEC2A85F7B1A64C98C5549950F8D28FC601EBA8227E117A17BC2",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_38/dickstelle_zurueckspringer0/c_fl_x62_y50.png": {
+      "bytes": 7371604,
+      "sha256": "205DDD12BCA35F6E6F63892A31931D192880C8CAFAB7571E50A7F7FBE20736EB",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_38/dickstelle_zurueckspringer0/c_fl_x62_y75.png": {
+      "bytes": 7343125,
+      "sha256": "DBE92C28E67978716502A96B785AF993FD253F138C2D65C1052FDCF0A27A27AE",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_38/dickstelle_zurueckspringer0/c_fl_x93_y125.png": {
+      "bytes": 7333584,
+      "sha256": "F2647678F752F10D5E0F75C9A3494435E77AEA4F294E33EA04DA8DF4398E6911",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_38/dickstelle_zurueckspringer0/f_fl_x155_y125.png": {
+      "bytes": 7299270,
+      "sha256": "8A1CD0CCB3E61FCE7405E12807C5D0BB19D0746557F4B41F6F10DD0B44218DE5",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_38/dickstelle_zurueckspringer0/f_fl_x155_y75.png": {
+      "bytes": 7348850,
+      "sha256": "4E9A672224E7C755BF40D22E51BF5F9BB9B389CD8FA11D8837AC70DA0CA51EB6",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_4/1/c_fl0004.png": {
+      "bytes": 4756751,
+      "sha256": "3894BF2B4E0F47C53179FEBFB4697EAB281150A0CF67207C24786DC5F0C2916E",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_4/1/c_fl0029.png": {
+      "bytes": 4796424,
+      "sha256": "1E24E0296443694F6DEDAD2F0A8ECBF04899478CBDCB10142800E86050C926A9",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_4/1/c_fl0045.png": {
+      "bytes": 4717772,
+      "sha256": "4901422B2039F52A25C562B588FBCF5B976AAE691FAAD8DED1C6FF62755F29B6",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_4/1/c_fl0046.png": {
+      "bytes": 4719093,
+      "sha256": "FE2F4D226991562EF99F1E9850C214A62034D5EB0D96A541BA3AE931F4BAD8BB",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_4/1/c_fl0057.png": {
+      "bytes": 4776708,
+      "sha256": "C9611A3B686CB6647557F5D542FAF301FB05F04336D4AC3FF1427724E16535CF",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_4/1/c_fl0069.png": {
+      "bytes": 4843180,
+      "sha256": "C96641407BDEA0B631BC51DA8E3F5042522C4FD08C37EE5BFAFCDDECFA228400",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_4/1/c_fl0078.png": {
+      "bytes": 4744539,
+      "sha256": "5E7CFEBEA876E3765F437D58E17FBF66517C16EEE719DE0EE443ADEB20CD8C8E",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_4/1/c_fl0079.png": {
+      "bytes": 4736622,
+      "sha256": "3EC2ADBB2BC89EF7D34F4D28532FC5B3FF51DEEAE839A0CA75EC46E0DEB08904",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_4/2/c_fl0002.png": {
+      "bytes": 4864876,
+      "sha256": "7C30011B9F7F503174352F32784013729862A5B533A5CA1035D8F8F0E193AD48",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_4/2/c_fl0006.png": {
+      "bytes": 4760154,
+      "sha256": "C4F2BC2DF00C93A2B75E00A2EDC75C9DF7FE6B01FBAD365947DCCF9C015A69C9",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_4/2/c_fl0009.png": {
+      "bytes": 4756507,
+      "sha256": "369C1BFD6B00914B79166F9E35FBE02214855635C3EACB3FA78B09B2357A0650",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_4/2/c_fl0011.png": {
+      "bytes": 4867001,
+      "sha256": "BEA8AAA6620BCB6BA483BD676ABA6AFC57AD34FF0B15CF6242BEC3C6CD4AAB7A",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_4/2/c_fl0012.png": {
+      "bytes": 4860718,
+      "sha256": "033C41940457060E73F2F422DB397DB5DA48AFC730940D21CB2C803649E7E7B8",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_4/2/c_fl0025.png": {
+      "bytes": 4844957,
+      "sha256": "D69C5267D55D89DC139AC1F907BB898562358B265BF47807161BE3EFA2CB6F44",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_4/2/c_fl0059.png": {
+      "bytes": 4758375,
+      "sha256": "8F1B3B09D5A567F3B8F0CEBF5FF10D327DC5464A03176849ABA4E6AC2D86E3BD",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_4/2/c_fl0070.png": {
+      "bytes": 4855829,
+      "sha256": "F1C35011A870091800C88E5D50BE481CA08412E6A823DFD38424D53B1B359182",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_4/2/f_fl0045.png": {
+      "bytes": 4753325,
+      "sha256": "915070E95CAFBF6241C987DFF90E75D29E498BCDB7349D7A96503900F40C02CF",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_4/2/f_fl0046.png": {
+      "bytes": 4711094,
+      "sha256": "8AC4C05B9536C80D0B7D55ECB8ACFCD7B7699114BF1C53E3B0343334161B5E5B",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_4/2/f_fl0047.png": {
+      "bytes": 4712748,
+      "sha256": "5F0F7D6EBBDFC44FB9F19C42058E722F7177875162D30D2D16561753E4CD269D",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_4/2/f_fl0048.png": {
+      "bytes": 4726624,
+      "sha256": "A5785D79F9391CAD57567A6D48932A373A8B3563CFE78F3D7853DA790974EC7E",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_4/3/c_fl0012.png": {
+      "bytes": 4793342,
+      "sha256": "3EF1A9E629E41AA5C873CA53F3F55BD9D7D9A57A68D8A83FF789B3038180E9E7",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_4/3/c_fl0017.png": {
+      "bytes": 4778330,
+      "sha256": "D6236E569DDD9CC169B48C772A79A7BA92C1C4D62513E6CD355531341346D64E",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_4/3/c_fl0027.png": {
+      "bytes": 4788496,
+      "sha256": "A418022C04B99089759550328E09BD7903416DF6AFDE1232051B63A2112C8B3A",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_4/3/c_fl0033.png": {
+      "bytes": 4643996,
+      "sha256": "390444161B83427C5FA041BB7E38579AC2C1FD5E0DCD0B663787510D494BF8C8",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_4/3/c_fl0056.png": {
+      "bytes": 4787683,
+      "sha256": "866796A75D40F2B313B77F2DB059DAB7990817B15D7DA19AF751C15823B2BEBD",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_4/3/c_fl0064.png": {
+      "bytes": 4649698,
+      "sha256": "38DEFC81D74F10373F0B6F2C16BCB6A3F5EE5D247D33C79E7CE03998CC157AED",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_4/3/c_fl0066.png": {
+      "bytes": 4753988,
+      "sha256": "B443BEB2AFF7A9D823BD274386DCE9DAE264636C8B194C408F0CC025856D99B3",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_4/3/c_fl0082.png": {
+      "bytes": 4790574,
+      "sha256": "C11B5D493FA7C5EEFFD56757B3A921A593BA15922A5B8B4EED62102A357EB20B",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_4/dataset.json": {
+      "bytes": 125447,
+      "sha256": "8506758830C86891FA48044FCD22DECA6FD3946F1D5E4756487EC513D1A7691A"
+    },
+    "Textile_5/1/c_fl0008.png": {
+      "bytes": 4802183,
+      "sha256": "F994B8CC69F5515D1E14DE7E06140B73B1878F0930E732C039AA82B9E180A509",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_5/1/c_fl0017.png": {
+      "bytes": 4598047,
+      "sha256": "322FDA614A8D8C6243514147EB20B87F634DF174AD8226F950C8F77C008915BF",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_5/1/c_fl0023.png": {
+      "bytes": 4666092,
+      "sha256": "11E01D93DE256B7E486A621AFD9B8580AD559B60601D266AA9C4130830236AEB",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_5/1/c_fl0036.png": {
+      "bytes": 4795963,
+      "sha256": "3CF0F5057DF09A8B919DE20987C56851A0B9BE15A64533FFF58A624C417A86DF",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_5/1/c_fl0045.png": {
+      "bytes": 4592483,
+      "sha256": "2CF4146E0C60ABA29DC15EF4C11BD9A87172112F77BCEC506336A50D8830AA6E",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_5/1/c_fl0050.png": {
+      "bytes": 4803407,
+      "sha256": "906A812BC64722B8DA68F753D9A627411C0A617472C05EC71152295B88F0225E",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_5/1/c_fl0051.png": {
+      "bytes": 4664005,
+      "sha256": "DA94665E2C6BE4766CE031550D049349FBB71B8292DE98644771FA45651C2F02",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_5/1/c_fl0078.png": {
+      "bytes": 4734299,
+      "sha256": "8698074B2B6132C47EA6C7883E528D6486F23B4CBBCD7B7D02F7D3111E41000E",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_5/2/c_fl0006.png": {
+      "bytes": 4719875,
+      "sha256": "B2C96CED30A17AB79FDCEC5E25BC0C72BDF18DA25D0E243201E46F1F07DB12E4",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_5/2/c_fl0007.png": {
+      "bytes": 4717487,
+      "sha256": "ADDFEBC8DE5AAFC267B9730BC5FCE2B30C015DDD7E13794CCC5BE936282BECC0",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_5/2/c_fl0014.png": {
+      "bytes": 4740426,
+      "sha256": "C675303C6D431B8758FA0052DD529E49A01A852C2F8B376445E1EADF1D488ACD",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_5/2/c_fl0029.png": {
+      "bytes": 4737673,
+      "sha256": "DA6414DF9F4A3148F5C277A7B21302C65E2B2BDACACAC2AC7C5C35CED58A1EE4",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_5/2/c_fl0037.png": {
+      "bytes": 4684157,
+      "sha256": "B755FD6E9E32D1D621B359E55ED1ACA8ECF9A2DAAE66B7255A6AA3F96E9B807B",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_5/2/c_fl0058.png": {
+      "bytes": 4738804,
+      "sha256": "EBBCC682BABDFA77D0C0D5E82964B71011B3B202C3D1EF9CC5EFB6349B153169",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_5/2/c_fl0062.png": {
+      "bytes": 4714672,
+      "sha256": "043C9F62D6A122859455C3A190A1BB23D461E958614D4D6EA36B1CD3742405CD",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_5/2/c_fl0083.png": {
+      "bytes": 4738657,
+      "sha256": "64F0DCC97DD23F9E73F75E2A53AA394697C956465CE55A9816D5DEA1429A5BB5",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_5/2/f_fl0034.png": {
+      "bytes": 4718618,
+      "sha256": "E0CA910397AC4A8419DC8937AA91B6EDCAE0B2113D0BE781B97A86F0AECB143A",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_5/2/f_fl0053.png": {
+      "bytes": 4734299,
+      "sha256": "6E5A8B010E87E543D26F7A26A3C1156AAE46389CE98D3A0AC77776B3C8BE02B3",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_5/2/f_fl0055.png": {
+      "bytes": 4750406,
+      "sha256": "0842DBE2B0AD01D27527C2B663B081FF0A2DD9BF58C45AB1FC826AF08A156EDD",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_5/2/f_fl0068.png": {
+      "bytes": 4733420,
+      "sha256": "497551F6445736B64B710CC9B07A98F4E243DE7ED5448AC5F7BB82AD69C0691E",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_5/2/f_fl0080.png": {
+      "bytes": 4812052,
+      "sha256": "056B53AEDD15CEAE17DA19D78F0707581E771E8D9CD8D86569141F1E565903F2",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_5/3/c_fl0007.png": {
+      "bytes": 4734755,
+      "sha256": "672C0F1881289EE3DC05B775A727AEA79F526EB5EF8DE8EB018252276F4B21A3",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_5/3/c_fl0015.png": {
+      "bytes": 4622518,
+      "sha256": "98978D85624D71DF54AC2DD6F35D8C651FCADAC6573EACECF97703727163FCE1",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_5/3/c_fl0026.png": {
+      "bytes": 4613893,
+      "sha256": "7CD94A916FD7786B5B90EBF59F0BAE1F8C78ACC9E66295D7F46842A0BC3C89AA",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_5/3/c_fl0028.png": {
+      "bytes": 4682513,
+      "sha256": "B598D33113BB341944CD7FFDF15AF01988B9E0775758005C0862DF90B587EC49",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_5/3/c_fl0056.png": {
+      "bytes": 4675855,
+      "sha256": "1E3E83CA7118D39818622566B30A4BEF2D8C5AFE6C079D4244C2869C02D6D969",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_5/3/c_fl0057.png": {
+      "bytes": 4592245,
+      "sha256": "37E7BE4D0172A74A0B163EF8DBF5318C526F805B645FEB405D0703392F2B371D",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_5/3/c_fl0059.png": {
+      "bytes": 4540200,
+      "sha256": "C4B758BA19CF976E4C1ABBA01DFA096626CB01055C080CA01390E852CB9A5482",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_5/3/c_fl0066.png": {
+      "bytes": 4546280,
+      "sha256": "EE9BC6CD8952B304C020C24D674206353D00977FF33B39ED4F6C06F661101548",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_5/dataset.json": {
+      "bytes": 42794,
+      "sha256": "006F08E72A29897B48F9F6334384C2A23ABE38DB21FD1615DD345D3AD048DC26"
+    },
+    "Textile_6/1/c_fl0002.png": {
+      "bytes": 4695931,
+      "sha256": "F7D587636BAC70926BEE4555BCCEEB1550CC77D723EB90A2CB78E64837028B8D",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_6/1/c_fl0004.png": {
+      "bytes": 4801659,
+      "sha256": "14E063D08420E3EE83167A9AE90B53F70E715DD7EC5CA48034280E41132F7283",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_6/1/c_fl0011.png": {
+      "bytes": 4682981,
+      "sha256": "DCAF7E0151DF47B9E1AE926401A3C6F27042FDBBBEF9A4D451D853906B0BC19F",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_6/1/c_fl0025.png": {
+      "bytes": 4676625,
+      "sha256": "DE4DC42064160548DC86C26F1C14B2A8BDC8A4C67F44ED40D3577CC5244EE102",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_6/1/c_fl0040.png": {
+      "bytes": 4673867,
+      "sha256": "99DAE4BFF39944D69B9641AAF061D00B96EB4AA6DC97D6D7BEE2B487815EF5BE",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_6/1/c_fl0054.png": {
+      "bytes": 4658818,
+      "sha256": "C825AD3C2179F0A9178751EE0590D706E62CE860899ABC62432FDC19CC8039C4",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_6/1/c_fl0055.png": {
+      "bytes": 4694257,
+      "sha256": "A88D681541C3D2355F9AC2B3C194DFEC77F13E4999EDA46D169F0CC5E1A7417C",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_6/1/c_fl0067.png": {
+      "bytes": 4663199,
+      "sha256": "30DE5038BDD3E7F29C74CCA508FCDCD2A1E24D565A360B27469AAC0964E440A7",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_6/2/c_fl0001.png": {
+      "bytes": 4726576,
+      "sha256": "1B61BEFDDA79B94BFFA693A91D87B6B08A53877428B4B9F90C37C1E106105059",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_6/2/c_fl0022.png": {
+      "bytes": 4785568,
+      "sha256": "CF2B7166062AB8D46D9A0A3D5EA3226FF768842773A76BD52B8C795B583B0F68",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_6/2/c_fl0023.png": {
+      "bytes": 4663645,
+      "sha256": "E3FBBCDFD1D7674AF3ECD449F52353A156B2BA0A0DD80B5DC5E3CD8D72E54C40",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_6/2/c_fl0041.png": {
+      "bytes": 4699740,
+      "sha256": "67315A860CEF8DB317107F8DE81333D5A4414F1F3219DB40C4C93F7DCEBC061F",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_6/2/c_fl0042.png": {
+      "bytes": 4699682,
+      "sha256": "B71B07F44524372660DE238CE494940E573EA957C54AD72D81092606491DDFE5",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_6/2/c_fl0048.png": {
+      "bytes": 4792028,
+      "sha256": "9EF0715F9BD5EB76E374CAE02DD83ABDD30E2064F78764E5566DF45696194F29",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_6/2/c_fl0058.png": {
+      "bytes": 4663513,
+      "sha256": "42DFDA0BF92D1470B970368DA6F732A3C720B6A18B17BCC64F8D9BFDA56CFED0",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_6/2/c_fl0075.png": {
+      "bytes": 4782136,
+      "sha256": "EBB0CE54CFF9E16E12D5729CF8BD0CB25B7815EFF1986FFD72AD9D2A44E70C33",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_6/2/f_fl0038.png": {
+      "bytes": 4654911,
+      "sha256": "57AB2CA34FB7E019638219C558910FA2D83EED605EAB1851BCE4F868DC4A7E0C",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_6/3/c_fl0024.png": {
+      "bytes": 4653378,
+      "sha256": "F9B1C41BFCD045E59C0D010A02AA77937E34931724D78BDF8FFBE28198ECD06D",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_6/3/c_fl0031.png": {
+      "bytes": 4653767,
+      "sha256": "4E9C01CD409EA0689083DE6FC8CF3C52263EC969CEE828D7CEC6F9CFF2BDBE36",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_6/3/c_fl0041.png": {
+      "bytes": 4682045,
+      "sha256": "319CCA13DECF18C2B159FA4DBFBC54CED8DFB7B5707C1B197A2DB70ECBAD8257",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_6/3/c_fl0052.png": {
+      "bytes": 4644484,
+      "sha256": "A226F4951D84CD82337ECDCBE50F4C41BA0A530A7AE6286E1F1E42290AC62D60",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_6/3/c_fl0057.png": {
+      "bytes": 4687996,
+      "sha256": "0775580F2EF83D24B69737B3D41ADB9AFA35641FB5A32080AA38BEC541BC3496",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_6/3/c_fl0058.png": {
+      "bytes": 4664706,
+      "sha256": "0D525FC2B1A0028C32149B5DFD412915A66A0A9F0ADBB4FD170410A3849199B8",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_6/3/c_fl0065.png": {
+      "bytes": 4657633,
+      "sha256": "33150F438A2EFAEE3D15B8F626B000F655F9DF4BBC77F5AB1ADF6BC65FDFC410",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_6/3/c_fl0069.png": {
+      "bytes": 4677709,
+      "sha256": "0AE73A27AC00631DAF0D5016C7A10F935A5A8944353860597200C433C7B98C95",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_6/4/c_fl0026.png": {
+      "bytes": 4646503,
+      "sha256": "6706B22D2C0DEAB1E531E094CB67F63452E6BF2FC5E7C572DA5CC57AA1CBF5DD",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_6/4/c_fl0035.png": {
+      "bytes": 4758508,
+      "sha256": "566C2749D59B00801B72FA47B4AFBED342706CD685D38427E443513A6612EB5B",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_6/4/c_fl0039.png": {
+      "bytes": 4625623,
+      "sha256": "8D4F0C4CF04C57292B3C1A6AFD5FB2833260F6F3660DB1191AE856C88EE38B0B",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_6/4/c_fl0050.png": {
+      "bytes": 4695702,
+      "sha256": "D882CCE9E96B83209C1224B30DF59FCE2F9C33A7839A5B8818D017869A3D4F1D",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_6/4/c_fl0060.png": {
+      "bytes": 4585770,
+      "sha256": "7EF844A796B05E20A40103E17FD06D495AA1A48D9A577D2B85E036AE371861BA",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_6/4/c_fl0067.png": {
+      "bytes": 4614939,
+      "sha256": "ECC90FF7A45AD3FD3DAAE0834AA484B72359AD6481B2FA9A566A0DD324734D96",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_6/4/c_fl0071.png": {
+      "bytes": 4644646,
+      "sha256": "DC1D02ED4815002BDBC84000543E18DB55F9D103F5CE7121527E89A5C55F1E27",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_6/4/c_fl0076.png": {
+      "bytes": 4759591,
+      "sha256": "C301A1069D8C1D457F19672843FB5D75267EDFF1A0380A1D77CC8F1CD5786A59",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_6/5/c_fl0003.png": {
+      "bytes": 4705629,
+      "sha256": "8AE88E3A9ECE1C6B3A2E53BE2C7E728D5DEAB40F4D551DDA1408AFD6E6FD46EC",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_6/5/c_fl0004.png": {
+      "bytes": 4715490,
+      "sha256": "B27DDECAF75FACB5060F4795F8F1E084F42EB506A6AAF4209D33D221599BD45D",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_6/5/c_fl0015.png": {
+      "bytes": 4808510,
+      "sha256": "55FC29B12625566A81605887CDBED0C9F88378496B9AB2F45F22036FDB35829D",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_6/5/c_fl0032.png": {
+      "bytes": 4690572,
+      "sha256": "F0AC69F66E7278FC22792D406587170BE33EBF39E43200B6802B4B2DE2D6E329",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_6/5/c_fl0040.png": {
+      "bytes": 4797953,
+      "sha256": "5980D0B5BF8BB46EFFC527D503F65F181B303CE6E1B57AB6E86E516D910AEB8F",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_6/5/c_fl0043.png": {
+      "bytes": 4801241,
+      "sha256": "4EA0CDAAA355C5EAC34976F0F6F1A32E14B08CF3EF8F00AAD27A13C42A1573F2",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_6/5/c_fl0044.png": {
+      "bytes": 4707307,
+      "sha256": "07AC094EBED74C2649F3C7F5750051007B2BCF8F646B148ECC9712212F977998",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_6/5/c_fl0045.png": {
+      "bytes": 4664728,
+      "sha256": "313C3734B3CDA221FE59F93BBBF0D3B58CED49F0D25FA3BA8C7AB806FDC053F2",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_6/5/f_fl0013.png": {
+      "bytes": 4839476,
+      "sha256": "50CC623BC7CC16D2A04CBD5E6034DCB62CE099F2BEF6C7A20EA71D10EAB919A9",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_6/5/f_fl0014.png": {
+      "bytes": 4839462,
+      "sha256": "8E5B6FB6D7DB004F93AD78BCB01F61FA81F0148D3A3185D6C5C87DAE49E41AB7",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_6/5/f_fl0027.png": {
+      "bytes": 4835110,
+      "sha256": "E364B472D3FEEA778411BB67401C8F336B25E69975FA54F075B50731973209AC",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_6/5/f_fl0028.png": {
+      "bytes": 4829986,
+      "sha256": "FB8A89E7DB413CB67CE896F8A8759730B532CCC89EAA1F9E90A7E5C4ACC217AA",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_6/5/f_fl0041.png": {
+      "bytes": 4826049,
+      "sha256": "B2B2BD6D2CA5195D3E917F96BA4D582F575441B524318FE96AE797A03445BD72",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_6/5/f_fl0042.png": {
+      "bytes": 4831547,
+      "sha256": "00794D890BEBF1B5A71D8D42D71E399735AD52AF0D24E5CBE5651ECE06A510D1",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_6/6/c_fl0002.png": {
+      "bytes": 4660559,
+      "sha256": "8F31D71DBF317329E963C9D8ECB174A40DCACB3F134B85C9A2BC6B4CA6C57862",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_6/6/c_fl0003.png": {
+      "bytes": 4644238,
+      "sha256": "8B980843BEE638EC0B2ED66194C88432E7C8A4D6EE5D7F309095AD6DBD27621A",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_6/6/c_fl0010.png": {
+      "bytes": 4638387,
+      "sha256": "A15F0B90F45D1E0B895FA9538823FEA1D7D9948BFF37AC8B07ACE3BD5522C39B",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_6/6/c_fl0031.png": {
+      "bytes": 4642700,
+      "sha256": "E32DCEECD01C76B7B4AD51884EFEF9275FE8A722CC360A0B0DDA1086DF241779",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_6/6/c_fl0032.png": {
+      "bytes": 4665662,
+      "sha256": "FDB945BFB16230561BEEF33F5BCBDA37E6723D2A493738CB31ADAEBA0CC5100D",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_6/6/c_fl0044.png": {
+      "bytes": 4662360,
+      "sha256": "5B5692AB9EB6A58B6B2888F1D4579E95855D1BAAF6CB9A8ABEE7D76F8DE8E4E1",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_6/6/c_fl0046.png": {
+      "bytes": 4658134,
+      "sha256": "D3AF3F5B9DD777A2321FE3C9422D5D7A369578E69783ED50F1F371799B70BA0D",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_6/6/c_fl0067.png": {
+      "bytes": 4673918,
+      "sha256": "214AA7C5597850A3E156866CAE61BCD30102D136E9CB317278A8F6A41984397A",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_6/7/c_fl0006.png": {
+      "bytes": 4712205,
+      "sha256": "252DB943F24C630B7FC91E1A20110D47DBE72060DD1DB4234C03DD7A920D27C5",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_6/7/c_fl0008.png": {
+      "bytes": 4778883,
+      "sha256": "717429904C8C9F8333EEB13140A5F59C3DB34C7C0F521B80DAD24B03E8FFD08F",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_6/7/c_fl0033.png": {
+      "bytes": 4782811,
+      "sha256": "348951F041C073D9BB00A45E848233251D1F4282599D831932B8FA0F72948864",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_6/7/c_fl0035.png": {
+      "bytes": 4690382,
+      "sha256": "DC76E921F394FE751B5E7199BD0D338001509D60A097B5FBBDFDCD2998385D33",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_6/7/c_fl0036.png": {
+      "bytes": 4780241,
+      "sha256": "393FE438260546C082BDBBD84FA6C8618EBBC06D0ED5EA319D23F3F13FFAB29B",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_6/7/c_fl0060.png": {
+      "bytes": 4770352,
+      "sha256": "4502626C52348279A138844E307823CF094B5051C89A9540D44EEA9DF05B60A3",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_6/7/c_fl0065.png": {
+      "bytes": 4768555,
+      "sha256": "A623C3E3FEDE6030FD6A802207821CE3CDE406EF7B52BF0F9C7171F5EC00155A",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_6/7/c_fl0083.png": {
+      "bytes": 4704300,
+      "sha256": "1F4360492F2FF0E63F9BE06BC435E19B307C4DFEC343A6C2A439CB99DED2EF96",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_6/7/f_fl0038.png": {
+      "bytes": 4767262,
+      "sha256": "18A6215C28F6185F3AE1D16DB367BAE6069B7A9CE48A41A11BF9BA0ACE398A37",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_6/7/f_fl0045.png": {
+      "bytes": 4767585,
+      "sha256": "66FC1CF0CDBB6CF68EC57FD2C2BABD6299AA878343178C251F5A03C60C1A7CCC",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_6/7/f_fl0075.png": {
+      "bytes": 4771693,
+      "sha256": "1E2D1FD123A161B148532B17842B24F4C85CE17893B38D8E10C9BD0266E3E4B4",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_6/8/c_fl0001.png": {
+      "bytes": 4726508,
+      "sha256": "62D479C6057BC92CE744606FEF6F25E76D0C3A5B2249A78D07CBD3B7B8DEAE47",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_6/8/c_fl0013.png": {
+      "bytes": 4672857,
+      "sha256": "C38AC3FC1106AEB27CF9BBE2BDF2CCBD3BECCFE37232B0FD0A314449F86CD58F",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_6/8/c_fl0028.png": {
+      "bytes": 4667028,
+      "sha256": "B8B3D0C99139FA846074CF58C9C761237B5F9E3D86C721F2808DC4508DD8B761",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_6/8/c_fl0029.png": {
+      "bytes": 4692035,
+      "sha256": "305D043C3D1FFC6DA5A86B51D9B6D102870E3CA9A7BC719FAC947075235A3C6C",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_6/8/c_fl0033.png": {
+      "bytes": 4645492,
+      "sha256": "7CFD9464A0720947518AB06E1ECB78D2D4825CA4809194FB8F97076641F766B1",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_6/8/c_fl0051.png": {
+      "bytes": 4749256,
+      "sha256": "1DBF2C97F03F3BC217402F1E34FA0011DF242815D99C87E70241CEAC519C1F2E",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_6/8/c_fl0059.png": {
+      "bytes": 4765734,
+      "sha256": "4C48A0796D529963A8D82A1F57D24BBFAA7A0E96A607CE6AF679C98999E726F8",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_6/8/c_fl0073.png": {
+      "bytes": 4779477,
+      "sha256": "D9D959DDA46E75282EF0666F97347F6B928BDC4B8D0BF2032D11E668BFD8FCE5",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_6/8/f_fl0002.png": {
+      "bytes": 4810865,
+      "sha256": "D554A4204C7394EFF5F540AF7CFA2DAA27422C735297E6A7C149E8390DD90ADE",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_6/8/f_fl0025.png": {
+      "bytes": 4774552,
+      "sha256": "1B5896277E43904BDB7F97CDDCF766C26E1AE60D826D536430040E93A476B827",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_6/8/f_fl0030.png": {
+      "bytes": 4775632,
+      "sha256": "3B18D7D16F39D427214CB974ACC5E85135FCEBC71F6A463E6FB5D6FAF25CE5B2",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_6/8/f_fl0050.png": {
+      "bytes": 4653938,
+      "sha256": "C4B0EB934CA52A0E0F35987627B2EBBFE85852A80F71A27D4C0D6B8CF717137F",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_6/angeschmutzte_kettfaeden0/c_fl_x0_y150.png": {
+      "bytes": 5601592,
+      "sha256": "5AC6A603A15DB33DEDD23B0162B1738189CC3A019A0146BD055646E0034257AC",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_6/angeschmutzte_kettfaeden0/c_fl_x0_y25.png": {
+      "bytes": 5632220,
+      "sha256": "8F4998EE1918DD56780A216DDF8F9226950E93B18E8E2F58C1542375837E5A6B",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_6/angeschmutzte_kettfaeden0/c_fl_x124_y50.png": {
+      "bytes": 5822439,
+      "sha256": "56B10D7AFD9FE23080A85E55AEB3A40CD2AA5786A115E5D5CAE56D7F7E2A9513",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_6/angeschmutzte_kettfaeden0/c_fl_x155_y125.png": {
+      "bytes": 5903311,
+      "sha256": "51C49F386475A11FAD014B6023BEC1CC296C8C2F08B08D0792A86AA6783C65E1",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_6/angeschmutzte_kettfaeden0/c_fl_x155_y150.png": {
+      "bytes": 5904185,
+      "sha256": "D7A11D38FD61853266B1ACE1029132904D6C22957CD1780EF982BA04BDD41862",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_6/angeschmutzte_kettfaeden0/c_fl_x155_y25.png": {
+      "bytes": 5930503,
+      "sha256": "0B0558C66FC763EE40BB2CAC2DCD34034010D7389AB0DC85764F6433700E2EE8",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_6/angeschmutzte_kettfaeden0/c_fl_x62_y225.png": {
+      "bytes": 5477549,
+      "sha256": "1C80761868F171285B0758123700B693A78F35276003E387BCD2BC30E3D38651",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_6/angeschmutzte_kettfaeden0/c_fl_x93_y200.png": {
+      "bytes": 5451322,
+      "sha256": "3F87772E5C61AB8E459F5B632F14BEE02DFD7E0E067F9958B824C3E1BDB0F97D",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_6/angeschmutzte_kettfaeden0/f_fl_x0_y225.png": {
+      "bytes": 5621172,
+      "sha256": "DB5900AC752845CE91A48FDD8A239BCDBF1E473B6727C198AFA73BB2D1D2BFAE",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_6/angeschmutzte_kettfaeden0/f_fl_x124_y0.png": {
+      "bytes": 5891018,
+      "sha256": "C8E20A63A4B50CEB070375C61527A6E1B47210FB724894882CC6DB5C36E4EFFE",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_6/angeschmutzte_kettfaeden0/f_fl_x124_y100.png": {
+      "bytes": 5760399,
+      "sha256": "176B6ABA57F37759099233BC140F9B7F3653ACA04BB6A5D7EDFD1617038A3BA9",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_6/angeschmutzte_kettfaeden0/f_fl_x124_y75.png": {
+      "bytes": 5794289,
+      "sha256": "6EBEFED3515ECA0242FA3C93E5B47C5D853513AB6A1B396BE34C1AA4F10B37E3",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_6/angeschmutzte_kettfaeden0/f_fl_x31_y100.png": {
+      "bytes": 5515517,
+      "sha256": "DFF8FE6A7F944F99EBBF070C4888F7BE76EF45B655A8DBCBC180B4857BD0A4FA",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_6/angeschmutzte_kettfaeden0/f_fl_x31_y75.png": {
+      "bytes": 5558772,
+      "sha256": "F683938AD2779608A85B1FED6AB22E52BEF52D592953EE46680EF0A813859C5D",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_6/angeschmutzte_kettfaeden0/f_fl_x62_y100.png": {
+      "bytes": 5486378,
+      "sha256": "49CE6CD33867DABEF621FEC72FC3A9A96E84A294105E86B1EBAF08D191C8B696",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_6/dataset.json": {
+      "bytes": 109882,
+      "sha256": "63333080C113F166C7F82EFA49D073E982F6C08F653DE27EAC08D02E0B299B60"
+    },
+    "Textile_7/1/c_fl0000.png": {
+      "bytes": 4741486,
+      "sha256": "DF6DC4EE0856CEDD0CF7241F30A244545E0EC8AD9161EDC346FE5BE75E49C328",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_7/1/c_fl0019.png": {
+      "bytes": 4337944,
+      "sha256": "CEF92B11EAC57B0E0B8EFED565D5F40ADC89A183CA3A2E4649130C500D084535",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_7/1/c_fl0038.png": {
+      "bytes": 4729190,
+      "sha256": "52F78050694BAD0B174B33B42BE981B3D433A52A33CB5004F96EB79720A14C75",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_7/1/c_fl0049.png": {
+      "bytes": 4385720,
+      "sha256": "05AAB3D50C1C46A2CFA9059C80C21C697C3FB29089CC3CEBCBEFDFDDA09CAB91",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_7/1/c_fl0050.png": {
+      "bytes": 4358273,
+      "sha256": "1B178C15603640E131B69F51F7C23C6D33609A43531C437217E883EE2CE1D071",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_7/1/c_fl0057.png": {
+      "bytes": 4727084,
+      "sha256": "B3763474F40860036327ADF64456021794A4D4F90F0E8694C13EF0619538C18F",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_7/1/c_fl0062.png": {
+      "bytes": 4365011,
+      "sha256": "E6585EFACD312FFD8626F07E16E002353C5C254BCE39E09DB39EF0342FF96D27",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_7/1/c_fl0076.png": {
+      "bytes": 4355048,
+      "sha256": "E6EB3D27E4E41E9C92C8215CC71C9C1D10819463D3AAEB31713757F4123BFE3D",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_7/1/f_fl0063.png": {
+      "bytes": 4361860,
+      "sha256": "6B2514F2B3FE0EBF76E5FE3BFE68986A4BDE8A7A477D503C4F478564D23CB932",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_7/1/f_fl0064.png": {
+      "bytes": 4345104,
+      "sha256": "8EB3C109E55CFF3CB6148BFA08C7E0E64C22D0EA0400FAB91301C23C6E5B8605",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_7/1/f_fl0065.png": {
+      "bytes": 4624799,
+      "sha256": "5049CE028853107895972080E0F552CA346237EEB0F9D3AF52AF0B6E71F0B1F5",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_7/1/f_fl0066.png": {
+      "bytes": 4694656,
+      "sha256": "0D71FA8CECB13486FF1097A13EEC291051AB8B59EB989540F706BCA44C03467B",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_7/2/c_fl0001.png": {
+      "bytes": 4460640,
+      "sha256": "0000C2AFBE41218BA28164751CAF454C79F64D334A59B37E5C932027B3EE6C26",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_7/2/c_fl0003.png": {
+      "bytes": 4823545,
+      "sha256": "F408979ACEA6478848CBA992B373DC641C1EC0CC1CAF675AFE028FF59DA5F4EB",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_7/2/c_fl0018.png": {
+      "bytes": 4788277,
+      "sha256": "8F3318512E08A02308D2130340F8EB5963ABF5BC4ADEA3E4FB59ED8A12808AE5",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_7/2/c_fl0019.png": {
+      "bytes": 4794506,
+      "sha256": "6550FD7CFDF86CB01D0DAE40B0EA6B1EC9D7F824E9686A3E7258E8516E745F00",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_7/2/c_fl0040.png": {
+      "bytes": 4439416,
+      "sha256": "3000BCCADFE3D32066DB3BA079467120FEBB38F1B663AAAD86EEDF8B8E840101",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_7/2/c_fl0060.png": {
+      "bytes": 4773889,
+      "sha256": "A61387D119253CF420AAB07B082CD34F3E8A344E53ED479E2648CB7AFD58DB76",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_7/2/c_fl0074.png": {
+      "bytes": 4762560,
+      "sha256": "309FF728F25D1621AEAA87DC87665C0FE4E5CD11E39F3B3B5A799C8AD2468CFE",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_7/2/c_fl0079.png": {
+      "bytes": 4764184,
+      "sha256": "F82E65828598547B9A2C5C90B52CF0EBC3388920C794EF12F47175EC7219C179",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_7/2/f_fl0027.png": {
+      "bytes": 4489096,
+      "sha256": "C33C209693D3FCF5CB26AA611A840058971BB71A38AB80C2E531912C0EF27EFB",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_7/2/f_fl0028.png": {
+      "bytes": 4506218,
+      "sha256": "4C5724920D24F5DC7447D05B5458E9CCB5D493E57B6B6ED13B926D764173B8F0",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_7/2/f_fl0041.png": {
+      "bytes": 4482468,
+      "sha256": "0CDFC0024E30C802C863D6E84E84E5774D1727AEDE31F3C0562E54E2D5D9CAAE",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_7/2/f_fl0042.png": {
+      "bytes": 4482651,
+      "sha256": "96EED7159EA535CEC4B2BF3AC2D309A27B655160EEC8C4C808790E714E101951",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_7/3/c_fl0000.png": {
+      "bytes": 4791731,
+      "sha256": "91041739183F539BD703023D3935808BB58E620432D3BE0D61ED774C3941CA46",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_7/3/c_fl0017.png": {
+      "bytes": 4364656,
+      "sha256": "235EA44C0AA8B155F0431141F0D6231BC76E47741BD18E7CD8672CCFBD6EB9DD",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_7/3/c_fl0019.png": {
+      "bytes": 4378219,
+      "sha256": "281B4A1FE4F957462BD86FAF89086AD2853CBA0E324EE73B3423EFEB1FCE301E",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_7/3/c_fl0028.png": {
+      "bytes": 4771558,
+      "sha256": "922E1B7E52F4E3D4309A1A946F2CB05FB7F19289BD30C67AB133A472E3373D0D",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_7/3/c_fl0033.png": {
+      "bytes": 4368643,
+      "sha256": "50D8E0098B56C9647FDAE60D58ED9826C844BEAF655EEA7138CCCF0EBD3B04B8",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_7/3/c_fl0042.png": {
+      "bytes": 4780917,
+      "sha256": "951CC8C82EBA1D3F40D00EF7A7BB51FCC0A6BBF7470D72DF0808C38A5C549947",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_7/3/c_fl0063.png": {
+      "bytes": 4375423,
+      "sha256": "D0AF615FAC833E329958AB32096D82FA9F01F7CBF6E9FD0448A4E5E5C7D60B4F",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_7/3/c_fl0071.png": {
+      "bytes": 4749902,
+      "sha256": "B5D185DC12E0E19CE3AC76A31828959D3687A1CD08B3228D18C6AF873BCAB26E",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_7/3/f_fl0030.png": {
+      "bytes": 4545313,
+      "sha256": "0DBCF482A00DFB26721EA548F2A622C85284AFF9444EFC063087235410C60216",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_7/3/f_fl0032.png": {
+      "bytes": 4355496,
+      "sha256": "EBEF76E94B1D397C3AAF4E76DDD233E4EEF80033DF711D922A8ACF1F639FECC5",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_7/3/f_fl0072.png": {
+      "bytes": 4549713,
+      "sha256": "A2B8729A9EAC916ECF3865F88D85F3ED9E06AD9153AFA9F6B5CF18BDFFB7D40F",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_7/4/c_fl0005.png": {
+      "bytes": 4787018,
+      "sha256": "2CAC1C3CA7C57FDC3E32B1880F454D14E7ED2AE8A5CF8E5B6C989B2E920EB037",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_7/4/c_fl0012.png": {
+      "bytes": 4784276,
+      "sha256": "114674277EFBD098DC8C639923506F0147F2818E063B2490CD5DEE4513ECF9DA",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_7/4/c_fl0016.png": {
+      "bytes": 4765855,
+      "sha256": "209963A559634FAA0C848784D2FDBCE1978CBD9AAD1C4C71EA503AC087F72BEE",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_7/4/c_fl0018.png": {
+      "bytes": 4763201,
+      "sha256": "9C313782A2BF912F1731B225B693E1A462B9E73FD97458AE54323DCF6C55AE0B",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_7/4/c_fl0036.png": {
+      "bytes": 4772272,
+      "sha256": "AD89CF4ECA1C45B74D37C9036294D0509969FE8F48026BFBA0E887D50239A75A",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_7/4/c_fl0065.png": {
+      "bytes": 4736692,
+      "sha256": "A0E3263886E52EAC9E38F81B0C5CF090F4DE2204E7402EE514095E385B1C88A4",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_7/4/c_fl0067.png": {
+      "bytes": 4728805,
+      "sha256": "C222CE9F47D66A7AD2A701E6A3DC4B0233AD6D7BBF7031CAE43B8357A50FDC1E",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_7/4/c_fl0074.png": {
+      "bytes": 4736623,
+      "sha256": "260CB8F8C32B10C695EA132E9B5391325E54E5CC09ED98C147CD6D53BCF0AFDB",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_7/4/f_fl0052.png": {
+      "bytes": 4705771,
+      "sha256": "FA336B6843607C8DBC6E296E60D744EFE1EFA9F702A300BB6721694602FA3385",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_7/5/c_fl0007.png": {
+      "bytes": 4799455,
+      "sha256": "3FF443C41AD90488E3C0438F6FA232309CDF86F3C67F42104E5EC1147A8E7ECF",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_7/5/c_fl0033.png": {
+      "bytes": 4781748,
+      "sha256": "314FB9597448C20DE5D5FD3308C8435B0703BFF931CD8A97BBF803BAC48DB003",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_7/5/c_fl0039.png": {
+      "bytes": 4586022,
+      "sha256": "377E5484D9B8FA9A7F3061CF64AB6AD443CE66B7038F04E8981E423953B27383",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_7/5/c_fl0043.png": {
+      "bytes": 4418849,
+      "sha256": "5B76CCDF7B78E4725C28F71D4D75287A786293341BE62E352918BFD2DC705689",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_7/5/c_fl0052.png": {
+      "bytes": 4784380,
+      "sha256": "B272697AD6CD448C500ECE8603A7512FBD8D53BB79DCCDD96802286DE2EE6F97",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_7/5/c_fl0073.png": {
+      "bytes": 4759461,
+      "sha256": "C9D072A27AD55B8902D29C63580A4CB4D581E280E96BDE8C6D819DCF6D822BF0",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_7/5/c_fl0079.png": {
+      "bytes": 4727261,
+      "sha256": "C04475F4F41FF1489691217421E5EF44434FB685C1A168F6FCF67A678198E3A5",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_7/5/c_fl0081.png": {
+      "bytes": 4574757,
+      "sha256": "FA3A9938D997B031AC8BC08DE574C398B0E6DCF233C1D3907CA47B5993E08DFD",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_7/6/c_fl0005.png": {
+      "bytes": 4744831,
+      "sha256": "71E6E2FD3D649D369AA0E43BBBF1D20159DFD9035B7D078745721920D4438DC2",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_7/6/c_fl0016.png": {
+      "bytes": 4756363,
+      "sha256": "88ECBC29B0E394F5A94B0BB396FE83EF9EE74411A703C882982C27FB508A8C33",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_7/6/c_fl0032.png": {
+      "bytes": 4602976,
+      "sha256": "511414172BBE81EA451BF25F2BD94D8181C037941DD62DA71F0E6230E22D1EC8",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_7/6/c_fl0033.png": {
+      "bytes": 4681994,
+      "sha256": "69BD3B3E50E738FED8C77E7CC1833C96BE404DA513B4F591398B2FCE19727B2C",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_7/6/c_fl0041.png": {
+      "bytes": 4589272,
+      "sha256": "E20D986126F69842C8A51F0279349F44CE6EB62126B6D665D341BBDB57FBA30E",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_7/6/c_fl0050.png": {
+      "bytes": 4609266,
+      "sha256": "654988C1152E7FDF280266A5E567D0E2D02C6AAA46A723A34D278E4644944B57",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_7/6/c_fl0052.png": {
+      "bytes": 4550323,
+      "sha256": "AA867CBBEAA821BD3E7285C989358EEF930CA8A60FD4D005EBCE33593DE8C219",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_7/6/c_fl0070.png": {
+      "bytes": 4655331,
+      "sha256": "8696BD620E4F763A2B1FA0D7E318A9A612DFE5ED3265D014F7E46B9CB17DD533",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_7/dataset.json": {
+      "bytes": 142346,
+      "sha256": "A433831FA7E2696825A8EE7782CFC7E91CE1720B652D31E12D6AF297699C8F03"
+    },
+    "Textile_7/schlinge_kette0/c_fl_x0_y175.png": {
+      "bytes": 6034608,
+      "sha256": "611173C839E67CF7236FBA8868B586AEB7FEA20A010A5938D6DDC031A42C1F3D",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_7/schlinge_kette0/c_fl_x0_y25.png": {
+      "bytes": 6148633,
+      "sha256": "ED4965686CDD761EE2C3464E0C2E68775A4642256CE200F37554871881903E0B",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_7/schlinge_kette0/c_fl_x0_y50.png": {
+      "bytes": 6133567,
+      "sha256": "83CAA5037D4667D771F0AB2E45CEB6AA57F5623BAF4EF9C89AFAB352D2229A70",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_7/schlinge_kette0/c_fl_x124_y175.png": {
+      "bytes": 6844664,
+      "sha256": "649DCC3D5B548C08408D01BF78A2CB7AA4F8EFD97E599CB53E6C365CE93792B8",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_7/schlinge_kette0/c_fl_x124_y200.png": {
+      "bytes": 6930328,
+      "sha256": "FC841CAE6ED95AEE8D1F42AF7CFC43B0BC51FA7A320CE3B34E53440077AF2BE3",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_7/schlinge_kette0/c_fl_x31_y125.png": {
+      "bytes": 6717578,
+      "sha256": "9F711990396E6171F1A711180C38D3EA7A1BC30DDC281070DDBCDC830421FA96",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_7/schlinge_kette0/c_fl_x31_y175.png": {
+      "bytes": 6686748,
+      "sha256": "D2FDDE8E02E680E2FFDD03DD6CE1AB38485567A5997B34E7E052F57A1E1A1BBC",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_7/schlinge_kette0/c_fl_x62_y25.png": {
+      "bytes": 7023484,
+      "sha256": "E7DA4CA9F083F07FAE20C459F2931E5DE3C12D73043332120B42B6863B939E83",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_7/schlinge_kette0/f_fl_x93_y150.png": {
+      "bytes": 6883650,
+      "sha256": "9AC4124F49A0B90AD4470B2248B9D3EBE2308CEC16B29A4FE2E880BBCD95E462",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    },
+    "Textile_7/schlinge_kette0/f_fl_x93_y175.png": {
+      "bytes": 6921498,
+      "sha256": "1EAF27620DEDCEAE4450B7FF45CC4A2814CB3FC0AAFC071BB114C049D6BA09DA",
+      "width": 2448,
+      "height": 2050,
+      "mode": "RGB"
+    }
+  }
+}

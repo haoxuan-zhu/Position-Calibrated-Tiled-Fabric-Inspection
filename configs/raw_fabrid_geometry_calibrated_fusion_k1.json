@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "seed": 20260805,
+  "base_config": "configs/raw_fabrid_anomalib_patchcore_k0.json",
+  "parent_geometric_audit_config": "configs/raw_fabrid_geometric_fusion_baselines_k0.json",
+  "reference_result_pattern": "runs/raw_fabrid_context_bias_field_k3/final_reproduction/{fold}.json",
+  "checkpoint_pattern": "runs/raw_fabrid_patchcore_k0/instance_audit/lightning_{fold}/Patchcore/v0/weights/lightning/model.ckpt",
+  "crop_observations": {
+    "physical_crop_edge": 256,
+    "phase_shift_pixels": 64,
+    "output_stride_pixels": 8,
+    "views": [
+      "base_grid",
+      "x_shifted_grid",
+      "y_shifted_grid"
+    ],
+    "crops_per_parent": 73
+  },
+  "candidate": {
+    "name": "gaussian_bias_scale_weighted_mean",
+    "equation": "weight(r)=gaussian(r;sigma_scale=1/8)/robust_scale(r)^2; response=sum_r weight(r)*(score(r)-normal_median(r))/sum_r weight(r)",
+    "identification": "normal_median and robust_scale use source calibration normal parents only; Gaussian weights use crop geometry only",
+    "parameter_selection": "No target normal, defect score, annotation, or metric selects sigma_scale, center, scale, or component inclusion."
+  },
+  "component_ablations": {
+    "gaussian": "fixed geometry only",
+    "gaussian_bias_equal_mean": "Gaussian geometry plus normal-coordinate bias subtraction",
+    "gaussian_scale_weighted_mean": "Gaussian geometry times inverse normal-coordinate robust variance without bias subtraction",
+    "gaussian_bias_scale_weighted_mean": "full fixed candidate"
+  },
+  "primary_score_mode": "robust_z",
+  "development_gate": {
+    "fold": "Rollo4A",
+    "minimum_pixel_ap_gain_over_both_gaussian_and_pcaf": 0.001,
+    "maximum_instance_auc_loss_from_better_reference": 0.005,
+    "maximum_parent_recall_loss_from_better_reference": 0.03,
+    "maximum_target_normal_false_positive_increase_over_pcaf": 0,
+    "interpretation": "The full candidate alone determines continuation. Failure stops this geometry-times-calibration formulation; component ablations may explain failure but may not select a replacement."
+  },
+  "confirmation": {
+    "folds": [
+      "Rollo1A",
+      "Rollo2A",
+      "Rollo3A",
+      "Rollo5A",
+      "Rollo6A",
+      "Rollo7A"
+    ],
+    "run_only_after_development_gate": true,
+    "support_condition": "Positive six-roll macro Pixel AP against both frozen PCAF and Gaussian, with every fold reported and no more than one aggregate additional target-normal false positive relative to PCAF."
+  },
+  "provenance": {
+    "created_before_candidate_metrics": "2026-08-05",
+    "motivation": "The completed K0 audit found fixed center windows stronger than PCAF in roll-macro Pixel AP, motivating a product-of-reliabilities estimator rather than post-result window tuning."
+  }
+}

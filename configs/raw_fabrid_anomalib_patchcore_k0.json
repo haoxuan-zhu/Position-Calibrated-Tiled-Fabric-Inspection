@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "seed": 20260729,
+  "data": {
+    "root": "/root/autodl-tmp/Fabric_Defect_Detection/data/RAW_FABRID",
+    "metadata": "RAW_FABRID_HighRes_Metadata.csv",
+    "coco": "RAW_FABRID_HighRes_COCO.json",
+    "image_height": 1024,
+    "image_width": 1792
+  },
+  "tiling": {
+    "tile_height": 256,
+    "tile_width": 256,
+    "rows": 4,
+    "columns": 7,
+    "overlap": 0,
+    "selection": "fixed_grid_label_independent",
+    "train_tile_budget": 512,
+    "train_selection": "one_seeded_tile_per_training_parent_then_seeded_uniform_fill",
+    "evaluation_stride": 8
+  },
+  "protocols": {
+    "P1_same_roll_full_frame": {
+      "normal_train_fraction": 0.6,
+      "normal_calibration_fraction": 0.2,
+      "normal_split": "fixed_seed_random_parent_split_within_roll",
+      "anomaly_evaluation": "all_defective_parents_in_roll"
+    },
+    "P2_leave_one_roll_out_full_frame": {
+      "source_normal_calibration_rule": "every_fourth_filename_sorted_normal_parent_per_source_roll",
+      "target_normal_evaluation": "all_normal_parents_in_heldout_roll",
+      "target_anomaly_evaluation": "all_defective_parents_in_heldout_roll"
+    }
+  },
+  "model": {
+    "implementation": "anomalib_2.5.1_Patchcore",
+    "backbone": "wide_resnet50_2",
+    "layers": [
+      "layer2",
+      "layer3"
+    ],
+    "pre_trained": true,
+    "coreset_sampling_ratio": 0.005,
+    "num_neighbors": 9,
+    "precision": "float32",
+    "train_batch_size": 4,
+    "predict_batch_size": 8,
+    "num_workers": 2
+  },
+  "scores": {
+    "image_top_fraction": 0.001,
+    "modes": [
+      "raw",
+      "robust_z",
+      "robust_z_local_mean_max"
+    ],
+    "local_mean_kernel_tokens": 3
+  },
+  "evaluation": {
+    "normal_parent_fpr": 0.01,
+    "small_instance_area_px": 1024,
+    "elongated_instance_aspect_ratio": 10.0,
+    "pixel_mask_reduction": "any_positive_within_8x8_cell",
+    "instance_detection": "maximum_score_inside_instance_mask_above_source_normal_parent_maximum_quantile"
+  },
+  "interpretation": "Frozen official-implementation strong-baseline gate. P2 failure alone establishes strict low-FPR difficulty, not cross-roll specificity; matched P1 and target-oracle diagnostics are required before any cross-roll-specific claim."
+}

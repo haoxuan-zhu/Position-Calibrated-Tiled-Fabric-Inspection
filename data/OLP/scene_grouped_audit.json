@@ -1,0 +1,4693 @@
+{
+  "schema_version": 1,
+  "purpose": "OLP metadata-only scene-grouped PCAF external protocol",
+  "source": {
+    "metadata_root": "G:\\MyProject\\Fabric_Defect_Detection\\data\\OLP\\metadata",
+    "download_archive": "G:/Plain_Fabric_Defect_Detection/datasets/OLP/source/olp-dataset.tar",
+    "official_paper_doi": "10.3390/s22134750",
+    "license_observed_in_archive": "CC-BY-NC-SA-4.0"
+  },
+  "selection_guard": "Eligibility and assignment use acquisition scenes, normal/anomaly availability, and stable hashes only; detector outputs are unavailable.",
+  "config": {
+    "schema_version": 1,
+    "seed": 20260730,
+    "data": {
+      "root": "/root/autodl-tmp/Fabric_Defect_Detection/data/OLP/subset",
+      "metadata_root": "/root/autodl-tmp/Fabric_Defect_Detection/data/OLP/metadata",
+      "audit": "/root/autodl-tmp/Fabric_Defect_Detection/data/OLP/scene_grouped_audit.json",
+      "illumination": "front_light_rgb_only",
+      "original_height": 2050,
+      "original_width": 2448,
+      "padded_height": 2304,
+      "padded_width": 2560,
+      "padding": "bottom_and_right_reflect_then_score_original_geometry_only",
+      "license": "CC-BY-NC-SA-4.0_as_packaged_in_downloaded_archive"
+    },
+    "eligibility": {
+      "minimum_acquisition_scenes": 3,
+      "minimum_normals_per_source_scene": 8,
+      "minimum_evaluation_anomalies": 1,
+      "selection": "metadata_only_before_detector_outputs"
+    },
+    "split": {
+      "scene_assignment": "sha256(seed:textile_id:scene)_ascending; first=train, second=calibration, all_remaining=evaluation",
+      "normal_train_per_scene": 8,
+      "normal_calibration_per_scene": 8,
+      "normal_evaluation_per_scene": 8,
+      "normal_assignment": "sha256(seed:textile_id:role:relative_path)_ascending",
+      "anomalies": "all_anomalous_parents_in_evaluation_scenes_only"
+    },
+    "tiling": {
+      "crop_edge": 256,
+      "phase_shift_pixels": 64,
+      "output_stride_pixels": 8,
+      "views": [
+        "base_grid",
+        "x_shifted_grid",
+        "y_shifted_grid"
+      ],
+      "selection": "label_independent_full_padded_parent_geometry",
+      "train_crops": "all_base_grid_crops_from_selected_training_normal_parents"
+    },
+    "model": {
+      "implementation": "anomalib_2.5.1_Patchcore",
+      "backbone": "wide_resnet50_2",
+      "layers": [
+        "layer2",
+        "layer3"
+      ],
+      "pre_trained": true,
+      "coreset_sampling_ratio": 0.005,
+      "num_neighbors": 9,
+      "precision": "float32",
+      "train_batch_size": 8,
+      "predict_batch_size": 16,
+      "num_workers": 2
+    },
+    "fusion": [
+      "single_base",
+      "mean",
+      "context_bias_equal_mean",
+      "context_bias_weighted_mean"
+    ],
+    "score": {
+      "mode": "parent_wise_robust_z",
+      "local_mean_kernel_tokens": 3,
+      "parent_top_fraction": 0.001,
+      "calibration_normal_fpr": 0.01,
+      "mask_reduction": "any_positive_within_8x8_cell"
+    },
+    "primary_endpoint": "textile_macro_pixel_average_precision_pcaf_minus_matched_mean",
+    "decision_rule_frozen_before_outputs": {
+      "external_success": "macro_delta_gt_0 AND textile_bootstrap_95pct_lower_gt_0 AND wins_ge_10_of_15 AND worst_delta_ge_minus_0.05",
+      "supporting_only": "macro_delta_gt_0 AND wins_ge_8_of_15 but full external_success rule not met",
+      "failure": "macro_delta_le_0 OR wins_lt_8_of_15",
+      "dataset_selection_reason": "two_dimensionally_identifiable_crop_geometry_plus_patterned_fabrics_pixel_masks_and_scene_groups"
+    },
+    "claim_boundary": "External scene-grouped patterned-fabric validation on OLP front-light images; no roll or temporal claim. Eligibility and split are fixed from metadata before detector outputs."
+  },
+  "eligible_textiles": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    14,
+    16,
+    18,
+    21,
+    23,
+    24,
+    31,
+    38
+  ],
+  "excluded_textiles": {
+    "8": [
+      "fewer_than_3_scenes"
+    ],
+    "9": [
+      "fewer_than_3_scenes"
+    ],
+    "10": [
+      "fewer_than_3_scenes"
+    ],
+    "11": [
+      "fewer_than_3_scenes"
+    ],
+    "12": [
+      "fewer_than_3_scenes"
+    ],
+    "13": [
+      "fewer_than_3_scenes"
+    ],
+    "15": [
+      "fewer_than_3_scenes"
+    ],
+    "17": [
+      "fewer_than_3_scenes"
+    ],
+    "19": [
+      "fewer_than_3_scenes"
+    ],
+    "20": [
+      "fewer_than_3_scenes"
+    ],
+    "22": [
+      "fewer_than_3_scenes"
+    ],
+    "25": [
+      "fewer_than_3_scenes"
+    ],
+    "26": [
+      "fewer_than_3_scenes"
+    ],
+    "27": [
+      "fewer_than_3_scenes"
+    ],
+    "28": [
+      "fewer_than_3_scenes"
+    ],
+    "29": [
+      "fewer_than_3_scenes"
+    ],
+    "30": [
+      "fewer_than_3_scenes"
+    ],
+    "32": [
+      "fewer_than_3_scenes"
+    ],
+    "33": [
+      "fewer_than_3_scenes"
+    ],
+    "34": [
+      "fewer_than_3_scenes"
+    ],
+    "35": [
+      "fewer_than_3_scenes"
+    ],
+    "36": [
+      "fewer_than_3_scenes"
+    ],
+    "37": [
+      "fewer_than_3_scenes"
+    ]
+  },
+  "totals": {
+    "training_normals": 120,
+    "calibration_normals": 120,
+    "evaluation_normals": 280,
+    "evaluation_anomalies": 172,
+    "evaluation_annotations": 362
+  },
+  "textiles": {
+    "1": {
+      "textile_id": 1,
+      "all_scenes": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "training_scene": "1",
+      "calibration_scene": "3",
+      "evaluation_scenes": [
+        "4",
+        "2",
+        "6",
+        "5"
+      ],
+      "training_normals": [
+        {
+          "image_id": 61,
+          "scene": "1",
+          "relative_path": "Textile_1/1/c_fl0068.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 45,
+          "scene": "1",
+          "relative_path": "Textile_1/1/c_fl0049.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 34,
+          "scene": "1",
+          "relative_path": "Textile_1/1/c_fl0037.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 60,
+          "scene": "1",
+          "relative_path": "Textile_1/1/c_fl0067.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 65,
+          "scene": "1",
+          "relative_path": "Textile_1/1/c_fl0074.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 1,
+          "scene": "1",
+          "relative_path": "Textile_1/1/c_fl0001.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 28,
+          "scene": "1",
+          "relative_path": "Textile_1/1/c_fl0031.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 36,
+          "scene": "1",
+          "relative_path": "Textile_1/1/c_fl0039.png",
+          "annotation_count": 0
+        }
+      ],
+      "calibration_normals": [
+        {
+          "image_id": 236,
+          "scene": "3",
+          "relative_path": "Textile_1/3/c_fl0074.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 215,
+          "scene": "3",
+          "relative_path": "Textile_1/3/c_fl0053.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 210,
+          "scene": "3",
+          "relative_path": "Textile_1/3/c_fl0048.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 245,
+          "scene": "3",
+          "relative_path": "Textile_1/3/c_fl0083.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 163,
+          "scene": "3",
+          "relative_path": "Textile_1/3/c_fl0000.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 192,
+          "scene": "3",
+          "relative_path": "Textile_1/3/c_fl0029.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 234,
+          "scene": "3",
+          "relative_path": "Textile_1/3/c_fl0072.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 194,
+          "scene": "3",
+          "relative_path": "Textile_1/3/c_fl0031.png",
+          "annotation_count": 0
+        }
+      ],
+      "evaluation_normals": [
+        {
+          "image_id": 252,
+          "scene": "4",
+          "relative_path": "Textile_1/4/c_fl0005.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 253,
+          "scene": "4",
+          "relative_path": "Textile_1/4/c_fl0006.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 263,
+          "scene": "4",
+          "relative_path": "Textile_1/4/c_fl0016.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 326,
+          "scene": "4",
+          "relative_path": "Textile_1/4/c_fl0082.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 290,
+          "scene": "4",
+          "relative_path": "Textile_1/4/c_fl0045.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 287,
+          "scene": "4",
+          "relative_path": "Textile_1/4/c_fl0041.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 249,
+          "scene": "4",
+          "relative_path": "Textile_1/4/c_fl0002.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 250,
+          "scene": "4",
+          "relative_path": "Textile_1/4/c_fl0003.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 150,
+          "scene": "2",
+          "relative_path": "Textile_1/2/c_fl0073.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 121,
+          "scene": "2",
+          "relative_path": "Textile_1/2/c_fl0044.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 133,
+          "scene": "2",
+          "relative_path": "Textile_1/2/c_fl0056.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 140,
+          "scene": "2",
+          "relative_path": "Textile_1/2/c_fl0063.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 137,
+          "scene": "2",
+          "relative_path": "Textile_1/2/c_fl0060.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 119,
+          "scene": "2",
+          "relative_path": "Textile_1/2/c_fl0042.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 92,
+          "scene": "2",
+          "relative_path": "Textile_1/2/c_fl0013.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 108,
+          "scene": "2",
+          "relative_path": "Textile_1/2/c_fl0029.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 475,
+          "scene": "6",
+          "relative_path": "Textile_1/6/c_fl0077.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 436,
+          "scene": "6",
+          "relative_path": "Textile_1/6/c_fl0033.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 477,
+          "scene": "6",
+          "relative_path": "Textile_1/6/c_fl0079.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 421,
+          "scene": "6",
+          "relative_path": "Textile_1/6/c_fl0016.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 467,
+          "scene": "6",
+          "relative_path": "Textile_1/6/c_fl0069.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 449,
+          "scene": "6",
+          "relative_path": "Textile_1/6/c_fl0050.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 420,
+          "scene": "6",
+          "relative_path": "Textile_1/6/c_fl0015.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 468,
+          "scene": "6",
+          "relative_path": "Textile_1/6/c_fl0070.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 396,
+          "scene": "5",
+          "relative_path": "Textile_1/5/c_fl0073.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 352,
+          "scene": "5",
+          "relative_path": "Textile_1/5/c_fl0021.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 379,
+          "scene": "5",
+          "relative_path": "Textile_1/5/c_fl0052.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 371,
+          "scene": "5",
+          "relative_path": "Textile_1/5/c_fl0044.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 375,
+          "scene": "5",
+          "relative_path": "Textile_1/5/c_fl0048.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 363,
+          "scene": "5",
+          "relative_path": "Textile_1/5/c_fl0033.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 378,
+          "scene": "5",
+          "relative_path": "Textile_1/5/c_fl0051.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 377,
+          "scene": "5",
+          "relative_path": "Textile_1/5/c_fl0050.png",
+          "annotation_count": 0
+        }
+      ],
+      "evaluation_anomalies": [
+        {
+          "image_id": 161,
+          "scene": "2",
+          "relative_path": "Textile_1/2/f_fl0038.png",
+          "annotation_count": 1
+        },
+        {
+          "image_id": 162,
+          "scene": "2",
+          "relative_path": "Textile_1/2/f_fl0039.png",
+          "annotation_count": 1
+        },
+        {
+          "image_id": 328,
+          "scene": "4",
+          "relative_path": "Textile_1/4/f_fl0027.png",
+          "annotation_count": 1
+        },
+        {
+          "image_id": 329,
+          "scene": "4",
+          "relative_path": "Textile_1/4/f_fl0042.png",
+          "annotation_count": 1
+        },
+        {
+          "image_id": 330,
+          "scene": "4",
+          "relative_path": "Textile_1/4/f_fl0055.png",
+          "annotation_count": 1
+        },
+        {
+          "image_id": 406,
+          "scene": "5",
+          "relative_path": "Textile_1/5/f_fl0036.png",
+          "annotation_count": 1
+        },
+        {
+          "image_id": 482,
+          "scene": "6",
+          "relative_path": "Textile_1/6/f_fl0045.png",
+          "annotation_count": 1
+        },
+        {
+          "image_id": 483,
+          "scene": "6",
+          "relative_path": "Textile_1/6/f_fl0052.png",
+          "annotation_count": 1
+        }
+      ]
+    },
+    "2": {
+      "textile_id": 2,
+      "all_scenes": [
+        "1",
+        "2",
+        "3"
+      ],
+      "training_scene": "1",
+      "calibration_scene": "2",
+      "evaluation_scenes": [
+        "3"
+      ],
+      "training_normals": [
+        {
+          "image_id": 74,
+          "scene": "1",
+          "relative_path": "Textile_2/1/c_fl0076.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 20,
+          "scene": "1",
+          "relative_path": "Textile_2/1/c_fl0020.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 34,
+          "scene": "1",
+          "relative_path": "Textile_2/1/c_fl0034.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 42,
+          "scene": "1",
+          "relative_path": "Textile_2/1/c_fl0042.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 5,
+          "scene": "1",
+          "relative_path": "Textile_2/1/c_fl0005.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 36,
+          "scene": "1",
+          "relative_path": "Textile_2/1/c_fl0036.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 75,
+          "scene": "1",
+          "relative_path": "Textile_2/1/c_fl0077.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 10,
+          "scene": "1",
+          "relative_path": "Textile_2/1/c_fl0010.png",
+          "annotation_count": 0
+        }
+      ],
+      "calibration_normals": [
+        {
+          "image_id": 135,
+          "scene": "2",
+          "relative_path": "Textile_2/2/c_fl0053.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 142,
+          "scene": "2",
+          "relative_path": "Textile_2/2/c_fl0061.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 129,
+          "scene": "2",
+          "relative_path": "Textile_2/2/c_fl0047.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 84,
+          "scene": "2",
+          "relative_path": "Textile_2/2/c_fl0000.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 151,
+          "scene": "2",
+          "relative_path": "Textile_2/2/c_fl0072.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 155,
+          "scene": "2",
+          "relative_path": "Textile_2/2/c_fl0076.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 136,
+          "scene": "2",
+          "relative_path": "Textile_2/2/c_fl0054.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 101,
+          "scene": "2",
+          "relative_path": "Textile_2/2/c_fl0017.png",
+          "annotation_count": 0
+        }
+      ],
+      "evaluation_normals": [
+        {
+          "image_id": 222,
+          "scene": "3",
+          "relative_path": "Textile_2/3/c_fl0060.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 237,
+          "scene": "3",
+          "relative_path": "Textile_2/3/c_fl0075.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 171,
+          "scene": "3",
+          "relative_path": "Textile_2/3/c_fl0008.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 211,
+          "scene": "3",
+          "relative_path": "Textile_2/3/c_fl0049.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 198,
+          "scene": "3",
+          "relative_path": "Textile_2/3/c_fl0035.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 232,
+          "scene": "3",
+          "relative_path": "Textile_2/3/c_fl0070.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 216,
+          "scene": "3",
+          "relative_path": "Textile_2/3/c_fl0054.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 235,
+          "scene": "3",
+          "relative_path": "Textile_2/3/c_fl0073.png",
+          "annotation_count": 0
+        }
+      ],
+      "evaluation_anomalies": [
+        {
+          "image_id": 246,
+          "scene": "3",
+          "relative_path": "Textile_2/3/f_fl0046.png",
+          "annotation_count": 1
+        }
+      ]
+    },
+    "3": {
+      "textile_id": 3,
+      "all_scenes": [
+        "1",
+        "2",
+        "schusskraeusel0"
+      ],
+      "training_scene": "1",
+      "calibration_scene": "schusskraeusel0",
+      "evaluation_scenes": [
+        "2"
+      ],
+      "training_normals": [
+        {
+          "image_id": 6,
+          "scene": "1",
+          "relative_path": "Textile_3/1/c_fl0007.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 62,
+          "scene": "1",
+          "relative_path": "Textile_3/1/c_fl0070.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 16,
+          "scene": "1",
+          "relative_path": "Textile_3/1/c_fl0019.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 27,
+          "scene": "1",
+          "relative_path": "Textile_3/1/c_fl0031.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 63,
+          "scene": "1",
+          "relative_path": "Textile_3/1/c_fl0071.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 35,
+          "scene": "1",
+          "relative_path": "Textile_3/1/c_fl0040.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 64,
+          "scene": "1",
+          "relative_path": "Textile_3/1/c_fl0072.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 11,
+          "scene": "1",
+          "relative_path": "Textile_3/1/c_fl0012.png",
+          "annotation_count": 0
+        }
+      ],
+      "calibration_normals": [
+        {
+          "image_id": 165,
+          "scene": "schusskraeusel0",
+          "relative_path": "Textile_3/schusskraeusel0/c_fl_x0_y200.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 184,
+          "scene": "schusskraeusel0",
+          "relative_path": "Textile_3/schusskraeusel0/c_fl_x62_y125.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 192,
+          "scene": "schusskraeusel0",
+          "relative_path": "Textile_3/schusskraeusel0/c_fl_x93_y200.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 182,
+          "scene": "schusskraeusel0",
+          "relative_path": "Textile_3/schusskraeusel0/c_fl_x31_y75.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 190,
+          "scene": "schusskraeusel0",
+          "relative_path": "Textile_3/schusskraeusel0/c_fl_x93_y125.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 193,
+          "scene": "schusskraeusel0",
+          "relative_path": "Textile_3/schusskraeusel0/c_fl_x93_y225.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 194,
+          "scene": "schusskraeusel0",
+          "relative_path": "Textile_3/schusskraeusel0/c_fl_x93_y25.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 170,
+          "scene": "schusskraeusel0",
+          "relative_path": "Textile_3/schusskraeusel0/c_fl_x124_y200.png",
+          "annotation_count": 0
+        }
+      ],
+      "evaluation_normals": [
+        {
+          "image_id": 144,
+          "scene": "2",
+          "relative_path": "Textile_3/2/c_fl0070.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 97,
+          "scene": "2",
+          "relative_path": "Textile_3/2/c_fl0017.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 86,
+          "scene": "2",
+          "relative_path": "Textile_3/2/c_fl0002.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 126,
+          "scene": "2",
+          "relative_path": "Textile_3/2/c_fl0051.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 150,
+          "scene": "2",
+          "relative_path": "Textile_3/2/c_fl0076.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 106,
+          "scene": "2",
+          "relative_path": "Textile_3/2/c_fl0030.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 99,
+          "scene": "2",
+          "relative_path": "Textile_3/2/c_fl0021.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 110,
+          "scene": "2",
+          "relative_path": "Textile_3/2/c_fl0034.png",
+          "annotation_count": 0
+        }
+      ],
+      "evaluation_anomalies": [
+        {
+          "image_id": 158,
+          "scene": "2",
+          "relative_path": "Textile_3/2/f_fl0019.png",
+          "annotation_count": 1
+        },
+        {
+          "image_id": 159,
+          "scene": "2",
+          "relative_path": "Textile_3/2/f_fl0020.png",
+          "annotation_count": 1
+        },
+        {
+          "image_id": 160,
+          "scene": "2",
+          "relative_path": "Textile_3/2/f_fl0022.png",
+          "annotation_count": 1
+        },
+        {
+          "image_id": 161,
+          "scene": "2",
+          "relative_path": "Textile_3/2/f_fl0023.png",
+          "annotation_count": 1
+        },
+        {
+          "image_id": 162,
+          "scene": "2",
+          "relative_path": "Textile_3/2/f_fl0035.png",
+          "annotation_count": 1
+        },
+        {
+          "image_id": 163,
+          "scene": "2",
+          "relative_path": "Textile_3/2/f_fl0065.png",
+          "annotation_count": 3
+        }
+      ]
+    },
+    "4": {
+      "textile_id": 4,
+      "all_scenes": [
+        "1",
+        "2",
+        "3"
+      ],
+      "training_scene": "1",
+      "calibration_scene": "3",
+      "evaluation_scenes": [
+        "2"
+      ],
+      "training_normals": [
+        {
+          "image_id": 71,
+          "scene": "1",
+          "relative_path": "Textile_4/1/c_fl0078.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 62,
+          "scene": "1",
+          "relative_path": "Textile_4/1/c_fl0069.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 29,
+          "scene": "1",
+          "relative_path": "Textile_4/1/c_fl0029.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 38,
+          "scene": "1",
+          "relative_path": "Textile_4/1/c_fl0045.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 50,
+          "scene": "1",
+          "relative_path": "Textile_4/1/c_fl0057.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 4,
+          "scene": "1",
+          "relative_path": "Textile_4/1/c_fl0004.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 72,
+          "scene": "1",
+          "relative_path": "Textile_4/1/c_fl0079.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 39,
+          "scene": "1",
+          "relative_path": "Textile_4/1/c_fl0046.png",
+          "annotation_count": 0
+        }
+      ],
+      "calibration_normals": [
+        {
+          "image_id": 181,
+          "scene": "3",
+          "relative_path": "Textile_4/3/c_fl0017.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 176,
+          "scene": "3",
+          "relative_path": "Textile_4/3/c_fl0012.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 190,
+          "scene": "3",
+          "relative_path": "Textile_4/3/c_fl0027.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 222,
+          "scene": "3",
+          "relative_path": "Textile_4/3/c_fl0066.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 238,
+          "scene": "3",
+          "relative_path": "Textile_4/3/c_fl0082.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 212,
+          "scene": "3",
+          "relative_path": "Textile_4/3/c_fl0056.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 196,
+          "scene": "3",
+          "relative_path": "Textile_4/3/c_fl0033.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 220,
+          "scene": "3",
+          "relative_path": "Textile_4/3/c_fl0064.png",
+          "annotation_count": 0
+        }
+      ],
+      "evaluation_normals": [
+        {
+          "image_id": 85,
+          "scene": "2",
+          "relative_path": "Textile_4/2/c_fl0002.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 92,
+          "scene": "2",
+          "relative_path": "Textile_4/2/c_fl0009.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 149,
+          "scene": "2",
+          "relative_path": "Textile_4/2/c_fl0070.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 138,
+          "scene": "2",
+          "relative_path": "Textile_4/2/c_fl0059.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 108,
+          "scene": "2",
+          "relative_path": "Textile_4/2/c_fl0025.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 89,
+          "scene": "2",
+          "relative_path": "Textile_4/2/c_fl0006.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 94,
+          "scene": "2",
+          "relative_path": "Textile_4/2/c_fl0011.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 95,
+          "scene": "2",
+          "relative_path": "Textile_4/2/c_fl0012.png",
+          "annotation_count": 0
+        }
+      ],
+      "evaluation_anomalies": [
+        {
+          "image_id": 163,
+          "scene": "2",
+          "relative_path": "Textile_4/2/f_fl0045.png",
+          "annotation_count": 1
+        },
+        {
+          "image_id": 164,
+          "scene": "2",
+          "relative_path": "Textile_4/2/f_fl0046.png",
+          "annotation_count": 1
+        },
+        {
+          "image_id": 165,
+          "scene": "2",
+          "relative_path": "Textile_4/2/f_fl0047.png",
+          "annotation_count": 1
+        },
+        {
+          "image_id": 166,
+          "scene": "2",
+          "relative_path": "Textile_4/2/f_fl0048.png",
+          "annotation_count": 1
+        }
+      ]
+    },
+    "5": {
+      "textile_id": 5,
+      "all_scenes": [
+        "1",
+        "2",
+        "3"
+      ],
+      "training_scene": "1",
+      "calibration_scene": "3",
+      "evaluation_scenes": [
+        "2"
+      ],
+      "training_normals": [
+        {
+          "image_id": 44,
+          "scene": "1",
+          "relative_path": "Textile_5/1/c_fl0045.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 23,
+          "scene": "1",
+          "relative_path": "Textile_5/1/c_fl0023.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 77,
+          "scene": "1",
+          "relative_path": "Textile_5/1/c_fl0078.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 17,
+          "scene": "1",
+          "relative_path": "Textile_5/1/c_fl0017.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 8,
+          "scene": "1",
+          "relative_path": "Textile_5/1/c_fl0008.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 36,
+          "scene": "1",
+          "relative_path": "Textile_5/1/c_fl0036.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 50,
+          "scene": "1",
+          "relative_path": "Textile_5/1/c_fl0051.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 49,
+          "scene": "1",
+          "relative_path": "Textile_5/1/c_fl0050.png",
+          "annotation_count": 0
+        }
+      ],
+      "calibration_normals": [
+        {
+          "image_id": 222,
+          "scene": "3",
+          "relative_path": "Textile_5/3/c_fl0057.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 174,
+          "scene": "3",
+          "relative_path": "Textile_5/3/c_fl0007.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 195,
+          "scene": "3",
+          "relative_path": "Textile_5/3/c_fl0028.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 193,
+          "scene": "3",
+          "relative_path": "Textile_5/3/c_fl0026.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 224,
+          "scene": "3",
+          "relative_path": "Textile_5/3/c_fl0059.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 221,
+          "scene": "3",
+          "relative_path": "Textile_5/3/c_fl0056.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 229,
+          "scene": "3",
+          "relative_path": "Textile_5/3/c_fl0066.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 182,
+          "scene": "3",
+          "relative_path": "Textile_5/3/c_fl0015.png",
+          "annotation_count": 0
+        }
+      ],
+      "evaluation_normals": [
+        {
+          "image_id": 90,
+          "scene": "2",
+          "relative_path": "Textile_5/2/c_fl0006.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 113,
+          "scene": "2",
+          "relative_path": "Textile_5/2/c_fl0029.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 162,
+          "scene": "2",
+          "relative_path": "Textile_5/2/c_fl0083.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 98,
+          "scene": "2",
+          "relative_path": "Textile_5/2/c_fl0014.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 120,
+          "scene": "2",
+          "relative_path": "Textile_5/2/c_fl0037.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 91,
+          "scene": "2",
+          "relative_path": "Textile_5/2/c_fl0007.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 143,
+          "scene": "2",
+          "relative_path": "Textile_5/2/c_fl0062.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 139,
+          "scene": "2",
+          "relative_path": "Textile_5/2/c_fl0058.png",
+          "annotation_count": 0
+        }
+      ],
+      "evaluation_anomalies": [
+        {
+          "image_id": 163,
+          "scene": "2",
+          "relative_path": "Textile_5/2/f_fl0034.png",
+          "annotation_count": 1
+        },
+        {
+          "image_id": 164,
+          "scene": "2",
+          "relative_path": "Textile_5/2/f_fl0053.png",
+          "annotation_count": 1
+        },
+        {
+          "image_id": 165,
+          "scene": "2",
+          "relative_path": "Textile_5/2/f_fl0055.png",
+          "annotation_count": 1
+        },
+        {
+          "image_id": 166,
+          "scene": "2",
+          "relative_path": "Textile_5/2/f_fl0068.png",
+          "annotation_count": 1
+        },
+        {
+          "image_id": 167,
+          "scene": "2",
+          "relative_path": "Textile_5/2/f_fl0080.png",
+          "annotation_count": 2
+        }
+      ]
+    },
+    "6": {
+      "textile_id": 6,
+      "all_scenes": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "angeschmutzte_kettfaeden0"
+      ],
+      "training_scene": "1",
+      "calibration_scene": "3",
+      "evaluation_scenes": [
+        "8",
+        "2",
+        "angeschmutzte_kettfaeden0",
+        "4",
+        "6",
+        "5",
+        "7"
+      ],
+      "training_normals": [
+        {
+          "image_id": 11,
+          "scene": "1",
+          "relative_path": "Textile_6/1/c_fl0011.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 54,
+          "scene": "1",
+          "relative_path": "Textile_6/1/c_fl0055.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 66,
+          "scene": "1",
+          "relative_path": "Textile_6/1/c_fl0067.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 53,
+          "scene": "1",
+          "relative_path": "Textile_6/1/c_fl0054.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 39,
+          "scene": "1",
+          "relative_path": "Textile_6/1/c_fl0040.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 4,
+          "scene": "1",
+          "relative_path": "Textile_6/1/c_fl0004.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 2,
+          "scene": "1",
+          "relative_path": "Textile_6/1/c_fl0002.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 25,
+          "scene": "1",
+          "relative_path": "Textile_6/1/c_fl0025.png",
+          "annotation_count": 0
+        }
+      ],
+      "calibration_normals": [
+        {
+          "image_id": 185,
+          "scene": "3",
+          "relative_path": "Textile_6/3/c_fl0024.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 212,
+          "scene": "3",
+          "relative_path": "Textile_6/3/c_fl0052.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 191,
+          "scene": "3",
+          "relative_path": "Textile_6/3/c_fl0031.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 201,
+          "scene": "3",
+          "relative_path": "Textile_6/3/c_fl0041.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 217,
+          "scene": "3",
+          "relative_path": "Textile_6/3/c_fl0057.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 229,
+          "scene": "3",
+          "relative_path": "Textile_6/3/c_fl0069.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 218,
+          "scene": "3",
+          "relative_path": "Textile_6/3/c_fl0058.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 225,
+          "scene": "3",
+          "relative_path": "Textile_6/3/c_fl0065.png",
+          "annotation_count": 0
+        }
+      ],
+      "evaluation_normals": [
+        {
+          "image_id": 539,
+          "scene": "8",
+          "relative_path": "Textile_6/8/c_fl0073.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 527,
+          "scene": "8",
+          "relative_path": "Textile_6/8/c_fl0059.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 503,
+          "scene": "8",
+          "relative_path": "Textile_6/8/c_fl0029.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 502,
+          "scene": "8",
+          "relative_path": "Textile_6/8/c_fl0028.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 481,
+          "scene": "8",
+          "relative_path": "Textile_6/8/c_fl0001.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 490,
+          "scene": "8",
+          "relative_path": "Textile_6/8/c_fl0013.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 519,
+          "scene": "8",
+          "relative_path": "Textile_6/8/c_fl0051.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 506,
+          "scene": "8",
+          "relative_path": "Textile_6/8/c_fl0033.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 158,
+          "scene": "2",
+          "relative_path": "Textile_6/2/c_fl0075.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 107,
+          "scene": "2",
+          "relative_path": "Textile_6/2/c_fl0023.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 124,
+          "scene": "2",
+          "relative_path": "Textile_6/2/c_fl0041.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 85,
+          "scene": "2",
+          "relative_path": "Textile_6/2/c_fl0001.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 106,
+          "scene": "2",
+          "relative_path": "Textile_6/2/c_fl0022.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 131,
+          "scene": "2",
+          "relative_path": "Textile_6/2/c_fl0048.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 141,
+          "scene": "2",
+          "relative_path": "Textile_6/2/c_fl0058.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 125,
+          "scene": "2",
+          "relative_path": "Textile_6/2/c_fl0042.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 549,
+          "scene": "angeschmutzte_kettfaeden0",
+          "relative_path": "Textile_6/angeschmutzte_kettfaeden0/c_fl_x0_y150.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 594,
+          "scene": "angeschmutzte_kettfaeden0",
+          "relative_path": "Textile_6/angeschmutzte_kettfaeden0/c_fl_x93_y200.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 585,
+          "scene": "angeschmutzte_kettfaeden0",
+          "relative_path": "Textile_6/angeschmutzte_kettfaeden0/c_fl_x62_y225.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 552,
+          "scene": "angeschmutzte_kettfaeden0",
+          "relative_path": "Textile_6/angeschmutzte_kettfaeden0/c_fl_x0_y25.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 569,
+          "scene": "angeschmutzte_kettfaeden0",
+          "relative_path": "Textile_6/angeschmutzte_kettfaeden0/c_fl_x155_y25.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 565,
+          "scene": "angeschmutzte_kettfaeden0",
+          "relative_path": "Textile_6/angeschmutzte_kettfaeden0/c_fl_x155_y150.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 561,
+          "scene": "angeschmutzte_kettfaeden0",
+          "relative_path": "Textile_6/angeschmutzte_kettfaeden0/c_fl_x124_y50.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 564,
+          "scene": "angeschmutzte_kettfaeden0",
+          "relative_path": "Textile_6/angeschmutzte_kettfaeden0/c_fl_x155_y125.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 291,
+          "scene": "4",
+          "relative_path": "Textile_6/4/c_fl0050.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 306,
+          "scene": "4",
+          "relative_path": "Textile_6/4/c_fl0067.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 308,
+          "scene": "4",
+          "relative_path": "Textile_6/4/c_fl0071.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 281,
+          "scene": "4",
+          "relative_path": "Textile_6/4/c_fl0039.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 313,
+          "scene": "4",
+          "relative_path": "Textile_6/4/c_fl0076.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 277,
+          "scene": "4",
+          "relative_path": "Textile_6/4/c_fl0035.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 268,
+          "scene": "4",
+          "relative_path": "Textile_6/4/c_fl0026.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 299,
+          "scene": "4",
+          "relative_path": "Textile_6/4/c_fl0060.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 356,
+          "scene": "6",
+          "relative_path": "Textile_6/6/c_fl0010.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 373,
+          "scene": "6",
+          "relative_path": "Textile_6/6/c_fl0032.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 392,
+          "scene": "6",
+          "relative_path": "Textile_6/6/c_fl0067.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 372,
+          "scene": "6",
+          "relative_path": "Textile_6/6/c_fl0031.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 352,
+          "scene": "6",
+          "relative_path": "Textile_6/6/c_fl0002.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 353,
+          "scene": "6",
+          "relative_path": "Textile_6/6/c_fl0003.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 379,
+          "scene": "6",
+          "relative_path": "Textile_6/6/c_fl0044.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 381,
+          "scene": "6",
+          "relative_path": "Textile_6/6/c_fl0046.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 341,
+          "scene": "5",
+          "relative_path": "Textile_6/5/c_fl0043.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 342,
+          "scene": "5",
+          "relative_path": "Textile_6/5/c_fl0044.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 325,
+          "scene": "5",
+          "relative_path": "Textile_6/5/c_fl0015.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 340,
+          "scene": "5",
+          "relative_path": "Textile_6/5/c_fl0040.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 343,
+          "scene": "5",
+          "relative_path": "Textile_6/5/c_fl0045.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 320,
+          "scene": "5",
+          "relative_path": "Textile_6/5/c_fl0004.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 319,
+          "scene": "5",
+          "relative_path": "Textile_6/5/c_fl0003.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 336,
+          "scene": "5",
+          "relative_path": "Textile_6/5/c_fl0032.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 454,
+          "scene": "7",
+          "relative_path": "Textile_6/7/c_fl0060.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 402,
+          "scene": "7",
+          "relative_path": "Textile_6/7/c_fl0006.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 404,
+          "scene": "7",
+          "relative_path": "Textile_6/7/c_fl0008.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 432,
+          "scene": "7",
+          "relative_path": "Textile_6/7/c_fl0036.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 431,
+          "scene": "7",
+          "relative_path": "Textile_6/7/c_fl0035.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 459,
+          "scene": "7",
+          "relative_path": "Textile_6/7/c_fl0065.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 476,
+          "scene": "7",
+          "relative_path": "Textile_6/7/c_fl0083.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 429,
+          "scene": "7",
+          "relative_path": "Textile_6/7/c_fl0033.png",
+          "annotation_count": 0
+        }
+      ],
+      "evaluation_anomalies": [
+        {
+          "image_id": 160,
+          "scene": "2",
+          "relative_path": "Textile_6/2/f_fl0038.png",
+          "annotation_count": 1
+        },
+        {
+          "image_id": 345,
+          "scene": "5",
+          "relative_path": "Textile_6/5/f_fl0013.png",
+          "annotation_count": 2
+        },
+        {
+          "image_id": 346,
+          "scene": "5",
+          "relative_path": "Textile_6/5/f_fl0014.png",
+          "annotation_count": 1
+        },
+        {
+          "image_id": 347,
+          "scene": "5",
+          "relative_path": "Textile_6/5/f_fl0027.png",
+          "annotation_count": 1
+        },
+        {
+          "image_id": 348,
+          "scene": "5",
+          "relative_path": "Textile_6/5/f_fl0028.png",
+          "annotation_count": 4
+        },
+        {
+          "image_id": 349,
+          "scene": "5",
+          "relative_path": "Textile_6/5/f_fl0041.png",
+          "annotation_count": 1
+        },
+        {
+          "image_id": 350,
+          "scene": "5",
+          "relative_path": "Textile_6/5/f_fl0042.png",
+          "annotation_count": 1
+        },
+        {
+          "image_id": 477,
+          "scene": "7",
+          "relative_path": "Textile_6/7/f_fl0038.png",
+          "annotation_count": 1
+        },
+        {
+          "image_id": 478,
+          "scene": "7",
+          "relative_path": "Textile_6/7/f_fl0045.png",
+          "annotation_count": 1
+        },
+        {
+          "image_id": 479,
+          "scene": "7",
+          "relative_path": "Textile_6/7/f_fl0075.png",
+          "annotation_count": 1
+        },
+        {
+          "image_id": 542,
+          "scene": "8",
+          "relative_path": "Textile_6/8/f_fl0002.png",
+          "annotation_count": 1
+        },
+        {
+          "image_id": 543,
+          "scene": "8",
+          "relative_path": "Textile_6/8/f_fl0025.png",
+          "annotation_count": 1
+        },
+        {
+          "image_id": 544,
+          "scene": "8",
+          "relative_path": "Textile_6/8/f_fl0030.png",
+          "annotation_count": 1
+        },
+        {
+          "image_id": 545,
+          "scene": "8",
+          "relative_path": "Textile_6/8/f_fl0050.png",
+          "annotation_count": 1
+        },
+        {
+          "image_id": 599,
+          "scene": "angeschmutzte_kettfaeden0",
+          "relative_path": "Textile_6/angeschmutzte_kettfaeden0/f_fl_x0_y225.png",
+          "annotation_count": 1
+        },
+        {
+          "image_id": 600,
+          "scene": "angeschmutzte_kettfaeden0",
+          "relative_path": "Textile_6/angeschmutzte_kettfaeden0/f_fl_x124_y0.png",
+          "annotation_count": 1
+        },
+        {
+          "image_id": 601,
+          "scene": "angeschmutzte_kettfaeden0",
+          "relative_path": "Textile_6/angeschmutzte_kettfaeden0/f_fl_x124_y100.png",
+          "annotation_count": 4
+        },
+        {
+          "image_id": 602,
+          "scene": "angeschmutzte_kettfaeden0",
+          "relative_path": "Textile_6/angeschmutzte_kettfaeden0/f_fl_x124_y75.png",
+          "annotation_count": 1
+        },
+        {
+          "image_id": 603,
+          "scene": "angeschmutzte_kettfaeden0",
+          "relative_path": "Textile_6/angeschmutzte_kettfaeden0/f_fl_x31_y100.png",
+          "annotation_count": 5
+        },
+        {
+          "image_id": 604,
+          "scene": "angeschmutzte_kettfaeden0",
+          "relative_path": "Textile_6/angeschmutzte_kettfaeden0/f_fl_x31_y75.png",
+          "annotation_count": 4
+        },
+        {
+          "image_id": 605,
+          "scene": "angeschmutzte_kettfaeden0",
+          "relative_path": "Textile_6/angeschmutzte_kettfaeden0/f_fl_x62_y100.png",
+          "annotation_count": 2
+        }
+      ]
+    },
+    "7": {
+      "textile_id": 7,
+      "all_scenes": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "schlinge_kette0"
+      ],
+      "training_scene": "5",
+      "calibration_scene": "6",
+      "evaluation_scenes": [
+        "schlinge_kette0",
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "training_normals": [
+        {
+          "image_id": 358,
+          "scene": "5",
+          "relative_path": "Textile_7/5/c_fl0033.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 397,
+          "scene": "5",
+          "relative_path": "Textile_7/5/c_fl0081.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 391,
+          "scene": "5",
+          "relative_path": "Textile_7/5/c_fl0073.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 367,
+          "scene": "5",
+          "relative_path": "Textile_7/5/c_fl0043.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 395,
+          "scene": "5",
+          "relative_path": "Textile_7/5/c_fl0079.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 363,
+          "scene": "5",
+          "relative_path": "Textile_7/5/c_fl0039.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 336,
+          "scene": "5",
+          "relative_path": "Textile_7/5/c_fl0007.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 373,
+          "scene": "5",
+          "relative_path": "Textile_7/5/c_fl0052.png",
+          "annotation_count": 0
+        }
+      ],
+      "calibration_normals": [
+        {
+          "image_id": 412,
+          "scene": "6",
+          "relative_path": "Textile_7/6/c_fl0005.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 472,
+          "scene": "6",
+          "relative_path": "Textile_7/6/c_fl0070.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 445,
+          "scene": "6",
+          "relative_path": "Textile_7/6/c_fl0041.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 437,
+          "scene": "6",
+          "relative_path": "Textile_7/6/c_fl0033.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 454,
+          "scene": "6",
+          "relative_path": "Textile_7/6/c_fl0050.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 436,
+          "scene": "6",
+          "relative_path": "Textile_7/6/c_fl0032.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 456,
+          "scene": "6",
+          "relative_path": "Textile_7/6/c_fl0052.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 423,
+          "scene": "6",
+          "relative_path": "Textile_7/6/c_fl0016.png",
+          "annotation_count": 0
+        }
+      ],
+      "evaluation_normals": [
+        {
+          "image_id": 484,
+          "scene": "schlinge_kette0",
+          "relative_path": "Textile_7/schlinge_kette0/c_fl_x0_y25.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 511,
+          "scene": "schlinge_kette0",
+          "relative_path": "Textile_7/schlinge_kette0/c_fl_x31_y175.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 524,
+          "scene": "schlinge_kette0",
+          "relative_path": "Textile_7/schlinge_kette0/c_fl_x62_y25.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 509,
+          "scene": "schlinge_kette0",
+          "relative_path": "Textile_7/schlinge_kette0/c_fl_x31_y125.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 492,
+          "scene": "schlinge_kette0",
+          "relative_path": "Textile_7/schlinge_kette0/c_fl_x124_y200.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 491,
+          "scene": "schlinge_kette0",
+          "relative_path": "Textile_7/schlinge_kette0/c_fl_x124_y175.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 485,
+          "scene": "schlinge_kette0",
+          "relative_path": "Textile_7/schlinge_kette0/c_fl_x0_y50.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 481,
+          "scene": "schlinge_kette0",
+          "relative_path": "Textile_7/schlinge_kette0/c_fl_x0_y175.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 19,
+          "scene": "1",
+          "relative_path": "Textile_7/1/c_fl0019.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 57,
+          "scene": "1",
+          "relative_path": "Textile_7/1/c_fl0057.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 0,
+          "scene": "1",
+          "relative_path": "Textile_7/1/c_fl0000.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 50,
+          "scene": "1",
+          "relative_path": "Textile_7/1/c_fl0050.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 62,
+          "scene": "1",
+          "relative_path": "Textile_7/1/c_fl0062.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 38,
+          "scene": "1",
+          "relative_path": "Textile_7/1/c_fl0038.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 72,
+          "scene": "1",
+          "relative_path": "Textile_7/1/c_fl0076.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 49,
+          "scene": "1",
+          "relative_path": "Textile_7/1/c_fl0049.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 103,
+          "scene": "2",
+          "relative_path": "Textile_7/2/c_fl0019.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 152,
+          "scene": "2",
+          "relative_path": "Textile_7/2/c_fl0074.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 87,
+          "scene": "2",
+          "relative_path": "Textile_7/2/c_fl0003.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 157,
+          "scene": "2",
+          "relative_path": "Textile_7/2/c_fl0079.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 140,
+          "scene": "2",
+          "relative_path": "Textile_7/2/c_fl0060.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 122,
+          "scene": "2",
+          "relative_path": "Textile_7/2/c_fl0040.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 102,
+          "scene": "2",
+          "relative_path": "Textile_7/2/c_fl0018.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 85,
+          "scene": "2",
+          "relative_path": "Textile_7/2/c_fl0001.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 183,
+          "scene": "3",
+          "relative_path": "Textile_7/3/c_fl0019.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 195,
+          "scene": "3",
+          "relative_path": "Textile_7/3/c_fl0033.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 165,
+          "scene": "3",
+          "relative_path": "Textile_7/3/c_fl0000.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 204,
+          "scene": "3",
+          "relative_path": "Textile_7/3/c_fl0042.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 225,
+          "scene": "3",
+          "relative_path": "Textile_7/3/c_fl0063.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 192,
+          "scene": "3",
+          "relative_path": "Textile_7/3/c_fl0028.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 232,
+          "scene": "3",
+          "relative_path": "Textile_7/3/c_fl0071.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 181,
+          "scene": "3",
+          "relative_path": "Textile_7/3/c_fl0017.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 258,
+          "scene": "4",
+          "relative_path": "Textile_7/4/c_fl0012.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 264,
+          "scene": "4",
+          "relative_path": "Textile_7/4/c_fl0018.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 251,
+          "scene": "4",
+          "relative_path": "Textile_7/4/c_fl0005.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 282,
+          "scene": "4",
+          "relative_path": "Textile_7/4/c_fl0036.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 318,
+          "scene": "4",
+          "relative_path": "Textile_7/4/c_fl0074.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 262,
+          "scene": "4",
+          "relative_path": "Textile_7/4/c_fl0016.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 311,
+          "scene": "4",
+          "relative_path": "Textile_7/4/c_fl0067.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 309,
+          "scene": "4",
+          "relative_path": "Textile_7/4/c_fl0065.png",
+          "annotation_count": 0
+        }
+      ],
+      "evaluation_anomalies": [
+        {
+          "image_id": 80,
+          "scene": "1",
+          "relative_path": "Textile_7/1/f_fl0063.png",
+          "annotation_count": 1
+        },
+        {
+          "image_id": 81,
+          "scene": "1",
+          "relative_path": "Textile_7/1/f_fl0064.png",
+          "annotation_count": 1
+        },
+        {
+          "image_id": 82,
+          "scene": "1",
+          "relative_path": "Textile_7/1/f_fl0065.png",
+          "annotation_count": 1
+        },
+        {
+          "image_id": 83,
+          "scene": "1",
+          "relative_path": "Textile_7/1/f_fl0066.png",
+          "annotation_count": 1
+        },
+        {
+          "image_id": 161,
+          "scene": "2",
+          "relative_path": "Textile_7/2/f_fl0027.png",
+          "annotation_count": 1
+        },
+        {
+          "image_id": 162,
+          "scene": "2",
+          "relative_path": "Textile_7/2/f_fl0028.png",
+          "annotation_count": 1
+        },
+        {
+          "image_id": 163,
+          "scene": "2",
+          "relative_path": "Textile_7/2/f_fl0041.png",
+          "annotation_count": 1
+        },
+        {
+          "image_id": 164,
+          "scene": "2",
+          "relative_path": "Textile_7/2/f_fl0042.png",
+          "annotation_count": 1
+        },
+        {
+          "image_id": 243,
+          "scene": "3",
+          "relative_path": "Textile_7/3/f_fl0030.png",
+          "annotation_count": 1
+        },
+        {
+          "image_id": 244,
+          "scene": "3",
+          "relative_path": "Textile_7/3/f_fl0032.png",
+          "annotation_count": 1
+        },
+        {
+          "image_id": 245,
+          "scene": "3",
+          "relative_path": "Textile_7/3/f_fl0072.png",
+          "annotation_count": 1
+        },
+        {
+          "image_id": 328,
+          "scene": "4",
+          "relative_path": "Textile_7/4/f_fl0052.png",
+          "annotation_count": 1
+        },
+        {
+          "image_id": 535,
+          "scene": "schlinge_kette0",
+          "relative_path": "Textile_7/schlinge_kette0/f_fl_x93_y150.png",
+          "annotation_count": 1
+        },
+        {
+          "image_id": 536,
+          "scene": "schlinge_kette0",
+          "relative_path": "Textile_7/schlinge_kette0/f_fl_x93_y175.png",
+          "annotation_count": 1
+        }
+      ]
+    },
+    "14": {
+      "textile_id": 14,
+      "all_scenes": [
+        "1",
+        "2",
+        "3"
+      ],
+      "training_scene": "3",
+      "calibration_scene": "1",
+      "evaluation_scenes": [
+        "2"
+      ],
+      "training_normals": [
+        {
+          "image_id": 172,
+          "scene": "3",
+          "relative_path": "Textile_14/3/c_fl0027.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 209,
+          "scene": "3",
+          "relative_path": "Textile_14/3/c_fl0068.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 166,
+          "scene": "3",
+          "relative_path": "Textile_14/3/c_fl0021.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 171,
+          "scene": "3",
+          "relative_path": "Textile_14/3/c_fl0026.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 182,
+          "scene": "3",
+          "relative_path": "Textile_14/3/c_fl0037.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 159,
+          "scene": "3",
+          "relative_path": "Textile_14/3/c_fl0013.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 167,
+          "scene": "3",
+          "relative_path": "Textile_14/3/c_fl0022.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 163,
+          "scene": "3",
+          "relative_path": "Textile_14/3/c_fl0018.png",
+          "annotation_count": 0
+        }
+      ],
+      "calibration_normals": [
+        {
+          "image_id": 56,
+          "scene": "1",
+          "relative_path": "Textile_14/1/c_fl0076.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 11,
+          "scene": "1",
+          "relative_path": "Textile_14/1/c_fl0015.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 28,
+          "scene": "1",
+          "relative_path": "Textile_14/1/c_fl0035.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 30,
+          "scene": "1",
+          "relative_path": "Textile_14/1/c_fl0039.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 61,
+          "scene": "1",
+          "relative_path": "Textile_14/1/c_fl0082.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 31,
+          "scene": "1",
+          "relative_path": "Textile_14/1/c_fl0043.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 39,
+          "scene": "1",
+          "relative_path": "Textile_14/1/c_fl0052.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 20,
+          "scene": "1",
+          "relative_path": "Textile_14/1/c_fl0024.png",
+          "annotation_count": 0
+        }
+      ],
+      "evaluation_normals": [
+        {
+          "image_id": 79,
+          "scene": "2",
+          "relative_path": "Textile_14/2/c_fl0012.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 76,
+          "scene": "2",
+          "relative_path": "Textile_14/2/c_fl0009.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 72,
+          "scene": "2",
+          "relative_path": "Textile_14/2/c_fl0004.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 115,
+          "scene": "2",
+          "relative_path": "Textile_14/2/c_fl0054.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 135,
+          "scene": "2",
+          "relative_path": "Textile_14/2/c_fl0076.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 133,
+          "scene": "2",
+          "relative_path": "Textile_14/2/c_fl0074.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 131,
+          "scene": "2",
+          "relative_path": "Textile_14/2/c_fl0072.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 69,
+          "scene": "2",
+          "relative_path": "Textile_14/2/c_fl0001.png",
+          "annotation_count": 0
+        }
+      ],
+      "evaluation_anomalies": [
+        {
+          "image_id": 143,
+          "scene": "2",
+          "relative_path": "Textile_14/2/f_fl0005.png",
+          "annotation_count": 1
+        },
+        {
+          "image_id": 144,
+          "scene": "2",
+          "relative_path": "Textile_14/2/f_fl0025.png",
+          "annotation_count": 1
+        },
+        {
+          "image_id": 145,
+          "scene": "2",
+          "relative_path": "Textile_14/2/f_fl0035.png",
+          "annotation_count": 2
+        },
+        {
+          "image_id": 146,
+          "scene": "2",
+          "relative_path": "Textile_14/2/f_fl0036.png",
+          "annotation_count": 1
+        },
+        {
+          "image_id": 147,
+          "scene": "2",
+          "relative_path": "Textile_14/2/f_fl0046.png",
+          "annotation_count": 1
+        }
+      ]
+    },
+    "16": {
+      "textile_id": 16,
+      "all_scenes": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "training_scene": "1",
+      "calibration_scene": "2",
+      "evaluation_scenes": [
+        "3",
+        "4"
+      ],
+      "training_normals": [
+        {
+          "image_id": 57,
+          "scene": "1",
+          "relative_path": "Textile_16/1/c_fl0062.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 62,
+          "scene": "1",
+          "relative_path": "Textile_16/1/c_fl0067.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 23,
+          "scene": "1",
+          "relative_path": "Textile_16/1/c_fl0026.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 41,
+          "scene": "1",
+          "relative_path": "Textile_16/1/c_fl0044.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 24,
+          "scene": "1",
+          "relative_path": "Textile_16/1/c_fl0027.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 53,
+          "scene": "1",
+          "relative_path": "Textile_16/1/c_fl0057.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 8,
+          "scene": "1",
+          "relative_path": "Textile_16/1/c_fl0008.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 0,
+          "scene": "1",
+          "relative_path": "Textile_16/1/c_fl0000.png",
+          "annotation_count": 0
+        }
+      ],
+      "calibration_normals": [
+        {
+          "image_id": 138,
+          "scene": "2",
+          "relative_path": "Textile_16/2/c_fl0064.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 128,
+          "scene": "2",
+          "relative_path": "Textile_16/2/c_fl0053.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 92,
+          "scene": "2",
+          "relative_path": "Textile_16/2/c_fl0015.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 149,
+          "scene": "2",
+          "relative_path": "Textile_16/2/c_fl0075.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 115,
+          "scene": "2",
+          "relative_path": "Textile_16/2/c_fl0039.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 124,
+          "scene": "2",
+          "relative_path": "Textile_16/2/c_fl0049.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 86,
+          "scene": "2",
+          "relative_path": "Textile_16/2/c_fl0009.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 116,
+          "scene": "2",
+          "relative_path": "Textile_16/2/c_fl0040.png",
+          "annotation_count": 0
+        }
+      ],
+      "evaluation_normals": [
+        {
+          "image_id": 210,
+          "scene": "3",
+          "relative_path": "Textile_16/3/c_fl0053.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 207,
+          "scene": "3",
+          "relative_path": "Textile_16/3/c_fl0050.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 192,
+          "scene": "3",
+          "relative_path": "Textile_16/3/c_fl0031.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 172,
+          "scene": "3",
+          "relative_path": "Textile_16/3/c_fl0011.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 167,
+          "scene": "3",
+          "relative_path": "Textile_16/3/c_fl0006.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 186,
+          "scene": "3",
+          "relative_path": "Textile_16/3/c_fl0025.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 228,
+          "scene": "3",
+          "relative_path": "Textile_16/3/c_fl0071.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 171,
+          "scene": "3",
+          "relative_path": "Textile_16/3/c_fl0010.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 287,
+          "scene": "4",
+          "relative_path": "Textile_16/4/c_fl0053.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 283,
+          "scene": "4",
+          "relative_path": "Textile_16/4/c_fl0049.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 271,
+          "scene": "4",
+          "relative_path": "Textile_16/4/c_fl0032.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 313,
+          "scene": "4",
+          "relative_path": "Textile_16/4/c_fl0079.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 285,
+          "scene": "4",
+          "relative_path": "Textile_16/4/c_fl0051.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 288,
+          "scene": "4",
+          "relative_path": "Textile_16/4/c_fl0054.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 264,
+          "scene": "4",
+          "relative_path": "Textile_16/4/c_fl0025.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 244,
+          "scene": "4",
+          "relative_path": "Textile_16/4/c_fl0002.png",
+          "annotation_count": 0
+        }
+      ],
+      "evaluation_anomalies": [
+        {
+          "image_id": 241,
+          "scene": "3",
+          "relative_path": "Textile_16/3/f_fl0041.png",
+          "annotation_count": 1
+        },
+        {
+          "image_id": 242,
+          "scene": "3",
+          "relative_path": "Textile_16/3/f_fl0042.png",
+          "annotation_count": 1
+        },
+        {
+          "image_id": 318,
+          "scene": "4",
+          "relative_path": "Textile_16/4/f_fl0000.png",
+          "annotation_count": 1
+        },
+        {
+          "image_id": 319,
+          "scene": "4",
+          "relative_path": "Textile_16/4/f_fl0021.png",
+          "annotation_count": 1
+        },
+        {
+          "image_id": 320,
+          "scene": "4",
+          "relative_path": "Textile_16/4/f_fl0034.png",
+          "annotation_count": 1
+        },
+        {
+          "image_id": 321,
+          "scene": "4",
+          "relative_path": "Textile_16/4/f_fl0035.png",
+          "annotation_count": 1
+        },
+        {
+          "image_id": 322,
+          "scene": "4",
+          "relative_path": "Textile_16/4/f_fl0036.png",
+          "annotation_count": 1
+        },
+        {
+          "image_id": 323,
+          "scene": "4",
+          "relative_path": "Textile_16/4/f_fl0038.png",
+          "annotation_count": 1
+        },
+        {
+          "image_id": 324,
+          "scene": "4",
+          "relative_path": "Textile_16/4/f_fl0047.png",
+          "annotation_count": 1
+        }
+      ]
+    },
+    "18": {
+      "textile_id": 18,
+      "all_scenes": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "training_scene": "6",
+      "calibration_scene": "1",
+      "evaluation_scenes": [
+        "5",
+        "3",
+        "4",
+        "2"
+      ],
+      "training_normals": [
+        {
+          "image_id": 381,
+          "scene": "6",
+          "relative_path": "Textile_18/6/c_fl0034.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 369,
+          "scene": "6",
+          "relative_path": "Textile_18/6/c_fl0019.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 413,
+          "scene": "6",
+          "relative_path": "Textile_18/6/c_fl0069.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 387,
+          "scene": "6",
+          "relative_path": "Textile_18/6/c_fl0042.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 352,
+          "scene": "6",
+          "relative_path": "Textile_18/6/c_fl0001.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 396,
+          "scene": "6",
+          "relative_path": "Textile_18/6/c_fl0051.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 384,
+          "scene": "6",
+          "relative_path": "Textile_18/6/c_fl0039.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 408,
+          "scene": "6",
+          "relative_path": "Textile_18/6/c_fl0063.png",
+          "annotation_count": 0
+        }
+      ],
+      "calibration_normals": [
+        {
+          "image_id": 46,
+          "scene": "1",
+          "relative_path": "Textile_18/1/c_fl0055.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 31,
+          "scene": "1",
+          "relative_path": "Textile_18/1/c_fl0037.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 1,
+          "scene": "1",
+          "relative_path": "Textile_18/1/c_fl0001.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 32,
+          "scene": "1",
+          "relative_path": "Textile_18/1/c_fl0038.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 26,
+          "scene": "1",
+          "relative_path": "Textile_18/1/c_fl0030.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 17,
+          "scene": "1",
+          "relative_path": "Textile_18/1/c_fl0019.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 58,
+          "scene": "1",
+          "relative_path": "Textile_18/1/c_fl0070.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 66,
+          "scene": "1",
+          "relative_path": "Textile_18/1/c_fl0083.png",
+          "annotation_count": 0
+        }
+      ],
+      "evaluation_normals": [
+        {
+          "image_id": 273,
+          "scene": "5",
+          "relative_path": "Textile_18/5/c_fl0005.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 323,
+          "scene": "5",
+          "relative_path": "Textile_18/5/c_fl0070.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 296,
+          "scene": "5",
+          "relative_path": "Textile_18/5/c_fl0036.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 314,
+          "scene": "5",
+          "relative_path": "Textile_18/5/c_fl0060.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 288,
+          "scene": "5",
+          "relative_path": "Textile_18/5/c_fl0026.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 333,
+          "scene": "5",
+          "relative_path": "Textile_18/5/c_fl0082.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 328,
+          "scene": "5",
+          "relative_path": "Textile_18/5/c_fl0075.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 334,
+          "scene": "5",
+          "relative_path": "Textile_18/5/c_fl0083.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 147,
+          "scene": "3",
+          "relative_path": "Textile_18/3/c_fl0016.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 158,
+          "scene": "3",
+          "relative_path": "Textile_18/3/c_fl0033.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 150,
+          "scene": "3",
+          "relative_path": "Textile_18/3/c_fl0019.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 143,
+          "scene": "3",
+          "relative_path": "Textile_18/3/c_fl0008.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 157,
+          "scene": "3",
+          "relative_path": "Textile_18/3/c_fl0030.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 183,
+          "scene": "3",
+          "relative_path": "Textile_18/3/c_fl0068.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 146,
+          "scene": "3",
+          "relative_path": "Textile_18/3/c_fl0013.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 193,
+          "scene": "3",
+          "relative_path": "Textile_18/3/c_fl0081.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 222,
+          "scene": "4",
+          "relative_path": "Textile_18/4/c_fl0018.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 225,
+          "scene": "4",
+          "relative_path": "Textile_18/4/c_fl0023.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 233,
+          "scene": "4",
+          "relative_path": "Textile_18/4/c_fl0032.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 246,
+          "scene": "4",
+          "relative_path": "Textile_18/4/c_fl0051.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 235,
+          "scene": "4",
+          "relative_path": "Textile_18/4/c_fl0036.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 215,
+          "scene": "4",
+          "relative_path": "Textile_18/4/c_fl0010.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 211,
+          "scene": "4",
+          "relative_path": "Textile_18/4/c_fl0004.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 213,
+          "scene": "4",
+          "relative_path": "Textile_18/4/c_fl0008.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 114,
+          "scene": "2",
+          "relative_path": "Textile_18/2/c_fl0049.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 80,
+          "scene": "2",
+          "relative_path": "Textile_18/2/c_fl0011.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 124,
+          "scene": "2",
+          "relative_path": "Textile_18/2/c_fl0060.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 76,
+          "scene": "2",
+          "relative_path": "Textile_18/2/c_fl0007.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 105,
+          "scene": "2",
+          "relative_path": "Textile_18/2/c_fl0039.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 93,
+          "scene": "2",
+          "relative_path": "Textile_18/2/c_fl0025.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 82,
+          "scene": "2",
+          "relative_path": "Textile_18/2/c_fl0013.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 129,
+          "scene": "2",
+          "relative_path": "Textile_18/2/c_fl0068.png",
+          "annotation_count": 0
+        }
+      ],
+      "evaluation_anomalies": [
+        {
+          "image_id": 131,
+          "scene": "2",
+          "relative_path": "Textile_18/2/f_fl0019.png",
+          "annotation_count": 1
+        },
+        {
+          "image_id": 132,
+          "scene": "2",
+          "relative_path": "Textile_18/2/f_fl0034.png",
+          "annotation_count": 1
+        },
+        {
+          "image_id": 133,
+          "scene": "2",
+          "relative_path": "Textile_18/2/f_fl0038.png",
+          "annotation_count": 1
+        },
+        {
+          "image_id": 134,
+          "scene": "2",
+          "relative_path": "Textile_18/2/f_fl0041.png",
+          "annotation_count": 1
+        },
+        {
+          "image_id": 135,
+          "scene": "2",
+          "relative_path": "Textile_18/2/f_fl0054.png",
+          "annotation_count": 1
+        },
+        {
+          "image_id": 136,
+          "scene": "2",
+          "relative_path": "Textile_18/2/f_fl0066.png",
+          "annotation_count": 1
+        },
+        {
+          "image_id": 137,
+          "scene": "2",
+          "relative_path": "Textile_18/2/f_fl0070.png",
+          "annotation_count": 1
+        },
+        {
+          "image_id": 196,
+          "scene": "3",
+          "relative_path": "Textile_18/3/f_fl0003.png",
+          "annotation_count": 1
+        },
+        {
+          "image_id": 197,
+          "scene": "3",
+          "relative_path": "Textile_18/3/f_fl0014.png",
+          "annotation_count": 2
+        },
+        {
+          "image_id": 198,
+          "scene": "3",
+          "relative_path": "Textile_18/3/f_fl0015.png",
+          "annotation_count": 1
+        },
+        {
+          "image_id": 199,
+          "scene": "3",
+          "relative_path": "Textile_18/3/f_fl0027.png",
+          "annotation_count": 1
+        },
+        {
+          "image_id": 200,
+          "scene": "3",
+          "relative_path": "Textile_18/3/f_fl0028.png",
+          "annotation_count": 1
+        },
+        {
+          "image_id": 201,
+          "scene": "3",
+          "relative_path": "Textile_18/3/f_fl0032.png",
+          "annotation_count": 1
+        },
+        {
+          "image_id": 202,
+          "scene": "3",
+          "relative_path": "Textile_18/3/f_fl0037.png",
+          "annotation_count": 1
+        },
+        {
+          "image_id": 203,
+          "scene": "3",
+          "relative_path": "Textile_18/3/f_fl0038.png",
+          "annotation_count": 1
+        },
+        {
+          "image_id": 204,
+          "scene": "3",
+          "relative_path": "Textile_18/3/f_fl0039.png",
+          "annotation_count": 1
+        },
+        {
+          "image_id": 205,
+          "scene": "3",
+          "relative_path": "Textile_18/3/f_fl0066.png",
+          "annotation_count": 2
+        },
+        {
+          "image_id": 206,
+          "scene": "3",
+          "relative_path": "Textile_18/3/f_fl0079.png",
+          "annotation_count": 1
+        },
+        {
+          "image_id": 269,
+          "scene": "4",
+          "relative_path": "Textile_18/4/f_fl0039.png",
+          "annotation_count": 1
+        },
+        {
+          "image_id": 335,
+          "scene": "5",
+          "relative_path": "Textile_18/5/f_fl0000.png",
+          "annotation_count": 1
+        },
+        {
+          "image_id": 336,
+          "scene": "5",
+          "relative_path": "Textile_18/5/f_fl0001.png",
+          "annotation_count": 1
+        },
+        {
+          "image_id": 337,
+          "scene": "5",
+          "relative_path": "Textile_18/5/f_fl0007.png",
+          "annotation_count": 1
+        },
+        {
+          "image_id": 338,
+          "scene": "5",
+          "relative_path": "Textile_18/5/f_fl0012.png",
+          "annotation_count": 1
+        },
+        {
+          "image_id": 339,
+          "scene": "5",
+          "relative_path": "Textile_18/5/f_fl0013.png",
+          "annotation_count": 2
+        },
+        {
+          "image_id": 340,
+          "scene": "5",
+          "relative_path": "Textile_18/5/f_fl0022.png",
+          "annotation_count": 1
+        },
+        {
+          "image_id": 341,
+          "scene": "5",
+          "relative_path": "Textile_18/5/f_fl0023.png",
+          "annotation_count": 1
+        },
+        {
+          "image_id": 342,
+          "scene": "5",
+          "relative_path": "Textile_18/5/f_fl0028.png",
+          "annotation_count": 1
+        },
+        {
+          "image_id": 343,
+          "scene": "5",
+          "relative_path": "Textile_18/5/f_fl0037.png",
+          "annotation_count": 1
+        },
+        {
+          "image_id": 344,
+          "scene": "5",
+          "relative_path": "Textile_18/5/f_fl0038.png",
+          "annotation_count": 1
+        },
+        {
+          "image_id": 345,
+          "scene": "5",
+          "relative_path": "Textile_18/5/f_fl0041.png",
+          "annotation_count": 1
+        },
+        {
+          "image_id": 346,
+          "scene": "5",
+          "relative_path": "Textile_18/5/f_fl0045.png",
+          "annotation_count": 1
+        },
+        {
+          "image_id": 347,
+          "scene": "5",
+          "relative_path": "Textile_18/5/f_fl0046.png",
+          "annotation_count": 1
+        },
+        {
+          "image_id": 348,
+          "scene": "5",
+          "relative_path": "Textile_18/5/f_fl0051.png",
+          "annotation_count": 1
+        },
+        {
+          "image_id": 349,
+          "scene": "5",
+          "relative_path": "Textile_18/5/f_fl0076.png",
+          "annotation_count": 1
+        },
+        {
+          "image_id": 350,
+          "scene": "5",
+          "relative_path": "Textile_18/5/f_fl0079.png",
+          "annotation_count": 1
+        }
+      ]
+    },
+    "21": {
+      "textile_id": 21,
+      "all_scenes": [
+        "1",
+        "2",
+        "garnaufschieber_kette0",
+        "knotenschuss0"
+      ],
+      "training_scene": "1",
+      "calibration_scene": "2",
+      "evaluation_scenes": [
+        "knotenschuss0",
+        "garnaufschieber_kette0"
+      ],
+      "training_normals": [
+        {
+          "image_id": 10,
+          "scene": "1",
+          "relative_path": "Textile_21/1/c_fl0024.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 19,
+          "scene": "1",
+          "relative_path": "Textile_21/1/c_fl0039.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 25,
+          "scene": "1",
+          "relative_path": "Textile_21/1/c_fl0045.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 9,
+          "scene": "1",
+          "relative_path": "Textile_21/1/c_fl0017.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 35,
+          "scene": "1",
+          "relative_path": "Textile_21/1/c_fl0068.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 13,
+          "scene": "1",
+          "relative_path": "Textile_21/1/c_fl0027.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 15,
+          "scene": "1",
+          "relative_path": "Textile_21/1/c_fl0029.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 29,
+          "scene": "1",
+          "relative_path": "Textile_21/1/c_fl0056.png",
+          "annotation_count": 0
+        }
+      ],
+      "calibration_normals": [
+        {
+          "image_id": 89,
+          "scene": "2",
+          "relative_path": "Textile_21/2/c_fl0047.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 74,
+          "scene": "2",
+          "relative_path": "Textile_21/2/c_fl0031.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 84,
+          "scene": "2",
+          "relative_path": "Textile_21/2/c_fl0041.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 82,
+          "scene": "2",
+          "relative_path": "Textile_21/2/c_fl0039.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 65,
+          "scene": "2",
+          "relative_path": "Textile_21/2/c_fl0021.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 56,
+          "scene": "2",
+          "relative_path": "Textile_21/2/c_fl0010.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 69,
+          "scene": "2",
+          "relative_path": "Textile_21/2/c_fl0026.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 108,
+          "scene": "2",
+          "relative_path": "Textile_21/2/c_fl0075.png",
+          "annotation_count": 0
+        }
+      ],
+      "evaluation_normals": [
+        {
+          "image_id": 215,
+          "scene": "knotenschuss0",
+          "relative_path": "Textile_21/knotenschuss0/c_fl_x155_y150.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 240,
+          "scene": "knotenschuss0",
+          "relative_path": "Textile_21/knotenschuss0/c_fl_x93_y150.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 225,
+          "scene": "knotenschuss0",
+          "relative_path": "Textile_21/knotenschuss0/c_fl_x31_y150.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 210,
+          "scene": "knotenschuss0",
+          "relative_path": "Textile_21/knotenschuss0/c_fl_x124_y50.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 197,
+          "scene": "knotenschuss0",
+          "relative_path": "Textile_21/knotenschuss0/c_fl_x0_y200.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 243,
+          "scene": "knotenschuss0",
+          "relative_path": "Textile_21/knotenschuss0/c_fl_x93_y225.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 194,
+          "scene": "knotenschuss0",
+          "relative_path": "Textile_21/knotenschuss0/c_fl_x0_y125.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 233,
+          "scene": "knotenschuss0",
+          "relative_path": "Textile_21/knotenschuss0/c_fl_x62_y175.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 141,
+          "scene": "garnaufschieber_kette0",
+          "relative_path": "Textile_21/garnaufschieber_kette0/c_fl_x124_y0.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 176,
+          "scene": "garnaufschieber_kette0",
+          "relative_path": "Textile_21/garnaufschieber_kette0/c_fl_x93_y25.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 166,
+          "scene": "garnaufschieber_kette0",
+          "relative_path": "Textile_21/garnaufschieber_kette0/c_fl_x62_y125.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 155,
+          "scene": "garnaufschieber_kette0",
+          "relative_path": "Textile_21/garnaufschieber_kette0/c_fl_x155_y75.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 158,
+          "scene": "garnaufschieber_kette0",
+          "relative_path": "Textile_21/garnaufschieber_kette0/c_fl_x31_y125.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 171,
+          "scene": "garnaufschieber_kette0",
+          "relative_path": "Textile_21/garnaufschieber_kette0/c_fl_x93_y0.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 157,
+          "scene": "garnaufschieber_kette0",
+          "relative_path": "Textile_21/garnaufschieber_kette0/c_fl_x31_y100.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 159,
+          "scene": "garnaufschieber_kette0",
+          "relative_path": "Textile_21/garnaufschieber_kette0/c_fl_x31_y150.png",
+          "annotation_count": 0
+        }
+      ],
+      "evaluation_anomalies": [
+        {
+          "image_id": 179,
+          "scene": "garnaufschieber_kette0",
+          "relative_path": "Textile_21/garnaufschieber_kette0/f_fl_x0_y100.png",
+          "annotation_count": 1
+        },
+        {
+          "image_id": 180,
+          "scene": "garnaufschieber_kette0",
+          "relative_path": "Textile_21/garnaufschieber_kette0/f_fl_x124_y125.png",
+          "annotation_count": 1
+        },
+        {
+          "image_id": 181,
+          "scene": "garnaufschieber_kette0",
+          "relative_path": "Textile_21/garnaufschieber_kette0/f_fl_x124_y175.png",
+          "annotation_count": 2
+        },
+        {
+          "image_id": 182,
+          "scene": "garnaufschieber_kette0",
+          "relative_path": "Textile_21/garnaufschieber_kette0/f_fl_x124_y200.png",
+          "annotation_count": 1
+        },
+        {
+          "image_id": 183,
+          "scene": "garnaufschieber_kette0",
+          "relative_path": "Textile_21/garnaufschieber_kette0/f_fl_x124_y225.png",
+          "annotation_count": 1
+        },
+        {
+          "image_id": 184,
+          "scene": "garnaufschieber_kette0",
+          "relative_path": "Textile_21/garnaufschieber_kette0/f_fl_x155_y0.png",
+          "annotation_count": 1
+        },
+        {
+          "image_id": 185,
+          "scene": "garnaufschieber_kette0",
+          "relative_path": "Textile_21/garnaufschieber_kette0/f_fl_x31_y200.png",
+          "annotation_count": 1
+        },
+        {
+          "image_id": 186,
+          "scene": "garnaufschieber_kette0",
+          "relative_path": "Textile_21/garnaufschieber_kette0/f_fl_x31_y225.png",
+          "annotation_count": 1
+        },
+        {
+          "image_id": 187,
+          "scene": "garnaufschieber_kette0",
+          "relative_path": "Textile_21/garnaufschieber_kette0/f_fl_x62_y175.png",
+          "annotation_count": 1
+        },
+        {
+          "image_id": 188,
+          "scene": "garnaufschieber_kette0",
+          "relative_path": "Textile_21/garnaufschieber_kette0/f_fl_x62_y200.png",
+          "annotation_count": 1
+        },
+        {
+          "image_id": 189,
+          "scene": "garnaufschieber_kette0",
+          "relative_path": "Textile_21/garnaufschieber_kette0/f_fl_x62_y225.png",
+          "annotation_count": 2
+        },
+        {
+          "image_id": 190,
+          "scene": "garnaufschieber_kette0",
+          "relative_path": "Textile_21/garnaufschieber_kette0/f_fl_x93_y175.png",
+          "annotation_count": 2
+        },
+        {
+          "image_id": 191,
+          "scene": "garnaufschieber_kette0",
+          "relative_path": "Textile_21/garnaufschieber_kette0/f_fl_x93_y225.png",
+          "annotation_count": 1
+        },
+        {
+          "image_id": 245,
+          "scene": "knotenschuss0",
+          "relative_path": "Textile_21/knotenschuss0/f_fl_x31_y25.png",
+          "annotation_count": 1
+        },
+        {
+          "image_id": 246,
+          "scene": "knotenschuss0",
+          "relative_path": "Textile_21/knotenschuss0/f_fl_x31_y50.png",
+          "annotation_count": 1
+        },
+        {
+          "image_id": 247,
+          "scene": "knotenschuss0",
+          "relative_path": "Textile_21/knotenschuss0/f_fl_x62_y0.png",
+          "annotation_count": 1
+        },
+        {
+          "image_id": 248,
+          "scene": "knotenschuss0",
+          "relative_path": "Textile_21/knotenschuss0/f_fl_x62_y25.png",
+          "annotation_count": 1
+        },
+        {
+          "image_id": 249,
+          "scene": "knotenschuss0",
+          "relative_path": "Textile_21/knotenschuss0/f_fl_x62_y50.png",
+          "annotation_count": 2
+        },
+        {
+          "image_id": 250,
+          "scene": "knotenschuss0",
+          "relative_path": "Textile_21/knotenschuss0/f_fl_x93_y25.png",
+          "annotation_count": 2
+        },
+        {
+          "image_id": 251,
+          "scene": "knotenschuss0",
+          "relative_path": "Textile_21/knotenschuss0/f_fl_x93_y50.png",
+          "annotation_count": 1
+        }
+      ]
+    },
+    "23": {
+      "textile_id": 23,
+      "all_scenes": [
+        "flecken_schmutz0",
+        "kettbruch1",
+        "kettbruch2",
+        "spannfaden_kette1"
+      ],
+      "training_scene": "kettbruch1",
+      "calibration_scene": "flecken_schmutz0",
+      "evaluation_scenes": [
+        "spannfaden_kette1",
+        "kettbruch2"
+      ],
+      "training_normals": [
+        {
+          "image_id": 66,
+          "scene": "kettbruch1",
+          "relative_path": "Textile_23/kettbruch1/c_fl_x0_y225.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 107,
+          "scene": "kettbruch1",
+          "relative_path": "Textile_23/kettbruch1/c_fl_x93_y100.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 112,
+          "scene": "kettbruch1",
+          "relative_path": "Textile_23/kettbruch1/c_fl_x93_y25.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 63,
+          "scene": "kettbruch1",
+          "relative_path": "Textile_23/kettbruch1/c_fl_x0_y150.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 64,
+          "scene": "kettbruch1",
+          "relative_path": "Textile_23/kettbruch1/c_fl_x0_y175.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 65,
+          "scene": "kettbruch1",
+          "relative_path": "Textile_23/kettbruch1/c_fl_x0_y200.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 62,
+          "scene": "kettbruch1",
+          "relative_path": "Textile_23/kettbruch1/c_fl_x0_y125.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 68,
+          "scene": "kettbruch1",
+          "relative_path": "Textile_23/kettbruch1/c_fl_x0_y50.png",
+          "annotation_count": 0
+        }
+      ],
+      "calibration_normals": [
+        {
+          "image_id": 7,
+          "scene": "flecken_schmutz0",
+          "relative_path": "Textile_23/flecken_schmutz0/c_fl_x0_y25.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 34,
+          "scene": "flecken_schmutz0",
+          "relative_path": "Textile_23/flecken_schmutz0/c_fl_x31_y175.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 44,
+          "scene": "flecken_schmutz0",
+          "relative_path": "Textile_23/flecken_schmutz0/c_fl_x62_y175.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 36,
+          "scene": "flecken_schmutz0",
+          "relative_path": "Textile_23/flecken_schmutz0/c_fl_x31_y225.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 9,
+          "scene": "flecken_schmutz0",
+          "relative_path": "Textile_23/flecken_schmutz0/c_fl_x0_y75.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 42,
+          "scene": "flecken_schmutz0",
+          "relative_path": "Textile_23/flecken_schmutz0/c_fl_x62_y125.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 57,
+          "scene": "flecken_schmutz0",
+          "relative_path": "Textile_23/flecken_schmutz0/c_fl_x93_y75.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 53,
+          "scene": "flecken_schmutz0",
+          "relative_path": "Textile_23/flecken_schmutz0/c_fl_x93_y200.png",
+          "annotation_count": 0
+        }
+      ],
+      "evaluation_normals": [
+        {
+          "image_id": 180,
+          "scene": "spannfaden_kette1",
+          "relative_path": "Textile_23/spannfaden_kette1/c_fl_x0_y0.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 195,
+          "scene": "spannfaden_kette1",
+          "relative_path": "Textile_23/spannfaden_kette1/c_fl_x124_y200.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 198,
+          "scene": "spannfaden_kette1",
+          "relative_path": "Textile_23/spannfaden_kette1/c_fl_x124_y50.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 187,
+          "scene": "spannfaden_kette1",
+          "relative_path": "Textile_23/spannfaden_kette1/c_fl_x0_y25.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 220,
+          "scene": "spannfaden_kette1",
+          "relative_path": "Textile_23/spannfaden_kette1/c_fl_x93_y100.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 182,
+          "scene": "spannfaden_kette1",
+          "relative_path": "Textile_23/spannfaden_kette1/c_fl_x0_y125.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 223,
+          "scene": "spannfaden_kette1",
+          "relative_path": "Textile_23/spannfaden_kette1/c_fl_x93_y175.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 192,
+          "scene": "spannfaden_kette1",
+          "relative_path": "Textile_23/spannfaden_kette1/c_fl_x124_y125.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 150,
+          "scene": "kettbruch2",
+          "relative_path": "Textile_23/kettbruch2/c_fl_x31_y0.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 142,
+          "scene": "kettbruch2",
+          "relative_path": "Textile_23/kettbruch2/c_fl_x155_y125.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 153,
+          "scene": "kettbruch2",
+          "relative_path": "Textile_23/kettbruch2/c_fl_x31_y150.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 121,
+          "scene": "kettbruch2",
+          "relative_path": "Textile_23/kettbruch2/c_fl_x0_y100.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 173,
+          "scene": "kettbruch2",
+          "relative_path": "Textile_23/kettbruch2/c_fl_x93_y75.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 123,
+          "scene": "kettbruch2",
+          "relative_path": "Textile_23/kettbruch2/c_fl_x0_y150.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 160,
+          "scene": "kettbruch2",
+          "relative_path": "Textile_23/kettbruch2/c_fl_x62_y175.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 132,
+          "scene": "kettbruch2",
+          "relative_path": "Textile_23/kettbruch2/c_fl_x124_y125.png",
+          "annotation_count": 0
+        }
+      ],
+      "evaluation_anomalies": [
+        {
+          "image_id": 174,
+          "scene": "kettbruch2",
+          "relative_path": "Textile_23/kettbruch2/f_fl_x62_y0.png",
+          "annotation_count": 1
+        },
+        {
+          "image_id": 175,
+          "scene": "kettbruch2",
+          "relative_path": "Textile_23/kettbruch2/f_fl_x62_y100.png",
+          "annotation_count": 1
+        },
+        {
+          "image_id": 176,
+          "scene": "kettbruch2",
+          "relative_path": "Textile_23/kettbruch2/f_fl_x62_y125.png",
+          "annotation_count": 2
+        },
+        {
+          "image_id": 177,
+          "scene": "kettbruch2",
+          "relative_path": "Textile_23/kettbruch2/f_fl_x62_y150.png",
+          "annotation_count": 1
+        },
+        {
+          "image_id": 178,
+          "scene": "kettbruch2",
+          "relative_path": "Textile_23/kettbruch2/f_fl_x62_y50.png",
+          "annotation_count": 1
+        },
+        {
+          "image_id": 179,
+          "scene": "kettbruch2",
+          "relative_path": "Textile_23/kettbruch2/f_fl_x62_y75.png",
+          "annotation_count": 1
+        },
+        {
+          "image_id": 229,
+          "scene": "spannfaden_kette1",
+          "relative_path": "Textile_23/spannfaden_kette1/f_fl_x62_y125.png",
+          "annotation_count": 1
+        }
+      ]
+    },
+    "24": {
+      "textile_id": 24,
+      "all_scenes": [
+        "angeschmutzter_kettfaden0",
+        "angeschmutzter_kettfaden1",
+        "garnaufschieber0"
+      ],
+      "training_scene": "angeschmutzter_kettfaden0",
+      "calibration_scene": "garnaufschieber0",
+      "evaluation_scenes": [
+        "angeschmutzter_kettfaden1"
+      ],
+      "training_normals": [
+        {
+          "image_id": 53,
+          "scene": "angeschmutzter_kettfaden0",
+          "relative_path": "Textile_24/angeschmutzter_kettfaden0/c_fl_x93_y200.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 28,
+          "scene": "angeschmutzter_kettfaden0",
+          "relative_path": "Textile_24/angeschmutzter_kettfaden0/c_fl_x155_y50.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 13,
+          "scene": "angeschmutzter_kettfaden0",
+          "relative_path": "Textile_24/angeschmutzter_kettfaden0/c_fl_x124_y150.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 25,
+          "scene": "angeschmutzter_kettfaden0",
+          "relative_path": "Textile_24/angeschmutzter_kettfaden0/c_fl_x155_y200.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 5,
+          "scene": "angeschmutzter_kettfaden0",
+          "relative_path": "Textile_24/angeschmutzter_kettfaden0/c_fl_x0_y200.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 1,
+          "scene": "angeschmutzter_kettfaden0",
+          "relative_path": "Textile_24/angeschmutzter_kettfaden0/c_fl_x0_y100.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 38,
+          "scene": "angeschmutzter_kettfaden0",
+          "relative_path": "Textile_24/angeschmutzter_kettfaden0/c_fl_x31_y50.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 3,
+          "scene": "angeschmutzter_kettfaden0",
+          "relative_path": "Textile_24/angeschmutzter_kettfaden0/c_fl_x0_y150.png",
+          "annotation_count": 0
+        }
+      ],
+      "calibration_normals": [
+        {
+          "image_id": 156,
+          "scene": "garnaufschieber0",
+          "relative_path": "Textile_24/garnaufschieber0/c_fl_x31_y50.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 137,
+          "scene": "garnaufschieber0",
+          "relative_path": "Textile_24/garnaufschieber0/c_fl_x124_y50.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 123,
+          "scene": "garnaufschieber0",
+          "relative_path": "Textile_24/garnaufschieber0/c_fl_x0_y150.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 144,
+          "scene": "garnaufschieber0",
+          "relative_path": "Textile_24/garnaufschieber0/c_fl_x155_y225.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 128,
+          "scene": "garnaufschieber0",
+          "relative_path": "Textile_24/garnaufschieber0/c_fl_x0_y50.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 160,
+          "scene": "garnaufschieber0",
+          "relative_path": "Textile_24/garnaufschieber0/c_fl_x62_y125.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 171,
+          "scene": "garnaufschieber0",
+          "relative_path": "Textile_24/garnaufschieber0/c_fl_x93_y200.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 130,
+          "scene": "garnaufschieber0",
+          "relative_path": "Textile_24/garnaufschieber0/c_fl_x124_y0.png",
+          "annotation_count": 0
+        }
+      ],
+      "evaluation_normals": [
+        {
+          "image_id": 113,
+          "scene": "angeschmutzter_kettfaden1",
+          "relative_path": "Textile_24/angeschmutzter_kettfaden1/c_fl_x93_y225.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 102,
+          "scene": "angeschmutzter_kettfaden1",
+          "relative_path": "Textile_24/angeschmutzter_kettfaden1/c_fl_x62_y200.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 98,
+          "scene": "angeschmutzter_kettfaden1",
+          "relative_path": "Textile_24/angeschmutzter_kettfaden1/c_fl_x31_y50.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 81,
+          "scene": "angeschmutzter_kettfaden1",
+          "relative_path": "Textile_24/angeschmutzter_kettfaden1/c_fl_x155_y100.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 75,
+          "scene": "angeschmutzter_kettfaden1",
+          "relative_path": "Textile_24/angeschmutzter_kettfaden1/c_fl_x124_y200.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 69,
+          "scene": "angeschmutzter_kettfaden1",
+          "relative_path": "Textile_24/angeschmutzter_kettfaden1/c_fl_x0_y75.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 106,
+          "scene": "angeschmutzter_kettfaden1",
+          "relative_path": "Textile_24/angeschmutzter_kettfaden1/c_fl_x62_y75.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 94,
+          "scene": "angeschmutzter_kettfaden1",
+          "relative_path": "Textile_24/angeschmutzter_kettfaden1/c_fl_x31_y175.png",
+          "annotation_count": 0
+        }
+      ],
+      "evaluation_anomalies": [
+        {
+          "image_id": 117,
+          "scene": "angeschmutzter_kettfaden1",
+          "relative_path": "Textile_24/angeschmutzter_kettfaden1/f_fl_x62_y100.png",
+          "annotation_count": 1
+        },
+        {
+          "image_id": 118,
+          "scene": "angeschmutzter_kettfaden1",
+          "relative_path": "Textile_24/angeschmutzter_kettfaden1/f_fl_x62_y125.png",
+          "annotation_count": 1
+        },
+        {
+          "image_id": 119,
+          "scene": "angeschmutzter_kettfaden1",
+          "relative_path": "Textile_24/angeschmutzter_kettfaden1/f_fl_x62_y150.png",
+          "annotation_count": 1
+        }
+      ]
+    },
+    "31": {
+      "textile_id": 31,
+      "all_scenes": [
+        "einschlag_schuss0",
+        "knotenschuss1",
+        "schussfehler0"
+      ],
+      "training_scene": "einschlag_schuss0",
+      "calibration_scene": "knotenschuss1",
+      "evaluation_scenes": [
+        "schussfehler0"
+      ],
+      "training_normals": [
+        {
+          "image_id": 9,
+          "scene": "einschlag_schuss0",
+          "relative_path": "Textile_31/einschlag_schuss0/c_fl_x124_y0.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 0,
+          "scene": "einschlag_schuss0",
+          "relative_path": "Textile_31/einschlag_schuss0/c_fl_x0_y0.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 37,
+          "scene": "einschlag_schuss0",
+          "relative_path": "Textile_31/einschlag_schuss0/c_fl_x31_y75.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 1,
+          "scene": "einschlag_schuss0",
+          "relative_path": "Textile_31/einschlag_schuss0/c_fl_x0_y125.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 45,
+          "scene": "einschlag_schuss0",
+          "relative_path": "Textile_31/einschlag_schuss0/c_fl_x62_y25.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 29,
+          "scene": "einschlag_schuss0",
+          "relative_path": "Textile_31/einschlag_schuss0/c_fl_x31_y0.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 10,
+          "scene": "einschlag_schuss0",
+          "relative_path": "Textile_31/einschlag_schuss0/c_fl_x124_y100.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 46,
+          "scene": "einschlag_schuss0",
+          "relative_path": "Textile_31/einschlag_schuss0/c_fl_x62_y50.png",
+          "annotation_count": 0
+        }
+      ],
+      "calibration_normals": [
+        {
+          "image_id": 73,
+          "scene": "knotenschuss1",
+          "relative_path": "Textile_31/knotenschuss1/c_fl_x124_y150.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 97,
+          "scene": "knotenschuss1",
+          "relative_path": "Textile_31/knotenschuss1/c_fl_x31_y25.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 89,
+          "scene": "knotenschuss1",
+          "relative_path": "Textile_31/knotenschuss1/c_fl_x155_y75.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 88,
+          "scene": "knotenschuss1",
+          "relative_path": "Textile_31/knotenschuss1/c_fl_x155_y50.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 102,
+          "scene": "knotenschuss1",
+          "relative_path": "Textile_31/knotenschuss1/c_fl_x62_y125.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 103,
+          "scene": "knotenschuss1",
+          "relative_path": "Textile_31/knotenschuss1/c_fl_x62_y150.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 118,
+          "scene": "knotenschuss1",
+          "relative_path": "Textile_31/knotenschuss1/c_fl_x93_y75.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 83,
+          "scene": "knotenschuss1",
+          "relative_path": "Textile_31/knotenschuss1/c_fl_x155_y150.png",
+          "annotation_count": 0
+        }
+      ],
+      "evaluation_normals": [
+        {
+          "image_id": 137,
+          "scene": "schussfehler0",
+          "relative_path": "Textile_31/schussfehler0/c_fl_x31_y50.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 125,
+          "scene": "schussfehler0",
+          "relative_path": "Textile_31/schussfehler0/c_fl_x0_y200.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 138,
+          "scene": "schussfehler0",
+          "relative_path": "Textile_31/schussfehler0/c_fl_x31_y75.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 142,
+          "scene": "schussfehler0",
+          "relative_path": "Textile_31/schussfehler0/c_fl_x62_y150.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 121,
+          "scene": "schussfehler0",
+          "relative_path": "Textile_31/schussfehler0/c_fl_x0_y100.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 123,
+          "scene": "schussfehler0",
+          "relative_path": "Textile_31/schussfehler0/c_fl_x0_y150.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 146,
+          "scene": "schussfehler0",
+          "relative_path": "Textile_31/schussfehler0/c_fl_x62_y25.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 130,
+          "scene": "schussfehler0",
+          "relative_path": "Textile_31/schussfehler0/c_fl_x31_y0.png",
+          "annotation_count": 0
+        }
+      ],
+      "evaluation_anomalies": [
+        {
+          "image_id": 149,
+          "scene": "schussfehler0",
+          "relative_path": "Textile_31/schussfehler0/f_fl_x124_y0.png",
+          "annotation_count": 8
+        },
+        {
+          "image_id": 150,
+          "scene": "schussfehler0",
+          "relative_path": "Textile_31/schussfehler0/f_fl_x124_y100.png",
+          "annotation_count": 7
+        },
+        {
+          "image_id": 151,
+          "scene": "schussfehler0",
+          "relative_path": "Textile_31/schussfehler0/f_fl_x124_y125.png",
+          "annotation_count": 7
+        },
+        {
+          "image_id": 152,
+          "scene": "schussfehler0",
+          "relative_path": "Textile_31/schussfehler0/f_fl_x124_y150.png",
+          "annotation_count": 8
+        },
+        {
+          "image_id": 153,
+          "scene": "schussfehler0",
+          "relative_path": "Textile_31/schussfehler0/f_fl_x124_y175.png",
+          "annotation_count": 8
+        },
+        {
+          "image_id": 154,
+          "scene": "schussfehler0",
+          "relative_path": "Textile_31/schussfehler0/f_fl_x124_y200.png",
+          "annotation_count": 7
+        },
+        {
+          "image_id": 155,
+          "scene": "schussfehler0",
+          "relative_path": "Textile_31/schussfehler0/f_fl_x124_y225.png",
+          "annotation_count": 8
+        },
+        {
+          "image_id": 156,
+          "scene": "schussfehler0",
+          "relative_path": "Textile_31/schussfehler0/f_fl_x124_y25.png",
+          "annotation_count": 8
+        },
+        {
+          "image_id": 157,
+          "scene": "schussfehler0",
+          "relative_path": "Textile_31/schussfehler0/f_fl_x124_y50.png",
+          "annotation_count": 11
+        },
+        {
+          "image_id": 158,
+          "scene": "schussfehler0",
+          "relative_path": "Textile_31/schussfehler0/f_fl_x124_y75.png",
+          "annotation_count": 7
+        },
+        {
+          "image_id": 159,
+          "scene": "schussfehler0",
+          "relative_path": "Textile_31/schussfehler0/f_fl_x155_y0.png",
+          "annotation_count": 9
+        },
+        {
+          "image_id": 160,
+          "scene": "schussfehler0",
+          "relative_path": "Textile_31/schussfehler0/f_fl_x155_y100.png",
+          "annotation_count": 9
+        },
+        {
+          "image_id": 161,
+          "scene": "schussfehler0",
+          "relative_path": "Textile_31/schussfehler0/f_fl_x155_y125.png",
+          "annotation_count": 7
+        },
+        {
+          "image_id": 162,
+          "scene": "schussfehler0",
+          "relative_path": "Textile_31/schussfehler0/f_fl_x155_y150.png",
+          "annotation_count": 10
+        },
+        {
+          "image_id": 163,
+          "scene": "schussfehler0",
+          "relative_path": "Textile_31/schussfehler0/f_fl_x155_y175.png",
+          "annotation_count": 9
+        },
+        {
+          "image_id": 164,
+          "scene": "schussfehler0",
+          "relative_path": "Textile_31/schussfehler0/f_fl_x155_y200.png",
+          "annotation_count": 10
+        },
+        {
+          "image_id": 165,
+          "scene": "schussfehler0",
+          "relative_path": "Textile_31/schussfehler0/f_fl_x155_y225.png",
+          "annotation_count": 9
+        },
+        {
+          "image_id": 166,
+          "scene": "schussfehler0",
+          "relative_path": "Textile_31/schussfehler0/f_fl_x155_y25.png",
+          "annotation_count": 9
+        },
+        {
+          "image_id": 167,
+          "scene": "schussfehler0",
+          "relative_path": "Textile_31/schussfehler0/f_fl_x155_y50.png",
+          "annotation_count": 6
+        },
+        {
+          "image_id": 168,
+          "scene": "schussfehler0",
+          "relative_path": "Textile_31/schussfehler0/f_fl_x155_y75.png",
+          "annotation_count": 11
+        },
+        {
+          "image_id": 169,
+          "scene": "schussfehler0",
+          "relative_path": "Textile_31/schussfehler0/f_fl_x31_y150.png",
+          "annotation_count": 1
+        },
+        {
+          "image_id": 170,
+          "scene": "schussfehler0",
+          "relative_path": "Textile_31/schussfehler0/f_fl_x93_y0.png",
+          "annotation_count": 2
+        },
+        {
+          "image_id": 171,
+          "scene": "schussfehler0",
+          "relative_path": "Textile_31/schussfehler0/f_fl_x93_y100.png",
+          "annotation_count": 3
+        },
+        {
+          "image_id": 172,
+          "scene": "schussfehler0",
+          "relative_path": "Textile_31/schussfehler0/f_fl_x93_y125.png",
+          "annotation_count": 1
+        },
+        {
+          "image_id": 173,
+          "scene": "schussfehler0",
+          "relative_path": "Textile_31/schussfehler0/f_fl_x93_y150.png",
+          "annotation_count": 3
+        },
+        {
+          "image_id": 174,
+          "scene": "schussfehler0",
+          "relative_path": "Textile_31/schussfehler0/f_fl_x93_y175.png",
+          "annotation_count": 1
+        },
+        {
+          "image_id": 175,
+          "scene": "schussfehler0",
+          "relative_path": "Textile_31/schussfehler0/f_fl_x93_y200.png",
+          "annotation_count": 3
+        },
+        {
+          "image_id": 176,
+          "scene": "schussfehler0",
+          "relative_path": "Textile_31/schussfehler0/f_fl_x93_y225.png",
+          "annotation_count": 2
+        },
+        {
+          "image_id": 177,
+          "scene": "schussfehler0",
+          "relative_path": "Textile_31/schussfehler0/f_fl_x93_y25.png",
+          "annotation_count": 4
+        },
+        {
+          "image_id": 178,
+          "scene": "schussfehler0",
+          "relative_path": "Textile_31/schussfehler0/f_fl_x93_y50.png",
+          "annotation_count": 3
+        },
+        {
+          "image_id": 179,
+          "scene": "schussfehler0",
+          "relative_path": "Textile_31/schussfehler0/f_fl_x93_y75.png",
+          "annotation_count": 1
+        }
+      ]
+    },
+    "38": {
+      "textile_id": 38,
+      "all_scenes": [
+        "dekoware_verlierer_schuss0",
+        "dickstelle_schuss2",
+        "dickstelle_schuss4",
+        "dickstelle_zurueckspringer0"
+      ],
+      "training_scene": "dekoware_verlierer_schuss0",
+      "calibration_scene": "dickstelle_schuss2",
+      "evaluation_scenes": [
+        "dickstelle_schuss4",
+        "dickstelle_zurueckspringer0"
+      ],
+      "training_normals": [
+        {
+          "image_id": 49,
+          "scene": "dekoware_verlierer_schuss0",
+          "relative_path": "Textile_38/dekoware_verlierer_schuss0/c_fl_x93_y225.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 35,
+          "scene": "dekoware_verlierer_schuss0",
+          "relative_path": "Textile_38/dekoware_verlierer_schuss0/c_fl_x62_y100.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 30,
+          "scene": "dekoware_verlierer_schuss0",
+          "relative_path": "Textile_38/dekoware_verlierer_schuss0/c_fl_x31_y200.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 46,
+          "scene": "dekoware_verlierer_schuss0",
+          "relative_path": "Textile_38/dekoware_verlierer_schuss0/c_fl_x93_y150.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 26,
+          "scene": "dekoware_verlierer_schuss0",
+          "relative_path": "Textile_38/dekoware_verlierer_schuss0/c_fl_x31_y100.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 14,
+          "scene": "dekoware_verlierer_schuss0",
+          "relative_path": "Textile_38/dekoware_verlierer_schuss0/c_fl_x124_y225.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 11,
+          "scene": "dekoware_verlierer_schuss0",
+          "relative_path": "Textile_38/dekoware_verlierer_schuss0/c_fl_x124_y150.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 48,
+          "scene": "dekoware_verlierer_schuss0",
+          "relative_path": "Textile_38/dekoware_verlierer_schuss0/c_fl_x93_y200.png",
+          "annotation_count": 0
+        }
+      ],
+      "calibration_normals": [
+        {
+          "image_id": 109,
+          "scene": "dickstelle_schuss2",
+          "relative_path": "Textile_38/dickstelle_schuss2/c_fl_x93_y125.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 71,
+          "scene": "dickstelle_schuss2",
+          "relative_path": "Textile_38/dickstelle_schuss2/c_fl_x124_y100.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 113,
+          "scene": "dickstelle_schuss2",
+          "relative_path": "Textile_38/dickstelle_schuss2/c_fl_x93_y225.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 61,
+          "scene": "dickstelle_schuss2",
+          "relative_path": "Textile_38/dickstelle_schuss2/c_fl_x0_y100.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 105,
+          "scene": "dickstelle_schuss2",
+          "relative_path": "Textile_38/dickstelle_schuss2/c_fl_x62_y25.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 69,
+          "scene": "dickstelle_schuss2",
+          "relative_path": "Textile_38/dickstelle_schuss2/c_fl_x0_y75.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 73,
+          "scene": "dickstelle_schuss2",
+          "relative_path": "Textile_38/dickstelle_schuss2/c_fl_x124_y150.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 93,
+          "scene": "dickstelle_schuss2",
+          "relative_path": "Textile_38/dickstelle_schuss2/c_fl_x31_y150.png",
+          "annotation_count": 0
+        }
+      ],
+      "evaluation_normals": [
+        {
+          "image_id": 143,
+          "scene": "dickstelle_schuss4",
+          "relative_path": "Textile_38/dickstelle_schuss4/c_fl_x155_y150.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 151,
+          "scene": "dickstelle_schuss4",
+          "relative_path": "Textile_38/dickstelle_schuss4/c_fl_x31_y100.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 160,
+          "scene": "dickstelle_schuss4",
+          "relative_path": "Textile_38/dickstelle_schuss4/c_fl_x62_y0.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 173,
+          "scene": "dickstelle_schuss4",
+          "relative_path": "Textile_38/dickstelle_schuss4/c_fl_x93_y150.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 157,
+          "scene": "dickstelle_schuss4",
+          "relative_path": "Textile_38/dickstelle_schuss4/c_fl_x31_y25.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 132,
+          "scene": "dickstelle_schuss4",
+          "relative_path": "Textile_38/dickstelle_schuss4/c_fl_x124_y125.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 131,
+          "scene": "dickstelle_schuss4",
+          "relative_path": "Textile_38/dickstelle_schuss4/c_fl_x124_y100.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 167,
+          "scene": "dickstelle_schuss4",
+          "relative_path": "Textile_38/dickstelle_schuss4/c_fl_x62_y25.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 200,
+          "scene": "dickstelle_zurueckspringer0",
+          "relative_path": "Textile_38/dickstelle_zurueckspringer0/c_fl_x155_y0.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 226,
+          "scene": "dickstelle_zurueckspringer0",
+          "relative_path": "Textile_38/dickstelle_zurueckspringer0/c_fl_x62_y50.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 230,
+          "scene": "dickstelle_zurueckspringer0",
+          "relative_path": "Textile_38/dickstelle_zurueckspringer0/c_fl_x93_y125.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 215,
+          "scene": "dickstelle_zurueckspringer0",
+          "relative_path": "Textile_38/dickstelle_zurueckspringer0/c_fl_x31_y25.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 227,
+          "scene": "dickstelle_zurueckspringer0",
+          "relative_path": "Textile_38/dickstelle_zurueckspringer0/c_fl_x62_y75.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 183,
+          "scene": "dickstelle_zurueckspringer0",
+          "relative_path": "Textile_38/dickstelle_zurueckspringer0/c_fl_x0_y150.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 198,
+          "scene": "dickstelle_zurueckspringer0",
+          "relative_path": "Textile_38/dickstelle_zurueckspringer0/c_fl_x124_y50.png",
+          "annotation_count": 0
+        },
+        {
+          "image_id": 186,
+          "scene": "dickstelle_zurueckspringer0",
+          "relative_path": "Textile_38/dickstelle_zurueckspringer0/c_fl_x0_y225.png",
+          "annotation_count": 0
+        }
+      ],
+      "evaluation_anomalies": [
+        {
+          "image_id": 179,
+          "scene": "dickstelle_schuss4",
+          "relative_path": "Textile_38/dickstelle_schuss4/f_fl_x93_y75.png",
+          "annotation_count": 2
+        },
+        {
+          "image_id": 238,
+          "scene": "dickstelle_zurueckspringer0",
+          "relative_path": "Textile_38/dickstelle_zurueckspringer0/f_fl_x155_y125.png",
+          "annotation_count": 1
+        },
+        {
+          "image_id": 239,
+          "scene": "dickstelle_zurueckspringer0",
+          "relative_path": "Textile_38/dickstelle_zurueckspringer0/f_fl_x155_y75.png",
+          "annotation_count": 1
+        }
+      ]
+    }
+  }
+}
