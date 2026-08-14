@@ -1,0 +1,104 @@
+{
+  "schema_version": 1,
+  "purpose": "Deterministic PCDR qualitative-case cache",
+  "run": {
+    "fold": "Rollo2A",
+    "device": "NVIDIA GeForce RTX 4090",
+    "torch": "2.5.1+cu124",
+    "predict_seconds": 67.44217782840133,
+    "script_sha256": "CF80FA78E51C7590329BF9E981AB01C1BF480DF4F716B63A84080E15431221DF",
+    "config_sha256": "385655E16196E4762DB0489E04382DF4B587C3E0D406C2CA03EAC262D39B254C",
+    "checkpoint_sha256": "D1C31655ADDBA835B2C6396D54D06DE4E3C8107A8B6FA9BFB58BC8B1EEF4F5F7",
+    "cache_sha256": "BAC395909A802466D36DAE56BC9454ABE9FA51DE74E1C8180B01C068D2F9BAD6",
+    "memory_vectors": 2621,
+    "memory_dimensions": 1536
+  },
+  "counts": {
+    "anomalous_parents": 27,
+    "crops_per_parent": 73
+  },
+  "replay": {
+    "reference": "/root/autodl-tmp/Fabric_Defect_Detection/runs/raw_fabrid_dual_readout_fusion_k2/all_folds/Rollo2A.json",
+    "maximum_absolute_spatial_metric_error": 0.0,
+    "tolerance": 1e-08,
+    "per_metric_errors": {
+      "hann/pixel_average_precision": 0.0,
+      "pcdr/pixel_average_precision": 0.0,
+      "hann/instance_auc_all": 0.0,
+      "pcdr/instance_auc_all": 0.0,
+      "hann/instance_auc_small": 0.0,
+      "pcdr/instance_auc_small": 0.0,
+      "hann/instance_auc_elongated": 0.0,
+      "pcdr/instance_auc_elongated": 0.0
+    },
+    "passed": true
+  },
+  "per_parent_pixel_ap_delta": {
+    "87": -0.00645507570772097,
+    "88": 0.0016199111609455086,
+    "90": 0.043115558457799574,
+    "98": -0.005061633502790985,
+    "100": -0.013257762471159729,
+    "104": 0.006565337046140263,
+    "105": -0.00016835173830498373,
+    "108": 0.0018713277151781726,
+    "110": -0.003876666558590758,
+    "114": -0.009111903582981973,
+    "116": 0.001222738391773226,
+    "124": 2.28408765460264e-05,
+    "126": -0.005415711598334427,
+    "128": 0.0022697279242996915,
+    "130": 0.008549177355270055,
+    "132": -0.0036544202081330995,
+    "135": -0.011666432328614529,
+    "139": -0.0062935638107866065,
+    "143": -0.016036537758616354,
+    "148": -0.018827319158741695,
+    "151": 0.012702784724351934,
+    "152": -0.0012315270935958633,
+    "154": -0.0009001779372840302,
+    "155": 0.0062911804397872695,
+    "157": -0.005122430491692809,
+    "161": -0.005295404356827654,
+    "165": -0.002118258675529283
+  },
+  "geometric_fusion": {
+    "uses_scores_to_define_weights": false,
+    "uses_labels": false,
+    "crop_token_edge": 32,
+    "gaussian_sigma_scale": 0.125,
+    "gaussian_minimum_weight": 1.1253517471925912e-07,
+    "hann_zero_weight_fallback": "equal mean of available observations",
+    "hann_fallback_parent_cells": 152084,
+    "hard_center_tie_rule": "equal mean among observations tied for maximum boundary distance"
+  },
+  "geometry_calibration": {
+    "uses_target_labels_or_scores_to_define_weights": false,
+    "gaussian_sigma_scale": 0.125,
+    "relative_coordinate_bins": 1024,
+    "samples_per_relative_bin_minimum": 8395,
+    "samples_per_relative_bin_median": 8395.0,
+    "robust_scale_minimum": 0.995759904384613,
+    "robust_scale_median": 1.1996920108795166,
+    "pcaf_replica_maximum_map_error": 0.0
+  },
+  "context_response_calibration": {
+    "fit_normal_parents": 115,
+    "coordinate_calibration_seconds": 0.5676197838038206,
+    "field_recovery_seconds": 0.7098489012569189,
+    "field_recovery_milliseconds_per_parent": 3.6032939150097407,
+    "relative_coordinate_bins": 1024,
+    "samples_per_relative_bin_minimum": 8395,
+    "samples_per_relative_bin_median": 8395.0,
+    "robust_scale_minimum": 0.995759904384613,
+    "robust_scale_median": 1.1996920108795166,
+    "coverage_pattern_cell_counts": {},
+    "score": "pattern-conditional empirical upper-tail of one-sided robust residual energy",
+    "physical_field_estimator": "inverse-robust-variance weighted mean after crop-relative median bias removal",
+    "ablation_estimators": {
+      "context_bias_equal_mean": "equal mean after crop-relative median bias removal",
+      "context_scale_weighted_mean": "inverse-robust-variance weighted raw response without bias removal"
+    },
+    "uses_defect_labels": false
+  }
+}

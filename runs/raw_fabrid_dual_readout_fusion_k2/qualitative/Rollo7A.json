@@ -1,0 +1,103 @@
+{
+  "schema_version": 1,
+  "purpose": "Deterministic PCDR qualitative-case cache",
+  "run": {
+    "fold": "Rollo7A",
+    "device": "NVIDIA GeForce RTX 4090",
+    "torch": "2.5.1+cu124",
+    "predict_seconds": 95.79157012701035,
+    "script_sha256": "CF80FA78E51C7590329BF9E981AB01C1BF480DF4F716B63A84080E15431221DF",
+    "config_sha256": "385655E16196E4762DB0489E04382DF4B587C3E0D406C2CA03EAC262D39B254C",
+    "checkpoint_sha256": "2359CF6CD948D4C80BE9E03A7CC97A89DF497B4F22D822A1DDF83DF6C36599B5",
+    "cache_sha256": "B0CC3E90717E42D1366301DACD0B8234BAE4992466F6EAFC2E3F80E910B82EAD",
+    "memory_vectors": 2621,
+    "memory_dimensions": 1536
+  },
+  "counts": {
+    "anomalous_parents": 26,
+    "crops_per_parent": 73
+  },
+  "replay": {
+    "reference": "/root/autodl-tmp/Fabric_Defect_Detection/runs/raw_fabrid_dual_readout_fusion_k2/all_folds/Rollo7A.json",
+    "maximum_absolute_spatial_metric_error": 0.0,
+    "tolerance": 1e-08,
+    "per_metric_errors": {
+      "hann/pixel_average_precision": 0.0,
+      "pcdr/pixel_average_precision": 0.0,
+      "hann/instance_auc_all": 0.0,
+      "pcdr/instance_auc_all": 0.0,
+      "hann/instance_auc_small": 0.0,
+      "pcdr/instance_auc_small": 0.0,
+      "hann/instance_auc_elongated": 0.0,
+      "pcdr/instance_auc_elongated": 0.0
+    },
+    "passed": true
+  },
+  "per_parent_pixel_ap_delta": {
+    "516": 0.02853121089285482,
+    "539": 0.011902980330311883,
+    "544": 0.02301617220663621,
+    "548": 0.001322144217541843,
+    "554": 0.0058750685126707225,
+    "560": 0.020385110801873885,
+    "565": -0.0004819932193466103,
+    "566": 0.026042305277067412,
+    "577": 0.004603040392253566,
+    "586": 0.015910666959841863,
+    "593": 0.0341639154340424,
+    "600": 0.02900476653963402,
+    "613": -0.00463948076680154,
+    "614": 0.018156295191244343,
+    "634": -0.0022940074119817133,
+    "643": 0.04323321879231151,
+    "653": 0.018569521576208836,
+    "658": -0.0005242210446301798,
+    "667": 0.025401918298937565,
+    "674": 0.0465315934065933,
+    "685": 0.01949505391435291,
+    "689": -0.024964118845608008,
+    "693": 0.0015217391304346295,
+    "697": -0.0032569594272323574,
+    "702": -0.0038206033940887396,
+    "706": -0.012256685810091872
+  },
+  "geometric_fusion": {
+    "uses_scores_to_define_weights": false,
+    "uses_labels": false,
+    "crop_token_edge": 32,
+    "gaussian_sigma_scale": 0.125,
+    "gaussian_minimum_weight": 1.1253517471925912e-07,
+    "hann_zero_weight_fallback": "equal mean of available observations",
+    "hann_fallback_parent_cells": 216160,
+    "hard_center_tie_rule": "equal mean among observations tied for maximum boundary distance"
+  },
+  "geometry_calibration": {
+    "uses_target_labels_or_scores_to_define_weights": false,
+    "gaussian_sigma_scale": 0.125,
+    "relative_coordinate_bins": 1024,
+    "samples_per_relative_bin_minimum": 6351,
+    "samples_per_relative_bin_median": 6351.0,
+    "robust_scale_minimum": 0.8520634770393372,
+    "robust_scale_median": 1.0865871906280518,
+    "pcaf_replica_maximum_map_error": 0.0
+  },
+  "context_response_calibration": {
+    "fit_normal_parents": 87,
+    "coordinate_calibration_seconds": 0.49824151396751404,
+    "field_recovery_seconds": 0.9941685274243355,
+    "field_recovery_milliseconds_per_parent": 3.550601883658341,
+    "relative_coordinate_bins": 1024,
+    "samples_per_relative_bin_minimum": 6351,
+    "samples_per_relative_bin_median": 6351.0,
+    "robust_scale_minimum": 0.8520634770393372,
+    "robust_scale_median": 1.0865871906280518,
+    "coverage_pattern_cell_counts": {},
+    "score": "pattern-conditional empirical upper-tail of one-sided robust residual energy",
+    "physical_field_estimator": "inverse-robust-variance weighted mean after crop-relative median bias removal",
+    "ablation_estimators": {
+      "context_bias_equal_mean": "equal mean after crop-relative median bias removal",
+      "context_scale_weighted_mean": "inverse-robust-variance weighted raw response without bias removal"
+    },
+    "uses_defect_labels": false
+  }
+}

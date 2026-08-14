@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "selection_rule": "Select the most negative per-parent PCDR-minus-Hann Pixel-AP case within the retained negative roll Rollo2A, then the closest remaining case to the median across all anomalous parents in the six candidate-evaluation folds, then the best remaining case. Ties are resolved by candidate-fold order, parent index, and filename.",
+  "eligible_parents": 124,
+  "median_delta": 0.0023348136979294276,
+  "selected": [
+    {
+      "fold": "Rollo2A",
+      "index": 148,
+      "filename": "Rollo2A_0000066_D_07-05-2024_10-39-45.618.png",
+      "hann_ap": 0.40463385000647784,
+      "pcdr_ap": 0.38580653084773614,
+      "delta": -0.018827319158741695
+    },
+    {
+      "fold": "Rollo2A",
+      "index": 128,
+      "filename": "Rollo2A_0000046_D_07-05-2024_10-39-21.594.png",
+      "hann_ap": 0.7634422923411411,
+      "pcdr_ap": 0.7657120202654408,
+      "delta": 0.0022697279242996915
+    },
+    {
+      "fold": "Rollo1A",
+      "index": 71,
+      "filename": "Rollo1A_0000074_D_07-05-2024_10-32-28.223.png",
+      "hann_ap": 0.6896639184003106,
+      "pcdr_ap": 0.8069556555826578,
+      "delta": 0.1172917371823472
+    }
+  ],
+  "input_cache_sha256": {
+    "Rollo1A.npz": "20F094FF13CD2489905775676C597CCCD7F88F7F3ACDBF8C3003EA34343A0636",
+    "Rollo2A.npz": "BAC395909A802466D36DAE56BC9454ABE9FA51DE74E1C8180B01C068D2F9BAD6",
+    "Rollo3A.npz": "C708B2C1A4E56AAC947DF083EC97F9F5761C564A86F042FFAA78CEFF358F3A8B",
+    "Rollo5A.npz": "D7119606C9D584C0508779DEB85B12ECD841DE8F6F0F98B78D324E0D15EE578C",
+    "Rollo6A.npz": "C21D70AE30C4B6B76729EEFF024837BCC1B22F44E8727461D1452549F5B91689",
+    "Rollo7A.npz": "B0CC3E90717E42D1366301DACD0B8234BAE4992466F6EAFC2E3F80E910B82EAD"
+  },
+  "output_npz_sha256": "588C362768B79BC6C79DD7714BA01FDDFFA0BA53BD3012F45180430CB6BAD5E1"
+}

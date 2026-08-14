@@ -1,9 +1,9 @@
 cff-version: 1.2.0
 message: "If you use this code or its derived records, please cite the associated manuscript."
-title: "Position-Calibrated Tiled Fabric Inspection"
+title: "Position-Calibrated Dual Readout for PatchCore-Based Tiled Fabric Anomaly Inspection"
 type: software
 authors:
   - family-names: Zhu
     given-names: Haoxuan
 repository-code: "https://github.com/haoxuan-zhu/Position-Calibrated-Tiled-Fabric-Inspection"
-date-released: 2026-08-14
+date-released: 2026-08-15

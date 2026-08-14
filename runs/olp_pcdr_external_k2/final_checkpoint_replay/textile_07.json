@@ -1,0 +1,372 @@
+{
+  "schema_version": 1,
+  "purpose": "Complete PCDR external evaluation on OLP",
+  "claim_boundary": "External acquisition-and-texture validation on 15 metadata-eligible OLP textiles. Textiles, not rolls, are the highest-level evaluation units; this experiment carries no roll or temporal claim.",
+  "config": {
+    "schema_version": 1,
+    "seed": 20260730,
+    "base_config": "configs/olp_patchcore_pcaf_external.json",
+    "checkpoint_pattern": "runs/olp_pcaf_external/full/checkpoints/textile_{textile_id:02d}.ckpt",
+    "reference_result_pattern": "runs/olp_pcaf_external/full/textile_{textile_id:02d}.json",
+    "eligible_textiles": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      14,
+      16,
+      18,
+      21,
+      23,
+      24,
+      31,
+      38
+    ],
+    "reported_variants": [
+      "gaussian",
+      "hann",
+      "hann_pcaf_dual",
+      "pcdr"
+    ],
+    "pcdr": {
+      "localization": "gaussian_bias_equal_mean",
+      "alarm": "context_bias_weighted_mean"
+    },
+    "legacy_replay_policy": {
+      "reason": "The legacy OLP JSON was scored from the trained in-memory model, whereas this experiment reloads the saved checkpoint.",
+      "checkpoint_sha256_split_paths_and_counts": "exact",
+      "discrete_counts_and_rates": "exact",
+      "continuous_legacy_metrics": "reported_as_diagnostic_drift_only",
+      "matched_method_comparisons": "recomputed_from_one_shared_checkpoint_replay_cache"
+    },
+    "invariants": [
+      "reuse the original normal-only textile checkpoint",
+      "reuse the original OLP run seed",
+      "reuse the metadata-frozen scene split",
+      "reuse the original 256-pixel three-view crop observations",
+      "reuse the original source-normal calibration parents and robust-z scoring",
+      "do not select textiles or variants from detector outputs"
+    ],
+    "claim_boundary": "External acquisition-and-texture validation on 15 metadata-eligible OLP textiles. Textiles, not rolls, are the highest-level evaluation units; this experiment carries no roll or temporal claim."
+  },
+  "run": {
+    "textile_id": 7,
+    "smoke": false,
+    "device": "NVIDIA GeForce RTX 4090",
+    "torch": "2.5.1+cu124",
+    "predict_seconds": 75.9226888678968,
+    "fusion_and_evaluation_seconds": 92.78186649270356,
+    "checkpoint_sha256": "07AE1A1690D3FF3AA3AD79DEBB7F01E0D61A806B643511EFACDAA093071D941D",
+    "memory_vectors": 3686,
+    "memory_dimensions": 1536,
+    "script_sha256": "175394FD0E9CB308439DBD9682755AAC0CEBCAA58332C6809CCFB0378A501D01",
+    "config_sha256": "3D5BFFFF533E836A65FED392D46D4775FC7442FA9616967DC0352FACB5F76693",
+    "base_config_sha256": "7F740A2C2A3F68725EBFC131CA6E31DAAD01BD958D109467E3D6C3252F93B12F"
+  },
+  "counts": {
+    "training_normals": 8,
+    "calibration_normals": 8,
+    "evaluation_normals": 40,
+    "anomalies": 14
+  },
+  "split_scenes": {
+    "training_normals": [
+      "5"
+    ],
+    "calibration_normals": [
+      "6"
+    ],
+    "evaluation_normals": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "schlinge_kette0"
+    ],
+    "anomalies": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "schlinge_kette0"
+    ]
+  },
+  "split_paths": {
+    "training_normals": [
+      "Textile_7/5/c_fl0033.png",
+      "Textile_7/5/c_fl0081.png",
+      "Textile_7/5/c_fl0073.png",
+      "Textile_7/5/c_fl0043.png",
+      "Textile_7/5/c_fl0079.png",
+      "Textile_7/5/c_fl0039.png",
+      "Textile_7/5/c_fl0007.png",
+      "Textile_7/5/c_fl0052.png"
+    ],
+    "calibration_normals": [
+      "Textile_7/6/c_fl0005.png",
+      "Textile_7/6/c_fl0070.png",
+      "Textile_7/6/c_fl0041.png",
+      "Textile_7/6/c_fl0033.png",
+      "Textile_7/6/c_fl0050.png",
+      "Textile_7/6/c_fl0032.png",
+      "Textile_7/6/c_fl0052.png",
+      "Textile_7/6/c_fl0016.png"
+    ],
+    "evaluation_normals": [
+      "Textile_7/schlinge_kette0/c_fl_x0_y25.png",
+      "Textile_7/schlinge_kette0/c_fl_x31_y175.png",
+      "Textile_7/schlinge_kette0/c_fl_x62_y25.png",
+      "Textile_7/schlinge_kette0/c_fl_x31_y125.png",
+      "Textile_7/schlinge_kette0/c_fl_x124_y200.png",
+      "Textile_7/schlinge_kette0/c_fl_x124_y175.png",
+      "Textile_7/schlinge_kette0/c_fl_x0_y50.png",
+      "Textile_7/schlinge_kette0/c_fl_x0_y175.png",
+      "Textile_7/1/c_fl0019.png",
+      "Textile_7/1/c_fl0057.png",
+      "Textile_7/1/c_fl0000.png",
+      "Textile_7/1/c_fl0050.png",
+      "Textile_7/1/c_fl0062.png",
+      "Textile_7/1/c_fl0038.png",
+      "Textile_7/1/c_fl0076.png",
+      "Textile_7/1/c_fl0049.png",
+      "Textile_7/2/c_fl0019.png",
+      "Textile_7/2/c_fl0074.png",
+      "Textile_7/2/c_fl0003.png",
+      "Textile_7/2/c_fl0079.png",
+      "Textile_7/2/c_fl0060.png",
+      "Textile_7/2/c_fl0040.png",
+      "Textile_7/2/c_fl0018.png",
+      "Textile_7/2/c_fl0001.png",
+      "Textile_7/3/c_fl0019.png",
+      "Textile_7/3/c_fl0033.png",
+      "Textile_7/3/c_fl0000.png",
+      "Textile_7/3/c_fl0042.png",
+      "Textile_7/3/c_fl0063.png",
+      "Textile_7/3/c_fl0028.png",
+      "Textile_7/3/c_fl0071.png",
+      "Textile_7/3/c_fl0017.png",
+      "Textile_7/4/c_fl0012.png",
+      "Textile_7/4/c_fl0018.png",
+      "Textile_7/4/c_fl0005.png",
+      "Textile_7/4/c_fl0036.png",
+      "Textile_7/4/c_fl0074.png",
+      "Textile_7/4/c_fl0016.png",
+      "Textile_7/4/c_fl0067.png",
+      "Textile_7/4/c_fl0065.png"
+    ],
+    "anomalies": [
+      "Textile_7/1/f_fl0063.png",
+      "Textile_7/1/f_fl0064.png",
+      "Textile_7/1/f_fl0065.png",
+      "Textile_7/1/f_fl0066.png",
+      "Textile_7/2/f_fl0027.png",
+      "Textile_7/2/f_fl0028.png",
+      "Textile_7/2/f_fl0041.png",
+      "Textile_7/2/f_fl0042.png",
+      "Textile_7/3/f_fl0030.png",
+      "Textile_7/3/f_fl0032.png",
+      "Textile_7/3/f_fl0072.png",
+      "Textile_7/4/f_fl0052.png",
+      "Textile_7/schlinge_kette0/f_fl_x93_y150.png",
+      "Textile_7/schlinge_kette0/f_fl_x93_y175.png"
+    ]
+  },
+  "frozen_source_identity": {
+    "checkpoint_sha256": "07AE1A1690D3FF3AA3AD79DEBB7F01E0D61A806B643511EFACDAA093071D941D",
+    "checkpoint_matches": true,
+    "split_paths_match": true,
+    "split_counts_match": true,
+    "passed": true
+  },
+  "frozen_replay": {
+    "reference": "/root/autodl-tmp/Fabric_Defect_Detection/runs/olp_pcaf_external/full/textile_07.json",
+    "maximum_absolute_metric_error": 3.818444492126316e-07,
+    "continuous_metrics_are_diagnostic_only": true,
+    "exact_metrics": [
+      "defect_parent_recall",
+      "evaluation_normal_false_positives",
+      "evaluation_normal_fpr",
+      "pixel_evaluated_cells",
+      "pixel_positive_cells"
+    ],
+    "passed": true,
+    "per_metric_errors": {
+      "mean": {
+        "pixel_average_precision": 3.1940623951287606e-08,
+        "pixel_roc_auc": 2.3116171532500118e-08,
+        "parent_average_precision": 0.0,
+        "parent_roc_auc": 0.0,
+        "source_calibrated_threshold": 0.0,
+        "evaluation_normal_false_positives": 0.0,
+        "evaluation_normal_fpr": 0.0,
+        "defect_parent_recall": 0.0,
+        "pixel_positive_cells": 0.0,
+        "pixel_evaluated_cells": 0.0
+      },
+      "context_bias_weighted_mean": {
+        "pixel_average_precision": 3.818444492126316e-07,
+        "pixel_roc_auc": 2.8382294636752903e-07,
+        "parent_average_precision": 0.0,
+        "parent_roc_auc": 0.0,
+        "source_calibrated_threshold": 0.0,
+        "evaluation_normal_false_positives": 0.0,
+        "evaluation_normal_fpr": 0.0,
+        "defect_parent_recall": 0.0,
+        "pixel_positive_cells": 0.0,
+        "pixel_evaluated_cells": 0.0
+      }
+    }
+  },
+  "dual_readout_identity": {
+    "hann_pcaf_dual": {
+      "maximum_localization_metric_error": 0.0,
+      "maximum_alarm_metric_error": 0.0,
+      "passed": true
+    },
+    "pcdr": {
+      "maximum_localization_metric_error": 0.0,
+      "maximum_alarm_metric_error": 0.0,
+      "passed": true
+    }
+  },
+  "geometric_fusion": {
+    "uses_scores_to_define_weights": false,
+    "uses_labels": false,
+    "crop_token_edge": 32,
+    "gaussian_sigma_scale": 0.125,
+    "gaussian_minimum_weight": 1.1253517471925912e-07,
+    "hann_zero_weight_fallback": "equal mean of available observations",
+    "hann_fallback_parent_cells": 93000,
+    "hard_center_tie_rule": "equal mean among observations tied for maximum boundary distance"
+  },
+  "geometry_calibration": {
+    "uses_target_labels_or_scores_to_define_weights": false,
+    "gaussian_sigma_scale": 0.125,
+    "relative_coordinate_bins": 1024,
+    "samples_per_relative_bin_minimum": 2008,
+    "samples_per_relative_bin_median": 2008.0,
+    "robust_scale_minimum": 1.1452986001968384,
+    "robust_scale_median": 2.3822715282440186,
+    "pcaf_replica_maximum_map_error": 0.0
+  },
+  "context_response_calibration": {
+    "fit_normal_parents": 8,
+    "coordinate_calibration_seconds": 0.8555216025561094,
+    "field_recovery_seconds": 0.8100829105824232,
+    "field_recovery_milliseconds_per_parent": 13.065853396490697,
+    "relative_coordinate_bins": 1024,
+    "samples_per_relative_bin_minimum": 2008,
+    "samples_per_relative_bin_median": 2008.0,
+    "robust_scale_minimum": 1.1452986001968384,
+    "robust_scale_median": 2.3822715282440186,
+    "coverage_pattern_cell_counts": {},
+    "score": "pattern-conditional empirical upper-tail of one-sided robust residual energy",
+    "physical_field_estimator": "inverse-robust-variance weighted mean after crop-relative median bias removal",
+    "ablation_estimators": {
+      "context_bias_equal_mean": "equal mean after crop-relative median bias removal",
+      "context_scale_weighted_mean": "inverse-robust-variance weighted raw response without bias removal"
+    },
+    "uses_defect_labels": false
+  },
+  "metrics": {
+    "mean": {
+      "pixel_average_precision": 0.08258364386818716,
+      "pixel_roc_auc": 0.761593102071475,
+      "parent_average_precision": 0.38863378684807254,
+      "parent_roc_auc": 0.6160714285714286,
+      "source_calibrated_threshold": 6.785193920135498,
+      "evaluation_normal_false_positives": 3,
+      "evaluation_normal_fpr": 0.075,
+      "defect_parent_recall": 0.2857142857142857,
+      "pixel_positive_cells": 65324,
+      "pixel_evaluated_cells": 4246668
+    },
+    "context_bias_weighted_mean": {
+      "pixel_average_precision": 0.08243517413989607,
+      "pixel_roc_auc": 0.7622141813756196,
+      "parent_average_precision": 0.4442443534880509,
+      "parent_roc_auc": 0.6875,
+      "source_calibrated_threshold": 7.373416900634766,
+      "evaluation_normal_false_positives": 2,
+      "evaluation_normal_fpr": 0.05,
+      "defect_parent_recall": 0.14285714285714285,
+      "pixel_positive_cells": 65324,
+      "pixel_evaluated_cells": 4246668
+    },
+    "gaussian": {
+      "pixel_average_precision": 0.07150337298606657,
+      "pixel_roc_auc": 0.784241933042386,
+      "parent_average_precision": 0.21684678240677308,
+      "parent_roc_auc": 0.32678571428571423,
+      "source_calibrated_threshold": 8.729521751403809,
+      "evaluation_normal_false_positives": 11,
+      "evaluation_normal_fpr": 0.275,
+      "defect_parent_recall": 0.14285714285714285,
+      "pixel_positive_cells": 65324,
+      "pixel_evaluated_cells": 4246668
+    },
+    "hann": {
+      "pixel_average_precision": 0.07088879369725759,
+      "pixel_roc_auc": 0.7837456864171679,
+      "parent_average_precision": 0.21529693286998164,
+      "parent_roc_auc": 0.32321428571428573,
+      "source_calibrated_threshold": 8.931686401367188,
+      "evaluation_normal_false_positives": 10,
+      "evaluation_normal_fpr": 0.25,
+      "defect_parent_recall": 0.14285714285714285,
+      "pixel_positive_cells": 65324,
+      "pixel_evaluated_cells": 4246668
+    },
+    "hard_center": {
+      "pixel_average_precision": 0.07045003843641112,
+      "pixel_roc_auc": 0.782001090668158,
+      "parent_average_precision": 0.21859821351317651,
+      "parent_roc_auc": 0.33571428571428574,
+      "source_calibrated_threshold": 8.633296012878418,
+      "evaluation_normal_false_positives": 10,
+      "evaluation_normal_fpr": 0.25,
+      "defect_parent_recall": 0.14285714285714285,
+      "pixel_positive_cells": 65324,
+      "pixel_evaluated_cells": 4246668
+    },
+    "gaussian_bias_equal_mean": {
+      "pixel_average_precision": 0.07218385834672773,
+      "pixel_roc_auc": 0.7857539630960835,
+      "parent_average_precision": 0.22923225386557905,
+      "parent_roc_auc": 0.32857142857142857,
+      "source_calibrated_threshold": 8.841048240661621,
+      "evaluation_normal_false_positives": 11,
+      "evaluation_normal_fpr": 0.275,
+      "defect_parent_recall": 0.14285714285714285,
+      "pixel_positive_cells": 65324,
+      "pixel_evaluated_cells": 4246668
+    },
+    "hann_pcaf_dual": {
+      "pixel_average_precision": 0.07088879369725759,
+      "pixel_roc_auc": 0.7837456864171679,
+      "pixel_positive_cells": 65324,
+      "pixel_evaluated_cells": 4246668,
+      "parent_average_precision": 0.4442443534880509,
+      "parent_roc_auc": 0.6875,
+      "source_calibrated_threshold": 7.373416900634766,
+      "evaluation_normal_false_positives": 2,
+      "evaluation_normal_fpr": 0.05,
+      "defect_parent_recall": 0.14285714285714285
+    },
+    "pcdr": {
+      "pixel_average_precision": 0.07218385834672773,
+      "pixel_roc_auc": 0.7857539630960835,
+      "pixel_positive_cells": 65324,
+      "pixel_evaluated_cells": 4246668,
+      "parent_average_precision": 0.4442443534880509,
+      "parent_roc_auc": 0.6875,
+      "source_calibrated_threshold": 7.373416900634766,
+      "evaluation_normal_false_positives": 2,
+      "evaluation_normal_fpr": 0.05,
+      "defect_parent_recall": 0.14285714285714285
+    }
+  }
+}

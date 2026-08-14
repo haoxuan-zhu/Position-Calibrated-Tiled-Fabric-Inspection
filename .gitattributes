@@ -6,3 +6,9 @@
 *.sh text eol=lf
 *.txt text eol=lf
 *.png binary
+
+# Preserve hash-locked experiment assets byte for byte.
+configs/** -text
+data/** -text
+runs/** -text
+tools/** -text

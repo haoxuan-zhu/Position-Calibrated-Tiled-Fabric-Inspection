@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "purpose": "Deterministic PCDR qualitative-case cache",
+  "run": {
+    "fold": "Rollo5A",
+    "device": "NVIDIA GeForce RTX 4090",
+    "torch": "2.5.1+cu124",
+    "predict_seconds": 53.940823920071125,
+    "script_sha256": "CF80FA78E51C7590329BF9E981AB01C1BF480DF4F716B63A84080E15431221DF",
+    "config_sha256": "385655E16196E4762DB0489E04382DF4B587C3E0D406C2CA03EAC262D39B254C",
+    "checkpoint_sha256": "5B24CFD899BF73AD5CD602496C08BE6A63B3CA634442EE3FA73CD2A3DD660314",
+    "cache_sha256": "D7119606C9D584C0508779DEB85B12ECD841DE8F6F0F98B78D324E0D15EE578C",
+    "memory_vectors": 2621,
+    "memory_dimensions": 1536
+  },
+  "counts": {
+    "anomalous_parents": 15,
+    "crops_per_parent": 73
+  },
+  "replay": {
+    "reference": "/root/autodl-tmp/Fabric_Defect_Detection/runs/raw_fabrid_dual_readout_fusion_k2/all_folds/Rollo5A.json",
+    "maximum_absolute_spatial_metric_error": 0.0,
+    "tolerance": 1e-08,
+    "per_metric_errors": {
+      "hann/pixel_average_precision": 0.0,
+      "pcdr/pixel_average_precision": 0.0,
+      "hann/instance_auc_all": 0.0,
+      "pcdr/instance_auc_all": 0.0,
+      "hann/instance_auc_small": 0.0,
+      "pcdr/instance_auc_small": 0.0,
+      "hann/instance_auc_elongated": 0.0,
+      "pcdr/instance_auc_elongated": 0.0
+    },
+    "passed": true
+  },
+  "per_parent_pixel_ap_delta": {
+    "362": -0.008457644074266912,
+    "365": 0.03478085757793348,
+    "366": 0.01077671792161683,
+    "368": 0.015455309442022336,
+    "369": 0.004248981444091582,
+    "370": 0.005346438251441654,
+    "372": 0.0287362330968578,
+    "373": 0.007065266263006187,
+    "374": 0.0021289363664637184,
+    "376": -0.0023150801401256027,
+    "379": 0.002166139970870673,
+    "380": 0.005557366070734204,
+    "383": -0.007500452961766602,
+    "384": -0.002329745376658754,
+    "389": 0.005201254823763213
+  },
+  "geometric_fusion": {
+    "uses_scores_to_define_weights": false,
+    "uses_labels": false,
+    "crop_token_edge": 32,
+    "gaussian_sigma_scale": 0.125,
+    "gaussian_minimum_weight": 1.1253517471925912e-07,
+    "hann_zero_weight_fallback": "equal mean of available observations",
+    "hann_fallback_parent_cells": 121204,
+    "hard_center_tie_rule": "equal mean among observations tied for maximum boundary distance"
+  },
+  "geometry_calibration": {
+    "uses_target_labels_or_scores_to_define_weights": false,
+    "gaussian_sigma_scale": 0.125,
+    "relative_coordinate_bins": 1024,
+    "samples_per_relative_bin_minimum": 9052,
+    "samples_per_relative_bin_median": 9052.0,
+    "robust_scale_minimum": 0.9940575361251831,
+    "robust_scale_median": 1.1982667446136475,
+    "pcaf_replica_maximum_map_error": 0.0
+  },
+  "context_response_calibration": {
+    "fit_normal_parents": 124,
+    "coordinate_calibration_seconds": 0.5916137583553791,
+    "field_recovery_seconds": 0.5604573152959347,
+    "field_recovery_milliseconds_per_parent": 3.5697918171715584,
+    "relative_coordinate_bins": 1024,
+    "samples_per_relative_bin_minimum": 9052,
+    "samples_per_relative_bin_median": 9052.0,
+    "robust_scale_minimum": 0.9940575361251831,
+    "robust_scale_median": 1.1982667446136475,
+    "coverage_pattern_cell_counts": {},
+    "score": "pattern-conditional empirical upper-tail of one-sided robust residual energy",
+    "physical_field_estimator": "inverse-robust-variance weighted mean after crop-relative median bias removal",
+    "ablation_estimators": {
+      "context_bias_equal_mean": "equal mean after crop-relative median bias removal",
+      "context_scale_weighted_mean": "inverse-robust-variance weighted raw response without bias removal"
+    },
+    "uses_defect_labels": false
+  }
+}

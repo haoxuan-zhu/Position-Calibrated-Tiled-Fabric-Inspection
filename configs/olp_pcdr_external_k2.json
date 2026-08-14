@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "seed": 20260730,
+  "base_config": "configs/olp_patchcore_pcaf_external.json",
+  "checkpoint_pattern": "runs/olp_pcaf_external/full/checkpoints/textile_{textile_id:02d}.ckpt",
+  "reference_result_pattern": "runs/olp_pcaf_external/full/textile_{textile_id:02d}.json",
+  "eligible_textiles": [1, 2, 3, 4, 5, 6, 7, 14, 16, 18, 21, 23, 24, 31, 38],
+  "reported_variants": [
+    "gaussian",
+    "hann",
+    "hann_pcaf_dual",
+    "pcdr"
+  ],
+  "pcdr": {
+    "localization": "gaussian_bias_equal_mean",
+    "alarm": "context_bias_weighted_mean"
+  },
+  "legacy_replay_policy": {
+    "reason": "The legacy OLP JSON was scored from the trained in-memory model, whereas this experiment reloads the saved checkpoint.",
+    "checkpoint_sha256_split_paths_and_counts": "exact",
+    "discrete_counts_and_rates": "exact",
+    "continuous_legacy_metrics": "reported_as_diagnostic_drift_only",
+    "matched_method_comparisons": "recomputed_from_one_shared_checkpoint_replay_cache"
+  },
+  "invariants": [
+    "reuse the original normal-only textile checkpoint",
+    "reuse the original OLP run seed",
+    "reuse the metadata-frozen scene split",
+    "reuse the original 256-pixel three-view crop observations",
+    "reuse the original source-normal calibration parents and robust-z scoring",
+    "do not select textiles or variants from detector outputs"
+  ],
+  "claim_boundary": "External acquisition-and-texture validation on 15 metadata-eligible OLP textiles. Textiles, not rolls, are the highest-level evaluation units; this experiment carries no roll or temporal claim."
+}

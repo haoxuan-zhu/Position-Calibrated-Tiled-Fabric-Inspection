@@ -13,9 +13,11 @@ Both readouts reuse the same frozen PatchCore crop maps. PCDR requires no defect
 
 ## Main result
 
-Rollo4A was used for method development. On the other six RAW-FABRID rolls, the frozen PCDR localization readout reaches a macro Pixel AP of **0.3017**, compared with **0.2963** for the strongest fixed reference, a paired change of **+0.0053**. It exceeds each roll's strongest reference on **5/6** confirmation rolls. All parent scores and source-calibrated operating-point metrics are exactly inherited from the PCAF alarm readout.
+Rollo4A was used for method development. On the other six RAW-FABRID rolls, the frozen PCDR localization readout reaches a macro Pixel AP of **0.3017**, compared with **0.2963** for the fair Hann--PCAF dual-output reference, a paired change of **+0.0053**. It exceeds each roll's strongest single-field reference on **5/6** candidate-evaluation rolls. All parent scores and source-calibrated operating-point metrics are exactly inherited from the PCAF alarm readout.
 
-The repository also retains the complete seven-roll diagnostic records, fixed-window controls, a same-location fixed-effect audit, the grouped OLP external evaluation, and a computation-aware sequential-acquisition extension. These supporting studies are kept separate from the six-roll confirmation estimate.
+Two closing controls test the main alternative explanations. On native unsmoothed `32 x 32` patch-score fields, the six-roll macro Pixel-AP gain over Hann remains **+0.0058**. On 15 scene-grouped OLP textures, complete PCDR improves over Hann--PCAF on **12/15** textures with a macro change of **+0.0038**, although the textile-bootstrap interval crosses zero.
+
+The repository also retains the complete seven-roll diagnostic records, fixed-window controls, a same-location fixed-effect audit, the grouped OLP external evaluation, qualitative-case selection records, and a computation-aware sequential-acquisition extension. These supporting studies are kept separate from the six-roll candidate-evaluation estimate.
 
 ## Repository layout
 
@@ -26,7 +28,7 @@ The repository also retains the complete seven-roll diagnostic records, fixed-wi
 - `assets/`: the coordinate-calibration audit figure;
 - `release_manifest.json`: SHA-256 inventory of the public package.
 
-The repository intentionally excludes the paper source, internal work logs, model checkpoints, and third-party image data.
+The repository intentionally excludes the paper source, submission files, internal work logs, model checkpoints, and third-party image data. The qualitative selection record is included, but its RAW-FABRID image archive is not redistributed.
 
 ## Verify the released records
 
@@ -46,6 +48,16 @@ python tools/summarize_raw_fabrid_dual_readout_fusion_k2.py \
 python tools/summarize_raw_fabrid_coordinate_fixed_effect_audit.py \
   runs/raw_fabrid_coordinate_fixed_effect_audit/full \
   outputs/fixed_effect_summary.json outputs/fixed_effect_summary.md
+
+python tools/summarize_olp_pcdr_external_k2.py \
+  runs/olp_pcdr_external_k2/final_checkpoint_replay \
+  outputs/olp_pcdr_summary.json
+
+python tools/summarize_raw_fabrid_patch_score_field_control_k3.py \
+  runs/raw_fabrid_patch_score_field_control_k3/all_folds \
+  outputs/patch_score_field_summary.json
+
+python tools/test_patchcore_field_variants.py
 ```
 
 Run each program with `--help` before use; the frozen runner scripts remain available for the original experiment layout.
@@ -67,7 +79,7 @@ The committed JSON records include configuration, implementation, and checkpoint
 - Parents and rolls, not crops, are the experimental units.
 - The six-roll confirmation result is candidate-unseen but not a fully blind dataset evaluation: reference outputs existed before the candidate readout was frozen.
 - ISP-AD is used only as label-free evidence that identical registered content can receive crop-dependent detector responses.
-- OLP is grouped by acquisition scene and summarized by textile; it is supporting external evidence, not a cross-roll test.
+- OLP trains and calibrates one detector per textile, groups images by acquisition scene, and summarizes by textile; it is supporting acquisition-and-texture evidence, not zero-shot transfer or a cross-roll test.
 - The sequential extension reduces average crop count but is not lossless and is not part of the primary PCDR claim.
 
 ## Citation

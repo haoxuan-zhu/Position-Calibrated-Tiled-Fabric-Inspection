@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "seed": 20260814,
+  "base_config": "configs/raw_fabrid_anomalib_patchcore_k0.json",
+  "pcdr_config": "configs/raw_fabrid_dual_readout_fusion_k2.json",
+  "checkpoint_pattern": "runs/raw_fabrid_patchcore_k0/instance_audit/lightning_{fold}/Patchcore/v0/weights/lightning/model.ckpt",
+  "reference_result_pattern": "runs/raw_fabrid_dual_readout_fusion_k2/all_folds/{fold}.json",
+  "folds": [
+    "Rollo1A",
+    "Rollo2A",
+    "Rollo3A",
+    "Rollo4A",
+    "Rollo5A",
+    "Rollo6A",
+    "Rollo7A"
+  ],
+  "field_variants": {
+    "raw_patch": "Native 32x32 nearest-neighbour patch-distance grid with no anomaly-map rendering.",
+    "resize_roundtrip": "Nearest-neighbour 32x32-to-256x256 upsampling followed by the registered bilinear 256x256-to-32x32 projection, without Gaussian smoothing.",
+    "anomalib_default": "Frozen Anomalib anomaly-map generator (32x32-to-256x256 upsampling and sigma-4 smoothing) followed by the registered bilinear 256x256-to-32x32 projection."
+  },
+  "controlled_quantities": [
+    "normal-coordinate center map",
+    "Hann Pixel AP",
+    "PCDR localization Pixel AP",
+    "PCDR-minus-Hann Pixel AP"
+  ],
+  "invariants": [
+    "same frozen fold checkpoint and memory bank",
+    "same query embeddings and nearest-neighbour patch scores",
+    "same 73 crop observations and processed-pixel budget",
+    "same source-normal calibration split",
+    "same robust-z scoring and grouped target evaluation"
+  ],
+  "interpretation": "A persistent coordinate-centered gain on raw_patch rules out the complete upsample-smooth-downsample chain as a necessary cause. A gain confined to anomalib_default narrows the claim to calibration of the standard Anomalib rendering pipeline."
+}

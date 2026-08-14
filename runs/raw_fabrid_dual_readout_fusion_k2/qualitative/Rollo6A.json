@@ -1,0 +1,105 @@
+{
+  "schema_version": 1,
+  "purpose": "Deterministic PCDR qualitative-case cache",
+  "run": {
+    "fold": "Rollo6A",
+    "device": "NVIDIA GeForce RTX 4090",
+    "torch": "2.5.1+cu124",
+    "predict_seconds": 78.30084896832705,
+    "script_sha256": "CF80FA78E51C7590329BF9E981AB01C1BF480DF4F716B63A84080E15431221DF",
+    "config_sha256": "385655E16196E4762DB0489E04382DF4B587C3E0D406C2CA03EAC262D39B254C",
+    "checkpoint_sha256": "1D60EB3FD23AFB65A9A3B6465B85901E23676B1FF1152925ECA8AA916226AFCF",
+    "cache_sha256": "C21D70AE30C4B6B76729EEFF024837BCC1B22F44E8727461D1452549F5B91689",
+    "memory_vectors": 2621,
+    "memory_dimensions": 1536
+  },
+  "counts": {
+    "anomalous_parents": 28,
+    "crops_per_parent": 73
+  },
+  "replay": {
+    "reference": "/root/autodl-tmp/Fabric_Defect_Detection/runs/raw_fabrid_dual_readout_fusion_k2/all_folds/Rollo6A.json",
+    "maximum_absolute_spatial_metric_error": 0.0,
+    "tolerance": 1e-08,
+    "per_metric_errors": {
+      "hann/pixel_average_precision": 0.0,
+      "pcdr/pixel_average_precision": 0.0,
+      "hann/instance_auc_all": 0.0,
+      "pcdr/instance_auc_all": 0.0,
+      "hann/instance_auc_small": 0.0,
+      "pcdr/instance_auc_small": 0.0,
+      "hann/instance_auc_elongated": 0.0,
+      "pcdr/instance_auc_elongated": 0.0
+    },
+    "passed": true
+  },
+  "per_parent_pixel_ap_delta": {
+    "394": 0.005060664864565356,
+    "395": 0.0023998994715591637,
+    "409": 0.006128597945494585,
+    "412": 0.008048812174452191,
+    "419": 0.002555053642010141,
+    "423": -0.00621748648770315,
+    "425": 0.0064102564102563875,
+    "429": 0.0,
+    "431": -0.0037912637912640434,
+    "435": -0.007150286324500876,
+    "439": 0.012068676226068331,
+    "443": 0.008261017977096552,
+    "447": 0.006481577111276504,
+    "450": -0.02875723176032774,
+    "453": 0.03360972039141119,
+    "459": 0.0,
+    "462": 0.014167217672461208,
+    "466": 0.0,
+    "470": -0.009920634920634885,
+    "472": -0.013262657535103362,
+    "475": 0.014609708079414085,
+    "478": -0.004114295471994267,
+    "479": 0.0043206917254901,
+    "482": 0.038730158730158726,
+    "492": -0.027433506617972614,
+    "497": -0.007127574973578965,
+    "512": -0.0031577035251283414,
+    "515": 0.004297024327549123
+  },
+  "geometric_fusion": {
+    "uses_scores_to_define_weights": false,
+    "uses_labels": false,
+    "crop_token_edge": 32,
+    "gaussian_sigma_scale": 0.125,
+    "gaussian_minimum_weight": 1.1253517471925912e-07,
+    "hann_zero_weight_fallback": "equal mean of available observations",
+    "hann_fallback_parent_cells": 176788,
+    "hard_center_tie_rule": "equal mean among observations tied for maximum boundary distance"
+  },
+  "geometry_calibration": {
+    "uses_target_labels_or_scores_to_define_weights": false,
+    "gaussian_sigma_scale": 0.125,
+    "relative_coordinate_bins": 1024,
+    "samples_per_relative_bin_minimum": 7665,
+    "samples_per_relative_bin_median": 7665.0,
+    "robust_scale_minimum": 0.9684628248214722,
+    "robust_scale_median": 1.3145573139190674,
+    "pcaf_replica_maximum_map_error": 0.0
+  },
+  "context_response_calibration": {
+    "fit_normal_parents": 105,
+    "coordinate_calibration_seconds": 0.5457743406295776,
+    "field_recovery_seconds": 0.84483378008008,
+    "field_recovery_milliseconds_per_parent": 3.6892304806990395,
+    "relative_coordinate_bins": 1024,
+    "samples_per_relative_bin_minimum": 7665,
+    "samples_per_relative_bin_median": 7665.0,
+    "robust_scale_minimum": 0.9684628248214722,
+    "robust_scale_median": 1.3145573139190674,
+    "coverage_pattern_cell_counts": {},
+    "score": "pattern-conditional empirical upper-tail of one-sided robust residual energy",
+    "physical_field_estimator": "inverse-robust-variance weighted mean after crop-relative median bias removal",
+    "ablation_estimators": {
+      "context_bias_equal_mean": "equal mean after crop-relative median bias removal",
+      "context_scale_weighted_mean": "inverse-robust-variance weighted raw response without bias removal"
+    },
+    "uses_defect_labels": false
+  }
+}
