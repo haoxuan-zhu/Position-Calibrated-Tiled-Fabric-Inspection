@@ -30,12 +30,17 @@ The repository also retains the complete seven-roll diagnostic records, fixed-wi
 
 The repository intentionally excludes the paper source, submission files, internal work logs, model checkpoints, and third-party image data. The qualitative selection record is included, but its RAW-FABRID image archive is not redistributed.
 
+For a stranger-oriented code map, exact environment, dataset layout, and the
+difference between record-level and end-to-end reproduction, see
+[`REPRODUCING.md`](REPRODUCING.md).
+
 ## Verify the released records
 
 Python 3.10 is recommended. The checksum audit uses only the standard library:
 
 ```bash
 python tools/verify_release.py
+python tools/reproduce_reported_tables.py
 ```
 
 The principal aggregate tables can be regenerated directly from the committed fold records:
@@ -64,7 +69,11 @@ Run each program with `--help` before use; the frozen runner scripts remain avai
 
 ## End-to-end reproduction
 
-The experiments were executed with Python 3.10, PyTorch 2.1, CUDA 12.1, anomalib 2.5.1, and an RTX 4090. Install a CUDA-compatible PyTorch build first, then install `requirements.txt`.
+The reported detector runs used Python 3.10, PyTorch 2.5.1 with CUDA 12.4,
+anomalib 2.5.1, and an RTX 4090. Install the matching PyTorch/torchvision build
+from `requirements-cuda124.txt` first, then install `requirements.txt`. Other
+recent environments may regenerate the JSON summaries, but they are not the
+claimed detector environment.
 
 End-to-end reruns additionally require:
 
