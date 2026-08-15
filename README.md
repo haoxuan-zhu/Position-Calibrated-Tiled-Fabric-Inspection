@@ -11,6 +11,20 @@ Both readouts reuse the same frozen PatchCore crop maps. PCDR requires no defect
 
 ![Crop-coordinate calibration audit](assets/coordinate_calibration_audit.png)
 
+## Quick verification
+
+The release inventory and headline tables can be checked from a fresh clone
+without image data, model checkpoints, or a GPU:
+
+```bash
+python tools/verify_release.py
+python tools/reproduce_reported_tables.py
+```
+
+These commands verify the published file inventory and render the reported
+RAW-FABRID, OLP, and native-score comparisons from committed JSON records.
+End-to-end detector reproduction is documented separately below.
+
 ## Main result
 
 Rollo4A was used for method development. On the other six RAW-FABRID rolls, the frozen PCDR localization readout reaches a macro Pixel AP of **0.3017**, compared with **0.2963** for the fair Hann--PCAF dual-output reference, a paired change of **+0.0053**. It exceeds each roll's strongest single-field reference on **5/6** candidate-evaluation rolls. All parent scores and source-calibrated operating-point metrics are exactly inherited from the PCAF alarm readout.
@@ -22,7 +36,8 @@ The repository also retains the complete seven-roll diagnostic records, fixed-wi
 ## Repository layout
 
 - `configs/`: frozen experiment specifications;
-- `tools/`: PCDR, PCAF, baseline, audit, and summarization programs;
+- `tools/`: PCDR, PCAF, baseline, audit, and summarization programs, with a
+  [reader-oriented code map](tools/README.md);
 - `runs/`: immutable per-fold JSON outputs and aggregate summaries;
 - `data/OLP/`: metadata-only scene-grouping and subset manifests;
 - `assets/`: the coordinate-calibration audit figure;
@@ -34,16 +49,10 @@ For a stranger-oriented code map, exact environment, dataset layout, and the
 difference between record-level and end-to-end reproduction, see
 [`REPRODUCING.md`](REPRODUCING.md).
 
-## Verify the released records
+## Rebuild the detailed summaries
 
-Python 3.10 is recommended. The checksum audit uses only the standard library:
-
-```bash
-python tools/verify_release.py
-python tools/reproduce_reported_tables.py
-```
-
-The principal aggregate tables can be regenerated directly from the committed fold records:
+Python 3.10 is recommended. The principal aggregate tables can be regenerated
+directly from the committed fold records:
 
 ```bash
 python tools/summarize_raw_fabrid_dual_readout_fusion_k2.py \
@@ -86,7 +95,7 @@ The committed JSON records include configuration, implementation, and checkpoint
 ## Evaluation boundaries
 
 - Parents and rolls, not crops, are the experimental units.
-- The six-roll confirmation result is candidate-unseen but not a fully blind dataset evaluation: reference outputs existed before the candidate readout was frozen.
+- The six-roll candidate evaluation is not a fully blind dataset evaluation: reference outputs existed before the candidate readout was frozen.
 - ISP-AD is used only as label-free evidence that identical registered content can receive crop-dependent detector responses.
 - OLP trains and calibrates one detector per textile, groups images by acquisition scene, and summarizes by textile; it is supporting acquisition-and-texture evidence, not zero-shot transfer or a cross-roll test.
 - The sequential extension reduces average crop count but is not lossless and is not part of the primary PCDR claim.
