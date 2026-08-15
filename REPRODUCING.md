@@ -16,6 +16,12 @@ that reason, the executed experiment scripts retain their original bytes;
 reader guidance is added here instead of silently changing a hash-locked
 implementation after the results were obtained.
 
+`SOURCE_COMMIT` and the abbreviated manuscript commit identifiers `f853e05`
+and `e982991` belong to the author's non-public development repository. They
+preserve the ordering of the frozen implementation and recorded results, but
+cannot be resolved in this public repository. Public release identity is given
+by the immutable `tvc-submission-*` tags and `release_manifest.json` here.
+
 ## 1. Environment
 
 The reported GPU runs used Python 3.10, PyTorch 2.5.1+cu124,
@@ -95,6 +101,8 @@ RAW_FABRID/
 For OLP, keep the official RGB images/COCO metadata locally. The released
 `data/OLP/scene_grouped_audit.json`, `subset_members.txt`, and
 `subset_manifest.json` define the eligible subset and frozen scene assignment.
+The members file is a relative-path inventory only; it does not redistribute
+OLP image bytes.
 Copy `configs/olp_patchcore_pcaf_external.json` before replacing its three
 machine-specific data paths; do not edit the frozen configuration in place.
 

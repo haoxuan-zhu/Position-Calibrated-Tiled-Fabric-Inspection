@@ -95,6 +95,19 @@ The committed JSON records include configuration, implementation, and checkpoint
 
 The manuscript is being prepared for journal submission. Citation metadata will be updated with the journal record or preprint identifier when available.
 
+## Provenance
+
+`SOURCE_COMMIT` records the final source commit in the author's non-public
+development repository. The manuscript's abbreviated identifiers `f853e05`
+and `e982991` refer to the same private development history, so they are
+provenance labels rather than objects that can be checked out from this public
+repository. Reproducible public snapshots are identified by the immutable
+`tvc-submission-*` tags in this repository.
+
 ## License
 
-No open-source license is granted in this submission-stage snapshot. A license will be selected before or when the repository is made public.
+This submission-stage repository is publicly accessible for peer review and
+reproducibility auditing, but it is not released as open-source software. No
+permission to reuse, modify, or redistribute the original code or
+documentation is granted. All rights are reserved; see [`LICENSE`](LICENSE).
+Third-party assets remain subject to their own terms.
